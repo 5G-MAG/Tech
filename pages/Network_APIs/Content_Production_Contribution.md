@@ -12,6 +12,8 @@ One of the use cases identified in [Towards a comprehensive 5G-based toolbox for
 ## Scenario description and actors involved
 A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
 
+![image](./images/figure_high_level_diagram.png)
+
 The actors involved are:
 - Production manager (Program Director), deals with the configuration of the production equipment and the access network and has the authority to use the application that interacts with the network operator. There can be either 
   - an On-Site Production Manager, who is together with the Production Crew on site, or
