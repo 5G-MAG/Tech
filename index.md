@@ -15,6 +15,6 @@ More information on Topics and Technology can be found at [https://www.5g-mag.co
 
 # Topics
 ## Network APIs
-- Documentation on this topics is listed here: https://5g-mag.github.io/Tech/pages/Network_APIs/
+- Documentation available on this topic is listed [here](https://5g-mag.github.io/Tech/pages/Network_APIs/).
 ### Network Capability Exposure and APIs for Content Production and Contribution Scenarios
-- Documentation available here: https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production_Contribution.html
+- Documentation available [here](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production_Contribution.html).
