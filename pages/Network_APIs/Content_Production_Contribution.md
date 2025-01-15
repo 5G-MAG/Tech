@@ -6,7 +6,9 @@ nav_order: 0
 has_children: false
 ---
 
-
+{: .note }
+This documentation is currently under development and subject to change. It reflects the ongoing work of 5G-MAG members, as part of **WI: Network Exposure and APIs Supporting Media Services and Applications**
+We welcome and encourage contributions from the broader community. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
 # Network Capability Exposure and APIs for Content Production and Contribution Scenarios
 One of the use cases identified in [Towards a comprehensive 5G-based toolbox for live media production](https://www.5g-mag.com/post/towards-a-comprehensive-5g-based-toolbox-for-live-media-production) that may benefit from specific network capabilities beyond best-effort connectivity is professional electronics newsgathering (ENG) or live streaming contribution. The ability of networks to expose capabilities to third-parties and for these to configure and access available network resources may improve the way media traffic is delivered on networks. This document identified a series of requirements, processes and collaboration scenarios related to the exposure of network capabilities to applications.
