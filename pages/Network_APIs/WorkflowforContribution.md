@@ -1,4 +1,4 @@
----
+x---
 layout: default
 title: Workflow for Content Production & Contribution
 parent: Network APIs
@@ -66,5 +66,5 @@ Independent steps that can be triggered during the life of the event:
 ## END OF THE EVENT :
  
 Step 4) : release resources
-  * The production crew through [GwAPI] releases the booked[TL7]  resources.
+  * The production crew through [GwAPI] releases the booked resources.
  
