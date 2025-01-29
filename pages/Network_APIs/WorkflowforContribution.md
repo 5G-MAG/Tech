@@ -26,7 +26,7 @@ We welcome and encourage contributions from the broader community. If you are in
   * Through app specific [AppAPI], the client app is properly connected to the Application Server. e.g. Haivision app with BBC server, or LiveU app with LiveU server, etc …
  
 ### Step 2)Event planning and pre-booking
-  * a) Through the Network API Platform, the production crew can discover the capabilities the network can offer (for which the production company is eligible for).
+  * a) Through the Network API Platform, the production crew (on location or located in production centre) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for).
     * Example: QoD available, connectivity monitoring available, Timing as a service available, edge compute instantiation, …
   * b) Through the Network API Platform, the production crew requests network services for every of the planned SIM cards in advance. Possible services (Network Capabilities) are:
     * Quality on Demand
