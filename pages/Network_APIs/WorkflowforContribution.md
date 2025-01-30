@@ -22,8 +22,9 @@ We welcome and encourage contributions from the broader community. If you are in
 ## Before the Event: 
  
 ### Step 1) Preparing your device, configuring application clients & servers and configuring client/server flows
-  * Devices have already best effort connectivity .
-  * Through app specific [AppAPI], the client app is properly connected to the Application Server. e.g. Haivision app with BBC server, or LiveU app with LiveU server, etc …
+  * Production device nodes have already best effort connectivity.
+    * There are 5G Connected device nodes (like wireless cameras, wireless Intercom devices) and Data Network connected device nodes (like vision mixer, sound mixer, etc) 
+  * "Application-specific API" - enables communication between the production network orchestrator and the production device nodes (e.g. camera control units, vision mixer, wireless microphones, sound mixer, etc.), some of which are UEs.
  
 ### Step 2)Event planning and pre-booking
   * a) Through the Network API Platform, the production crew (on location or located in production centre) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for).
