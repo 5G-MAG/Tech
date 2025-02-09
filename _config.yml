@@ -35,7 +35,7 @@ aux_links:
 
 # Build settings
 theme: just-the-docs
-color_scheme: custom
+color_scheme: wider
 
 # configures the default callouts described in: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
 callouts_level: quiet # or loud
