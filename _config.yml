@@ -34,7 +34,8 @@ aux_links:
     - "https://www.5g-mag.com"
 
 # Build settings
-theme: just-the-docs
+theme: jekyll-rtd-theme
+# theme: just-the-docs
 color_scheme: custom
 
 # configures the default callouts described in: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
