@@ -8,6 +8,7 @@ has_children: true
 # Requirements - Inputs to SDOs
 
 ## 3GPP
+
  Meeting | Title  
  -- | --
 [3GPP SA1 IMT-2030](https://www.3gpp.org/ftp/workshop/2024-05-08_3GPP_Stage1_IMT2030_UC_WS/Docs/SWS-240007.zip) | Views from 5G-MAG towards IMT-2030
