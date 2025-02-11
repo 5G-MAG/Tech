@@ -46,14 +46,14 @@ We welcome and encourage contributions from the broader community. If you are in
  
 ### Step 3) Local configuration
   * a) Production crew arrives in the venue, plugs the SIM cards and turn on the devices, connectivity is enabled based on the booked network services (See step 2).
-  * b) The production crew uses [AppAPI] to configure the different services, matching the connection ID delivered in step 2-e).
-    * Example: QoD service: A camera for which  one video + one audio is pre-booked. The [AppAPI] is used to properly configure the bitrate of the audio and video output, and the provided IDs.
-    * Example: Time Sync service: A camera for which access to global clock is requested. The [AppAPI] is used to properly configure the time parameters and the provided IDs.
+  * b) The production crew uses an Application-specific API to configure the different services, matching the connection ID delivered in step 2-e).
+    * Example: QoD service: A camera for which  one video + one audio is pre-booked. The Application-specific API is used to properly configure the bitrate of the audio and video output, and the provided IDs.
+    * Example: Time Sync service: A camera for which access to global clock is requested. The Application-specific API is used to properly configure the time parameters and the provided IDs.
  
 Independent steps that can be triggered during the life of the event:
-  * The production crew can use [GwAPI] to monitor that the flows are coming and are properly using the reserved resource.
-  * The production crew receives notification through [GwAPI] indicating potential issues (throughput, delay, …)
-  * The production crew through [GwAPI] can request a change of the current configuration
+  * The production crew can use the Network API Platform to monitor that the flows are coming and are properly using the reserved resource.
+  * The production crew receives notification through the Network API Platform indicating potential issues (throughput, delay, …)
+  * The production crew through the Network API Platform can request a change of the current configuration
     * Same validation steps as from 2-b to 2-e will be conducted after requesting the change
     * Changes can be:
       * Switch profile A from SIM card A to SIM card B
@@ -66,5 +66,5 @@ Independent steps that can be triggered during the life of the event:
  
 ## After the Event: 
 ### Step 4) Release resources
-  * The production crew through [GwAPI] releases the booked resources.
+  * The production crew through the Network API Platform releases the booked resources.
  
