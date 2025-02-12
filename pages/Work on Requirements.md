@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Requirements - Inputs to SDOs
+title: Requirements towards SDOs
 nav_order: 1
 has_children: true
 ---
 
-# Requirements - Inputs to SDOs
+# Requirements towards SDOs
 
 ## 3GPP
 
