@@ -84,5 +84,5 @@ Note: Network access IDs are not expected to change when a reconfiguration occur
 Note: the steps in phase C are repeated whenever a service is added and created from scratch.
  
 ## After the event
-### Phase D: Locationm teardown
+### Phase D: Location teardown
 1. Through the Network API Platform, the production crew releases the booked resources.
