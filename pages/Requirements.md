@@ -5,7 +5,7 @@ nav_order: 1
 has_children: true
 ---
 
-# Requirements towards SDOs
+# Services, Applications and Network Requirements towards SDOs
 
 ## 3GPP
 
