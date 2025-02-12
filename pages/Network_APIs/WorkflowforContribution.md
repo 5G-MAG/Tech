@@ -50,17 +50,20 @@ Note: Booking is done based on:
  * Geographical area
  * Schedule (starting time and closing time of the event)
 
-3. Through the Network API Platform, the production receives a booking reference responding to the service request.
-4. Through the Network API Platform the production accepts the service booking offer (involving payment/contract/SLA aspects)[TL6] .
-5. Through the production receives connection IDs to be used for every reserved SIM/services
+3. Through the Network API Platform, the production manager receives a booking reference responding to the service request.
+4. Through the Network API Platform the production manager accepts the service booking offer (involving payment/contract/SLA aspects).
+5. Through the Network API Platform the production manager receives **network access IDs** to be used by the production device UEs to access the network on location.
+    * Each network access ID ultimately resolves to a Data Network Name (DNN) and optionally a network slice identifier (S-NSSAI).
  
-## During the Event
+## During the event
 
 ![image](https://github.com/5G-MAG/Tech/blob/main/pages/Network_APIs/images/Workflow_Step_3.png)
 
 ### Phase C: Location setup and configuration
 1. Production crew arrives in the venue, plugs the SIM cards and turn on the devices, connectivity is enabled based on the booked network services (See phase B).
-2. The production crew uses an application-specific API to configure the different services, matching the connection ID delivered in step B.5).
+2. The production crew initiates the setup of the location production by interacting with the production network orchestrator.
+3. The production network orchestrator configures the production device nodes using an application-specific API, citing the network access IDs delivered in step B.5).
+
    * Example: QoD service: A camera for which  one video + one audio is pre-booked. The application-specific API is used to properly configure the bitrate of the audio and video output, and the provided IDs.
    * Example: Time Sync service: A camera for which access to global clock is requested. The application-specific API is used to properly configure the time parameters and the provided IDs.
  
@@ -76,7 +79,7 @@ Note: Booking is done based on:
   * Enable/Disable time service on a SIM card.
   * etc.
 
-Note: Connection ID are not expected to change when a reconfiguration occurs.
+Note: Network access IDs are not expected to change when a reconfiguration occurs.
 
 Note: the steps in phase C are repeated whenever a service is added and created from scratch.
  
