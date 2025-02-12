@@ -15,8 +15,6 @@ We welcome and encourage contributions from the broader community. If you are in
   
 ## Pre-conditions
 
-![image](https://github.com/5G-MAG/Tech/blob/main/pages/Network_APIs/images/Workflow_Step_1.png)
-
 * The production company has set up an agreement with a network operator for usage of certain **network capabilitues** (e.g. selected from an API catalogue) and has received authentication credentials from the newotk operator authorising their use (when available).
 * The production crew (on location or located in the production centre) has access to one or several **Network API Platforms**. These platforms are accessible through any device/connectivity (e.g. Internet-acccessible website portal, command line tools, dedicated application, etc.).
   * Note: For Network API Platform access, the production crew has obtained key access tokens/keys/credentials/payment details in advance.
@@ -26,15 +24,19 @@ We welcome and encourage contributions from the broader community. If you are in
  
 ## Before the Event
 
-![image](https://github.com/5G-MAG/Tech/blob/main/pages/Network_APIs/images/Workflow_Step_2.png)
-
 ### Phase A: Preparing devices, configuring application clients and servers, and configuring client/server flows
+
+![image](https://github.com/5G-MAG/Tech/blob/main/pages/Network_APIs/images/Workflow_Step_1.png)
+
 * Some production device nodes are UEs; others are connected to the Data Network:
   * Example production device nodes connected to the RAN: wireless cameras, wireless camaera control units, wireless microphones, wireless talkback intercom, etc.
   * Example production device nodes connected to the Data Network: vision mixer, sound mixer, etc. 
 * An **application-specific API** enables communication between the production network orchestrator and the production device nodes.
  
 ### Phase B: Event planning and pre-booking
+
+![image](https://github.com/5G-MAG/Tech/blob/main/pages/Network_APIs/images/Workflow_Step_2.png)
+
 1. Through the Network API Platform, the production crew (on location or located in the production centre) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for).
    * Example: QoD available, connectivity monitoring available, Timing as a service available, edge compute instantiation, etc.
 2. Through the Network API Platform, the production crew requests network services for each of the planned SIM cards in advance. Possible services (network capabilities) are:
