@@ -50,7 +50,7 @@ Note: Booking is done based on:
  * Geographical area
  * Schedule (starting time and closing time of the event)
 
-3. Through the Network API Platform, the production receives a booking offer responding to the service request.
+3. Through the Network API Platform, the production receives a booking reference responding to the service request.
 4. Through the Network API Platform the production accepts the service booking offer (involving payment/contract/SLA aspects)[TL6] .
 5. Through the production receives connection IDs to be used for every reserved SIM/services
  
