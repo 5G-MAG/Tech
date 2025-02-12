@@ -50,10 +50,12 @@ Note: Booking is done based on:
  * Geographical area
  * Schedule (starting time and closing time of the event)
 
-3. Through the Network API Platform, the production manager receives a booking reference responding to the service request.
+3. Through the Network API Platform the production manager receives a booking reference responding to the service request.
 4. Through the Network API Platform the production manager accepts the service booking offer (involving payment/contract/SLA aspects).
 5. Through the Network API Platform the production manager receives **network access IDs** to be used by the production device UEs to access the network on location.
     * Each network access ID ultimately resolves to a Data Network Name (DNN) and optionally a network slice identifier (S-NSSAI).
+6. The production crew is responsible for inserting the right SIM card into the right production device UE.
+    * Additional configuration of the network access ID may also be required (e.g. by using OMA-DM).
  
 ## During the event
 
