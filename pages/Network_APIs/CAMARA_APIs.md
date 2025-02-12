@@ -47,7 +47,7 @@ We welcome and encourage contributions from the broader community. If you are in
 
 #### Scope
 - Service APIs for “Device Location” (see APIBacklog)
-  - It provides the customer with the ability to:
+- It provides the customer with the ability to:
   - verify the location of a device (location-verification).
   - retrieve the location of a device (location-retrieval).
   - subscribe and receive notifications about a device entering or leaving certain location (geofencing-subscriptions).
