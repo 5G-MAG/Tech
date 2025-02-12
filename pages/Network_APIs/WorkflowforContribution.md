@@ -14,57 +14,63 @@ We welcome and encourage contributions from the broader community. If you are in
 # Required interactions to exploit network capabilities
   
 ## Pre-conditions
-  * The production company has set up an agreement for Network Capability usages. As result, the production company obtained information, used for authentication. During the process of negotiating the agreement, a set of relevant network capabilities has been identified (e.g. using an API catalogue). As result, the production company is authorized to use certain network capabilities (when available).
-  * The production crew has access to one, or several, Network API Platforms. This platform is accessible through any device/connectivity (e.g. a website accessible through the open internet, or command prompt, a dedicated app, etc …).
-    * Note: For the Network API Platform access, the crew has obtained key access tokens/key/credentials/payment-details in advance.
-  * The production crew have a set of credentials (SIM/eSIM) of the network devices will connect to. The network provides, by default, best-effort connectivity.
+* The production company has set up an agreement with a network operator for usage of certain **network capabilitues** (e.g. selected from an API catalogue) and has received authentication credentials from the newotk operator authorising their use (when available).
+* The production crew (on location or located in the production centre) has access to one or several **Network API Platforms**. These platforms are accessible through any device/connectivity (e.g. Internet-acccessible website portal, command line tools, dedicated application, etc.).
+  * Note: For Network API Platform access, the production crew has obtained key access tokens/keys/credentials/payment details in advance.
+* The production crew has a set of credentials (SIM/eSIM) for the network the production device nodes will connect to.
+* By default, the network provides "best efforts" connectivity.
+* Production device nodes already have working "best efforts" connectivity to the network.
  
-## Before the Event: 
+## Before the Event
  
-### Step 1) Preparing your device, configuring application clients & servers and configuring client/server flows
-  * Production device nodes have already best effort connectivity.
-    * There are 5G Connected device nodes (like wireless cameras, wireless Intercom devices) and Data Network connected device nodes (like vision mixer, sound mixer, etc) 
-  * "Application-specific API" - enables communication between the production network orchestrator and the production device nodes (e.g. camera control units, vision mixer, wireless microphones, sound mixer, etc.), some of which are UEs.
+### Phase A: Preparing devices, configuring application clients and servers, and configuring client/server flows
+* Some production device nodes are UEs; others are connected to the Data Network:
+  * Example production device nodes connected to the RAN: wireless cameras, wireless camaera control units, wireless microphones, wireless talkback intercom, etc.
+  * Example production device nodes connected to the Data Network: vision mixer, sound mixer, etc. 
+* An **application-specific API** enables communication between the production network orchestrator and the production device nodes.
  
-### Step 2)Event planning and pre-booking
-  * a) Through the Network API Platform, the production crew (on location or located in production centre) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for).
-    * Example: QoD available, connectivity monitoring available, Timing as a service available, edge compute instantiation, …
-  * b) Through the Network API Platform, the production crew requests network services for every of the planned SIM cards in advance. Possible services (Network Capabilities) are:
-    * Quality on Demand
-      * One or several QoS profiles for each SIM card (QOS Profiles are mapped to 5QIs) 
-      * Example: A sim may be pre booked for One uplink video / One uplink audio / one downlink data / …
-    * Time as a service
-      * Access stratum based or PTP based
-    * Note: Booking is done based on :
-      * Geographical area
-      * Schedule (starting time and closing time of the event)
-  * c) Through the Network API Platform, the production receives a booking offer responding to the service request.
-  * d) Through the Network API Platform the production accepts the service booking offer (involving payment/contract/SLA aspects)[TL6] .
-  * e) Through the production receives connection IDs to be used for every reserved SIM/services
+### Phase B: Event planning and pre-booking
+1. Through the Network API Platform, the production crew (on location or located in the production centre) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for).
+   * Example: QoD available, connectivity monitoring available, Timing as a service available, edge compute instantiation, etc.
+2. Through the Network API Platform, the production crew requests network services for each of the planned SIM cards in advance. Possible services (network capabilities) are:
+   1. *Quality-on-Demand*
+      * One or several QoS profiles for each SIM card (QoS profiles are mapped to 5QIs) 
+      * Example: A sim may be pre booked for One uplink video / One uplink audio / one downlink data / etc.
+   2. *Time-as-a-service*
+      * Provided either by access stratum or Precision Time Protocol (PTP).
+
+Note: Booking is done based on:
+ * Geographical area
+ * Schedule (starting time and closing time of the event)
+
+3. Through the Network API Platform, the production receives a booking offer responding to the service request.
+4. Through the Network API Platform the production accepts the service booking offer (involving payment/contract/SLA aspects)[TL6] .
+5. Through the production receives connection IDs to be used for every reserved SIM/services
  
-## During the Event: 
+## During the Event
  
-### Step 3) Local configuration
-  * a) Production crew arrives in the venue, plugs the SIM cards and turn on the devices, connectivity is enabled based on the booked network services (See step 2).
-  * b) The production crew uses an Application-specific API to configure the different services, matching the connection ID delivered in step 2-e).
-    * Example: QoD service: A camera for which  one video + one audio is pre-booked. The Application-specific API is used to properly configure the bitrate of the audio and video output, and the provided IDs.
-    * Example: Time Sync service: A camera for which access to global clock is requested. The Application-specific API is used to properly configure the time parameters and the provided IDs.
+### Phase C: Location setup and configuration
+1. Production crew arrives in the venue, plugs the SIM cards and turn on the devices, connectivity is enabled based on the booked network services (See phase B).
+2. The production crew uses an application-specific API to configure the different services, matching the connection ID delivered in step B.5).
+   * Example: QoD service: A camera for which  one video + one audio is pre-booked. The application-specific API is used to properly configure the bitrate of the audio and video output, and the provided IDs.
+   * Example: Time Sync service: A camera for which access to global clock is requested. The application-specific API is used to properly configure the time parameters and the provided IDs.
  
-Independent steps that can be triggered during the life of the event:
-  * The production crew can use the Network API Platform to monitor that the flows are coming and are properly using the reserved resource.
-  * The production crew receives notification through the Network API Platform indicating potential issues (throughput, delay, …)
-  * The production crew through the Network API Platform can request a change of the current configuration
-    * Same validation steps as from 2-b to 2-e will be conducted after requesting the change
-    * Changes can be:
-      * Switch profile A from SIM card A to SIM card B
-      * Increase or decrease the capacity of an existing profile
-      * Remove or add a profile to a SIM card
-      * Enable/Disable time service on a SIM card
-      * etc …
-      * Note: Connection ID are not expected to change when a reconfiguration occurs.
-      * Note: When a service is added and created from scratch, step 3) should be done again.
+### Independent steps that can be triggered during the event
+* The production crew can use the Network API Platform to monitor that the flows are coming and are properly using the reserved resource.
+* The production crew receives notification through the Network API Platform indicating potential issues (throughput, delay, etc.).
+* The production crew through the Network API Platform can request a change of the current configuration.
+* Same validation steps as from B.2 to B.5 will be conducted after requesting the change.
+* Changes can be, for example:
+  * Switch profile A from SIM card A to SIM card B.
+  * Increase or decrease the capacity of an existing profile.
+  * Remove or add a profile to a SIM card.
+  * Enable/Disable time service on a SIM card.
+  * etc.
+
+Note: Connection ID are not expected to change when a reconfiguration occurs.
+
+Note: the steps in phase C are repeated whenever a service is added and created from scratch.
  
-## After the Event: 
-### Step 4) Release resources
-  * The production crew through the Network API Platform releases the booked resources.
- 
+## After the event
+### Phase D: Locationm teardown
+1. Through the Network API Platform, the production crew releases the booked resources.
