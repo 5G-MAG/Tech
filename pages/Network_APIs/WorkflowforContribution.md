@@ -14,6 +14,9 @@ We welcome and encourage contributions from the broader community. If you are in
 # Required interactions to exploit network capabilities
   
 ## Pre-conditions
+
+![image](https://github.com/5G-MAG/Tech/blob/main/pages/Network_APIs/images/Workflow_Step_1.png)
+
 * The production company has set up an agreement with a network operator for usage of certain **network capabilitues** (e.g. selected from an API catalogue) and has received authentication credentials from the newotk operator authorising their use (when available).
 * The production crew (on location or located in the production centre) has access to one or several **Network API Platforms**. These platforms are accessible through any device/connectivity (e.g. Internet-acccessible website portal, command line tools, dedicated application, etc.).
   * Note: For Network API Platform access, the production crew has obtained key access tokens/keys/credentials/payment details in advance.
@@ -22,7 +25,9 @@ We welcome and encourage contributions from the broader community. If you are in
 * Production device nodes already have working "best efforts" connectivity to the network.
  
 ## Before the Event
- 
+
+![image](https://github.com/5G-MAG/Tech/blob/main/pages/Network_APIs/images/Workflow_Step_2.png)
+
 ### Phase A: Preparing devices, configuring application clients and servers, and configuring client/server flows
 * Some production device nodes are UEs; others are connected to the Data Network:
   * Example production device nodes connected to the RAN: wireless cameras, wireless camaera control units, wireless microphones, wireless talkback intercom, etc.
@@ -48,7 +53,9 @@ Note: Booking is done based on:
 5. Through the production receives connection IDs to be used for every reserved SIM/services
  
 ## During the Event
- 
+
+![image](https://github.com/5G-MAG/Tech/blob/main/pages/Network_APIs/images/Workflow_Step_3.png)
+
 ### Phase C: Location setup and configuration
 1. Production crew arrives in the venue, plugs the SIM cards and turn on the devices, connectivity is enabled based on the booked network services (See phase B).
 2. The production crew uses an application-specific API to configure the different services, matching the connection ID delivered in step B.5).
