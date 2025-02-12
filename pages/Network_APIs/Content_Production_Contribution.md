@@ -3,7 +3,7 @@ layout: default
 title: Content Production & Contribution
 parent: Network APIs
 nav_order: 0
-has_children: false
+has_children: true
 ---
 
 {: .warning }
