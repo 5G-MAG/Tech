@@ -7,7 +7,7 @@ has_children: true
 
 # Services, Applications and Network Requirements towards SDOs
 
-## 3GPP
+## Inputs to 3GPP Workshops
 
  Meeting | Title  
  -- | --
