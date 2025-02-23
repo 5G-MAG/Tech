@@ -5,7 +5,7 @@ nav_order: 0
 has_children: false
 ---
 
-<img src="/assets/images/Banner_Tech.png" /> 
+<img src="{{site.baseurl}}/assets/images/Banner_Tech.png" /> 
 
 This website provides documentation related to the work conducted within the 5G-MAG Work Items.
 
