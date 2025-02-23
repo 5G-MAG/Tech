@@ -5,9 +5,8 @@ nav_order: 0
 has_children: false
 ---
 
-<img src="{{site.baseurl}}/assets/images/5g-mag-logo-with-text.png" alt="5g-mag" style="height:50px">
+<img src="/assets/images/Banner_Tech.png" /> 
 
-# Tech
 This website provides documentation related to the work conducted within the 5G-MAG Work Items.
 
 {: .note }
