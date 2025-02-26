@@ -14,20 +14,19 @@ We welcome and encourage contributions from the broader community. If you are in
 # Network Capabilities (Network Services) for Content Production & Contribution
 
 ## Quality of Service
-- Ability to identify media/data flows coming from devices (identify of flow? application? SIM? Device?): delivery to endpoint (Application Media Server) identified by security/protocol/IP/port
-- Ability to configure new or pre-select QoS profiles
-- Ability to request attaching a QoS profile to a media/data flow
+- Ability to apply different QoS profiles to individual data flows coming from the same device.
+- Ability to separate media/data flows coming from devices
+  - Delivery to endpoint (Application Media Server) may be identified by security/protocol/IP/port
+- Ability to configure new or re-configure existing QoS profiles to be selected during runtime 
+- Ability to select at runtime a QoS profile for a media flow
 - Ability to receive ACK (success/fail)
-- Ability to reconfigure QoS profile for a given flow
 
-## Real-time information monitoring and/ Network assistance
-- Ability to receive real-time information able to influence uplink media delivery details (e.g. codec reconfiguration, bitrate reconfiguration)
-- Ability to receive notification/monitor network quality
-- Ability to receive notification on unavailable capability
+## Information monitoring, logging and/or Network assistance
+- Ability to receive information from the network
+  - real-time for QoS profile re-selection and/or e.g. codec reconfiguration, bitrate reconfiguration
+  - during runtime for troubleshooting 
+  - after the session (logging information) for post-processing
 
 ## Time Synchronization
 -	Ability to enable distribution of timing information
-
-## Logging
--	Ability to receive a report of an uplink media delivery session
  
