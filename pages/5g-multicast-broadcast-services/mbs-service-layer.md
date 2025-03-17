@@ -1,8 +1,7 @@
 ---
 layout: default
 title: MBS Service Layer Aspects
-grand_parent: References and Quick Guides
-parent: 5G Multicast Broadcast Services
+parent: 5G Multicast Broadcast Services (MBS)
 has_children: false
 nav_order: 0
 ---
