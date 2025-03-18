@@ -28,7 +28,7 @@ We welcome and encourage contributions from the broader community. If you are in
  
 ### Phase B: Network capability pre-booking
 
-<img src="./images/Workflow_Step_1.png" width="80%">
+<img src="./images/Workflow_Step_1.png" width="60%">
 
 1. Through the Network API Platform, the content provider requests network services for the population of client applications in (a) certain area/s. Possible services (network capabilities) are:
    1. *Quality-on-Demand*
@@ -48,7 +48,7 @@ Note: Booking is done based on:
  
 ## While consuming the audio streaming service
 
-<img src="./images/Workflow_Step_2.png" width="80%">
+<img src="./images/Workflow_Step_2.png" width="60%">
 
 ### Phase C: Setuop and configuration
 * The content provider configures the content provider's client application with the network access IDs delivered in step B.4.
