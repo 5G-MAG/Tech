@@ -14,7 +14,7 @@ We welcome and encourage contributions from the broader community. If you are in
 
 ## Scenario description and actors involved
 
-<img src="./images/figure_high_level_diagram.png" width="80%">
+<img src="./images/figure_high_level_diagram.png" width="60%">
 
 The actors involved are:
 
