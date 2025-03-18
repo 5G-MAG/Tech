@@ -16,10 +16,6 @@ We welcome and encourage contributions from the broader community. If you are in
 ## Pre-conditions
 
 * A content provider wishes to stream live segmented-audio over the internet, including mobile networks, to an application running on standards off-the-shelf 3GPP UEs (e.g. smartphones, connected cars, etc.).
-
-* Today, such as service would have to be delivered over-the-top, i.e. without any defined quality of service (QoS).
-* Measurements of such a service over today's mobile networks indicate that the QoS experienced by listeners may fall short of their expectations (e.g. latency and interruption-free audio playblack similar to conventional broadcast radio).
-
 * The content provider has the ability to use certain **network capabilitues** (e.g. selected from an API catalogue) and has received authentication credentials from the newotk operator authorising their use (when available).
 * The content provider has access to one or several **Network API Platforms**. These platforms are accessible through any device/connectivity (e.g. Internet-acccessible website portal, command line tools, dedicated application, etc.).
   * Note: For Network API Platform access, the content provider has obtained key access tokens/keys/credentials/payment details in advance.
