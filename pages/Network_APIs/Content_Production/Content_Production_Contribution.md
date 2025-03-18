@@ -16,7 +16,7 @@ One of the use cases identified in [Towards a comprehensive 5G-based toolbox for
 ## Scenario description and actors involved
 A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
 
-![image](./images/figure_high_level_diagram.png)
+<img src="./images/figure_high_level_diagram.png" width="80%">
 
 The actors involved are:
 -	Production manager deals with the configuration of the production equipment and the access network and has the authority to use the application that interacts with the network operator. There can be either: 
@@ -38,9 +38,9 @@ Network and Application Functions involved:
 ### Collaboration scenario #1: Direct invoking Network APIs
 The Network API Platform of a Network Provider is accessed directly from API Consumers, either deployed with the Studio Production or the Location Production functions. The API consumer can be a Web Portal, e.g. offered by the CSP. Alternatively, the API consumers can be embedded production devices like a Vision Mixer or a production orchestration solution ([NMOS](https://specs.amwa.tv/nmos/branches/main/docs/Technical_Overview.html)  concept). The API consumer functions can be integrated in media servers, responsible for receiving the video stream from the application client.
 
-![image](./images/figure_collaboration_1.png)
+<img src="./images/figure_collaboration_1.png" width="80%">
 
 ### Collaboration scenario #2: Invoking Network APIs via an Aggregator
 The Network API Platform of a Network Provider is accessed via an Aggregator API Platform. The Aggregator Platforms harmonize capabilities offered by different Network Providers and routes customer requests to them.
 
-![image](./images/figure_collaboration_2.png)
+<img src="./images/figure_collaboration_2.png" width="80%">
