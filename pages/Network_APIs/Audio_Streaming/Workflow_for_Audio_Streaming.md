@@ -23,13 +23,12 @@ We welcome and encourage contributions from the broader community. If you are in
 ## Before consuming the audio streaming service
 
 ### Phase A: Preparing the audio streaming application
-![image](./images/Workflow_Step_1.png)
 
 * All devices are 3GPP UEs (e.g. smartphones, connected cars, etc.) with a content provider's client application (e.g. radio player app) installed.
  
 ### Phase B: Network capability pre-booking
 
-![image](./images/Workflow_Step_2.png)
+<img src="./images/Workflow_Step_1.png" width="80%">
 
 1. Through the Network API Platform, the content provider requests network services for the population of client applications in (a) certain area/s. Possible services (network capabilities) are:
    1. *Quality-on-Demand*
@@ -49,7 +48,7 @@ Note: Booking is done based on:
  
 ## While consuming the audio streaming service
 
-![image](./images/Workflow_Step_3.png)
+<img src="./images/Workflow_Step_2.png" width="80%">
 
 ### Phase C: Setuop and configuration
 * The content provider configures the content provider's client application with the network access IDs delivered in step B.4.
