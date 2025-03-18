@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Requirements
-parent: Audio Streaming Apps
+parent: Audio Streaming App
 grand_parent: Network APIs
 nav_order: 1
 has_children: false
