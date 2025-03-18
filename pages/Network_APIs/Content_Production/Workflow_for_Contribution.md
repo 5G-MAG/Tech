@@ -26,7 +26,7 @@ We welcome and encourage contributions from the broader community. If you are in
 
 ### Phase A: Preparing devices, configuring application clients and servers, and configuring client/server flows
 
-<img src="./images/Workflow_Step_1.png" width="80%">
+<img src="./images/Workflow_Step_1.png" width="60%">
 
 * Some production device nodes are UEs; others are connected to the Data Network:
   * Example production device nodes connected to the RAN: wireless cameras, wireless camaera control units, wireless microphones, wireless talkback intercom, etc.
@@ -35,7 +35,7 @@ We welcome and encourage contributions from the broader community. If you are in
  
 ### Phase B: Event planning and pre-booking
 
-<img src="./images/Workflow_Step_2.png" width="80%">
+<img src="./images/Workflow_Step_2.png" width="60%">
 
 1. Through the Network API Platform, the production crew (on location or located in the production centre) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for).
    * Example: QoD available, connectivity monitoring available, Timing as a service available, edge compute instantiation, etc.
@@ -59,7 +59,7 @@ Note: Booking is done based on:
  
 ## During the event
 
-<img src="./images/Workflow_Step_3.png" width="80%">
+<img src="./images/Workflow_Step_3.png" width="60%">
 
 ### Phase C: Location setup and configuration
 1. Production crew arrives in the venue, plugs the SIM cards and turn on the devices, connectivity is enabled based on the booked network services (See phase B).
