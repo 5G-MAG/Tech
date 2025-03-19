@@ -30,19 +30,14 @@ We welcome and encourage contributions from the broader community. If you are in
 ## Time Synchronization
 -	Ability to enable distribution of timing information
 
-# To be solved by the production system (e.g. NMOS)
-- Tag a device+stream+flow with a human-readable identifier that can be mapped to an IP address and port number
+## Out of scope
+- Tag the combination device+stream+flow with a human-readable identifier that can be mapped to an IP address and port number (e.g. applying the NMOS framework).
 
+# Considerations on Devices
 
+## Device Identification
+- Ability to obtain uniquely identify a devices against the network operator
 
-
-## Add section on devices?
-
-## Connectivity related
-
-### Device Identification
-- Ability to obtain a device ID to uniquely identify a devices against the network operator
-
-### Data flow identifier
-- Ability to identify the different data flows (PDU session ID??) per device
+## Data flow identifier
+- Ability to identify the different data flows within a device
 
