@@ -14,7 +14,7 @@ We welcome and encourage contributions from the broader community. If you are in
 # Network Capabilities (Network Services) for Content Production & Contribution
 
 ## Quality of Service
-- Ability to apply different QoS profiles to individual data flows coming from the same production device node
+- Ability to request different QoS profiles for individual data flows coming from the same production device node
 - Ability to separate media/data flows coming from the same production device node
   - Delivery to endpoint (Application Media Server) may be identified by security/protocol/IP/port
 - Ability to configure new or re-configure existing QoS profiles to be selected during runtime 
