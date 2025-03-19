@@ -15,7 +15,7 @@ We welcome and encourage contributions from the broader community. If you are in
 
 ## Quality of Service
 Today, audio streaming services would have to be delivered over-the-top, i.e. without any defined quality of service (QoS). Measurements of such a service over today's mobile networks indicate that the QoS experienced by listeners may fall short of their expectations (e.g. latency and interruption-free audio playblack similar to conventional broadcast radio). Therefore, the following requirements are defined:  
-- Ability to set quality of service requirements for a given location
+- Ability to to request different QoS profiles for individual data flows being distributed across a targeted service area
 - Ability to provision for realiably low-latency
 - Delivery to endpoint (Application Media Server) may be identified by security/protocol/IP/port
 - Ability to configure new or re-configure existing QoS profiles to be selected during runtime 
