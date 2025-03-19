@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Workflow
-parent: Audio Streaming App
+title: Live Media Distribution
 grand_parent: Network APIs
 nav_order: 0
 has_children: false
