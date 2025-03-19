@@ -20,3 +20,6 @@ Please refer to the [Tech repository](https://github.com/5G-MAG/Tech/tree/main/p
 - Documentation available on this topic is listed [here](https://5g-mag.github.io/Tech/pages/Network_APIs/).
 ### Network Capability Exposure and APIs for Content Production and Contribution Scenarios
 - Documentation available [here](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production_Contribution.html).
+
+## Non-Terrestrial Networks
+- Documentation available on this topic is listed [here](https://5g-mag.github.io/Tech/pages/NTN/).
