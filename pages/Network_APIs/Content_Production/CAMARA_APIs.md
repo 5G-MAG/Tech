@@ -25,6 +25,7 @@ Ability to select at runtime a QoS profile for a media flow |
 Ability to receive ACK (success/fail) | 
 
 ## Information monitoring, logging and/or Network assistance
+
  Requirement | CAMARA APIs  
  -- | --
 Ability to receive real-time information from the network | 
@@ -32,6 +33,7 @@ Ability to receive information from the network during runtime for troubleshooti
 Ability to receive information from the network after the session (logging information) for post-processing | 
 
 ## Time Synchronization
+
  Requirement | CAMARA APIs  
  -- | --
 Ability to enable distribution of timing information | 
