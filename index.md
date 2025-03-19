@@ -10,7 +10,8 @@ has_children: false
 This website provides documentation related to the work conducted within the 5G-MAG Work Items.
 
 {: .note }
-More information on Topics and Technology can be found at [https://www.5g-mag.com/topics](https://www.5g-mag.com/topics) and [https://www.5g-mag.com/technology](https://www.5g-mag.com/technology)
+More information on Topics and Technology can be found at [https://www.5g-mag.com/technology](https://www.5g-mag.com/technology).
+Please refer to the [Tech repository](https://github.com/5G-MAG/Tech/tree/main/pages) to provide updates to this documentation.
 
 # Topics
 ## 5G Multicast Broadcast Services (MBS)
