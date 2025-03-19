@@ -11,6 +11,33 @@ has_children: false
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members as part of **WI: Network Exposure and APIs Supporting Media Services and Applications**
 We welcome and encourage contributions from the broader community. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
+# Requirements coverage by CAMARA APIs
+
+## Quality of Service
+
+ Requirement | CAMARA APIs  
+ -- | --
+Ability to apply different QoS profiles to individual data flows coming from the same production device node | 
+Ability to separate media/data flows coming from the same production device node | 
+Delivery to endpoint (Application Media Server) may be identified by security/protocol/IP/port | 
+Ability to configure new or re-configure existing QoS profiles to be selected during runtime  | 
+Ability to select at runtime a QoS profile for a media flow | 
+Ability to receive ACK (success/fail) | 
+
+## Information monitoring, logging and/or Network assistance
+
+ Requirement | CAMARA APIs  
+ -- | --
+Ability to receive real-time information from the network | 
+Ability to receive information from the network during runtime for troubleshooting | 
+Ability to receive information from the network after the session (logging information) for post-processing | 
+
+## Time Synchronization
+
+ Requirement | CAMARA APIs  
+ -- | --
+Ability to enable distribution of timing information | 
+
 # CAMARA APIs within the scope of Content Production & Contribution
 
 ## General information
@@ -29,9 +56,6 @@ We welcome and encourage contributions from the broader community. If you are in
   - define intents in the form of policy thresholds for QoS metrics against the device and the application service. The API service will alert the consumers if and when the policy has breached.
   - NOTE: The scope of this API family should be limited (at least at a first stage) to 4G and 5G.
 
-#### Application to Content Production & Contribution
-
-
 ### [DeviceIdentifier](https://github.com/camaraproject/DeviceIdentifier)
 
 #### Scope
@@ -39,9 +63,6 @@ We welcome and encourage contributions from the broader community. If you are in
 - It provides the customer with the ability to:
   - Retrieve the current identity (IMEI) of the mobile device being used by a given mobile subscriber
   - Retrieve the type (manufacturer and model) of the mobile device being used by a given mobile subscriber
-
-#### Application to Content Production & Contribution
-
 
 ### [DeviceLocation](https://github.com/camaraproject/DeviceLocation)
 
@@ -53,9 +74,6 @@ We welcome and encourage contributions from the broader community. If you are in
   - subscribe and receive notifications about a device entering or leaving certain location (geofencing-subscriptions).
   - NOTE: The scope of this API family should be limited (at least at a first stage) to 4G and 5G.
 
-#### Application to Content Production & Contribution
-
-
 ### [DeviceStatus](https://github.com/camaraproject/DeviceStatus)
 
 #### Scope
@@ -65,18 +83,12 @@ We welcome and encourage contributions from the broader community. If you are in
   - check if a device is roaming, and in which country
   - receive notifications if the connectivity or roaming status of the device changes
 
-#### Application to Content Production & Contribution
-
-
 ### [NetworkSliceBooking](https://github.com/camaraproject/NetworkSliceBooking)
 
 #### Scope
 - Service APIs for “Network Slice Booking” (see APIBacklog.md)
 - It provides the customer with the ability to:
   - reserve, dynamically provisioning, query, dynamically delete a slice with customized SLA assurance capabilities, customized service duration, expected slice covered locations.
-
-#### Application to Content Production & Contribution
-
 
 ### [QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
@@ -87,6 +99,3 @@ We welcome and encourage contributions from the broader community. If you are in
     - Session mode, for a specific duration
     - Provision mode, indefinitely for each time the device connects to the same access network
   - get notification if the network cannot fulfill
-
-#### Application to Content Production & Contribution
-
