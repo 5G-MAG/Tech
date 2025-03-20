@@ -5,4 +5,4 @@ nav_order: 2
 has_children: true
 ---
 
-# Network APIs
+# Network Capability Exposure and APIs
