@@ -15,11 +15,13 @@ Please refer to the [Tech repository](https://github.com/5G-MAG/Tech/tree/main/p
 
 # Topics
 ## 5G Multicast Broadcast Services (MBS)
-- Documentation available on this topic is listed [here](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/).
+- Documentation available on this topic is listed [here](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/5g-multicast-broadcast-services.html).
 ## Network APIs
-- Documentation available on this topic is listed [here](https://5g-mag.github.io/Tech/pages/Network_APIs/).
+- Documentation available on this topic is listed [here](https://5g-mag.github.io/Tech/pages/Network_APIs/Network_APIs.html).
 ### Network Capability Exposure and APIs for Content Production and Contribution Scenarios
 - Documentation available [here](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production_Contribution.html).
+### Network Capability Exposure and APIs for Live Media Streaming
+- Documentation available [here](https://5g-mag.github.io/Tech/pages/Network_APIs/Live_Media_Distribution/Live_Media_Distribution.html).
 
 ## Non-Terrestrial Networks
 - Documentation available on this topic is listed [here](https://5g-mag.github.io/Tech/pages/NTN/).
