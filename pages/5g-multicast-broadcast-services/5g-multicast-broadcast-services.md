@@ -7,6 +7,8 @@ has_children: true
 
 # 5G Multicast Broadcast Services (MBS)
 
+<img src="../../assets/images/title_MBS.png" width="60%">
+
 In 2019, 3GPP identified a number of services across different industry verticals that share the requirement of conveying common data to multiple recipients at the same time - for example public safety, V2X, group communications and internet of things (IoT). 
 
 As multicast and broadcast have the potential to deliver ‘common data’ services more efficiently than unicast 3GPP has since standardised these capabilities in the 5G system as 5G New Radio Multicast and Broadcast Services (5G-NR MBS). 5G-NR MBS will be substantially complete in Release 17 (Rel-17), with some (mainly service) aspects carrying over to Rel-18.
