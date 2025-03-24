@@ -6,6 +6,7 @@ has_children: true
 ---
 
 # Network Capability Exposure and APIs
+<img src="../../assets/images/title_NetworkAPI.png" width="60%">
 
 ##  Content Production and Contribution Scenarios
 - Documentation available [here](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Content_Production_Contribution.html).
