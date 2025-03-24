@@ -21,7 +21,7 @@ We welcome and encourage contributions from the broader community. If you are in
 *	The Application Service Provider additionally provisions these as multicast services in the 5G Core of the NTN.
 
 {: .note }
-* Check how to provision	multicast services.
+- Check how to provision	multicast services.
 
 **Network and access to services**
 *	The gNodeB of the NTN (“Donor gNodeB”) is deployed either at the ground station (Transparent Payload architecture) or on board the spacecraft (Regenerative Payload, not illustrated).
