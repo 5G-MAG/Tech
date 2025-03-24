@@ -20,7 +20,8 @@ We welcome and encourage contributions from the broader community. If you are in
 * An Application Service Provider makes available over the Internet services (e.g. TV, radio, any linear/live streaming service) which users can access through an application installed on their devices (e.g. a smartphone, a smart TV, tablet, etc.).
 *	The Application Service Provider additionally provisions these as multicast services in the 5G Core of the NTN.
 
-{: .important } Check how to provision	multicast services_
+{: .note }
+* Check how to provision	multicast services.
 
 **Network and access to services**
 *	The gNodeB of the NTN (“Donor gNodeB”) is deployed either at the ground station (Transparent Payload architecture) or on board the spacecraft (Regenerative Payload, not illustrated).
