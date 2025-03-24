@@ -17,6 +17,8 @@ In principle, 5G-NR MBS equipped mobile networks would be able to use the most s
 
 Media services, for example linear/live radio and TV, concurrently requested by a number of users, although not explicitly identified as a relevant use case have many characteristics in common with the use cases that were identified, and so may also benefit from 5G-NR MBS.
 
+{: .note } Editor's note: Include the stack from SA4 to RAN1
+
 These pages provide an introduction to 5G-NR MBS in the context of media distribution:
 
 ## [MBS Service Layer Aspects](./mbs-service-layer.html)
