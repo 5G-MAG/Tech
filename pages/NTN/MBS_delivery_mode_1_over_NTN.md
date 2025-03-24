@@ -32,6 +32,11 @@ Check how to provision	multicast services.
 *	The NTN has the ability to detect concurrent consumption of services by multiple users and may use parameters such as session counting to trigger unicast-to-multicast switching at upper layers.
 *	The Donor gNodeB is able to autonomously switch the delivery mode of multicast packets between point-to-point to point-to-multipoint according to the number of UEs attempting to receive multicast user services concurrently.
 
+{: .note }
+Check provisioning of multicast services which can be delivered either by means of point-to-point of point-to-multipoint.
+Optionally, include 5GMS architecture.
+Check detection of concurrent consumption of service by multiple users and session counting.
+
 **Device considerations**
 *	User Equipment directly connected to the NTN (including UEs or a Mobile Relay Node in a moving platform) requires subscription and registration with the NTN operator in order to obtain mobile broadband connectivity and access to the desired services.
 *	In addition, the NTN operator authorises UEs that are able to consume multicast user services.
