@@ -20,6 +20,8 @@ We welcome and encourage contributions from the broader community. If you are in
 * An Application Service Provider makes available over the Internet services (e.g. TV, radio, any linear/live streaming service) which users can access through an application installed on their devices (e.g. a smartphone, a smart TV, tablet, etc.).
 *	The Application Service Provider additionally provisions these as multicast services in the 5G Core of the NTN.
 
+{: .note } Check how to provision	multicast services_
+
 **Network and access to services**
 *	The gNodeB of the NTN (“Donor gNodeB”) is deployed either at the ground station (Transparent Payload architecture) or on board the spacecraft (Regenerative Payload, not illustrated).
 *	The NTN operator offers mobile broadband access to their subscribed users.
@@ -39,7 +41,7 @@ We welcome and encourage contributions from the broader community. If you are in
 *	For critical applications, lossless mobility without interruption should be guaranteed when UEs transit across different satellite coverage areas, even when those different coverage areas are served by different NTNs operated by the same NTN operator (e.g. from LEO to GEO with a common 5G Core). Interruption-free multicast user service should be guaranteed when a UE is served from a gNodeB which switches multicast packet delivery from point-to-multipoint to point-to-point communication and vice versa.
 *	For services with less stringent requirements, some level of multicast user service interruption may be tolerable when a UE transits across different coverage areas, including when those different coverage areas are served by different NTNs. Some level of interruption may be tolerable when a UE is served from a gNodeB which switches multicast packet delivery from point-to-multipoint to point-to-point communication and vice versa.
 
-## Deployment architecture with MBS User Services
+## Deployment architecture with MBS User Services to regular 3GPP UEs
 
 Proposal of baseline architecture
 
