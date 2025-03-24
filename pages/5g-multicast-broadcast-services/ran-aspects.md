@@ -46,9 +46,10 @@ Delivery mode 1 payloads are intended for multiple UEs served by a particular gN
 Delivery mode 1 can only be received by compatible UEs in RRC_Connected state.
 Delivery mode 1 is not used for a broadcast MBS session. 
 
+{: .note } Editor's note: Check the options for feedback (NACK,...)
+
 ### Delivery mode 2 (Broadcast)
 gNodeBs always uses this transmission mode for a Broadcast MBS Session (which always uses the point-to-multipoint RAN delivery method).
 Delivery mode 2 does not support HARQ feedback nor retransmissions. Service continuity, as a UE moves from one cell to another, is supported (the UE can read the MCCH/MTCH from neighbour cells), however lossless handover is not supported. Service breaks may therefore occur as the UE moves from one cell to another. Broadcast may therefore be considered to offer a lower quality of service than delivery mode 1 (Multicast). 
 Delivery Mode 2 payloads are intended for any UE served by a particular gNodeB. The payload is scrambled using a shared key known to the gNodeB. The scrambling key is broadcast in the XXXX channel to all listening UEs.
 Delivery mode 2 can be received by UEs in all RRC states (RRC_Connected, RRC_Idle and RRC_Inactive).
-
