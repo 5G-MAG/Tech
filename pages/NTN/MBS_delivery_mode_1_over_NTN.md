@@ -53,6 +53,4 @@ Proposal of baseline architecture
 
 <img src="./images/figure_MBS_Multicast_NTN.png" width="80%">
 
-
-
-## Deployment architecture with 5G Media Streaming and MBS User Services
+## Deployment architecture with MBS User Services to Moving Platform
