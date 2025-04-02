@@ -17,9 +17,13 @@ One of the use cases identified in [Towards a comprehensive 5G-based toolbox for
 
 {: .note }
 TBC - Single UE / UE with DSDA (two UEs om 3GPP perspective - bonding may possible - how is the UE able  to identify that two SIMs can be used simultaneously?) / Cellular-bonding backpack
+Add a state model / pre-Live
 
 ## Outside Broadcast: Scenario description and actors involved
 A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
+
+{: .note }
+TBC - (2 options: production and mix locally and program feed back to MCR - wireless/wireless wired/wireless wireless-to-MCR) Add a state model / rehearsal
 
 <img src="./images/figure_high_level_diagram.png" width="60%">
 
