@@ -13,11 +13,12 @@ We welcome and encourage contributions from the broader community. If you are in
 # Network Capability Exposure and APIs for Content Production and Contribution Scenarios
 One of the use cases identified in [Towards a comprehensive 5G-based toolbox for live media production](https://www.5g-mag.com/post/towards-a-comprehensive-5g-based-toolbox-for-live-media-production) that may benefit from specific network capabilities beyond best-effort connectivity is professional electronics newsgathering (ENG) or live streaming contribution. The ability of networks to expose capabilities to third-parties and for these to configure and access available network resources may improve the way media traffic is delivered on networks. This document identified a series of requirements, processes and collaboration scenarios related to the exposure of network capabilities to applications.
 
+## Newsgathering and mobile journalism: Scenario description and actors involved
 
 {: .note }
-We should add a simpler case for "news gathering or mobile journalism"
+TBC
 
-## Scenario description and actors involved
+## Small-scale production: Scenario description and actors involved
 A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
 
 <img src="./images/figure_high_level_diagram.png" width="60%">
