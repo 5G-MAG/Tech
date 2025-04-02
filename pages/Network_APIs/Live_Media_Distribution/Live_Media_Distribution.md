@@ -18,4 +18,4 @@ We welcome and encourage contributions from the broader community. If you are in
 
 The actors involved are:
 
-Today, audio streaming services would have to be delivered over-the-top, i.e. without any defined quality of service (QoS). Measurements of such a service over today's mobile networks indicate that the QoS experienced by listeners may fall short of their expectations (e.g. latency and interruption-free audio playblack similar to conventional broadcast radio). 
+Today, audio streaming services would have to be delivered over-the-top, i.e. without any defined quality of service (QoS). Measurements of such a service over today's mobile networks indicate that the QoS experienced by listeners may fall short of their expectations (e.g. interruption-free playback delivered with a delay comparable with linear broadcast radio/television). 
