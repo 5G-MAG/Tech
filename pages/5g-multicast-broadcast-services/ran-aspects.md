@@ -31,6 +31,10 @@ The PTP RAN delivery method is not used for broadcast MBS sessions.
 5G-NR MBS compatible gNodeBs support three different delivery modes at Layer 2: delivery mode 1 (multicast), delivery mode 2 (broadcast), and the unicast delivery mode, where the latter is italicised as it does not reflect a defined 3GPP’s term but is used in this document to describe the ‘default unicast’ delivery mode, absent 5G-NR MBS. 
 
 ### Unicast delivery mode
+
+{: .note }
+Is unicast delivery mode a term, which is used in 3GPP specifications? Could it be enough with point-to-point RAN delivery method or point-to-point delivery method. The word unicast can easily be confused with IP Unicast.
+
 gNodeBs always use the unicast delivery mode for the point-to-point RAN delivery method. This includes the delivery of:
 *	Unicast packets arriving at reference point N3 from a PDU Session.
 *	MBS packets from a Multicast MBS Session arriving at reference point N3 in a PDU Session corresponding to 5GC individual MBS traffic delivery.
