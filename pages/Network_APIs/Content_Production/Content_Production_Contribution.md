@@ -18,7 +18,7 @@ One of the use cases identified in [Towards a comprehensive 5G-based toolbox for
 {: .note }
 TBC
 
-## Small-scale production: Scenario description and actors involved
+## Outside Broadcast: Scenario description and actors involved
 A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
 
 <img src="./images/figure_high_level_diagram.png" width="60%">
