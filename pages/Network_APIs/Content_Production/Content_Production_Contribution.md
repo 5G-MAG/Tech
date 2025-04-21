@@ -10,16 +10,29 @@ has_children: true
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members as part of **WI: Network Exposure and APIs Supporting Media Services and Applications**
 We welcome and encourage contributions from the broader community. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# Network Capability Exposure and APIs for Content Production and Contribution Scenarios
-One of the use cases identified in [Towards a comprehensive 5G-based toolbox for live media production](https://www.5g-mag.com/post/towards-a-comprehensive-5g-based-toolbox-for-live-media-production) that may benefit from specific network capabilities beyond best-effort connectivity is professional electronics newsgathering (ENG) or live streaming contribution. The ability of networks to expose capabilities to third-parties and for these to configure and access available network resources may improve the way media traffic is delivered on networks. This document identified a series of requirements, processes and collaboration scenarios related to the exposure of network capabilities to applications.
+# Network Capability Exposure and APIs for Content Production and Contribution
+The exposure of network capabilities to applications representes an opportunity to exploit advanced network features beyond best-effort connectivity. Examples of network capabilities maz include on-demand quality, user equipment (UE) management, precise time synchronization,... Accessing and utilizing the desired features can be intricate and inconsistent across different networks. Several initiatives are taking shape to explore the opportunities behind Network APIs (exposing network capabilities to API consumers), offering high-level abstractions of underlying network functionalities to simplify resource utilization for non-network experts.
 
-## Newsgathering and mobile journalism: Scenario description and actors involved
+Use cases identified in [Towards a comprehensive 5G-based toolbox for live media production](https://www.5g-mag.com/post/towards-a-comprehensive-5g-based-toolbox-for-live-media-production) that may benefit from specific network capabilities beyond best-effort connectivity include professional electronics newsgathering (ENG), live streaming contribution and media production applications. This documentation identifies a series of requirements, processes and collaboration scenarios related to the exposure of network capabilities to applications.
+
+## Newsgathering and mobile journalism
+
+### Description
+
+Single UE
+UE with DSDA
+Cellular Bonding Backpack
 
 {: .note }
 TBC - Single UE / UE with DSDA (two UEs om 3GPP perspective - bonding may possible - how is the UE able  to identify that two SIMs can be used simultaneously?) / Cellular-bonding backpack
 Add a state model / pre-Live
 
-## Outside Broadcast: Scenario description and actors involved
+### Actors involved
+
+## Outside Broadcast
+
+### Description
+
 A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
 
 {: .note }
@@ -27,6 +40,7 @@ TBC - (2 options: production and mix locally and program feed back to MCR - wire
 
 <img src="./images/figure_high_level_diagram.png" width="60%">
 
+### Actors involved
 The actors involved are:
 -	Production manager deals with the configuration of the production equipment and the access network and has the authority to use the application that interacts with the network operator. There can be either: 
 -	a Location Production Manager, who is together with the Production Crew in the field, or
