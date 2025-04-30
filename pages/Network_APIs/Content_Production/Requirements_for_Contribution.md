@@ -36,7 +36,7 @@ This is a list of network capabilities required to realize the scenarios describ
 - Ability to establish a voice service across the intercom devices deployed at the production location or between the production center and the production location.
 
 {: .note}
-Focus on the QoS for Intercom - a voice service offered by the network may not be so relevant (alternative solutions, WebRTC). But multicast, PTT may be of use.
+Focus on the QoS for Intercom - a voice service offered by the network may not be so relevant (alternative solutions, WebRTC). But multicast, MCPTT may be of use.
 
 ## Out of scope
 - Tag the combination device+stream+flow with a human-readable identifier that can be mapped to an IP address and port number (e.g. applying the NMOS framework).
