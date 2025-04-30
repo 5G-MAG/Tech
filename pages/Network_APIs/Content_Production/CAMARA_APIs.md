@@ -44,14 +44,37 @@ Ability to enable distribution of timing information |
  -- | --
 Ability to establish a voice service across the intercom devices deployed at the production location or between the production center and the production location | 
 
+# Considerations for API selection
 
-# CAMARA APIs within the scope of Content Production & Contribution
+## Identification of devices
+  - Devices should be uniquely identifiable during operation
+  - Devices should be dynamically added or deleted during operation and attachable to given network capabilities
+  - Each device should only access the network capabilities which have been assigned during booking.
+
+## Device on-boarding and API consumer on-boarding
+- TBD How to obtain credentials
+
+## Discovery of network capabilities
+- TBD How to discover network capabilities
+
+# CAMARA APIs and related aspects within the scope of Content Production & Contribution
 
 ## General information
 
 - CAMARA Repositories in GitHub: [Link](https://github.com/orgs/camaraproject/repositories?q=sort%3Aname-asc)
 - API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
 - Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
+
+## Device identification
+
+### Description
+Device identifiers include:
+  - `ipv4Address`
+  - `ipv6Address`
+  - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
+  - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
+
+### Usage
 
 ## [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
