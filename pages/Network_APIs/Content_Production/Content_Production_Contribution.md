@@ -25,6 +25,10 @@ The content is delivered using one of the following solutions:
   - A single UE (e.g. a smartphone) equipped with at least two SIM cards (or eSIMs) each one connected to a different carrier of the same mobile network or connected to different mobile networks.
   - A device with multiple UEs (e.g. a cellular bonding backpack) equipment with multiple SIM cards each one connected to a different carrier of the same mobile network or connected to different mobile networks.
 
+{: .note }
+A single UE with 2 SIMs or 2 UEs and 2 SIMs? (In principle 2 UEs and 2 SIMs within a single device) - With DSDA: 2 parallel data sessions.
+Improve cellular bonding for smartphone - it is unclear if cellular bonding is supported in a smartphone. ATSSS (3GPP + non-3GPP) is within the scope of a single operator. 3GPP+3GPP is not in the scope of ATSSS.
+
 Note that multi-SIM devices enable users to utilize multiple cellular connections simultaneously. Dual-SIM Dual-Active or DSDA enable this use case with two SIM cards. This is different to Dual-SIM Dual-Standby (DSDS), which allows only one SIM to stay connected with active data at a time. 
 5G DSDA enhances data performance for end users by enabling the use of two data connections concurrently across SIM1 and SIM2, with the option to choose the best of them or aggregate both, if necessary, to reach higher data throughput. 
 
