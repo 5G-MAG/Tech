@@ -19,42 +19,55 @@ Use cases identified in [Towards a comprehensive 5G-based toolbox for live media
 
 ### Description
 
-Single UE
-UE with DSDA
-Cellular Bonding Backpack
+A journalist in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
+The content is delivered using one of the following solutions:
+  - A single UE (e.g. a smartphone) equipped with a single SIM card (or eSIM) connected to the mobile network.
+  - A single UE (e.g. a smartphone) equipped with at least two SIM cards (or eSIMs) each one connected to a different carrier of the same mobile network or connected to different mobile networks.
+  - A device with multiple UEs (e.g. a cellular bonding backpack) equipment with multiple SIM cards each one connected to a different carrier of the same mobile network or connected to different mobile networks.
 
-{: .note }
-TBC - Single UE / UE with DSDA (two UEs om 3GPP perspective - bonding may possible - how is the UE able  to identify that two SIMs can be used simultaneously?) / Cellular-bonding backpack
-Add a state model / pre-Live
+Note that multi-SIM devices enable users to utilize multiple cellular connections simultaneously. Dual-SIM Dual-Active or DSDA enable this use case with two SIM cards. This is different to Dual-SIM Dual-Standby (DSDS), which allows only one SIM to stay connected with active data at a time. 
+5G DSDA enhances data performance for end users by enabling the use of two data connections concurrently across SIM1 and SIM2, with the option to choose the best of them or aggregate both, if necessary, to reach higher data throughput. 
 
 ### Actors involved
+The actors involved are:
+  - Streamer/Creator/Crew, uses the content acquisition equipment to capture media, uses the network and sends data to the server.
+  -	a Studio Production Manager, who is located e.g. within the production centre.
+  -	Network operator, provides the network used for the production. A set of Network Capabilities can be configured through APIs. The set of offered APIs are called Network APIs in the following.
+  -	Aggregator (optional), provides access to different Network Operators. See [GSMA Open Gateway](https://www.gsma.com/solutions-and-impact/gsma-open-gateway/) and [GSMA Operator Platform](https://www.gsma.com/solutions-and-impact/technologies/networks/operator-platform-hp/). 
+
+Network and Application Functions involved:
+  -	Production Device (not depicted), used by the Streamer/Creator. The device contains at least one UE with a Subscription (SIM) and can host one or more client applications. A client application can be a video capturing and encoding application, which generates and sends a continuous video stream to a receiving Media Server. 
+  -	Network API Platform, used by the Network Operator for exposing Network Capabilities. The Network API Platform offers a collection of functions e.g. for Authentication / Authorization of the API Invoker (AuthZ Function) and different API Provider functions for different network capabilities. Beside this, there may be more functions, e.g. for API usage metering, API usage throttling, etc.
+  -	Aggregator API Platform (optional) is located in the path between the Network API Platforms and the API Invoker. It grants access to Network API Platforms from different Network Providers. 
+  -	API Consumer / Invoker, used by the Production equipment (functions) to interact with the Network API Platform of a Network Provider.    
+  -	Media Servers (not depicted) are typically located in the Studio Production Hub (operated by the Production Manager) and interact with the production devices, e.g. receiving video or audio streams.
 
 ## Outside Broadcast
 
 ### Description
 
-A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
-
-{: .note }
-TBC - (2 options: production and mix locally and program feed back to MCR - wireless/wireless wired/wireless wireless-to-MCR) Add a state model / rehearsal
+A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises. This scenario may involve two different cases:
+  - A network deployed in the field or at a venue that is used to connect devices and manage the production locally. The final program output may be generated locally and delivered to the production centre using one of the options described in the "newsgathering and mobile journalism" scenario, for instance, by means of a device connected to a mobile network.
+  - Devices are connected to the network with the production managed remotely and multiple devices contributing data to the production centre.
 
 <img src="./images/figure_high_level_diagram.png" width="60%">
 
 ### Actors involved
 The actors involved are:
--	Production manager deals with the configuration of the production equipment and the access network and has the authority to use the application that interacts with the network operator. There can be either: 
--	a Location Production Manager, who is together with the Production Crew in the field, or
--	a Studio Production Manager, who is located e.g. within the production centre.
+  -	Production manager deals with the configuration of the production equipment and the access network and has the authority to use the application that interacts with the network operator. There can be either: 
+    -	a Location Production Manager, who is together with the Production Crew in the field, or
+    -	a Studio Production Manager, who is located e.g. within the production centre.
+
   - Streamer/Creator/Crew, uses the content acquisition equipment to capture media, uses the network and sends data to the server.
--	Network operator, provides the network used for the production. A set of Network Capabilities can be configured through APIs. The set of offered APIs are called Network APIs in the following.
--	Aggregator (optional), provides access to different Network Operators. See [GSMA Open Gateway](https://www.gsma.com/solutions-and-impact/gsma-open-gateway/) and [GSMA Operator Platform](https://www.gsma.com/solutions-and-impact/technologies/networks/operator-platform-hp/). 
+  -	Network operator, provides the network used for the production. A set of Network Capabilities can be configured through APIs. The set of offered APIs are called Network APIs in the following.
+  -	Aggregator (optional), provides access to different Network Operators. See [GSMA Open Gateway](https://www.gsma.com/solutions-and-impact/gsma-open-gateway/) and [GSMA Operator Platform](https://www.gsma.com/solutions-and-impact/technologies/networks/operator-platform-hp/). 
 
 Network and Application Functions involved:
--	Production Device (not depicted), used by the crew during a production. Each device contains at least one UE with a Subscription (SIM) and can host one or more client applications. A client application can be a video capturing and encoding application, which generates and sends a continuous video stream to a receiving Media Server. 
--	Network API Platform, used by the Network Operator for exposing Network Capabilities. The Network API Platform offers a collection of functions e.g. for Authentication / Authorization of the API Invoker (AuthZ Function) and different API Provider functions for different network capabilities. Beside this, there may be more functions, e.g. for API usage metering, API usage throttling, etc.
--	Aggregator API Platform (optional) is located in the path between the Network API Platforms and the API Invoker. It grants access to Network API Platforms from different Network Providers. 
--	API Consumer / Invoker, used by the Production equipment (functions) to interact with the Network API Platform of a Network Provider.    
--	Media Servers (not depicted) are typically located in the Studio Production Hub (operated by the Production Manager) and interact with the production devices, e.g. receiving video or audio streams.
+  -	Production Device (not depicted), used by the crew during a production. Each device contains at least one UE with a Subscription (SIM) and can host one or more client applications. A client application can be a video capturing and encoding application, which generates and sends a continuous video stream to a receiving Media Server. 
+  -	Network API Platform, used by the Network Operator for exposing Network Capabilities. The Network API Platform offers a collection of functions e.g. for Authentication / Authorization of the API Invoker (AuthZ Function) and different API Provider functions for different network capabilities. Beside this, there may be more functions, e.g. for API usage metering, API usage throttling, etc.
+  -	Aggregator API Platform (optional) is located in the path between the Network API Platforms and the API Invoker. It grants access to Network API Platforms from different Network Providers. 
+  -	API Consumer / Invoker, used by the Production equipment (functions) to interact with the Network API Platform of a Network Provider.    
+  -	Media Servers (not depicted) are typically located in the Studio Production Hub (operated by the Production Manager) and interact with the production devices, e.g. receiving video or audio streams.
 
 ## Collaboration scenarios for the provisioning of network capabilities
 
