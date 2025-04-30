@@ -13,7 +13,7 @@ We welcome and encourage contributions from the broader community. If you are in
 
 # Requirements coverage by CAMARA APIs
 
-## Quality of Service
+## Media delivery with Quality of Service (QoS)
 
  Requirement | CAMARA APIs  
  -- | --
@@ -38,6 +38,13 @@ Ability to receive information from the network after the session (logging infor
  -- | --
 Ability to enable distribution of timing information | 
 
+## Voice service for Intercom
+
+ Requirement | CAMARA APIs  
+ -- | --
+Ability to establish a voice service across the intercom devices deployed at the production location or between the production center and the production location | 
+
+
 # CAMARA APIs within the scope of Content Production & Contribution
 
 ## General information
@@ -46,15 +53,173 @@ Ability to enable distribution of timing information |
 - API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
 - Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
 
-## List of relevant APIs
+## [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
-### [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
+### Description
+The Connectivity Insights API allows an application developer to ask the network the likelihood that an application's networking requirements can be met for a given end user session.
+Depending on the answer the network gives, the developer may decide to request a network boost (via the CAMARA QoD API) , and/or apply specific changes on the application side e.g. adjusting the resolution of the video stream upwards or downwards.
 
-#### Scope
-- Service APIs for “Connectivity Insights” (see APIBacklog)
-- It provides the customer with the ability to:
-  - define intents in the form of policy thresholds for QoS metrics against the device and the application service. The API service will alert the consumers if and when the policy has breached.
-  - NOTE: The scope of this API family should be limited (at least at a first stage) to 4G and 5G.
+### Scope
+{: .note }
+We could qualify the API as e.g. Informative - it doesn't have any direct interaction with the network
+
+### Usage
+1. Create an Application Profile using the Connectivity Insights **_application-profiles_ API**. It retruns an **_applicationProfileId_**
+2. Request with a **POST _check-network-quality_**, passing:
+    - the **_applicationProfileId_** obtained in step 1
+    - the address/port of an application server, and
+    - at least one device identifier.
+3. Response: The network will indicate whether it can or cannot meet the application requirements.
+Optional: use the **_connectivity-insights-subscriptions_ API** to receive notifications of network quality.
+
+#### Application Profiles
+Example:
+```
+{
+  "networkQualityThresholds": {
+    "packetDelayBudget": {
+      "value": 12,
+      "unit": "Minutes"
+    },
+    "targetMinDownstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "targetMinUpstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "packetlossErrorRate": 3,
+    "jitter": {
+      "value": 12,
+      "unit": "Minutes"
+    }
+  }
+}
+```
+  - "packet delay budget": the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
+  - "targetMinDownstreamRate": This is the target minimum downstream rate.
+  - "targetMinUpstreamRate": This is the target minimum upstream rate
+  - "packetlossErrorRate": The exponential power of the allowable error loss rate 10^(-N). For 5G network the 3GPP specification TS 23.203 defines the packet error loss rate QCI attribute.
+  - "jitter" requirement aims to limit the maximum variation in round-trip packet delay for the 99th percentile of traffic, following ITU Y.1540 standards. It considers only acknowledged packets in a session, which are packets that receive a confirmation of receipt from the recipient (e.g., using TCP).
+
+#### Checking network quality
+Example:
+```
+{
+  "applicationProfileId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "device": {
+    "phoneNumber": "123456789",
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {
+      "publicAddress": "84.125.93.10",
+      "publicPort": 59765
+    },
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+  },
+  "applicationServer": {
+    "ipv4Address": "192.168.0.1/24",
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+  },
+  "applicationServerPorts": {
+    "ranges": [
+      {
+        "from": 5010,
+        "to": 5020
+      }
+    ],
+    "ports": [
+      5060,
+      5070
+    ]
+  },
+  "monitoringTimeStamp": "2023-07-03T12:27:08.312Z"
+}
+```
+
+  - An ApplicationProfileId and one or more device identifiers. Together these allow the network to calculate whether the thresholds defined in the application profile can be met for the particular connected device.
+  - Identifier for the device: At least one identifier for the device (user equipment) out of four options: IPv4 address, IPv6 address, Phone number, or Network Access Identifier assigned by the mobile network operator for the device.
+  - Identifier for the application server: IPv4 and/or IPv6 address of the application server (application backend)
+  - Notification URL and token: Developers may provide a callback URL on which notifications can be received from the service provider. This is an optional parameter.
+
+Type of response:
+```
+{
+  "packetDelayBudget": "meets the application requirements",
+  "targetMinDownstreamRate": "meets the application requirements",
+  "targetMinUpstreamRate": "meets the application requirements",
+  "packetlossErrorRate": "meets the application requirements",
+  "jitter": "meets the application requirements",
+  "additionalKPIs": {
+    "signalStrength": "excellent",
+    "connectivityType": "5G-SA"
+  }
+}
+```
+#### Subscription to notifications
+Example:
+```
+{
+  "protocol": "HTTP",
+  "sink": "https://endpoint.example.com/sink",
+  "sinkCredential": {},
+  "types": [
+    "org.camaraproject.connectivity-insights-subscriptions.v0.network-quality"
+  ],
+  "config": {
+    "subscriptionDetail": {
+      "device": {
+        "phoneNumber": "123456789",
+        "networkAccessIdentifier": "123456789@domain.com",
+        "ipv4Address": {
+          "publicAddress": "84.125.93.10",
+          "publicPort": 59765
+        },
+        "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+      },
+      "applicationServer": {
+        "ipv4Address": "192.168.0.1/24",
+        "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+      },
+      "applicationServerPorts": {
+        "ranges": [
+          {
+            "from": 5010,
+            "to": 5020
+          }
+        ],
+        "ports": [
+          5060,
+          5070
+        ]
+      },
+      "applicationProfileId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    "subscriptionExpireTime": "2023-07-03T12:27:08.312Z",
+    "subscriptionMaxEvents": 5,
+    "initialEvent": true
+  }
+}
+```
+
+## [QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
+
+### Description
+
+### Scope
+
+### Usage
+
+## [DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
+
+### Description
+
+### Scope
+
+### Usage
+
+
+
 
 ### [DeviceIdentifier](https://github.com/camaraproject/DeviceIdentifier)
 
