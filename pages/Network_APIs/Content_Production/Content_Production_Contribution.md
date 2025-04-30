@@ -50,6 +50,8 @@ A production crew deployed in the field or at a venue is capturing and contribut
   - A network deployed in the field or at a venue that is used to connect devices and manage the production locally. The final program output may be generated locally and delivered to the production centre using one of the options described in the "newsgathering and mobile journalism" scenario, for instance, by means of a device connected to a mobile network.
   - Devices are connected to the network with the production managed remotely and multiple devices contributing data to the production centre.
 
+Multiple devices are concurrently used during the production. Not all data flows have the same priority and quality requirements. Therefore, each device and data flow should get the requested connectivity performance (e.g. throughput, latency, jitter,...) and with the desired QoS, which may change for each device and data flow during the production.
+
 <img src="./images/figure_high_level_diagram.png" width="60%">
 
 ### Actors involved
