@@ -55,9 +55,9 @@ A production crew deployed in the field or at a venue is capturing and contribut
 
   - A network deployed in the field or at a venue that is used to connect devices and manage the production locally. The final program output may be generated locally and delivered to the production centre using one of the options described in the "newsgathering and mobile journalism" scenario, for instance, by means of a device connected to a mobile network. (NOTE: SNPN + PNI-NPN / fixed - for the uplink we go for Scenario 1).
 
-  - Devices are connected to the public network with the production managed remotely and multiple devices contributing data to the production centre.
+  - Devices are connected to the public network with the production managed remotely and multiple devices contributing data to the production centre. (NOTE: Add text referring to PNI-NPN - this scenario is more relevant for network APIs)
 
-Multiple devices are concurrently used during the production. Not all data flows have the same priority and quality requirements. Therefore, each device and data flow should get the requested connectivity performance (e.g. throughput, latency, jitter,...) and with the desired QoS, which may change for each device and data flow during the production. (NOTE: Add text referring to PNI-NPN - this scenario is more relevant for network APIs)
+Multiple devices are concurrently used during the production. Not all data flows have the same priority and quality requirements. Therefore, each device and data flow should get the requested connectivity performance (e.g. throughput, latency, jitter,...) and with the desired QoS, which may change for each device and data flow during the production.
 
 <img src="./images/figure_high_level_diagram.png" width="60%">
 
