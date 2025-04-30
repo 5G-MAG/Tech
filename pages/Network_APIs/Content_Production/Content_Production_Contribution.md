@@ -19,18 +19,19 @@ Use cases identified in [Towards a comprehensive 5G-based toolbox for live media
 
 ### Description
 
-A journalist in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises.
+A journalist in the field or at a venue is capturing and contributing (uplinking) content to an application server located in the cloud or remote premises.
 The content is delivered using one of the following solutions:
+
   - A single UE (e.g. a smartphone) equipped with a single SIM card (or eSIM) connected to the mobile network.
-  - A single UE (e.g. a smartphone) equipped with at least two SIM cards (or eSIMs) each one connected to a different carrier of the same mobile network or connected to different mobile networks.
+
+  - A single device (e.g. a smartphone) with 2 UE each with 1 SIM card (or eSIM) connected to a different carrier of the same mobile network or connected to different mobile networks. Note that multi-SIM devices enable users to utilize multiple cellular connections simultaneously. Dual-SIM Dual-Active or DSDA enable this use case with two SIM cards. This is different to Dual-SIM Dual-Standby (DSDS), which allows only one SIM to stay connected with active data at a time. 
+5G DSDA enhances data performance for end users by enabling the use of two data connections concurrently across SIM1 and SIM2, with the option to choose the best of them or aggregate both, if necessary, to reach higher data throughput.
+
   - A device with multiple UEs (e.g. a cellular bonding backpack) equipment with multiple SIM cards each one connected to a different carrier of the same mobile network or connected to different mobile networks.
 
 {: .note }
 A single UE with 2 SIMs or 2 UEs and 2 SIMs? (In principle 2 UEs and 2 SIMs within a single device) - With DSDA: 2 parallel data sessions.
 Improve cellular bonding for smartphone - it is unclear if cellular bonding is supported in a smartphone. ATSSS (3GPP + non-3GPP) is within the scope of a single operator. 3GPP+3GPP is not in the scope of ATSSS.
-
-Note that multi-SIM devices enable users to utilize multiple cellular connections simultaneously. Dual-SIM Dual-Active or DSDA enable this use case with two SIM cards. This is different to Dual-SIM Dual-Standby (DSDS), which allows only one SIM to stay connected with active data at a time. 
-5G DSDA enhances data performance for end users by enabling the use of two data connections concurrently across SIM1 and SIM2, with the option to choose the best of them or aggregate both, if necessary, to reach higher data throughput. 
 
 ### Actors involved
 The actors involved are:
@@ -50,11 +51,13 @@ Network and Application Functions involved:
 
 ### Description
 
-A production crew deployed in the field or at a venue is capturing and contributing (upstreaming) content to an application server located in the cloud or remote premises. This scenario may involve two different cases:
-  - A network deployed in the field or at a venue that is used to connect devices and manage the production locally. The final program output may be generated locally and delivered to the production centre using one of the options described in the "newsgathering and mobile journalism" scenario, for instance, by means of a device connected to a mobile network.
-  - Devices are connected to the network with the production managed remotely and multiple devices contributing data to the production centre.
+A production crew deployed in the field or at a venue is capturing and contributing (uplinking) content to an application server located in the cloud or remote premises. This scenario may involve two different cases:
 
-Multiple devices are concurrently used during the production. Not all data flows have the same priority and quality requirements. Therefore, each device and data flow should get the requested connectivity performance (e.g. throughput, latency, jitter,...) and with the desired QoS, which may change for each device and data flow during the production.
+  - A network deployed in the field or at a venue that is used to connect devices and manage the production locally. The final program output may be generated locally and delivered to the production centre using one of the options described in the "newsgathering and mobile journalism" scenario, for instance, by means of a device connected to a mobile network. (NOTE: SNPN + PNI-NPN / fixed - for the uplink we go for Scenario 1).
+
+  - Devices are connected to the public network with the production managed remotely and multiple devices contributing data to the production centre.
+
+Multiple devices are concurrently used during the production. Not all data flows have the same priority and quality requirements. Therefore, each device and data flow should get the requested connectivity performance (e.g. throughput, latency, jitter,...) and with the desired QoS, which may change for each device and data flow during the production. (NOTE: Add text referring to PNI-NPN - this scenario is more relevant for network APIs)
 
 <img src="./images/figure_high_level_diagram.png" width="60%">
 
