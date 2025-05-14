@@ -12,7 +12,7 @@ This documentation is currently **under development and subject to change**. It 
 We welcome and encourage contributions from the broader community. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
 # Required interactions to exploit network capabilities
-  
+
 ## Pre-conditions
 
 * The production company has set up an agreement with a network operator for usage of certain **network capabilitues** (e.g. selected from an API catalogue) and has received authentication credentials from the newotk operator authorising their use (when available).
