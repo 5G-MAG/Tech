@@ -19,26 +19,13 @@ We welcome and encourage contributions from the broader community. If you are in
 - API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
 - Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
 
-## Device identification
+## ConnectivityInsights [Information on network quality]
 
 ### Description
-Device identifiers include:
-  - `ipv4Address`
-  - `ipv6Address`
-  - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
-  - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
+Information at: [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
-### Usage
-
-## [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
-
-### Description
 The Connectivity Insights API allows an application developer to ask the network the likelihood that an application's networking requirements can be met for a given end user session.
-Depending on the answer the network gives, the developer may decide to request a network boost (via the CAMARA QoD API) , and/or apply specific changes on the application side e.g. adjusting the resolution of the video stream upwards or downwards.
-
-### Scope
-{: .note }
-We could qualify the API as e.g. Informative - it doesn't have any direct interaction with the network
+Depending on the answer the network gives, the developer may decide to request a network boost (via the CAMARA QoD API), and/or apply specific changes on the application side e.g. adjusting the resolution of the video stream upwards or downwards.
 
 ### Usage
 1. Create an Application Profile using the Connectivity Insights **_application-profiles_ API**. It retruns an **_applicationProfileId_**
@@ -47,9 +34,9 @@ We could qualify the API as e.g. Informative - it doesn't have any direct intera
     - the address/port of an application server, and
     - at least one device identifier.
 3. Response: The network will indicate whether it can or cannot meet the application requirements.
-Optional: use the **_connectivity-insights-subscriptions_ API** to receive notifications of network quality.
+Optional: use the **_connectivity-insights-subscriptions_ API** to receive subcribe to notifications of network quality.
 
-#### Application Profiles
+#### How does an Application Profile look like?
 Example:
 ```
 {
@@ -80,7 +67,7 @@ Example:
   - "packetlossErrorRate": The exponential power of the allowable error loss rate 10^(-N). For 5G network the 3GPP specification TS 23.203 defines the packet error loss rate QCI attribute.
   - "jitter" requirement aims to limit the maximum variation in round-trip packet delay for the 99th percentile of traffic, following ITU Y.1540 standards. It considers only acknowledged packets in a session, which are packets that receive a confirmation of receipt from the recipient (e.g., using TCP).
 
-#### Checking network quality
+#### How to check network quality?
 Example:
 ```
 {
@@ -133,7 +120,7 @@ Type of response:
   }
 }
 ```
-#### Subscription to notifications
+#### How to subscribe to notifications?
 Example:
 ```
 {
@@ -179,24 +166,219 @@ Example:
 }
 ```
 
-## [QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
+#### How is a device identified?
+Device identifiers include:
+  - `ipv4Address`
+  - `ipv6Address`
+  - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
+  - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
+
+## [QualityOnDemand](https://github.com/camaraproject/QualityOnDemand) [QoS profile per App-Flow]
 
 ### Description
 
-### Scope
+The Quality-On-Demand (QoD) API provides a programmable interface for developers and other users (API consumers) to request stable latency or throughput managed by networks without the necessity to have an in-depth knowledge of the underlying network complexity (e.g. the 4G/5G system in case of a mobile network).
 
 ### Usage
 
-## [DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
+The usage of the QoD API is based on QoS profile classes and parameters which define App-Flows. Based on the API, QoS session resources can be created, queried, and deleted. Once an offered QoS profile class is requested, application users get a prioritized service with stable latency or throughput even in the case of congestion.
+
+1. Retrieve QoS profiles available by **POST _/retreive-qos-profiles_**
+2. Create a QoS session by **POST _/sessions_**. It retruns session details and notifications into a sink address.
+    - indication of a **_qosProfile_** and labels: Latency, throughput or priority requirements of the application mapped to relevant QoS profile values. Available QoS profiles can be obtained with a GET
+    - the address/port of an application server,
+    - the address/port of the server used to receive notifications, and
+    - a device identifier.
+3. Response: The network will indicate whether the request is active and for how long.
+
+#### How to retrieve QoS profiles?
+```
+{
+  "device": {
+  "phoneNumber": "+123456789",
+  "networkAccessIdentifier": "123456789@domain.com",
+  "ipv4Address": {},
+  "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+  },
+  "name": "voice",
+  "status": "ACTIVE"
+}
+```
+Type of response:
+```
+[
+  {
+    "name": "voice",
+    "description": "QoS profile for video streaming",
+    "status": "ACTIVE",
+    "targetMinUpstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "maxUpstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "maxUpstreamBurstRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "targetMinDownstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "maxDownstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "maxDownstreamBurstRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "minDuration": {
+      "value": 12,
+      "unit": "Days"
+    },
+    "maxDuration": {
+      "value": 12,
+      "unit": "Days"
+    },
+    "priority": 20,
+    "packetDelayBudget": {
+      "value": 12,
+      "unit": "Days"
+    },
+    "jitter": {
+      "value": 12,
+      "unit": "Days"
+    },
+    "packetErrorLossRate": 3,
+    "l4sQueueType": "non-l4s-queue",
+    "serviceClass": "real_time_interactive"
+  }
+]
+```
+
+#### How to create a QoS session?
+Example:
+```
+{
+  "device": {
+    "phoneNumber": "+123456789",
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {},
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+  },
+  "applicationServer": {
+    "ipv4Address": "198.51.100.0/24",
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+  },
+  "devicePorts": {
+    "ranges": [],
+    "ports": []
+  },
+  "applicationServerPorts": {
+    "ranges": [],
+    "ports": []
+  },
+  "qosProfile": "voice",
+  "sink": "https://endpoint.example.com/sink",
+  "sinkCredential": {
+    "credentialType": "PLAIN"
+  },
+  "duration": 3600
+}
+```
+
+Type of response:
+```
+{
+  "sessionId": "f6567dd8-e069-418e-8893-7d22fcf12459",
+  "duration": 3600,
+  "startedAt": "2024-06-01T12:00:00Z",
+  "expiresAt": "2024-06-01T13:00:00Z",
+  "qosStatus": "REQUESTED",
+  "statusInfo": "DURATION_EXPIRED"
+}
+```
+
+#### How is a device identified?
+Device identifiers include:
+  - `ipv4Address`
+  - `ipv6Address`
+  - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
+  - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
+
+## [QualityOnDemand Provisioning](https://github.com/camaraproject/QualityOnDemand) [QoS profile per App-Flow]
 
 ### Description
 
-### Scope
+The Quality-on-Demand (QoD) Provisioning API provides a programmable interface for developers to request the association of a specific QoS profile with a device, indefinitely. The association resulting from the QoD provisioning request is represented by a QoD provisioning record (or QoD provisioning for short) that includes information about the date of provisioning, the QoS profile, the provisioning status, etc., as well as a provisioningId that uniquely identifies this record for later use. Additionally, this API configures the network to apply the requested QoS profile to a specified device whenever the device is connected to the network, until the provisioning is revoked.
+
+### Usage
+
+1. Provision QoS profile for a device by **POST _/device-qos_**
+    - indication of a **_qosProfile_** and labels: Latency, throughput or priority requirements of the application mapped to relevant QoS profile values. Available QoS profiles can be obtained with a GET
+    - the address/port of the server used to receive notifications, and
+    - a device identifier.
+3. Response: The network will indicate whether the request is active and for how long.
+
+#### How to provision a QoS profile for a device?
+{
+  "device": {
+    "phoneNumber": "+123456789",
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {
+      "publicAddress": "203.0.113.0",
+      "publicPort": 59765
+    },
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+  },
+  "qosProfile": "QCI_1_voice",
+  "sink": "https://endpoint.example.com/sink",
+  "sinkCredential": {
+    "credentialType": "PLAIN"
+  }
+}
+
+Type of response:
+{
+  "device": {
+    "phoneNumber": "+123456789",
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {
+      "publicAddress": "203.0.113.0",
+      "publicPort": 59765
+    },
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+  },
+  "qosProfile": "QCI_1_voice",
+  "sink": "https://endpoint.example.com/sink",
+  "sinkCredential": {
+    "credentialType": "PLAIN"
+  },
+  "provisioningId": "8857548e-8974-477e-95e6-d461c2c06b56",
+  "startedAt": "2024-06-01T12:00:00Z",
+  "status": "REQUESTED",
+  "statusInfo": "NETWORK_TERMINATED"
+}
+
+#### How is a device identified?
+Device identifiers include:
+  - `ipv4Address`
+  - `ipv6Address`
+  - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
+  - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
+
+## [DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks) [Dedicated Network for a georaphical area]
+
+### Description
+This API allows for requesting a Dedicated Network, which provides a set of capabilities and connectivity performance targets. The Dedicated Network may be requested for a particular geographical location and at a particular time window. Depending on the requested start time for the dedicated network, the network may first enter a _reserved_ state.
 
 ### Usage
 
 
-
+OTHER APIs not yet analysed
 
 ### [DeviceIdentifier](https://github.com/camaraproject/DeviceIdentifier)
 
@@ -232,12 +414,3 @@ Example:
 - It provides the customer with the ability to:
   - reserve, dynamically provisioning, query, dynamically delete a slice with customized SLA assurance capabilities, customized service duration, expected slice covered locations.
 
-### [QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
-
-#### Scope
-- Service APIs for “Quality on Demand” (see APIBacklog.md)
-- It provides the API consumer with the ability to:
-  - set quality for a flow within an access network connections (e.g. mobile device connection or fixed access between a home gateway and the service providers gateway router)
-    - Session mode, for a specific duration
-    - Provision mode, indefinitely for each time the device connects to the same access network
-  - get notification if the network cannot fulfill
