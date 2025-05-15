@@ -309,7 +309,7 @@ Device identifiers include:
   - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
   - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
 
-## [QualityOnDemand Provisioning](https://github.com/camaraproject/QualityOnDemand) [QoS profile per App-Flow]
+## [QualityOnDemand Provisioning](https://github.com/camaraproject/QualityOnDemand) [QoS profile per Device]
 
 ### Description
 
