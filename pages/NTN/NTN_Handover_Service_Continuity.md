@@ -14,7 +14,7 @@ We welcome and encourage contributions from the broader community. If you are in
 Non-Terrestrial Networks (NTNs) may use satellites, for example, to provide connectivity over large geographical areas. In particular, NTNs may deliver Internet and media content to poorly served areas as well as to moving platforms (e.g. cars, trains, aeroplanes) beyond the reach of terrestrial infrastructure.
 The following describes some of the different ways in which NTNs can be deployed so as to support service continuity when both UEs and satellites are moving relative to one another. It then goes on to describe handover procedures that can be used with such NTN deployments to minimise service interruption time under these dynamic conditions.
 
-## Handover deployment models with a single NTN operator
+## Single NTN operator
 In this deployment model the satellite infrastructure is managed by a single NTN operator. Satellite-to-satellite handovers are considered for two types of scenarios: quasi-earth fixed beam and earth moving beams. In both cases frequent handovers are expected due to motion.
 
 ### Satellite-to-satellite handover with quasi-Earth fixed beam for NGSO
@@ -36,12 +36,12 @@ For example, switching the edge UEs to PTP transmission mode (while the other UE
 The handover is performed gradually by the UEs that are members of the multicast group. Compared to the quasi-Earth fixed beam deployment model, not all the UEs of the multicast group perform the handover at the same time. However, handovers occur more frequently with Earth moving beam. Depending on the deployment, this can involve more dedicated signalling (different gNodeB in Regenerative Payload) or common signalling (same gNodeB in Transparent Payload or inter-beam handover within the same satellite). In the case of same gNodeB in Transparent Payload or inter-beam handover within the same satellite (Regenerative Payload), this deployment reduces the service interruption time, and it reduces signalling overhead by involving only lower layers (Physical and MAC layer) for uplink synchronization and time alignment.
 The Earth moving beam deployment model involves lower onboard complexity of the satellite for beamforming techniques, but it increases the complexity of the end-to-end system to handle mobility and to allocate resources (beam, frequency plan, etc.). This scenario can be applicable for intra-satellite beam handover as explained in the point above, similar to Transparent Payload (two satellites managed by the same gNodeB)
 
-## Handover deployment models with a common NTN & TN operator
+## Common NTN & TN operator
 In this deployment model, the same operator owns the TN and NTN infrastructure. The same 5G Core is shared with both TN and NTN Access Network infrastructure. The handover between them does not involve a logical interface.
 ### TN-NTN or NTN-TN handover for PTM
 In terms of service interruption, i.e., the time taken to switch from one access network to another, this is suitable for real-time multicast applications that are sensitive to non-availability of the access network and that need to receive packets reliably (i.e., without any loss) and in the correct order. The network Round-Trip Time (RTT) between a Terrestrial Radio Access base station and a Non-Terrestrial Radio Access base station needs to be assessed. Dual connectivity UEs may also be considered.
 
-## Roaming deployment models with NTN and TN operators
+## Independent NTN and TN operators
 In this deployment model, two different operators own the TN and NTN infrastructure respectively, so the two different systems, each with its own 5G Core, are separate.
 ### Roaming between different Network Operators for TN and NTN
 Two options are envisaged for roaming:
