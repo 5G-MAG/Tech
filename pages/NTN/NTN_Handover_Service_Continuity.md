@@ -17,7 +17,7 @@ The following describes some of the different ways in which NTNs can be deployed
 ## Single NTN operator
 In this deployment model the satellite infrastructure is managed by a single NTN operator. Satellite-to-satellite handovers are considered for two types of scenarios: quasi-earth fixed beam and earth moving beams. In both cases frequent handovers are expected due to motion.
 
-### Satellite-to-satellite handover with quasi-Earth fixed beam for NGSO
+### Satellite-to-satellite handover with Quasi-Earth fixed beam for NGSO
 The target mapped cell will be served by a single beam and a frequent handover (time-based) is expected due to the satellite motion. Two different types of handover are considered:
 * a) Soft switch handover, where the Mapped Cell is served by two overlapping beams in different carrier frequencies during the switching phase.
 * b) Hard switch handover, where the Mapped Cell is served by only one beam at any point in time.
@@ -28,7 +28,7 @@ When using point-to-multipoint communication, all the UEs of the multicast group
 This behaviour should be suitable for applications that cannot tolerate packet loss. Some mechanisms should be implemented to avoid congestion during handover. Note that one gNodeB could handle both satellites in the case of a Transparent Payload deployment, while there would be a different gNodeB (involving dedicated signalling) in the case of Regenerative Payload. Depending on the deployment type, this can involve more dedicated signalling (different gNodeB in Regenerative Payload) or common signalling (same gNodeB in Transparent Payload or inter-beam handover within the same satellite). In the case of the same gNodeB in Transparent Payload or inter-beam handover within the same satellite (Regenerative Payload), this deployment reduces the service interruption time and reduces signalling overhead by involving only lower layers (Physical and MAC layer) for uplink synchronization and time alignment.
 Quasi-Earth fixed beam deployment model involves some onboard complexity of the satellite to support steerable beamforming techniques, but it reduces the complexity of the network to handle mobility and to allocate resources (beam, frequency plan, etc.). This scenario can be applicable to intra-satellite beam handover, similar to Transparent Payload (two satellites managed by the same gNodeB).
 
-### Satellite-to-satellite handover with Earth moving beam for NGSO
+### Satellite-to-satellite handover with Earth-Moving beam for NGSO
 A frequent (location-driven) handover is expected due to the satellite motion. The UE in the edge of the beam starts to proceed with the handover. When the UE is located at a distance d from the Beam Reference Centre, where D1 ≤ d ≤ D2, the UE can start performing the handover to the next beam (due to satellite motion). In the best case, the resulting service interruption is in the range of hundreds of milliseconds.
 Note that the IP address of the UE is preserved across handover in this scenario.
 When using point-to-multipoint communication, only the UE of the multicast group that is at the edge of the beam starts to experience poor radio link conditions, since the source satellite is close to the minimum elevation angle with respect to this UE. An appropriate mode of transmission should be considered during the handover phase to support service continuity.
