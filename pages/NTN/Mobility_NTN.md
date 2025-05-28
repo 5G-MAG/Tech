@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Network Deployment Models and Service Continuity
+title: Mobility Aspects NTN
 parent: Non-Terrestrial Networks
 nav_order: 2
 has_children: false
@@ -10,7 +10,7 @@ has_children: false
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members as part of **WI: Content Delivery over NTNs** and **WI: Multicast Broadcast Services**
 We welcome and encourage contributions from the broader community. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# Network Deployment Models and Service Continuity
+# Aspects on Mobility for NTN
 Non-Terrestrial Networks (NTNs) may use satellites, for example, to provide connectivity over large geographical areas. In particular, NTNs may deliver Internet and media content to poorly served areas as well as to moving platforms (e.g. cars, trains, aeroplanes) beyond the reach of terrestrial infrastructure.
 The following describes some of the different ways in which NTNs can be deployed so as to support service continuity when both UEs and satellites are moving relative to one another. It then goes on to describe handover procedures that can be used with such NTN deployments to minimise service interruption time under these dynamic conditions.
 
