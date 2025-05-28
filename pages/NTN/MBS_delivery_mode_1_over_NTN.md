@@ -12,21 +12,19 @@ We welcome and encourage contributions from the broader community. If you are in
 
 # Feasibility Analysis - MBS Delivery Mode 1 over NTN
 
-## Requirements and Overview
-
-### Delivery of multicast content with autonomous RAN switching between point-to-point and point-to-multipoint
+## Requirements and Overview for the delivery of multicast content with autonomous RAN switching between point-to-point and point-to-multipoint
 
 <img src="./images/figure_MBS_Multicast_NTN.png" width="80%">
 
-**Application Service Provider**
+### Application Service Provider
 * An Application Service Provider makes available over the Internet services (e.g. TV, radio, any linear/live streaming service) which users can access through an application installed on their devices (e.g. a smartphone, a smart TV, tablet, etc.).
 *	The Application Service Provider additionally provisions these as multicast services in the 5G Core of the NTN.
 
 {: .warning }
 To be checked: Provision of MBS Multicast services over the 5G Network with traffic originally coming from a streaming service available over the internet and to client applications already deployed in user equipment.
-Note that this is an aspect related to MBS and it is captured here: [MBS Service Layer Aspects](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/mbs-service-layer.html)
+Note that this is an aspect related to MBS and it is captured here: [MBS Service Layer Aspects](../5g-multicast-broadcast-services/mbs-service-layer.html)
 
-**Network and access to services**
+### Network and access to services
 *	The gNodeB of the NTN (“Donor gNodeB”) is deployed either at the ground station (Transparent Payload architecture) or on board the spacecraft (Regenerative Payload, not illustrated).
 *	The NTN operator offers mobile broadband access to their subscribed users.
 *	The NTN supports multicast user services.
@@ -37,32 +35,17 @@ Note that this is an aspect related to MBS and it is captured here: [MBS Service
 
 {: .warning }
 To be checked: Provision of MBS Multicast services which can be delivered either by means of point-to-point of point-to-multipoint and the mechanism by which concurrent consumption of a service by multiple users and session counting is performed.
-Note that this is an aspect related to MBS and it is captured here: [MBS Service and System Aspects](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/mbs-service-system-aspects.html)
+Note that this is an aspect related to MBS and it is captured here: [MBS Service and System Aspects](../5g-multicast-broadcast-services/mbs-service-system-aspects.html)
 
-**Device considerations**
+### Device considerations
 *	User Equipment directly connected to the NTN (including UEs or a Mobile Relay Node in a moving platform) requires subscription and registration with the NTN operator in order to obtain mobile broadband connectivity and access to the desired services.
 *	In addition, the NTN operator authorises UEs that are able to consume multicast user services.
 *	In order to obtain network connectivity and access to the desired services, User Equipment connected to a Mobile Relay Node within a moving platform requires either subscription and registration with the moving platform network operator (which could be the same as or different from the NPN) or directly with the NTN operator.
 
-**Mobility, handover, service interruption and reliability requirements**
+### Mobility, handover, service interruption and reliability requirements
 *	The delivery of multicast data packets using point-to-point or point-to-multipoint transmission should rely on mechanisms that ensure reliability and in-sequence delivery. User Equipment should be able to request repair of faulty or lost multicast data packets to increase delivery reliability.
 *	For critical applications, lossless mobility without interruption should be guaranteed when UEs transit across different satellite coverage areas, even when those different coverage areas are served by different NTNs operated by the same NTN operator (e.g. from LEO to GEO with a common 5G Core). Interruption-free multicast user service should be guaranteed when a UE is served from a gNodeB which switches multicast packet delivery from point-to-multipoint to point-to-point communication and vice versa.
 *	For services with less stringent requirements, some level of multicast user service interruption may be tolerable when a UE transits across different coverage areas, including when those different coverage areas are served by different NTNs. Some level of interruption may be tolerable when a UE is served from a gNodeB which switches multicast packet delivery from point-to-multipoint to point-to-point communication and vice versa.
 
 {: .warning }
-To be checked: Mobility aspects in relation to NTNare captured here: [Aspects on Mobility for NTN](https://5g-mag.github.io/Tech/pages/NTN/Mobility_NTN.html). Mobility aspects in relation to MBS are captured here: [Aspects on Mobility for MBS Multicast Services](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/Mobility_MBS_Multicast.html)
-
-## Scenarios under Study:
-* **Scenario 1**: Support of Lossless Handover for MBS Multicast Service for a group of users under the coverage of a satellite when mobility is triggered by the satellite moving.
-* **Scenario 2**: Support of Lossless Handover for MBS Multicast Service for a group of users under the coverage of a satellite when mobility is triggered by at least on user within the group of users or the entire group of users.
-
-### Scenario 1
-A group of users is consuming content provided via an MBS Multicast Service within the coverage area of a satellite (a beam). Due to satellite motion, coverage of the existing satellite/beam will be lost and the group of users will be illuminated by another satellite/beam. During this process handover delays should be minimized while the entire group of users is transfered to another satellite.
-
-#### Discussion
-Although PTM to PTM mobility is supported by MBS Multicast Services as explained in [Aspects on Mobility for MBS Multicast Services](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/Mobility_MBS_Multicast.html), mobility in this case is triggered by the satellite motion, not by the user. In addition, the PTM traffic delivery on the entire cell has to be transfered to another cell.
-
-One possibility would entail transfering each user first to PTP, then execute NTN mobility procedures and bring users back to PTM on the new cell. However this is not resource-efficient. The OAM can predict satellite movement and therefore can predict in advance whenever to start illuminating the beam of the target satellite. Based on these knowledges, the network can trigger Conditional Handover for the Group of Multicast Users and force switching their Multicast session on the PTP leg during the handover preparation and handover execution to ensure lossless handover for Multicast UEs.
-
-
-
+To be checked: Mobility aspects in relation to NTN are captured here: [Aspects on Mobility for NTN](../NTN/Mobility_NTN.html). Mobility aspects in relation to MBS are captured here: [Aspects on Mobility for MBS Multicast Services](../5g-multicast-broadcast-services/Mobility_MBS_Multicast.html). Mobility aspects in relation to MBS and NTN are captured here: [Aspects on Mobility for MBS Multicast over NTN](../NTN/Mobility_NTN_MBS_Multicast.html)
