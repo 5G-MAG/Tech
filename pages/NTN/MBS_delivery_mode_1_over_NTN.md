@@ -48,7 +48,7 @@ Note that this is an aspect related to MBS and it is captured here: [MBS Service
 *	For services with less stringent requirements, some level of multicast user service interruption may be tolerable when a UE transits across different coverage areas, including when those different coverage areas are served by different NTNs. Some level of interruption may be tolerable when a UE is served from a gNodeB which switches multicast packet delivery from point-to-multipoint to point-to-point communication and vice versa.
 
 {: .warning }
-To be checked: Mobility aspects in relation to NTNare captured here: [Aspects on NTN Handover and Service Continuity](https://5g-mag.github.io/Tech/pages/NTN/NTN_Handover_Service_Continuity.html). Mobility aspects in relation to MBS are captured here: [Aspects on Service Continuity for MBS Multicast Services](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/MBS_Handover_Multicast.html)
+To be checked: Mobility aspects in relation to NTNare captured here: [Aspects on Mobility for NTN](https://5g-mag.github.io/Tech/pages/NTN/Mobility_NTN.html). Mobility aspects in relation to MBS are captured here: [Aspects on Mobility for MBS Multicast Services](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/Mobility_MBS_Multicast.html)
 
 ## Deployment architecture with MBS User Services to regular 3GPP UEs
 
