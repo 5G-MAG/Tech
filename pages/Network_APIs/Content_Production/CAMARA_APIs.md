@@ -21,12 +21,17 @@ We welcome and encourage contributions from the broader community. If you are in
 
 ## List of CAMARA APIs
 Potentially additional APIs:
+* QOS Boking: 
+  * https://github.com/camaraproject/QoSBooking
+  * Yaml in PR: Only a withdrawn yaml: https://github.com/camaraproject/QoSBooking/pull/5
+  * API Backlog: [documentation/API proposals/APIproposal_QoS_Booking_KDDI.md](https://github.com/camaraproject/APIBacklog/blob/main/documentation/API%20proposals/APIproposal_QoS_Booking_KDDI.md)
+  * 
 
-- [QOS Boking](https://github.com/camaraproject/QoSBooking)
-Yaml in PR: Only a withdrawn yaml: Initial API proposal for QoS Booking API camaraproject/QoSBooking#5
-
-- [Network Slice Booking](https://github.com/camaraproject/NetworkSliceBooking)
-But no real progress since some time.
+* Network Slice Booking
+  * https://github.com/camaraproject/NetworkSliceBooking
+  * But no real progress since some time.
+  * API Backlog: https://github.com/camaraproject/APIBacklog/blob/main/documentation/API%20proposals/APIproposal_NetworkSlicing_ChinaUnicom.md
+  * Supporting slides: https://github.com/camaraproject/APIBacklog/raw/refs/heads/main/documentation/SupportingDocuments/Network%20Slicing%20Service%20API%20Introduction%20for%20CAMARA.PPTX
 
 ## ConnectivityInsights [Information on network quality]
 
