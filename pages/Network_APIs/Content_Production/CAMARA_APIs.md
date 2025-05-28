@@ -20,7 +20,13 @@ We welcome and encourage contributions from the broader community. If you are in
 - Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
 
 ## List of CAMARA APIs
-TBC
+Potentially additional APIs:
+
+- [QOS Boking](https://github.com/camaraproject/QoSBooking)
+Yaml in PR: Only a withdrawn yaml: Initial API proposal for QoS Booking API camaraproject/QoSBooking#5
+
+- [Network Slice Booking](https://github.com/camaraproject/NetworkSliceBooking)
+But no real progress since some time.
 
 ## ConnectivityInsights [Information on network quality]
 
