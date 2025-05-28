@@ -10,7 +10,7 @@ nav_order: 0
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members as part of **WI: Multicast Broadcast Services**
 We welcome and encourage contributions from the broader community. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# Handover for Multicast Services
+# Aspects on Handover for MBS Multicast Services
 
 ## Handover between 2 cells supporting Multicast
 Mobility procedures described in 3GPP TS 38.300 for multicast reception allow the UE to continue receiving multicast service(s) via PTM or PTP in a new cell after handover.
