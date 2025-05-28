@@ -14,6 +14,8 @@ We welcome and encourage contributions from the broader community. If you are in
 Non-Terrestrial Networks (NTNs) may use satellites, for example, to provide connectivity over large geographical areas. In particular, NTNs may deliver Internet and media content to poorly served areas as well as to moving platforms (e.g. cars, trains, aeroplanes) beyond the reach of terrestrial infrastructure.
 The following describes some of the different ways in which NTNs can be deployed so as to support service continuity when both UEs and satellites are moving relative to one another. It then goes on to describe handover procedures that can be used with such NTN deployments to minimise service interruption time under these dynamic conditions.
 
+{: .caution }
+
 ## Single NTN operator
 In this deployment model the satellite infrastructure is managed by a single NTN operator. Satellite-to-satellite handovers are considered for two types of scenarios: quasi-earth fixed beam and earth moving beams. In both cases frequent handovers are expected due to motion.
 
