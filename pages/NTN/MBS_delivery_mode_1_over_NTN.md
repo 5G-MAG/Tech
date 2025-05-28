@@ -15,7 +15,9 @@ We welcome and encourage contributions from the broader community. If you are in
 ## Requirements and Overview
 
 ### Delivery of multicast content with autonomous RAN switching between point-to-point and point-to-multipoint
- 
+
+<img src="./images/figure_MBS_Multicast_NTN.png" width="80%">
+
 **Application Service Provider**
 * An Application Service Provider makes available over the Internet services (e.g. TV, radio, any linear/live streaming service) which users can access through an application installed on their devices (e.g. a smartphone, a smart TV, tablet, etc.).
 *	The Application Service Provider additionally provisions these as multicast services in the 5G Core of the NTN.
@@ -49,9 +51,3 @@ Note that this is an aspect related to MBS and it is captured here: [MBS Service
 
 {: .warning }
 To be checked: Mobility aspects in relation to NTNare captured here: [Aspects on Mobility for NTN](https://5g-mag.github.io/Tech/pages/NTN/Mobility_NTN.html). Mobility aspects in relation to MBS are captured here: [Aspects on Mobility for MBS Multicast Services](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/Mobility_MBS_Multicast.html)
-
-## Deployment architecture with MBS User Services to regular 3GPP UEs
-
-Proposal of baseline architecture
-
-<img src="./images/figure_MBS_Multicast_NTN.png" width="80%">
