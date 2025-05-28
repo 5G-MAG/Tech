@@ -12,7 +12,7 @@ We welcome and encourage contributions from the broader community. If you are in
 
 # Feasibility Analysis - MBS Delivery Mode 1 over NTN
 
-## Requirements
+## Requirements and Overview
 
 ### Delivery of multicast content with autonomous RAN switching between point-to-point and point-to-multipoint
  
@@ -20,8 +20,9 @@ We welcome and encourage contributions from the broader community. If you are in
 * An Application Service Provider makes available over the Internet services (e.g. TV, radio, any linear/live streaming service) which users can access through an application installed on their devices (e.g. a smartphone, a smart TV, tablet, etc.).
 *	The Application Service Provider additionally provisions these as multicast services in the 5G Core of the NTN.
 
-{: .note }
-Check how to provision	multicast services.
+{: .warning }
+To be checked: Provision of MBS Multicast services over the 5G Network with traffic originally coming from a streaming service available over the internet and to client applications already deployed in user equipment.
+Note that this is an aspect related to MBS and it is captured here: [MBS Service Layer Aspects](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/mbs-service-layer.html)
 
 **Network and access to services**
 *	The gNodeB of the NTN (“Donor gNodeB”) is deployed either at the ground station (Transparent Payload architecture) or on board the spacecraft (Regenerative Payload, not illustrated).
@@ -32,10 +33,9 @@ Check how to provision	multicast services.
 *	The NTN has the ability to detect concurrent consumption of services by multiple users and may use parameters such as session counting to trigger unicast-to-multicast switching at upper layers.
 *	The Donor gNodeB is able to autonomously switch the delivery mode of multicast packets between point-to-point to point-to-multipoint according to the number of UEs attempting to receive multicast user services concurrently.
 
-{: .note }
-Check provisioning of multicast services which can be delivered either by means of point-to-point of point-to-multipoint.
-Optionally, include 5GMS architecture.
-Check detection of concurrent consumption of service by multiple users and session counting.
+{: .warning }
+To be checked: Provision of MBS Multicast services which can be delivered either by means of point-to-point of point-to-multipoint and the mechanism by which concurrent consumption of a service by multiple users and session counting is performed.
+Note that this is an aspect related to MBS and it is captured here: [MBS Service and System Aspects](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/mbs-service-system-aspects.html)
 
 **Device considerations**
 *	User Equipment directly connected to the NTN (including UEs or a Mobile Relay Node in a moving platform) requires subscription and registration with the NTN operator in order to obtain mobile broadband connectivity and access to the desired services.
@@ -47,10 +47,11 @@ Check detection of concurrent consumption of service by multiple users and sessi
 *	For critical applications, lossless mobility without interruption should be guaranteed when UEs transit across different satellite coverage areas, even when those different coverage areas are served by different NTNs operated by the same NTN operator (e.g. from LEO to GEO with a common 5G Core). Interruption-free multicast user service should be guaranteed when a UE is served from a gNodeB which switches multicast packet delivery from point-to-multipoint to point-to-point communication and vice versa.
 *	For services with less stringent requirements, some level of multicast user service interruption may be tolerable when a UE transits across different coverage areas, including when those different coverage areas are served by different NTNs. Some level of interruption may be tolerable when a UE is served from a gNodeB which switches multicast packet delivery from point-to-multipoint to point-to-point communication and vice versa.
 
+{: .warning }
+To be checked: Mobility aspects in relation to NTNare captured here: [Aspects on NTN Handover and Service Continuity](https://5g-mag.github.io/Tech/pages/NTN/NTN_Handover_Service_Continuity.html). Mobility aspects in relation to MBS are captured here: [Aspects on Service Continuity for MBS Multicast Services](https://5g-mag.github.io/Tech/pages/5g-multicast-broadcast-services/MBS_Handover_Multicast.html)
+
 ## Deployment architecture with MBS User Services to regular 3GPP UEs
 
 Proposal of baseline architecture
 
 <img src="./images/figure_MBS_Multicast_NTN.png" width="80%">
-
-## Deployment architecture with MBS User Services to Moving Platform
