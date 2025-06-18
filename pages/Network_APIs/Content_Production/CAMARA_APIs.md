@@ -14,7 +14,7 @@ We welcome and encourage contributions from the broader community. If you are in
 # Analysis of CAMARA APIs within the scope of Content Production & Contribution
 
 1. TOC
-{toc:}
+{:toc}
 
 ## General information
 
