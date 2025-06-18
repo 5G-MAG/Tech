@@ -13,6 +13,9 @@ We welcome and encourage contributions from the broader community. If you are in
 
 # Analysis of CAMARA APIs within the scope of Content Production & Contribution
 
+1. TOC
+{toc:}
+
 ## General information
 
 - CAMARA Repositories in GitHub: [Link](https://github.com/orgs/camaraproject/repositories?q=sort%3Aname-asc)
