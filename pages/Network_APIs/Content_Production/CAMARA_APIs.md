@@ -22,7 +22,6 @@ We welcome and encourage contributions from the broader community. If you are in
 - API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
 - Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
 
-## List of CAMARA APIs
 Potentially additional APIs:
 * QOS Boking: 
   * https://github.com/camaraproject/QoSBooking
