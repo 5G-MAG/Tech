@@ -16,6 +16,8 @@ We welcome and encourage contributions from the broader community. If you are in
 We collect here information about the following CAMARA APIs
  - [ConnectivityInsights](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/CAMARA_APIs.html#connectivityinsights)
  - [QualityOnDemand](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/CAMARA_APIs.html#qualityondemand)
+ - [QualityOnDemand Provisioning](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/CAMARA_APIs.html#qualityondemand-provisioning)
+ - [DedicatedNetworks](https://jordijoangimenez.github.io/Tech/pages/Network_APIs/Content_Production/CAMARA_APIs.html#dedicatednetworks)
 
 ## General information
 
