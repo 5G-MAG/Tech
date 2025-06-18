@@ -13,8 +13,9 @@ We welcome and encourage contributions from the broader community. If you are in
 
 # Analysis of CAMARA APIs within the scope of Content Production & Contribution
 
-1. TOC
-{:toc}
+We collect here information about the following CAMARA APIs
+ - [ConnectivityInsights](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/CAMARA_APIs.html#connectivityinsights)
+ - [QualityOnDemand](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/CAMARA_APIs.html#qualityondemand)
 
 ## General information
 
@@ -35,10 +36,12 @@ Potentially additional APIs:
   * API Backlog: https://github.com/camaraproject/APIBacklog/blob/main/documentation/API%20proposals/APIproposal_NetworkSlicing_ChinaUnicom.md
   * Supporting slides: https://github.com/camaraproject/APIBacklog/raw/refs/heads/main/documentation/SupportingDocuments/Network%20Slicing%20Service%20API%20Introduction%20for%20CAMARA.PPTX
 
-## ConnectivityInsights [Information on network quality]
+## ConnectivityInsights
 
 ### Description
 Information at: [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
+
+**Scope:** Information on network quality
 
 The Connectivity Insights API allows an application developer to ask the network the likelihood that an application's networking requirements can be met for a given end user session.
 Depending on the answer the network gives, the developer may decide to request a network boost (via the CAMARA QoD API), and/or apply specific changes on the application side e.g. adjusting the resolution of the video stream upwards or downwards.
@@ -189,9 +192,11 @@ Device identifiers include:
   - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
   - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
 
-## [QualityOnDemand](https://github.com/camaraproject/QualityOnDemand) [QoS profile per App-Flow]
+## [QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
 ### Description
+
+**Scope:** QoS profiles per App-Flow
 
 The Quality-On-Demand (QoD) API provides a programmable interface for developers and other users (API consumers) to request stable latency or throughput managed by networks without the necessity to have an in-depth knowledge of the underlying network complexity (e.g. the 4G/5G system in case of a mobile network).
 
@@ -325,9 +330,11 @@ Device identifiers include:
   - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
   - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
 
-## [QualityOnDemand Provisioning](https://github.com/camaraproject/QualityOnDemand) [QoS profile per Device]
+## [QualityOnDemand Provisioning](https://github.com/camaraproject/QualityOnDemand)
 
 ### Description
+
+**Scope:** QoS profiles per Device
 
 The Quality-on-Demand (QoD) Provisioning API provides a programmable interface for developers to request the association of a specific QoS profile with a device, indefinitely. The association resulting from the QoD provisioning request is represented by a QoD provisioning record (or QoD provisioning for short) that includes information about the date of provisioning, the QoS profile, the provisioning status, etc., as well as a provisioningId that uniquely identifies this record for later use. Additionally, this API configures the network to apply the requested QoS profile to a specified device whenever the device is connected to the network, until the provisioning is revoked.
 
@@ -386,9 +393,12 @@ Device identifiers include:
   - `phoneNumber`: A public identifier addressing a telephone subscription. In mobile networks it corresponds to the MSISDN (Mobile Station International Subscriber Directory Number). In order to be globally unique it has to be formatted in international format, according to E.164 standard, prefixed with '+' (e.g. "+123456789").
   - `networkAccessIdentifier`: A public identifier addressing a subscription in a mobile network. In 3GPP terminology, it corresponds to the GPSI formatted with the External Identifier ({Local Identifier}@{Domain Identifier}). Unlike the telephone number, the network access identifier is not subjected to portability ruling in force, and is individually managed by each operator (e.g. "123456789@domain.com")
 
-## [DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks) [Dedicated Network for a georaphical area]
+## [DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
 
 ### Description
+
+**Scope:** Dedicated Network for a georaphical area
+
 This API allows for requesting a Dedicated Network, which provides a set of capabilities and connectivity performance targets. The Dedicated Network may be requested for a particular geographical location and at a particular time window. Depending on the requested start time for the dedicated network, the network may first enter a _reserved_ state.
 
 ### Usage
