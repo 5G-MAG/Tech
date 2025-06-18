@@ -38,17 +38,15 @@ Potentially additional APIs:
   * API Backlog: https://github.com/camaraproject/APIBacklog/blob/main/documentation/API%20proposals/APIproposal_NetworkSlicing_ChinaUnicom.md
   * Supporting slides: https://github.com/camaraproject/APIBacklog/raw/refs/heads/main/documentation/SupportingDocuments/Network%20Slicing%20Service%20API%20Introduction%20for%20CAMARA.PPTX
 
-## ConnectivityInsights
+## [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
 ### Description
-Information at: [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
-
-**Scope:** Information on network quality
 
 The Connectivity Insights API allows an application developer to ask the network the likelihood that an application's networking requirements can be met for a given end user session.
 Depending on the answer the network gives, the developer may decide to request a network boost (via the CAMARA QoD API), and/or apply specific changes on the application side e.g. adjusting the resolution of the video stream upwards or downwards.
 
 ### Usage
+
 1. Create an Application Profile using the Connectivity Insights **_application-profiles_ API**. It retruns an **_applicationProfileId_**
 2. Request with a **POST _check-network-quality_**, passing:
     - the **_applicationProfileId_** obtained in step 1
@@ -58,7 +56,9 @@ Depending on the answer the network gives, the developer may decide to request a
 Optional: use the **_connectivity-insights-subscriptions_ API** to receive subcribe to notifications of network quality.
 
 #### How does an Application Profile look like?
+
 Example:
+
 ```
 {
   "networkQualityThresholds": {
@@ -82,6 +82,7 @@ Example:
   }
 }
 ```
+
   - "packet delay budget": the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
   - "targetMinDownstreamRate": This is the target minimum downstream rate.
   - "targetMinUpstreamRate": This is the target minimum upstream rate
@@ -89,7 +90,9 @@ Example:
   - "jitter" requirement aims to limit the maximum variation in round-trip packet delay for the 99th percentile of traffic, following ITU Y.1540 standards. It considers only acknowledged packets in a session, which are packets that receive a confirmation of receipt from the recipient (e.g., using TCP).
 
 #### How to check network quality?
+
 Example:
+
 ```
 {
   "applicationProfileId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
@@ -128,6 +131,7 @@ Example:
   - Notification URL and token: Developers may provide a callback URL on which notifications can be received from the service provider. This is an optional parameter.
 
 Type of response:
+
 ```
 {
   "packetDelayBudget": "meets the application requirements",
@@ -141,8 +145,11 @@ Type of response:
   }
 }
 ```
+
 #### How to subscribe to notifications?
+
 Example:
+
 ```
 {
   "protocol": "HTTP",
@@ -188,6 +195,7 @@ Example:
 ```
 
 #### How is a device identified?
+
 Device identifiers include:
   - `ipv4Address`
   - `ipv6Address`
@@ -215,6 +223,7 @@ The usage of the QoD API is based on QoS profile classes and parameters which de
 3. Response: The network will indicate whether the request is active and for how long.
 
 #### How to retrieve QoS profiles?
+
 ```
 {
   "device": {
@@ -227,7 +236,9 @@ The usage of the QoD API is based on QoS profile classes and parameters which de
   "status": "ACTIVE"
 }
 ```
+
 Type of response:
+
 ```
 [
   {
@@ -283,7 +294,9 @@ Type of response:
 ```
 
 #### How to create a QoS session?
+
 Example:
+
 ```
 {
   "device": {
@@ -314,6 +327,7 @@ Example:
 ```
 
 Type of response:
+
 ```
 {
   "sessionId": "f6567dd8-e069-418e-8893-7d22fcf12459",
@@ -326,6 +340,7 @@ Type of response:
 ```
 
 #### How is a device identified?
+
 Device identifiers include:
   - `ipv4Address`
   - `ipv6Address`
@@ -335,8 +350,6 @@ Device identifiers include:
 ## [QualityOnDemand Provisioning](https://github.com/camaraproject/QualityOnDemand)
 
 ### Description
-
-**Scope:** QoS profiles per Device
 
 The Quality-on-Demand (QoD) Provisioning API provides a programmable interface for developers to request the association of a specific QoS profile with a device, indefinitely. The association resulting from the QoD provisioning request is represented by a QoD provisioning record (or QoD provisioning for short) that includes information about the date of provisioning, the QoS profile, the provisioning status, etc., as well as a provisioningId that uniquely identifies this record for later use. Additionally, this API configures the network to apply the requested QoS profile to a specified device whenever the device is connected to the network, until the provisioning is revoked.
 
@@ -349,6 +362,8 @@ The Quality-on-Demand (QoD) Provisioning API provides a programmable interface f
 3. Response: The network will indicate whether the request is active and for how long.
 
 #### How to provision a QoS profile for a device?
+
+```
 {
   "device": {
     "phoneNumber": "+123456789",
@@ -365,8 +380,11 @@ The Quality-on-Demand (QoD) Provisioning API provides a programmable interface f
     "credentialType": "PLAIN"
   }
 }
+```
 
 Type of response:
+
+```
 {
   "device": {
     "phoneNumber": "+123456789",
@@ -387,8 +405,10 @@ Type of response:
   "status": "REQUESTED",
   "statusInfo": "NETWORK_TERMINATED"
 }
+```
 
 #### How is a device identified?
+
 Device identifiers include:
   - `ipv4Address`
   - `ipv6Address`
@@ -399,9 +419,27 @@ Device identifiers include:
 
 ### Description
 
-**Scope:** Dedicated Network for a georaphical area
+The Dedicated Network APIs, provide functionalities for reserving network connectivity resources (e.g. throughput) potentially with an SLA and for time and location (service area) limits, discover supported and prepared network capabilities/resources (e.g. existing slices to connect to), manage device access, offering insights based on network profiles and resource states.
 
-This API allows for requesting a Dedicated Network, which provides a set of capabilities and connectivity performance targets. The Dedicated Network may be requested for a particular geographical location and at a particular time window. Depending on the requested start time for the dedicated network, the network may first enter a _reserved_ state.
+The APIs are summarized in the table below followed by a brief description.
+
+| **API** | **Purpose of the API** | **Key Abstractions and concepts** |
+| ---- | ------- | ----|
+| Dedicated Network API | Reservation and lifecycle management of network connectivity resources for dedicated use. | A Dedicated Network is a logical resource and is used to embody the reservation of network connectivity resources in the physical network. Initiating a new reservation request using this API results in a new Dedicated Network resource being created. The Dedicated Network undergoes various lifecycle States including REQUESTED, RESERVED, ACTIVATED and TERMINATED. Reservation of resources occurs based on the selected **Network Profile**, **duration** when the reservation is needed (Service Time) and **geographical areas** where the service is needed (Service Area). | 
+| Dedicated Network Profiles API | Discovery of predefined set of network capabilities and performance characteristics | A Network Profile represents a predefined set of network capabilities and performance characteristics that can be applied when creating dedicated networks. Each profile represents a validated, supported configuration that has been pre-approved in the terms and conditions between the API Provider and API Consumer. |
+| Dedicated Network Accesses API | Managing access to the Dedicated Network, i.e., controlling which devices may benefit from the reserved resources and capabilities | A Device Access represents the permission for a specific device to use a Dedicated Network's reserved connectivity resources. The usage of resources can be tailored to each device within the constraints of the applicable Network Profile. |
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Usage
 
