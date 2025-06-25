@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Analysis of CAMARA APIs
+title: CAMARA APIs for QoS
 parent: Content Production & Contribution
 grand_parent: Network APIs
 nav_order: 4
