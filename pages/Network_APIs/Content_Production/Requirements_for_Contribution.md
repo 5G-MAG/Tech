@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Requirements
+title: Network Capability Requirements
 parent: Content Production & Contribution
-grand_parent: Network Capability Requirements
+grand_parent: Network APIs
 nav_order: 2
 has_children: false
 ---
