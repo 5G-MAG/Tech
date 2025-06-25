@@ -11,7 +11,7 @@ has_children: false
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members as part of **WI: Network Exposure and APIs Supporting Media Services and Applications**
 We welcome and encourage contributions from the broader community. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# Analysis of CAMARA APIs within the scope of Content Production & Contribution
+# Analysis of CAMARA APIs related to Quality of Service
 
 We collect here information about the following CAMARA APIs
  - [Connectivity Insights APIs](#connectivityinsights)
