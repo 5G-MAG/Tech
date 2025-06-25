@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Analysis of 3GPP APIs for Qos
+title: 3GPP APIs for Qos
 parent: Content Production & Contribution
 grand_parent: Network APIs
 nav_order: 4
