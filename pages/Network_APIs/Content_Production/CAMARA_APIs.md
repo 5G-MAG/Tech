@@ -1,7 +1,7 @@
 ---
 layout: default
 title: CAMARA APIs for QoS
-parent: Content Production & Contribution
+parent: Network API Initiatives
 grand_parent: Network APIs
 nav_order: 4
 has_children: false
