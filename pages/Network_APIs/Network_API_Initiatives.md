@@ -13,7 +13,7 @@ This documentation is currently **under development and subject to change**. It 
 
 ## 3GPP APIs
 
-### [CAMARA APIs for Quality of Service](https://jordijoangimenez.github.io/Tech/pages/Network_APIs/Content_Production/3GPP_APIs_QoS.html)
+### [3GPP APIs for Quality of Service](https://jordijoangimenez.github.io/Tech/pages/Network_APIs/Content_Production/3GPP_APIs_QoS.html)
 
 ## CAMARA APIs
 
