@@ -3,7 +3,7 @@ layout: default
 title: 3GPP APIs for Qos
 parent: Network API Initiatives
 grand_parent: Network APIs
-nav_order: 4
+nav_order: 0
 has_children: false
 ---
 
