@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Requirements by Network API Initiatives
-parent: Content Production & Contribution
-grand_parent: Network APIs
+title: Network API Initiatives
+parent: Network APIs
 nav_order: 3
 has_children: false
 ---
