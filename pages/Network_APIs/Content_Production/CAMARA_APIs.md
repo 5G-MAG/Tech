@@ -20,15 +20,7 @@ We collect here information about the following CAMARA APIs
  - [Dedicated Networks APIs](#dedicatednetworks)
  - [Network Slice Booking APIs](#networkslicebooking)
 
-## General information
-
-- CAMARA Repositories in GitHub: [Link](https://github.com/orgs/camaraproject/repositories?q=sort%3Aname-asc)
-- API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
-- Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
-
-
 ----
-
 
 ## [ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
