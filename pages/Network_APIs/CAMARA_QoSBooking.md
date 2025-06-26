@@ -1,6 +1,10 @@
 ---
 layout: default
-title: QoS Booking
+title: CAMARA: QoS Booking
+parent: Network API Analysis
+grand_parent: Network APIs
+nav_order: 3
+has_children: false
 ---
 
 {: .warning }
