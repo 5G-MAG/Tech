@@ -13,11 +13,16 @@ This documentation is currently **under development and subject to change**. It 
 
 ## 3GPP APIs
 
-### [3GPP APIs for Quality of Service](https://jordijoangimenez.github.io/Tech/pages/Network_APIs/3GPP_APIs_QoS.html)
+### 3GPP APIs for Quality of Service
 
 ## CAMARA APIs
 
-### [CAMARA APIs for Quality of Service](https://jordijoangimenez.github.io/Tech/pages/Network_APIs/CAMARA_APIs_QoS.html)
+### CAMARA APIs for Quality of Service
+ - [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html)
+ - [Quality On Demand APIs](./CAMARA_QualityonDemand.html)
+ - [QoS Booking APIs](./CAMARA_QoSBooking.html)
+ - [Dedicated Networks APIs](./CAMARA_DedicatedNetworks.html)
+ - [Network Slice Booking APIs](./CAMARA_NetworkSliceBooking.html)
 
 ### Information
 - CAMARA Repositories in GitHub: [Link](https://github.com/orgs/camaraproject/repositories?q=sort%3Aname-asc)
