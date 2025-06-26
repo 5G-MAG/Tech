@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CAMARA: Draft devics
+title: CAMARA Draft devics
 parent: Network API Analysis
 grand_parent: Network APIs
 nav_order: 3
