@@ -1,6 +1,10 @@
 ---
 layout: default
-title: Connectivity Insights
+title: CAMARA: Connectivity Insights
+parent: Network API Analysis
+grand_parent: Network APIs
+nav_order: 3
+has_children: false
 ---
 
 {: .warning }
