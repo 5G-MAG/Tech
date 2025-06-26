@@ -1,6 +1,10 @@
 ---
 layout: default
-title: Quality on Demand
+title: CAMARA: Quality on Demand
+parent: Network API Analysis
+grand_parent: Network APIs
+nav_order: 3
+has_children: false
 ---
 
 {: .warning }
