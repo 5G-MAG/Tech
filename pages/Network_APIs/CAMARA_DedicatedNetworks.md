@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CAMARA: Dedicated Networks
+title: CAMARA Dedicated Networks
 parent: Network API Analysis
 grand_parent: Network APIs
 nav_order: 3
