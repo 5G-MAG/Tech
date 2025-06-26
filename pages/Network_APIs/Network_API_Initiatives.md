@@ -12,7 +12,16 @@ This documentation is currently **under development and subject to change**. It 
 # Network API Initiatives under analysis
 
 ## 3GPP APIs
+We collect here information about the following 3GPP APIs
 
+### NEF
+- [Nnef_AFSessionWithQoS]()
+- [Nnef_ChargeableParty]()
+- [Nnef_BDTPNegotiation]()
+
+### PCF
+- [Npcf_PolicyAuthorization]()
+- [Npcf_BDTPolicyControl]()
 ### 3GPP APIs for Quality of Service
 
 ## CAMARA APIs
