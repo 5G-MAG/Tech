@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Network API Initiatives
+title: Network API Analysis
 parent: Network APIs
 nav_order: 3
-has_children: true
+has_children: false
 ---
 
 {: .warning }
