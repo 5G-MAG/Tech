@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CAMARA: Network Slice Booking
+title: CAMARA Network Slice Booking
 parent: Network API Analysis
 grand_parent: Network APIs
 nav_order: 3
