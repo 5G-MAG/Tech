@@ -60,7 +60,7 @@ Specifies the type of queue for L4S (Low Latency, Low Loss, Scalable Throughput)
 **NOTE**: serviceClass is experimental and could change or be removed in a future release.
 The name of a Service Class, representing a QoS Profile designed to provide optimized behavior for a specific application type. While DSCP values are commonly associated with Service Classes, their use may vary across network segments and may not be applied throughout the entire end-to-end QoS session. This aligns with the serviceClass concept used in HomeDevicesQoQ for consistent terminology. Service classes define specific QoS behaviors that map to DSCP (Differentiated Services Code Point) values or Microsoft QoS traffic types. The supported mappings are:
 - 1. Values aligned with the [RFC4594](https://datatracker.ietf.org/doc/html/rfc4594) guidelines for differentiated traffic classes.
-  2. Microsoft [QOS_TRAFFIC_TYPE](https://learn.microsoft.com/en-us/windows/win32/api/qos2/ne-qos2-qos_traffic_type) values for Windows developers.
+- 2. Microsoft [QOS_TRAFFIC_TYPE](https://learn.microsoft.com/en-us/windows/win32/api/qos2/ne-qos2-qos_traffic_type) values for Windows developers.
 
 #### QoS Booking APIs
 
