@@ -30,9 +30,9 @@ Ability to receive ACK (success/fail) |
 Requirement | API
 -- | --
 Ability to receive information from the network |
-real-time for QoS profile re-selection and/or e.g. codec reconfiguration, bitrate reconfiguration |
-during runtime for troubleshooting |
-after the session (logging information) for post-processing |
+Real-time information for QoS profile re-selection and/or e.g. codec reconfiguration, bitrate reconfiguration |
+Information during runtime for troubleshooting |
+Information after the session (logging information) for post-processing |
 
 ## Time Synchronization
 
