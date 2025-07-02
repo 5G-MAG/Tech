@@ -26,7 +26,9 @@ Ability to select at runtime a QoS profile for a media flow |
 Ability to receive ACK (success/fail) |
 
 ## Information monitoring, logging and/or Network assistance
+
 Requirement | API
+-- | --
 Ability to receive information from the network |
 real-time for QoS profile re-selection and/or e.g. codec reconfiguration, bitrate reconfiguration |
 during runtime for troubleshooting |
