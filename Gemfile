@@ -15,7 +15,7 @@ gem "minima", "~> 2.5.2"
 # gem "github-pages", "~> 228", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem 'jekyll-feed', '~> 0.17.0'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -33,4 +33,4 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick"
-gem "just-the-docs", "0.5.3"  # pinned to the current release 2023-6-17
+gem 'just-the-docs', '~> 0.10.1'
