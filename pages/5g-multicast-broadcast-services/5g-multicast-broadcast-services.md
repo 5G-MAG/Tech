@@ -9,6 +9,14 @@ has_children: true
 
 <img src="../../assets/images/title_MBS.png" width="60%">
 
+## Related documentation
+
+### 5G-MAG TECH XCHANGE: User Services for the 5G Multicast-Broadcast Service (3GPP Release 17)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/73KINNxl_FA?si=Jbj6BID6uaXxFGOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Technical Papers
+TBD
+
 In 2019, 3GPP identified a number of services across different industry verticals that share the requirement of conveying common data to multiple recipients at the same time - for example public safety, V2X, group communications and internet of things (IoT). 
 
 As multicast and broadcast have the potential to deliver ‘common data’ services more efficiently than unicast 3GPP has since standardised these capabilities in the 5G system as 5G New Radio Multicast and Broadcast Services (5G-NR MBS). 5G-NR MBS will be substantially complete in Release 17 (Rel-17), with some (mainly service) aspects carrying over to Rel-18.
