@@ -26,7 +26,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.5g-mag.com" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/images/5g-mag-logo-with-text.png"
 
-google_analytics: G-MD22P725DR
+ga_tracking: G-MD22P725DR
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings
 
 aux_links:
   "5G-MAG Technology in GitHub":
