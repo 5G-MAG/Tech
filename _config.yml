@@ -26,8 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.5g-mag.com" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/images/5g-mag-logo-with-text.png"
 
-google_analytics:
-  id: "G-MD22P725DR"
+google_analytics: G-MD22P725DR
 
 aux_links:
   "5G-MAG Technology in GitHub":
