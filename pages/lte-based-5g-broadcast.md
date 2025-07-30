@@ -2,7 +2,7 @@
 layout: default
 title: 5G Broadcast
 has_children: false
-nav_order: 2
+nav_order: 3
 ---
 
 <img src="../assets/images/Banner_5GBC.png" /> 
