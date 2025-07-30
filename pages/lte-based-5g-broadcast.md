@@ -16,3 +16,9 @@ nav_order: 2
 
 ### Technical Papers
 TBD
+
+##  Deployment Profiles
+- Documentation available [here](./deployment_profiles.html).
+
+## Operational Parameters in Use
+- Documentation available [here](./parameters_in_use.html).
