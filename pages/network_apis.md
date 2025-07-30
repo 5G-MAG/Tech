@@ -8,4 +8,4 @@ nav_order: 5
 
 <img src="../assets/images/Banner_API.png" /> 
 
-# Network Capability Exposure through APIs - Relevant Specifications
+# Network Capability Exposure through APIs - Overview of the Work
