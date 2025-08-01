@@ -7,7 +7,12 @@ nav_order: 4
 
 <img src="../assets/images/Banner_5MBS.png" /> 
 
-# 5G Multicast Broadcast Services - Overview of the Work
+# 5G Multicast Broadcast Services - Resources and Outcomes
+
+* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/7)
+* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/5g-multicast-broadcast-services.html)
+* **Reference Tools** available:
+    * [**Project: 5G Multicast Broadcast Services**](https://5g-mag.github.io/Getting-Started/pages/5g-multicast-broadcast-services/)
 
 ## Related documentation
 
