@@ -20,6 +20,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
    * [Project: 5G Media Streaming Architecture](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
    * [Project: 5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
+---
 
 <img src="./assets/images/Banner_UEDC.png" width="50%" /> 
 
@@ -30,6 +31,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
    * [UE data collection, reporting and event exposure](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
 
+---
 
 <img src="./assets/images/Banner_5GBC.png" width="50%" /> 
 
@@ -41,6 +43,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
     * [5G Broadcast Hybrid Services](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/)
     * [Emergency Alerts over 5G Broadcast](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
 
+---
 
 <img src="./assets/images/Banner_5MBS.png" width="50%" /> 
 
@@ -51,6 +54,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
     * [5G Multicast Broadcast Services](https://5g-mag.github.io/Getting-Started/pages/5g-multicast-broadcast-services/)
 
+---
 
 <img src="./assets/images/Banner_RTC.png" width="50%" /> 
 
@@ -59,6 +63,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/rtc.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/rtc.html)
 
+---
 
 <img src="./assets/images/Banner_API.png" width="50%" /> 
 
@@ -66,6 +71,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8)
 * All the [**Resources and Outcomes**](./pages/network_apis.html)
 
+---
 
 <img src="./assets/images/Banner_NTN.png" width="50%" /> 
 
@@ -82,6 +88,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/npn.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/npn.html)
 
+---
 
 <img src="./assets/images/Banner_TSC.png" width="50%" /> 
 
@@ -90,6 +97,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/tsc.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/tsc.html)
 
+---
 
 <img src="./assets/images/Banner_XR.png" width="50%" /> 
 
@@ -100,6 +108,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
    * [XR Media with MPEG-I Scene Description](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/)
 
+---
 
 <img src="./assets/images/Banner_V3C.png" width="50%" /> 
 
@@ -110,6 +119,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
    * [V3C Immersive Platform](https://5g-mag.github.io/Getting-Started/pages/v3c-immersive-platform/)
 
+---
 
 <img src="./assets/images/Banner_B2D.png" width="50%" /> 
 
@@ -120,6 +130,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
    * [Beyond 2D Evaluation Framework](https://5g-mag.github.io/Getting-Started/pages/beyond-2d-evaluation-framework/)
 
+---
 
 <img src="./assets/images/Banner_AIML.png" width="50%" /> 
 
@@ -130,6 +141,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
    * [AI & ML Evaluation Framework](https://5g-mag.github.io/Getting-Started/pages/ai-ml-evaluation-framework/)
 
+---
 
 <img src="./assets/images/Banner_MD.png" width="50%" /> 
 
@@ -140,6 +152,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
    * [Multimedia Content Delivery Protocols](https://5g-mag.github.io/Getting-Started/pages/multimedia-content-delivery/)
 
+---
 
 <img src="./assets/images/Banner_DVBI.png" width="50%" /> 
 
@@ -150,11 +163,15 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
    * [DVB-I Services over 5G Systems](https://5g-mag.github.io/Getting-Started/pages/dvbi-over-5g/)
 
+---
+
 <img src="./assets/images/Banner_6G.png" width="50%" /> 
 
 ## Towards 6G Media
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/20)
 * All the [**Resources and Outcomes**](./pages/6g.html)
+
+---
 
 {: .note }
 More information on Applications and Technology can be found at [https://www.5g-mag.com/technology](https://www.5g-mag.com/technology).
