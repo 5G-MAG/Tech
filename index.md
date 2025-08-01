@@ -17,8 +17,8 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/5g-media-streaming.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html)
 * **Reference Tools** available:
-   * [Project: 5G Media Streaming Architecture](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
-   * [Project: 5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
+   * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
+   * [**Project: 5G Core Network components**](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
 ---
 
@@ -29,7 +29,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/data-collection-event-exposure.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html)
 * **Reference Tools** available:
-   * [UE data collection, reporting and event exposure](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
+   * [**Project: UE data collection, reporting and event exposure**](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
 
 ---
 
@@ -40,8 +40,8 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/lte-based-5g-broadcast.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/lte-based-5g-broadcast.html)
 * **Reference Tools** available:
-    * [5G Broadcast Hybrid Services](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/)
-    * [Emergency Alerts over 5G Broadcast](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
+    * [**Project: 5G Broadcast Hybrid Services**](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/)
+    * [**Project: Emergency Alerts over 5G Broadcast**](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
 
 ---
 
@@ -52,7 +52,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/5g-multicast-broadcast-services.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/5g-multicast-broadcast-services.html)
 * **Reference Tools** available:
-    * [5G Multicast Broadcast Services](https://5g-mag.github.io/Getting-Started/pages/5g-multicast-broadcast-services/)
+    * [**Project: 5G Multicast Broadcast Services**](https://5g-mag.github.io/Getting-Started/pages/5g-multicast-broadcast-services/)
 
 ---
 
@@ -107,7 +107,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/xr.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/xr.html)
 * **Reference Tools** available:
-   * [XR Media with MPEG-I Scene Description](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/)
+   * [**Project: XR Media with MPEG-I Scene Description**](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/)
 
 ---
 
@@ -118,7 +118,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/volumetric-video.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/volumetric-video.html)
 * **Reference Tools** available:
-   * [V3C Immersive Platform](https://5g-mag.github.io/Getting-Started/pages/v3c-immersive-platform/)
+   * [**Project: V3C Immersive Platform**](https://5g-mag.github.io/Getting-Started/pages/v3c-immersive-platform/)
 
 ---
 
@@ -129,7 +129,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/beyond2d.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/beyond2d.html)
 * **Reference Tools** available:
-   * [Beyond 2D Evaluation Framework](https://5g-mag.github.io/Getting-Started/pages/beyond-2d-evaluation-framework/)
+   * [**Project: Beyond 2D Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/beyond-2d-evaluation-framework/)
 
 ---
 
@@ -140,7 +140,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/aiml.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/aiml.html)
 * **Reference Tools** available:
-   * [AI & ML Evaluation Framework](https://5g-mag.github.io/Getting-Started/pages/ai-ml-evaluation-framework/)
+   * [**Project: AI & ML Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/ai-ml-evaluation-framework/)
 
 ---
 
@@ -151,7 +151,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/multimedia-content-delivery.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/multimedia-content-delivery.html)
 * **Reference Tools** available:
-   * [Multimedia Content Delivery Protocols](https://5g-mag.github.io/Getting-Started/pages/multimedia-content-delivery/)
+   * [**Project: Multimedia Content Delivery Protocols**](https://5g-mag.github.io/Getting-Started/pages/multimedia-content-delivery/)
 
 ---
 
@@ -162,7 +162,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/dvb-i-5g.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/dvb-i-5g.html)
 * **Reference Tools** available:
-   * [DVB-I Services over 5G Systems](https://5g-mag.github.io/Getting-Started/pages/dvbi-over-5g/)
+   * [**Project: DVB-I Services over 5G Systems**](https://5g-mag.github.io/Getting-Started/pages/dvbi-over-5g/)
 
 ---
 
