@@ -9,7 +9,7 @@ nav_order: 6
 
 # Network Capability Exposure through APIs - Overview of the Work
 
-<img src="../assets/images/Banner_TechAnalysis.png" width="80%" /> 
+<img src="../assets/images/Banner_TechAnalysis.png" width="60%" /> 
 
 ##  Content Production and Contribution Scenarios
 - Documentation available [here](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Content_Production_Contribution.html).
