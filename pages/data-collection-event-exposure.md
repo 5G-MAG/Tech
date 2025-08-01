@@ -7,7 +7,12 @@ nav_order: 2
 
 <img src="../assets/images/Banner_UEDC.png" /> 
 
-# UE Data Collection, Reporting and Event Exposure - Overview of the Work
+# UE Data Collection, Reporting and Event Exposure - Resources and Outcomes
+
+* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/21)
+* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html)
+* **Reference Tools** available:
+   * [**Project: UE data collection, reporting and event exposure**](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
 
 ## Related documentation
 
