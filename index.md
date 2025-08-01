@@ -80,6 +80,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * All the [**Resources and Outcomes**](./pages/ntn.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/ntn.html)
 
+---
 
 <img src="./assets/images/Banner_NPN.png" width="50%" /> 
 
