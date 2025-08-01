@@ -7,7 +7,12 @@ nav_order: 10
 
 <img src="../assets/images/Banner_XR.png" /> 
 
-# XR Media with MPEG-I Scene Description - Overview of the Work
+# XR Media with MPEG-I Scene Description - Resources and Outcomes
+
+* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/13)
+* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/xr.html)
+* **Reference Tools** available:
+   * [**Project: XR Media with MPEG-I Scene Description**](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/)
 
 ## Related documentation
 
