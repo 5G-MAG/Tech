@@ -12,7 +12,7 @@ This documentation is currently **under development and subject to change**. It 
 
 # Network Capabilities (Network Services) for Content Production & Contribution
 
-This is a list of network capabilities required to realize the scenarios described in  [Network Capability Exposure and APIs for Content Production and Contribution Scenarios](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Content_Production_Contribution.html).
+This is a list of network capabilities required to realize the scenarios described in  [Network Capability Exposure and APIs for Content Production and Contribution Scenarios](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Production_Contribution_Scenarios.html).
 
 ## Media delivery with Quality of Service (QoS)
 
