@@ -10,7 +10,7 @@ has_children: false
 This website provides documentation related to the work conducted within 5G-MAG on the following topics:
 
 
-<img src="./assets/images/Banner_5GMS.png" width="60%" /> 
+<img src="./assets/images/Banner_5GMS.png" width="50%" /> 
 
 ## 5G Media Streaming Architecture
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/9)
@@ -21,7 +21,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
    * [Project: 5G Core Network components](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
 
-<img src="./assets/images/Banner_UEDC.png" width="60%" /> 
+<img src="./assets/images/Banner_UEDC.png" width="50%" /> 
 
 ## UE Data Collection, Reporting & Event Exposure
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/21)
@@ -31,7 +31,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
    * [UE data collection, reporting and event exposure](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
 
 
-<img src="./assets/images/Banner_5GBC.png" width="60%" /> 
+<img src="./assets/images/Banner_5GBC.png" width="50%" /> 
 
 ## 5G Broadcast
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/10)
@@ -42,7 +42,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
     * [Emergency Alerts over 5G Broadcast](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
 
 
-<img src="./assets/images/Banner_5MBS.png" width="60%" /> 
+<img src="./assets/images/Banner_5MBS.png" width="50%" /> 
 
 ## 5G Multicast Broadcast Services
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/7)
@@ -52,7 +52,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
     * [5G Multicast Broadcast Services](https://5g-mag.github.io/Getting-Started/pages/5g-multicast-broadcast-services/)
 
 
-<img src="./assets/images/Banner_RTC.png" width="60%" /> 
+<img src="./assets/images/Banner_RTC.png" width="50%" /> 
 
 ## Real-Time Media Communication
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/19)
@@ -60,14 +60,14 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/rtc.html)
 
 
-<img src="./assets/images/Banner_API.png" width="60%" /> 
+<img src="./assets/images/Banner_API.png" width="50%" /> 
 
 ## Network Capability Exposure through APIs
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8)
 * All the [**Resources and Outcomes**](./pages/network_apis.html)
 
 
-<img src="./assets/images/Banner_NTN.png" width="60%" /> 
+<img src="./assets/images/Banner_NTN.png" width="50%" /> 
 
 ## Non-Terrestrial Networks
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/6)
@@ -75,7 +75,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/ntn.html)
 
 
-<img src="./assets/images/Banner_NPN.png" width="60%" /> 
+<img src="./assets/images/Banner_NPN.png" width="50%" /> 
 
 ## Non-Public Networks
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/11)
@@ -83,7 +83,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/npn.html)
 
 
-<img src="./assets/images/Banner_TSC.png" width="60%" /> 
+<img src="./assets/images/Banner_TSC.png" width="50%" /> 
 
 ## Time Sensitive Communication
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/12)
@@ -91,7 +91,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/tsc.html)
 
 
-<img src="./assets/images/Banner_XR.png" width="60%" /> 
+<img src="./assets/images/Banner_XR.png" width="50%" /> 
 
 ## XR Media with MPEG-I Scene Description
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/13)
@@ -101,7 +101,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
    * [XR Media with MPEG-I Scene Description](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/)
 
 
-<img src="./assets/images/Banner_V3C.png" width="60%" /> 
+<img src="./assets/images/Banner_V3C.png" width="50%" /> 
 
 ## Volumetric Video Experiences with MPEG V3C
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/18)
@@ -111,7 +111,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
    * [V3C Immersive Platform](https://5g-mag.github.io/Getting-Started/pages/v3c-immersive-platform/)
 
 
-<img src="./assets/images/Banner_B2D.png" width="60%" /> 
+<img src="./assets/images/Banner_B2D.png" width="50%" /> 
 
 ## Beyond 2D Video Experiences
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/15)
@@ -121,7 +121,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
    * [Beyond 2D Evaluation Framework](https://5g-mag.github.io/Getting-Started/pages/beyond-2d-evaluation-framework/)
 
 
-<img src="./assets/images/Banner_AIML.png" width="60%" /> 
+<img src="./assets/images/Banner_AIML.png" width="50%" /> 
 
 ## AI/ML in Mobile Media Services
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/16)
@@ -131,7 +131,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
    * [AI & ML Evaluation Framework](https://5g-mag.github.io/Getting-Started/pages/ai-ml-evaluation-framework/)
 
 
-<img src="./assets/images/Banner_MD.png" width="60%" /> 
+<img src="./assets/images/Banner_MD.png" width="50%" /> 
 
 ## Multimedia Content Delivery Protocols
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/22)
@@ -141,7 +141,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
    * [Multimedia Content Delivery Protocols](https://5g-mag.github.io/Getting-Started/pages/multimedia-content-delivery/)
 
 
-<img src="./assets/images/Banner_DVBI.png" width="60%" /> 
+<img src="./assets/images/Banner_DVBI.png" width="50%" /> 
 
 ## DVB-I Services over 5G Systems
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/17)
@@ -150,7 +150,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 * **Reference Tools** available:
    * [DVB-I Services over 5G Systems](https://5g-mag.github.io/Getting-Started/pages/dvbi-over-5g/)
 
-<img src="./assets/images/Banner_6G.png" width="60%" /> 
+<img src="./assets/images/Banner_6G.png" width="50%" /> 
 
 ## Towards 6G Media
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/20)
