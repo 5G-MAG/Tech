@@ -7,7 +7,12 @@ nav_order: 11
 
 <img src="../assets/images/Banner_V3C.png" /> 
 
-# Volumetric Video Experiences with MPEG V3C - Overview of the Work
+# Volumetric Video Experiences with MPEG V3C - Resources and Outcomes
+
+* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/18)
+* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/volumetric-video.html)
+* **Reference Tools** available:
+   * [**Project: V3C Immersive Platform**](https://5g-mag.github.io/Getting-Started/pages/v3c-immersive-platform/)
 
 ## Related documentation
 
