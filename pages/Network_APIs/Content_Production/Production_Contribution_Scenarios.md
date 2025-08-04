@@ -6,14 +6,14 @@ nav_order: 0
 has_children: true
 ---
 
-<img src="../../../assets/images/Banner_TechAnalysis.png"/> 
+<img src="../assets/images/Banner_API.png" /> 
 
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-{: .toc }
-
 # Network Capability Exposure and APIs for Content Production and Contribution
+
+{: .toc }
 
 Wireless connectivity plays a key role in content production and contribution, with scenarios such as production in studios, coverage of live events in venues or on-the-move, commentary boxes, newsgathering,... These different setups may have unique needs involving specific infrastructure and equipment, as well as distinct media connectivity flows with varying quality-of-service (QoS) requirements.
 
