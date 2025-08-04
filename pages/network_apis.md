@@ -14,7 +14,7 @@ nav_order: 6
 <img src="../assets/images/Banner_TechAnalysis.png" width="50%" /> 
 
 ##  Content Production and Contribution Scenarios
-* Scenerios: [Network Capability Exposure and APIs for Content Production and Contribution](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Production_Contribution_Scenarios.html).
+* Scenarios: [Network Capability Exposure and APIs for Content Production and Contribution](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Production_Contribution_Scenarios.html).
 * Workflows: [Required interactions to exploit network capabilities](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Production_Contribution_Workflows.html).
 * Requirements: [Network Capabilities (Network Services) for Content Production & Contribution](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Production_Contribution_Requirements.html).
 
