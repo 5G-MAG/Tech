@@ -11,6 +11,8 @@ nav_order: 6
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8)
 
+---
+
 <img src="../assets/images/Banner_TechAnalysis.png" width="50%" /> 
 
 ##  Content Production and Contribution Scenarios
