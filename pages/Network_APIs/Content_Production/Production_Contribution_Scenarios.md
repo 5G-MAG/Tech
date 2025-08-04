@@ -6,18 +6,27 @@ nav_order: 0
 has_children: true
 ---
 
+<img src="../../../assets/images/Banner_API.png" /> 
+
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-
 # Network Capability Exposure and APIs for Content Production and Contribution
 
+Wireless connectivity plays a key role in content production and contribution, with scenarios such as production in studios, coverage of live events in venues or on-the-move, commentary boxes, newsgathering,... These different setups may have unique needs involving specific infrastructure and equipment, as well as distinct media connectivity flows with varying quality-of-service (QoS) requirements.
+
+## Media connectivity flows and QoS
+Examples of media flows include: Content acquisition, contribution to remote locations, control signals and telemetry, performance and analytics, voice services, return video/audio,...
+
+Each of them may involve certain QoS requirements including: data rate, bit error rate, latency, jitter,... Radio-related parameters such as amount of spectrum, uplink/downlink rates, or resilience to interference are considered as tunable variables to meet the QoS requirements and therefore are not considered up-front requirements.
+
+Meeting such requirements may involve a certain degree of control on the network and/or the network setup. While in some cases it may be possible to meet the requirements via best-effort contended public networks, others may require the setup of non-public networks (NPN) and invoking certain network capabilities beyond best-effort connectivity. 
+
+## Exposure of network capabilities
 The exposure of network capabilities to applications representes an opportunity to exploit advanced network features beyond best-effort connectivity. Examples of network capabilities maz include on-demand quality, user equipment (UE) management, precise time synchronization,... Accessing and utilizing the desired features can be intricate and inconsistent across different networks. Several initiatives are taking shape to explore the opportunities behind Network APIs (exposing network capabilities to API consumers), offering high-level abstractions of underlying network functionalities to simplify resource utilization for non-network experts.
 
-Use cases identified in [Towards a comprehensive 5G-based toolbox for live media production](https://www.5g-mag.com/post/towards-a-comprehensive-5g-based-toolbox-for-live-media-production) that may benefit from specific network capabilities beyond best-effort connectivity include professional electronics newsgathering (ENG), live streaming contribution and media production applications. This documentation identifies a series of requirements, processes and collaboration scenarios related to the exposure of network capabilities to applications.
 
-
-## Network setup: Newsgathering and mobile journalism
+## Example: Media connectivity flows for newsgathering and mobile journalism
 
 ### Description
 
@@ -49,7 +58,7 @@ The actors involved are:
   -	**Media Servers**, typically located in the Studio Production Hub (operated by the Production Manager) and interact with the production devices, e.g. receiving video or audio streams.
 
 
-## Network setup: Outside Broadcast
+## Example: Media connectivity flows for Outside Broadcast
 
 ### Description
 

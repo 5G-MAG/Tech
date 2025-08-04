@@ -1,13 +1,26 @@
 ---
 layout: default
-title: 5G Multicast Broadcast Services (MBS)
-nav_order: 1
-has_children: true
+title: 5G Multicast Broadcast Services
+has_children: false
+nav_order: 4
 ---
 
-# 5G Multicast Broadcast Services (MBS)
+<img src="../assets/images/Banner_5MBS.png" /> 
 
-<img src="../../assets/images/title_MBS.png" width="60%">
+# 5G Multicast Broadcast Services - Resources and Outcomes
+
+* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/7)
+* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/5g-multicast-broadcast-services.html)
+* **Reference Tools** available:
+    * [**Project: 5G Multicast Broadcast Services**](https://5g-mag.github.io/Getting-Started/pages/5g-multicast-broadcast-services/)
+
+## Related documentation
+
+### 5G-MAG TECH XCHANGE: User Services for the 5G Multicast-Broadcast Service (3GPP Release 17)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/73KINNxl_FA?si=Jbj6BID6uaXxFGOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Technical Papers
+TBD
 
 In 2019, 3GPP identified a number of services across different industry verticals that share the requirement of conveying common data to multiple recipients at the same time - for example public safety, V2X, group communications and internet of things (IoT). 
 
