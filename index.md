@@ -9,7 +9,6 @@ has_children: false
 
 This website provides documentation related to the work conducted within 5G-MAG on the following topics:
 
-
 <img src="./assets/images/Banner_5GMS.png" width="50%" /> 
 
 ## 5G Media Streaming Architecture
@@ -175,5 +174,5 @@ This website provides documentation related to the work conducted within 5G-MAG 
 ---
 
 {: .note }
-More information on Applications and Technology can be found at [https://www.5g-mag.com/technology](https://www.5g-mag.com/technology).
-Please refer to the [Tech repository](https://github.com/5G-MAG/Tech/tree/main/pages) to provide updates to this documentation.
+Copyright: 5G Media Action Group (5G-MAG)
+Please refer to the [Tech](https://github.com/5G-MAG/Tech/tree/main/pages) repository to provide updates to this documentation.
