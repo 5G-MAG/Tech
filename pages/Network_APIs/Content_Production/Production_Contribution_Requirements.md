@@ -12,9 +12,6 @@ has_children: false
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-1.TOC
-{: .toc }
-
 # Network Capabilities (Network Services) for Content Production & Contribution
 
 This is a list of network capabilities required to realize the scenarios described in  [Network Capability Exposure and APIs for Content Production and Contribution Scenarios](https://5g-mag.github.io/Tech/pages/Network_APIs/Content_Production/Production_Contribution_Scenarios.html).
