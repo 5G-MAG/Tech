@@ -13,9 +13,6 @@ This documentation is currently **under development and subject to change**. It 
 
 # Network Capability Exposure and APIs for Content Production and Contribution
 
-1. TOC
-{:toc}
-
 Wireless connectivity plays a key role in content production and contribution, with scenarios such as production in studios, coverage of live events in venues or on-the-move, commentary boxes, newsgathering,... These different setups may have unique needs involving specific infrastructure and equipment, as well as distinct media connectivity flows with varying quality-of-service (QoS) requirements.
 
 ## Media connectivity flows and QoS
