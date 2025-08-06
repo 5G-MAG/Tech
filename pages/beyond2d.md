@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Beyond 2D Video
-has_children: false
+has_children: true
 nav_order: 12
 ---
 
