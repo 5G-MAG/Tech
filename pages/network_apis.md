@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Network APIs
-has_children: yes
+has_children: true
 nav_order: 6
 ---
 
