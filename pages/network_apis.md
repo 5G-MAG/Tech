@@ -21,7 +21,7 @@ Wireless connectivity is a key element in content production and contribution, i
 
 * Scenarios: [Network Capability Exposure and APIs for Content Production and Contribution](./Network_APIs/Content_Production/Production_Contribution_Scenarios.html).
 * Workflows: [Required interactions to exploit network capabilities](./Network_APIs/Content_Production/Production_Contribution_Workflows.html).
-* Requirements: [Network Capabilities (Network Services) for Content Production & Contribution](./pages/Network_APIs/Content_Production/Production_Contribution_Requirements.html).
+* Requirements: [Network Capabilities (Network Services) for Content Production & Contribution](./Network_APIs/Content_Production/Production_Contribution_Requirements.html).
 
 ## Live Media Streaming
 
