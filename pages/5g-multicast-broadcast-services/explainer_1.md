@@ -19,7 +19,7 @@ MBS-enabled base stations autonomously decide whether to use PTM or PTP delivery
 
 <figure>
   <img src="image-url.jpg" alt="">
-  <figcaption style="text-align: center">To receive Multicast Services, UEs must first subscribe to a multicast group. Base stations 1 and 2 use the PTM delivery method to serve subscribed UEs within their reception footprints. Base station 2 additionally uses the PTP delivery method to serve UEs that require more robust delivery. Base station 3 (not supporting MBS) can deliver multicast packets via a conventional unicast PDU session unique to each subscribed UE.</figcaption>
+  <figcaption style="text-align: center; font-style: italic">To receive Multicast Services, UEs must first subscribe to a multicast group. Base stations 1 and 2 use the PTM delivery method to serve subscribed UEs within their reception footprints. Base station 2 additionally uses the PTP delivery method to serve UEs that require more robust delivery. Base station 3 (not supporting MBS) can deliver multicast packets via a conventional unicast PDU session unique to each subscribed UE.</figcaption>
 </figure>
 
 ## Broadcast Services
@@ -29,7 +29,7 @@ A single copy of the MBS traffic is efficiently transported over the 5G core net
 
 <figure>
   <img src="image-url.jpg" alt="">
-  <figcaption style="text-align: center">A Broadcast Service is available to compatible UEs within the broadcast service area, always using the PTM delivery method.</figcaption>
+  <figcaption style="text-align: center; font-style: italic">A Broadcast Service is available to compatible UEs within the broadcast service area, always using the PTM delivery method.</figcaption>
 </figure>
 
 ## What kinds of service could be offered with 5G MBS?
