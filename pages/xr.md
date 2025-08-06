@@ -1,7 +1,7 @@
 ---
 layout: default
 title: XR with MPEG-I SD
-has_children: false
+has_children: true
 nav_order: 10
 ---
 
