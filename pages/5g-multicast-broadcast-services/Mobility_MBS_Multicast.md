@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mobility for MBS Multicast
-parent: 5G Multicast Broadcast Services (MBS)
+parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 0
 ---
