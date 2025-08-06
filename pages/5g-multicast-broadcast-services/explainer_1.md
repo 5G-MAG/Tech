@@ -18,7 +18,7 @@ A Multicast Service uses PTM and/or PTP delivery methods to transport traffic fr
 MBS-enabled base stations autonomously decide whether to use PTM or PTP delivery methods at the radio access network based on the number of concurrent subscriptions and the quality of the radio channel.
 
 <figure>
-  <img src="image-url.jpg" alt="">
+  <img src="./images/figure_mbs_1.png" alt="">
   <figcaption style="text-align: center; font-style: italic">To receive Multicast Services, UEs must first subscribe to a multicast group. Base stations 1 and 2 use the PTM delivery method to serve subscribed UEs within their reception footprints. Base station 2 additionally uses the PTP delivery method to serve UEs that require more robust delivery. Base station 3 (not supporting MBS) can deliver multicast packets via a conventional unicast PDU session unique to each subscribed UE.</figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ A Broadcast Service uses only the PTM delivery method to transport traffic from 
 A single copy of the MBS traffic is efficiently transported over the 5G core network to each MBS-compatible base station in the service area using the shared traffic delivery method.
 
 <figure>
-  <img src="image-url.jpg" alt="">
+  <img src="./images/figure_mbs_2.png" alt="">
   <figcaption style="text-align: center; font-style: italic">A Broadcast Service is available to compatible UEs within the broadcast service area, always using the PTM delivery method.</figcaption>
 </figure>
 
@@ -38,7 +38,7 @@ MBS supports the delivery of both operator and third-party media content. In par
 * Multicast allows the efficient and scalable delivery of popular services while ensuring a similar quality of service (QoS) and reliability to that of unicast distribution. Quality of experience is independent of audience size and network congestion is mitigated. Multicast allows a group of UEs to receive services according to QoS requirements and/or prevailing channel conditions.
 
 <figure>
-  <img src="image-url.jpg" alt="">
+  <img src="./images/figure_mbs_3.png" alt="">
 </figure>
 
 ## Additional characteristics
