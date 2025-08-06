@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Multimedia Delivery Protocols
-has_children: false
+has_children: true
 nav_order: 14
 ---
 

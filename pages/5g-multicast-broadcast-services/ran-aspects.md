@@ -1,7 +1,7 @@
 ---
 layout: default
 title: MBS RAN Aspects
-parent: 5G Multicast Broadcast Services (MBS)
+parent: 5G Multicast Broadcast Services
 has_children: false
 nav_order: 2
 ---

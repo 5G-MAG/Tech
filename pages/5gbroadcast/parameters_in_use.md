@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Parameters in use
-parent: 5G Broadcast & MBMS
+parent: 5G Broadcast
 nav_order: 1
 has_children: true
 ---

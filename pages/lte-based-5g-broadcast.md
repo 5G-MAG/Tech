@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5G Broadcast
-has_children: false
+has_children: true
 nav_order: 3
 ---
 
@@ -15,13 +15,21 @@ nav_order: 3
     * [**Project: 5G Broadcast Hybrid Services**](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/)
     * [**Project: Emergency Alerts over 5G Broadcast**](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
 
-## Related documentation
+---
 
-### 5G-MAG TECH XCHANGE: 5G Media Streaming over eMBMS (3GPP Release 17)
+<img src="../assets/images/Banner_Explainers.png" width="50%" /> 
+
+
+## 5G Media Streaming over eMBMS (3GPP Release 17)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m6fU7F0DhS8?si=9levb2nUxu5HyfaZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Technical Papers
-TBD
+## [Spectrum for LTE-based 5G Terrestrial Broadcast](https://www.5g-mag.com/post/spectrum-for-lte-based-5g-terrestrial-broadcast)
+
+## [LTE-based 5G Terrestrial Broadcast for TV and radio distribution](https://www.5g-mag.com/post/lte-based-5g-terrestrial-broadcast-for-tv-and-radio-distribution)
+
+---
+
+<img src="../assets/images/Banner_TechAnalysis.png" width="50%" /> 
 
 ##  Deployment Profiles
 - Documentation available [here](./deployment_profiles.html).

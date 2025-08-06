@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Time Sensitive Communication
-has_children: false
+has_children: true
 nav_order: 9
 ---
 

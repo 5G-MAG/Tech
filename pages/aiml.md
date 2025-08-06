@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AI & ML in 5G Media 
-has_children: false
+has_children: true
 nav_order: 13
 ---
 
