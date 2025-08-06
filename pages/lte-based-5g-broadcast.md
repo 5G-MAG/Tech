@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5G Broadcast
-has_children: false
+has_children: true
 nav_order: 3
 ---
 
