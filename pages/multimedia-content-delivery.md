@@ -7,7 +7,7 @@ nav_order: 14
 
 <img src="../assets/images/Banner_MD.png" /> 
 
-# Multimedia Delivery Protocols - Resources and Outcomes
+# Multimedia Delivery Protocols - Tech Resources
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/22)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/multimedia-content-delivery.html)
