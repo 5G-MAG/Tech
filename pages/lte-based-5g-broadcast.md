@@ -7,7 +7,7 @@ nav_order: 3
 
 <img src="../assets/images/Banner_5GBC.png" /> 
 
-# 5G Broadcast - Resources and Outcomes
+# 5G Broadcast - Tech Resources
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/10)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/lte-based-5g-broadcast.html)
