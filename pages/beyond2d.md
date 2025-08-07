@@ -7,7 +7,7 @@ nav_order: 12
 
 <img src="../assets/images/Banner_B2D.png" /> 
 
-# Beyond 2D Video Experiences - Resources and Outcomes
+# Beyond 2D Video Experiences - Tech Resources
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/15)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/beyond2d.html)

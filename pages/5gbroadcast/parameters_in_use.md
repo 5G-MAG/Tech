@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Parameters in use
+title: Operational Parameters
 parent: 5G Broadcast
 nav_order: 1
 has_children: true
 ---
 
-# 5G Broadcast - Operational paramenters in use
+<img src="../../assets/images/Banner_5GBC.png" /> 
+
+# 5G Broadcast - Deployment profiles
+

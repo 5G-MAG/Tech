@@ -7,7 +7,7 @@ nav_order: 6
 
 <img src="../assets/images/Banner_API.png" /> 
 
-# Network Capability Exposure through APIs - Resources and Outcomes
+# Network Capability Exposure through APIs - Tech Resources
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8)
 

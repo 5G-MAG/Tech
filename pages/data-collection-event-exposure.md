@@ -7,7 +7,7 @@ nav_order: 2
 
 <img src="../assets/images/Banner_UEDC.png" /> 
 
-# UE Data Collection, Reporting and Event Exposure - Resources and Outcomes
+# UE Data Collection, Reporting and Event Exposure - Tech Resources
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/21)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html)
