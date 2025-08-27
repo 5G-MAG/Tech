@@ -23,3 +23,18 @@ nav_order: 2
 
 ## Technical Papers
 [UE Data Collection, Reporting and Exposure](https://www.3gpp.org/newsletter-issue-05-oct-2022#flipbook-flip6/17/), by Richard Bradbury (BBC R&D)
+
+---
+
+<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+
+This is a summary of the work conducted by 5G-MAG members on this topic.
+
+### In relation to Standards
+* Documentation on UE Data Collection and Reporting framework for Event Exposure in 3GPP Release 17
+* 3GPP Standardization tracker and relevant Work Items
+* Support to standards with feedback from implementation
+
+### In relation to Software
+* Implementation of reusable Rel-18 Data Collection Application Function for data reporting and event exposure
+* Cloud-based deployments and dockerization

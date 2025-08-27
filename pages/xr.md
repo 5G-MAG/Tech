@@ -26,3 +26,21 @@ nav_order: 10
 
 ## Technical Papers
 * [MPEG-I Scene Description: A dynamic scene description framework for immersive media](https://www.ibc.org/download?ac=24724), by T. Stockhammer (Qualcomm), I. Bouazizi (Qualcomm), M.-L. Champel (Xiaomi), E. Potetsianakis (Nokia), E. Thomas (Xiaomi), L. Kondrad (Nokia), E. Alexiou (TNO), G. Martin-Cocher (InterDigital), G. Bhullar (InterDigital), Q. Avril (InterDigital), Q. Galvane (InterDigital), J. Regateiro (InterDigital), P. Hirtzlin (InterDigital)
+
+---
+
+<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+
+This is a summary of the work conducted by 5G-MAG members on this topic.
+
+### In relation to Standards
+* Documentation on MPEG-I Scene Description extensions to glTF 2.0 3D/XR assets
+* 3GPP and MPEG Standardization tracker and relevant Work Items
+* Support to standards with feedback from implementation
+
+### In relation to Software
+* Implementation of a Unity Player with MAF Accesses for 3D and XR Scenees
+* Implementation of parsing and rendering of glTF extensions defined in MPEG-I Scene Description
+* Implementation of video textures and spatial audio extensions
+* Implementation of interactivity and anchoring
+* Implementation of basic content generation platform based on Blender

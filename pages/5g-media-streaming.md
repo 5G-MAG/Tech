@@ -24,3 +24,27 @@ nav_order: 1
 
 ## Dynamic Policies for 5G Media Streaming (3GPP Release 16)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cspJzBuBeU0?si=lw3_nDZKXA_Mz79p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+
+This is a summary of the work conducted by 5G-MAG members on this topic.
+
+### In relation to Standards
+* Deployment collaboration scenarios for 5GMS for streaming services
+* Requirements gathering for 3GPP FS_AMD “Study on Advanced Media Delivery”
+* Analysis of network features and APIs in relation to uplink media delivery and media production/contribution
+* Analysis of protocols and codecs supported
+* Tracking 3GPP standardization and relevant work items
+* Feedback to relevant specification from SW development
+
+### In relation to Software
+* Implementation of 5G Media Streaming Server-Side and Client-Side components
+* Cloud-based deployments and dockerization
+* Implementation of APIs and Application Provider toolbox
+* Implementation of 5GC service consumer libraries
+
+### In relation to Testing
+* Integration with commercial 5GC under planning
+* Generation of data and test assets under planning

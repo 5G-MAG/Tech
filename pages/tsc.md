@@ -11,3 +11,14 @@ nav_order: 9
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/12)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/tsc.html)
+
+---
+
+<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+
+This is a summary of the work conducted by 5G-MAG members on this topic.
+
+### In relation to Standards
+* Documentation on the ability of 5G technologies to support time services in relevant deployment scenarios for media production
+* Documentation on time information distribution and exposure to applications from 3GPP specifications
+* Documentation on time synchronization of media streams for content production using SMPTE ST 2110

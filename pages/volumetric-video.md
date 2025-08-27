@@ -23,3 +23,19 @@ nav_order: 11
 
 ## Technical Papers
 * [Efficient delivery and rendering on client devices via MPEG-I standards for emerging volumetric video experiences](https://www.ibc.org/download?ac=24714), by C. Guede (InterDigital), P. Fontaine (InterDigital), J. Mulard (InterDigital), B. Leroy (InterDigital), C. Quinquis (InterDigital), R. Gendrot (InterDigital), S. Gudumasu (InterDigital), V. Allié (InterDigital), B. Kroon (Philips), B. Sonneveldt (Philips), R. Schimanofsky (Philips)
+
+---
+
+<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+
+This is a summary of the work conducted by 5G-MAG members on this topic.
+
+### In relation to Standards
+* Documentation on MPEG V3C standards for volumetric video
+* 3GPP and MPEG Standardization tracker and relevant Work Items
+
+### In relation to Software
+* Implementation of a Unity Player to decode and play V3C contents supporting MPEG-I V-PCC and MIV formats
+* Implementation of decoded plugin library with V-PCC and MIV (MVD and MPI) synthesizers plugins
+* Implementation of content streaming with V3C Carriage over MPEG-DASH
+* Implementation of MPEG Haptics

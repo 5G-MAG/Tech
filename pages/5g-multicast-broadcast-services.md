@@ -47,3 +47,19 @@ These pages provide an introduction to 5G-NR MBS in the context of media distrib
 ## [MBS Service and System Aspects](./mbs-service-layer.html)
 
 ## [MBS RAN Aspects](./mbs-service-layer.html)
+
+---
+
+<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+
+This is a summary of the work conducted by 5G-MAG members on this topic.
+
+### In relation to Standards
+* Documentation on MBS for media delivery and content scalability
+* Documentation on architecture, features and procedures in the 5GC, RAN and MBS User Services components
+* 3GPP Standardization tracker and relevant Work Items
+* Support to standards with feedback from implementation
+
+### In relation to Software
+* Implementation of 5MBS User Services components
+* Implementation of end-to-end 5MBS delivery chain for SDR-based hardware
