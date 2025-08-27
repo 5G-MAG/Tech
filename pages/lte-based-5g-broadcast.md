@@ -36,3 +36,20 @@ nav_order: 3
 
 ## Operational Parameters in Use
 - Documentation available [here](./parameters_in_use.html).
+
+---
+
+<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+
+This is a summary of the work conducted by 5G-MAG members on this topic.
+
+### In relation to Standards
+* Documentation on LTE-based 5G Broadcast for TV, Radio and Emergency Alerts
+* Updates and maintenance of ETSI TS 103 720 “5G Broadcast System for TV and Radio” specification
+* Study of hardware-friendly approaches to Time-Frequency Interleaving
+* 3GPP Standardization tracker and relevant Work Items
+* Support to standards with feedback from implementation
+
+### In relation to Software
+* Implementation of end-to-end 5G Broadcast delivery chain for SDR-based hardware and Android smartphones
+* Implementation of transmitter for emergency alerts based on Cell Broadcast alerts over 5G Broadcast
