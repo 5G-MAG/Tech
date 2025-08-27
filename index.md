@@ -9,7 +9,7 @@ has_children: false
 
 This website provides documentation related to the work conducted within 5G-MAG on the following topics:
 
-<img src="./assets/images/Banner_5GMS.png" width="50%" /> 
+<img src="./assets/images/Banner_5GMS.png" width="80%" /> 
 
 ### Tech: 5G Media Streaming Architecture
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/9)
@@ -21,7 +21,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_UEDC.png" width="50%" /> 
+<img src="./assets/images/Banner_UEDC.png" width="80%" /> 
 
 ### Tech: UE Data Collection, Reporting & Event Exposure
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/21)
@@ -32,7 +32,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_5GBC.png" width="50%" /> 
+<img src="./assets/images/Banner_5GBC.png" width="80%" /> 
 
 ### Tech: 5G Broadcast
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/10)
@@ -44,7 +44,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_5MBS.png" width="50%" /> 
+<img src="./assets/images/Banner_5MBS.png" width="80%" /> 
 
 ### Tech: 5G Multicast Broadcast Services
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/7)
@@ -55,7 +55,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_RTC.png" width="50%" /> 
+<img src="./assets/images/Banner_RTC.png" width="80%" /> 
 
 ### Tech: Real-Time Media Communication (RTC)
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/19)
@@ -64,7 +64,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_API.png" width="50%" /> 
+<img src="./assets/images/Banner_API.png" width="80%" /> 
 
 ### Tech: Network Capability Exposure through APIs
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8)
@@ -72,7 +72,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_NTN.png" width="50%" /> 
+<img src="./assets/images/Banner_NTN.png" width="80%" /> 
 
 ### Tech: Non-Terrestrial Networks
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/6)
@@ -81,7 +81,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_NPN.png" width="50%" /> 
+<img src="./assets/images/Banner_NPN.png" width="80%" /> 
 
 ### Tech: Non-Public Networks
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/11)
@@ -90,7 +90,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_TSC.png" width="50%" /> 
+<img src="./assets/images/Banner_TSC.png" width="80%" /> 
 
 ### Tech: Time Sensitive Communication
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/12)
@@ -99,7 +99,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_XR.png" width="50%" /> 
+<img src="./assets/images/Banner_XR.png" width="80%" /> 
 
 ### Tech: XR Media with MPEG-I Scene Description
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/13)
@@ -110,7 +110,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_V3C.png" width="50%" /> 
+<img src="./assets/images/Banner_V3C.png" width="80%" /> 
 
 ### Tech: Volumetric Video Experiences with MPEG V3C
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/18)
@@ -121,7 +121,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_B2D.png" width="50%" /> 
+<img src="./assets/images/Banner_B2D.png" width="80%" /> 
 
 ### Tech: Beyond 2D Video Experiences
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/15)
@@ -132,7 +132,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_AIML.png" width="50%" /> 
+<img src="./assets/images/Banner_AIML.png" width="80%" /> 
 
 ### Tech: AI/ML in Mobile Media Services
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/16)
@@ -143,7 +143,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_MD.png" width="50%" /> 
+<img src="./assets/images/Banner_MD.png" width="80%" /> 
 
 ### Tech: Multimedia Content Delivery Protocols
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/22)
@@ -154,7 +154,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_DVBI.png" width="50%" /> 
+<img src="./assets/images/Banner_DVBI.png" width="80%" /> 
 
 ### Tech: DVB-I Services over 5G Systems
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/17)
@@ -165,7 +165,7 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 ---
 
-<img src="./assets/images/Banner_6G.png" width="50%" /> 
+<img src="./assets/images/Banner_6G.png" width="80%" /> 
 
 ### Tech: Towards 6G Media
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/20)
