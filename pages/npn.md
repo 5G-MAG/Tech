@@ -24,7 +24,7 @@ nav_order: 8
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/11) for details.
 
 ### In relation to Standards
 * Documentation on high-level scenarions, architectures and features for media production and contribution with 5G NPNs
