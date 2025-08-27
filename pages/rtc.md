@@ -12,6 +12,11 @@ nav_order: 5
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/19)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/rtc.html)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1WWCY95TNpLiGlJQYXt8kgfG0rzjWoHFw/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1WWCY95TNpLiGlJQYXt8kgfG0rzjWoHFw/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
