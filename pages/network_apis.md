@@ -11,6 +11,11 @@ nav_order: 6
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1wh8V_CIaHXQt509aMAUFLR8z-w_xZp_d/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1wh8V_CIaHXQt509aMAUFLR8z-w_xZp_d/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_TechAnalysis.png" width="50%" /> 
