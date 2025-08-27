@@ -14,6 +14,11 @@ nav_order: 13
 * **Reference Tools** available:
    * [**Project: AI & ML Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/ai-ml-evaluation-framework/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/11wkc2c83pMcLWkR0uPhC4immTkAx25ij/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/11wkc2c83pMcLWkR0uPhC4immTkAx25ij/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
