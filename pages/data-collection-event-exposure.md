@@ -28,7 +28,7 @@ nav_order: 2
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/21) for details.
 
 ### In relation to Standards
 * Documentation on UE Data Collection and Reporting framework for Event Exposure in 3GPP Release 17
