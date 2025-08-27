@@ -14,6 +14,11 @@ nav_order: 11
 * **Reference Tools** available:
    * [**Project: V3C Immersive Platform**](https://5g-mag.github.io/Getting-Started/pages/v3c-immersive-platform/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1vkewCH4bIppeimzg-ms8Qi4oI1o8f6LP/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1vkewCH4bIppeimzg-ms8Qi4oI1o8f6LP/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_Explainers.png" width="50%" /> 
