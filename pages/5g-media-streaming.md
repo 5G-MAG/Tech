@@ -15,6 +15,11 @@ nav_order: 1
    * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
    * [**Project: 5G Core Network components**](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1OStDM1ihSkZZRL9HiC_5HkY97K1TLmXR/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1OStDM1ihSkZZRL9HiC_5HkY97K1TLmXR/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_Explainers.png" width="50%" /> 
