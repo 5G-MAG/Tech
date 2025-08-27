@@ -31,3 +31,14 @@ Wireless connectivity is a key element in content production and contribution, i
 
 ## Network APIs: Industry Initiatives
 * [Network API Initiatives under analysis including CAMARA Project and 3GPP APIs](./Network_APIs/Network_API_Initiatives.html)
+
+---
+
+<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+
+This is a summary of the work conducted by 5G-MAG members on this topic.
+
+### In relation to Standards
+* Documentation on collaboration scenarios for the provisioning of network capabilities for media production and contribution
+* Documentation on requirements and expected exposure of network capabilities
+* Documentation on relevant APIs developed by CAMARA
