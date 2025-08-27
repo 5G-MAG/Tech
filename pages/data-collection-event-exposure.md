@@ -14,6 +14,11 @@ nav_order: 2
 * **Reference Tools** available:
    * [**Project: UE data collection, reporting and event exposure**](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1MzYZjOXwmBMqcloxZd4u6k0OzJmrB-k1/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1MzYZjOXwmBMqcloxZd4u6k0OzJmrB-k1/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_Explainers.png" width="50%" /> 
