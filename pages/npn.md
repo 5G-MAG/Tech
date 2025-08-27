@@ -12,6 +12,11 @@ nav_order: 8
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/11)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/npn.html)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1iKU8KkM2JgYPpcdrQWxQGLIwZCYlDrSV/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1iKU8KkM2JgYPpcdrQWxQGLIwZCYlDrSV/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_Explainers.png" width="50%" /> 
