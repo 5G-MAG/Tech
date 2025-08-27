@@ -36,7 +36,7 @@ Wireless connectivity is a key element in content production and contribution, i
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8) for details.
 
 ### In relation to Standards
 * Documentation on collaboration scenarios for the provisioning of network capabilities for media production and contribution
