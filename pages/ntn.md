@@ -16,7 +16,7 @@ nav_order: 7
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/6) for details.
 
 ### In relation to Standards
 * Documentation on Content Delivery over 5G Non-Terrestrial Networks including NTN Payload and connection types, types of User Equipment for accessing NTNs
