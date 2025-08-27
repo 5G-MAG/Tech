@@ -14,6 +14,11 @@ nav_order: 14
 * **Reference Tools** available:
    * [**Project: Multimedia Content Delivery Protocols**](https://5g-mag.github.io/Getting-Started/pages/multimedia-content-delivery/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1NvLJYDT4CVzlDsYgIc6hUjORY3nyDqyz/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1NvLJYDT4CVzlDsYgIc6hUjORY3nyDqyz/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
