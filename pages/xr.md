@@ -14,6 +14,11 @@ nav_order: 10
 * **Reference Tools** available:
    * [**Project: XR Media with MPEG-I Scene Description**](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1K7wnpqcT9JJKxG1aalmirliELrn87Tzs/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1K7wnpqcT9JJKxG1aalmirliELrn87Tzs/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_Explainers.png" width="50%" /> 
