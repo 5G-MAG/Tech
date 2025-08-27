@@ -14,6 +14,11 @@ nav_order: 12
 * **Reference Tools** available:
    * [**Project: Beyond 2D Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/beyond-2d-evaluation-framework/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1U2L-xyZgKXwOmO5tPQIp2VGpch0j4lsl/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1U2L-xyZgKXwOmO5tPQIp2VGpch0j4lsl/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
