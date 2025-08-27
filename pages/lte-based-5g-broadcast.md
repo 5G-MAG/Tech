@@ -15,6 +15,11 @@ nav_order: 3
     * [**Project: 5G Broadcast Hybrid Services**](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/)
     * [**Project: Emergency Alerts over 5G Broadcast**](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1T13M-z04JbUdpbKnaYLu4TO8ibxIwlfC/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1T13M-z04JbUdpbKnaYLu4TO8ibxIwlfC/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_Explainers.png" width="50%" /> 
