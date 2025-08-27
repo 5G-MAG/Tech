@@ -15,6 +15,11 @@ nav_order: 1
    * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
    * [**Project: 5G Core Network components**](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1OStDM1ihSkZZRL9HiC_5HkY97K1TLmXR/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1OStDM1ihSkZZRL9HiC_5HkY97K1TLmXR/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_Explainers.png" width="50%" /> 
@@ -29,7 +34,7 @@ nav_order: 1
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/9) for details.
 
 ### In relation to Standards
 * Deployment collaboration scenarios for 5GMS for streaming services

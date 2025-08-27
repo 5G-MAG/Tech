@@ -14,11 +14,16 @@ nav_order: 13
 * **Reference Tools** available:
    * [**Project: AI & ML Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/ai-ml-evaluation-framework/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/11wkc2c83pMcLWkR0uPhC4immTkAx25ij/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/11wkc2c83pMcLWkR0uPhC4immTkAx25ij/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/16) for details.
 
 ### In relation to Standards
 * 3GPP and MPEG Standardization tracker and relevant Work Items

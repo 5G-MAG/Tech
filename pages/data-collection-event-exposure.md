@@ -14,6 +14,11 @@ nav_order: 2
 * **Reference Tools** available:
    * [**Project: UE data collection, reporting and event exposure**](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1MzYZjOXwmBMqcloxZd4u6k0OzJmrB-k1/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1MzYZjOXwmBMqcloxZd4u6k0OzJmrB-k1/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_Explainers.png" width="50%" /> 
@@ -28,7 +33,7 @@ nav_order: 2
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/21) for details.
 
 ### In relation to Standards
 * Documentation on UE Data Collection and Reporting framework for Event Exposure in 3GPP Release 17

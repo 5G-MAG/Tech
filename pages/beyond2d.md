@@ -14,11 +14,16 @@ nav_order: 12
 * **Reference Tools** available:
    * [**Project: Beyond 2D Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/beyond-2d-evaluation-framework/)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1U2L-xyZgKXwOmO5tPQIp2VGpch0j4lsl/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1U2L-xyZgKXwOmO5tPQIp2VGpch0j4lsl/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/15) for details.
 
 ### In relation to Standards
 * 3GPP and MPEG Standardization tracker and relevant Work Items

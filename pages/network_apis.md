@@ -11,6 +11,11 @@ nav_order: 6
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8)
 
+## Overview
+<iframe width="60%" height="520" src="https://drive.google.com/file/d/1wh8V_CIaHXQt509aMAUFLR8z-w_xZp_d/preview"></iframe>
+
+[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1wh8V_CIaHXQt509aMAUFLR8z-w_xZp_d/preview){: .btn}
+
 ---
 
 <img src="../assets/images/Banner_TechAnalysis.png" width="50%" /> 
@@ -36,7 +41,7 @@ Wireless connectivity is a key element in content production and contribution, i
 
 <img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
 
-This is a summary of the work conducted by 5G-MAG members on this topic.
+This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/8) for details.
 
 ### In relation to Standards
 * Documentation on collaboration scenarios for the provisioning of network capabilities for media production and contribution
