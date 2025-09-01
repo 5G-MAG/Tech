@@ -47,11 +47,13 @@ Media services, for example linear/live radio and TV, concurrently requested by 
 
 These pages provide an introduction to 5G-NR MBS in the context of media distribution:
 
-## [MBS Service Layer Aspects](./mbs-service-layer.html)
+## [MBS Service Layer Aspects](./5g-multicast-broadcast-services/mbs-service-layer.html)
 
-## [MBS Service and System Aspects](./mbs-service-layer.html)
+## [MBS Service and System Aspects](./5g-multicast-broadcast-services/mbs-service-system-aspects.html)
 
-## [MBS RAN Aspects](./mbs-service-layer.html)
+## [MBS RAN Aspects](./5g-multicast-broadcast-services/ran-aspects.html)
+
+## [Aspects on Mobility for MBS Multicast Services](./5g-multicast-broadcast-services/Mobility_MBS_Multicast.html)
 
 ---
 
