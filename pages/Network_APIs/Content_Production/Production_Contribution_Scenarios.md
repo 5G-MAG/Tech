@@ -67,6 +67,8 @@ The content is delivered using one of the following options:
 
 <img src="./images/figure_newsgathering.png" width="60%">
 
+<img src="./images/figure_cellularbonding.png" width="60%">
+
 The actors involved are:
   - **Streamer/Creator**, uses the content acquisition equipment to capture media, uses the network and sends data to the server.
   -	a **Studio Production Manager**, located e.g. within the production centre.
