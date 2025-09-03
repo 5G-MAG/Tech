@@ -32,14 +32,20 @@ Media production scenarios often require a mix of connectivity solutions to meet
 
 Similarly, a major event like the coronation of King Charles III brought together numerous TV producers. They used a combination of dedicated, high-quality streams for the main ceremony and various other setups for newsgathering and interviews from journalists deployed around the site. This demonstrates how a single event can have multiple connectivity needs, from high-bandwidth main broadcasts to more flexible, on-the-go reporting. This is independent of the overall cost or budget of the whole event.
 
-<img src="./images/figure_footballmatch.jpeg" width="30%">
+<figure>
+  <img src="./images/figure_footballmatch.jpeg" width="30%">
+  <figcaption>Note: Figure generated with Google Gemini</figcaption>
+</figure>
 
 ### Immediacy Over Quality
 
 When a sudden street event unfolds, the only way to cover it is with smartphones on a best-effort connection. Getting any live footage is far more valuable than dismissing the connection due to its unreliability. 
 While the video might not be broadcast-quality, the immediate, raw footage from the scene is critical for covering the event as it happens.
 
-<img src="./images/figure_mobilejournalism.jpeg" width="30%">
+<figure>
+  <img src="./images/figure_mobilejournalism.jpeg" width="30%">
+  <figcaption>Note: Figure generated with Google Gemini</figcaption>
+</figure>
 
 ### Agility over Cost
 
@@ -47,7 +53,10 @@ For both sudden and partially-planned events, cellular bonding systems have emer
 
 Cellular bonding is needed as a single best-effort public mobile network cannot guarantee reliability. The news organization will plan where to send the different journalists that will provide reports from remote locations during the news programme. Covering sudden events with cellular bonding equipment is also usual, which may achieve better reliability that the connectivity via a single smartphone.
 
+<figure>
 <img src="./images/figure_breakingnews.jpeg" width="30%">
+  <figcaption>Note: Figure generated with Google Gemini</figcaption>
+</figure>
 
 ### Dynamic Footage over Signal Stability
 
@@ -55,7 +64,10 @@ High-mobility cameras introduce the unique challenge of seamlessly mixing their 
 
 Despite these issues, the value of the unique camera perspective is prioritized. A camera on a referee provides an on-field view of the action and is critical for live replays and enhancing the narrative of the game. A camera on a motorbike in the Tour de France provides up-close views of the riders that a stationary camera could never capture.
 
+<figure>
 <img src="./images/figure_tourdefrance.jpeg" width="30%">
+  <figcaption>Note: Figure generated with Google Gemini</figcaption>
+</figure>
 
 ## Beyond best-effort connectivity: exposure of network capabilities
 
