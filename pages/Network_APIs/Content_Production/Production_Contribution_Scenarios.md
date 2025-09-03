@@ -22,9 +22,17 @@ These different setups may have unique infrastructure and equipment needs, and t
 
 The use of wireless connectivity may differ as a trade-off between quality (or importance) of the content and connection reliability.
 
-## Practical examples and trade-offs
+## A few key ideas, practical examples and trade-offs
 
 The choice to use wireless connectivity is not limited to specific scenarios or production levels. Instead, it is a strategic trade-off, balancing cost, tolerance for technical glitches, risk of failure, and the quality and importance of the content. Examples are given below.
+
+### Diversity in connectivity needs in the same deployment scenario
+
+Media production scenarios often require a mix of connectivity solutions to meet a variety of needs. For example, during a football match, a production team uses high-quality cameras for the main broadcast, while a commentator stand might have additional wireless cameras for pre-game interviews. Wireless cameras are also deployed outside the stadium to capture interviews with the crowd at the entrance of the stadium.
+
+<img src="./images/figure_footballmatch.jpeg" width="60%">
+
+Similarly, a major event like the coronation of King Charles III brought together numerous TV producers. They used a combination of dedicated, high-quality streams for the main ceremony and various other setups for newsgathering and interviews from journalists deployed around the site. This demonstrates how a single event can have multiple connectivity needs, from high-bandwidth main broadcasts to more flexible, on-the-go reporting. This is independent of the overall cost or budget of the whole event.
 
 ### Immediacy Over Quality
 
@@ -40,6 +48,8 @@ Cellular bonding is needed as a single best-effort public mobile network cannot 
 ### Dynamic Footage over Signal Stability
 
 High-mobility cameras introduce the unique challenge of seamlessly mixing their footage (generally highly engaging) into a high-quality production that includes wired cameras with reliable connections. This means the wireless setup needs to be as stable as possible, whereas the nature of its constant motion, changing environments, and potential signal obstructions makes that challenging with frequent signal fades or brief drops in connectivity.
+
+<img src="./images/figure_tourdefrance.jpeg" width="60%">
 
 Despite these issues, the value of the unique camera perspective is prioritized. A camera on a referee provides an on-field view of the action and is critical for live replays and enhancing the narrative of the game. A camera on a motorbike in the Tour de France provides up-close views of the riders that a stationary camera could never capture.
 
