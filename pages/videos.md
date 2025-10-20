@@ -61,5 +61,6 @@ nav_order: 0
 
 ### UE Data Collection and Reporting framework for Event Exposure (3GPP Release 17)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1Hv81xdbBfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-## Teaser on 5G and XR (3GPP Release 16/17/18)
-<rame width="560" height="315" src="https://www.youtube.com/embed/q0eyTt3KAs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Teaser on 5G and XR (3GPP Release 16/17/18)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q0eyTt3KAs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
