@@ -11,29 +11,33 @@ nav_order: 0
 
 ## Workshop - October 2025 - 3GPP Release 19, ready for implementation
 
-### Advanced Media Delivery - An Introduction
+### Advanced Media Delivery
+#### An Introduction
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SS4OvkC9oK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Advanced Media Delivery - An Introduction
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SS4OvkC9oK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - 5G Media Streaming
+#### Remider on 5G Media Streaming
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_0ZyI1TZoMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Advanced Media Delivery - Common Client Metadata
+#### Common Client Metadata
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5CiUqlzxzKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Advanced Media Delivery - Multi-CDN Media Delivery
+#### Multi-CDN Media Delivery
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SsCTCmRmprQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Advanced Media Delivery - Multi-Access Media Delivery
+#### Multi-Access Media Delivery
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tLdCTMvdCuo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Advanced Media Delivery - Distributing encrypted and high-value content
+#### Distributing encrypted and high-value content
 <iframe width="560" height="315" src="https://www.youtube.com/embed/24v2XA6C0M0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Advanced Media Delivery - Improved QoS support for Media Streaming services
+#### Improved QoS support for Media Streaming services
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YNhzTgpjkns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+#### Media Streaming aspects of Network Slicing
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Y2S16ZMFMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Split Rendering with IMS Data Channel
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b-w3tBNAvYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### 3GPP PDU Set handling Rel-19 Enhancements
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fBHq_oahCXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
