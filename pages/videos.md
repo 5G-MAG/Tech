@@ -9,6 +9,9 @@ nav_order: 0
 
 # Videos - Tech Resources
 
+1. TOC
+{:toc}
+
 ## Workshop - October 2025 - 3GPP Release 19, ready for implementation
 
 ### Advanced Media Delivery - An Introduction
