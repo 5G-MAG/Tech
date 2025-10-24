@@ -7,12 +7,12 @@ nav_order: 1
 
 <img src="../assets/images/Banner_5GMS.png" /> 
 
-# 5G Media Streaming Architecture - Tech Resources
+# 5G Media Streaming - Tech Resources
 
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/9)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html)
 * **Reference Tools** available:
-   * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
+   * [**Project: 5G Media Streaming**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
    * [**Project: 5G Core Service Consumers**](https://5g-mag.github.io/Getting-Started/pages/5g-core-service-consumers/)
 
 ## Overview
