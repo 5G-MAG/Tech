@@ -46,6 +46,18 @@ By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédér
 By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_Y2S16ZMFMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+### Advanced Media Delivery - In-Session Unicast Repair for MBS/MBMS Obj. Distribution
+By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jadGLNqUT6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Advanced Media Delivery - Time Synchronization
+By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tksS78GA--Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Advanced Media Delivery - Initial overview on Release 20
+By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fRTFS8-ql_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Split Rendering with IMS Data Channel
 By Saba Ahsan (Nokia) and Gazi Illahi (Nokia)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/b-w3tBNAvYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -53,6 +65,14 @@ By Saba Ahsan (Nokia) and Gazi Illahi (Nokia)
 ### 3GPP PDU Set handling Rel-19 Enhancements
 By Saba Ahsan (Nokia) and Serhan Gül (Nokia)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fBHq_oahCXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### VOPS - Video Operating Points - Harmonization and Stereo MV-HEVC
+By Thomas Stockhammer (Qualcomm)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2Vpcwx4US5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Avatar Communications in AR Calls
+By Thomas Stockhammer (Qualcomm)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/plk9XMH1qF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
