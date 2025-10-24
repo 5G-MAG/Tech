@@ -13,12 +13,12 @@ This website provides documentation related to the work conducted within 5G-MAG 
 
 <img src="./assets/images/Banner_5GMS.png"/> 
 
-## Contents: 5G Media Streaming Architecture
+## Contents: 5G Media Streaming
 * Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/9)
 * All the [**Resources and Outcomes**](./pages/5g-media-streaming.html)
 * Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html)
 * **Reference Tools** available:
-   * [**Project: 5G Media Streaming Architecture**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
+   * [**Project: 5G Media Streaming**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
    * [**Project: 5G Core Network components**](https://5g-mag.github.io/Getting-Started/pages/5g-core-network-components/)
 
 ---
