@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Tech Videos
+title: Video Library
 has_children: true
 nav_order: 0
 ---
 
 <img src="../assets/images/Banner_TechVideos.png" /> 
 
-# Videos - Tech Resources
+# Tech Videos
 
 1. TOC
 {:toc}
