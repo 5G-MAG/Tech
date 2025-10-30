@@ -32,7 +32,7 @@ nav_order: 9
 
 Information can be found in the following resources:
 
-* [**Time synchronization services for media production over 5G networks**](https://hub.5g-mag.com/Tech/docs/5G-MAG%20Report%20-%20Time%20synchronization%20services%20for%20media%20production%20over%205G%20networks.pdf)
-* [**Time synchronization and media streams for content production using SMPTE ST 2110 standards**](https://hub.5g-mag.com/Tech/docs/5G-MAG%20Report%20-%20Time%20synchronization%20and%20media%20streams%20for%20content%20production%20using%20SMPTE%20ST%202110%20standards%20.pdf)
+* [**Time synchronization services for media production over 5G networks**](https://hub.5g-mag.com/Tech/docs/Time_synchronization_services_for_media_production over 5G networks.pdf)
+* [**Time synchronization and media streams for content production using SMPTE ST 2110 standards**](https://hub.5g-mag.com/Tech/docs/Time_synchronization_and_media_streams_for_content_production_using_SMPTE_ST_2110_standards.pdf)
 
 ---
