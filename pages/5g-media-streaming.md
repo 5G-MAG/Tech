@@ -37,7 +37,9 @@ nav_order: 1
 
 <img src="../assets/images/Banner_Documentation.png" width="60%" /> 
 
-TBC
+Information can be found in the following resources:
+
+* [**Uplink media delivery in 5G - Architectures & Features**](../docs/5G-MAG%20Report%20-%20Uplink%20media%20delivery%20in%205G_%20Architectures%20%26%20Features.pdf)
 
 ---
 
