@@ -39,7 +39,7 @@ nav_order: 1
 
 Information can be found in the following resources:
 
-* [**Uplink media delivery in 5G - Architectures & Features**](../docs/5G-MAG%20Report%20-%20Uplink%20media%20delivery%20in%205G_%20Architectures%20%26%20Features.pdf)
+* [**Uplink media delivery in 5G - Architectures & Features**](https://hub.5g-mag.com/Tech/docs/5G-MAG%20Report%20-%20Uplink%20media%20delivery%20in%205G_%20Architectures%20%26%20Features.pdf)
 
 ---
 
