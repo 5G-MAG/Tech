@@ -7,7 +7,7 @@ has_children: false
 nav_order: 2
 ---
 
-# Summary of the RAN procedures to acquire MCCH and MTCH:
+# Summary of the RAN procedures
   1. Obtain MIB
   2. Obtain SIB1 (points to SIB20)
   3. SIB20 contains configuration of MCCH
@@ -16,7 +16,89 @@ nav_order: 2
   6. Obtain configuration of MTCH within MBSBroadcastConfiguration and G-RNTIs via mbs-SessionInfoList within MBSBroadcastConfiguration
   7. Demodulation of MTCH (PDSCH) with G-RNTI
 
-# Control Plane
+## Acquiring PLMN and RAN Information
+
+{: .note } This information is not required for prototype/demo purposes as this can be pre-configured by other means.
+
+A UE can support MBS to deliver content from a single source entity to all users in a broadcast service area (MBS 
+broadcast communication), as defined in 3GPP TS 23.247. If the UE is pre-configured with information related to services using MBS, the UE can discover and receive data for 
+services by using the provisioned configuration. 
+The UE may support pre-configuration of information for services using MBS including:
+* PLMN ID of the PLMN for which the configuration applies;
+* RAN information based on NR-ARFCN on which the broadcast communication service is available;
+* list of TMGI, on which the broadcast communication service is available, each associated with user service 
+description (USD) information (3GPP TS 26.517) for the MBS broadcast service.
+* list of TMGI, on which the service announcement for broadcast communication service is available along with 
+the associated USD information (see 3GPP TS 26.517) for the MBS user service announcement service
+
+## Obtention of MIB/SIB signaling
+
+For definitions refer to **[3GPP TS 38.331](https://www.3gpp.org/DynaReport/38331.htm) Clause 6.2.2**
+
+{: .note } In threory SIB19 is designed for mobility and cell reselection, therefore not needed for MBS Broadcast.
+
+### SIB 20 - Acquisition MCCH/MTCH
+
+SIB20 contains the information required to acquire the MCCH/MTCH configuration for MBS broadcast. 
+
+```
+-- ASN1START
+-- TAG-SIB20-START
+
+SIB20-r17 ::= SEQUENCE { 
+ mcch-Config-r17 MCCH-Config-r17, 
+ cfr-ConfigMCCH-MTCH-r17 CFR-ConfigMCCH-MTCH-r17 OPTIONAL, -- Need S 
+ lateNonCriticalExtension OCTET STRING OPTIONAL, 
+ ..., 
+ [[ 
+ cfr-ConfigMCCH-MTCH-RedCap-r18 CFR-ConfigMCCH-MTCH-r17 OPTIONAL, -- Need S 
+ mcch-ConfigRedCap-r18 MCCH-Config-r17 OPTIONAL -- Need S 
+ ]] 
+}
+
+MCCH-Config-r17 ::= SEQUENCE { 
+ mcch-RepetitionPeriodAndOffset-r17 MCCH-RepetitionPeriodAndOffset-r17, 
+ mcch-WindowStartSlot-r17 INTEGER (0..79), 
+ mcch-WindowDuration-r17 ENUMERATED {sl2, sl4, sl8, sl10, sl20, sl40,sl80, sl160} OPTIONAL, -- Need S 
+ mcch-ModificationPeriod-r17 ENUMERATED {rf2, rf4, rf8, rf16, rf32, rf64, rf128, rf256, 
+ rf512, rf1024, rf2048, rf4096, rf8192, rf16384, rf32768, rf65536} 
+}
+
+MCCH-RepetitionPeriodAndOffset-r17 ::= CHOICE { 
+ rf1-r17 INTEGER(0), 
+ rf2-r17 INTEGER(0..1), 
+ rf4-r17 INTEGER(0..3), 
+ rf8-r17 INTEGER(0..7), 
+ rf16-r17 INTEGER(0..15), 
+ rf32-r17 INTEGER(0..31), 
+ rf64-r17 INTEGER(0..63), 
+ rf128-r17 INTEGER(0..127),
+ rf256-r17 INTEGER(0..255) 
+}
+
+-- TAG-SIB20-STOP
+-- ASN1STOP
+```
+
+### SIB 21 - Service continuity
+
+```
+SIB21-r17 ::= SEQUENCE { 
+ mbs-FSAI-IntraFreq-r17 MBS-FSAI-List-r17 OPTIONAL, -- Need R 
+ mbs-FSAI-InterFreqList-r17 MBS-FSAI-InterFreqList-r17 OPTIONAL, -- Need R 
+ lateNonCriticalExtension OCTET STRING OPTIONAL, 
+ ... 
+}
+MBS-FSAI-List-r17 ::= SEQUENCE (SIZE (1..maxFSAI-MBS-r17)) OF MBS-FSAI-r17 
+MBS-FSAI-InterFreqList-r17 ::= SEQUENCE (SIZE (1..maxFreq)) OF MBS-FSAI-InterFreq-r17 
+MBS-FSAI-InterFreq-r17 ::= SEQUENCE { 
+ dl-CarrierFreq-r17 ARFCN-ValueNR, 
+ mbs-FSAI-List-r17 MBS-FSAI-List-r17 
+} 
+MBS-FSAI-r17 ::= OCTET STRING (SIZE (3)) 
+```
+
+# Control Plane Procedures
 ## RRC: MBS Broadcast
 ### Acquisition of MBS Broadcast information via MCCH
 * Procedures in **[3GPP TS 38.331](https://www.3gpp.org/DynaReport/38331.htm) Clause 5.9**
@@ -61,7 +143,7 @@ nav_order: 2
 * Value of LCID for MBS broadcast on DL-SCH in **[3GPP TS 38.321](https://www.3gpp.org/DynaReport/38321.htm) Table 6.2.1-1c**
 * RNTI values MCCH-RNTI = FFFD in **[3GPP TS 38.321](https://www.3gpp.org/DynaReport/38321.htm) Table 7.1-1**
 
-# User Plane
+# User Plane Procedures
 ## SDAP: MBS Broadcast
 * SDAP architecture in **[3GPP TS 37.324](https://www.3gpp.org/DynaReport/37324.htm) Clause 4.2**
   * The SDAP sublayer is configured for MRBs by RRC. The SDAP sublayer maps MBS QoS flows to MRBs (mapping between an MBS QoS flow and an MRB for DL).
@@ -72,43 +154,9 @@ nav_order: 2
 
 ## PDCP: MBS Broadcast
 
-# Annex: RRC messages ASN.1
-For definitions refer to **[3GPP TS 38.331](https://www.3gpp.org/DynaReport/38331.htm) Clause 6.2.2**
-## SIB20
-```
--- ASN1START
--- TAG-SIB20-START
+---
 
-SIB20-r17 ::=	SEQUENCE {
-    mcch-Config-r17                MCCH-Config-r17,
-    cfr-ConfigMCCH-MTCH-r17        CFR-ConfigMCCH-MTCH-r17 OPTIONAL,  -- Need S
-    lateNonCriticalExtension       OCTET STRING            OPTIONAL,
-    ...
-}
-
-MCCH-Config-r17 ::= SEQUENCE {
-    mcch-RepetitionPeriodAndOffset-r17   MCCH-RepetitionPeriodAndOffset-r17,
-    mcch-WindowStartSlot-r17             INTEGER (0..79),
-    mcch-WindowDuration-r17              ENUMERATED {sl2, sl4, sl8, sl10, sl20, sl40,sl80, sl160}     OPTIONAL, -- Need S
-    mcch-ModificationPeriod-r17          ENUMERATED {rf2, rf4, rf8, rf16, rf32, rf64, rf128, rf256,
-                                         rf512, rf1024, r2048, rf4096, rf8192, rf16384, rf32768, rf65536}
-}
-
-MCCH-RepetitionPeriodAndOffset-r17 ::= CHOICE {
-    rf1-r17                                INTEGER(0),
-    rf2-r17                                INTEGER(0..1),
-    rf4-r17                                INTEGER(0..3),
-    rf8-r17                                INTEGER(0..7),
-    rf16-r17                               INTEGER(0..15),
-    rf32-r17                               INTEGER(0..31),
-    rf64-r17                               INTEGER(0..63),
-    rf128-r17                              INTEGER(0..127),
-    rf256-r17                              INTEGER(0..255)
-}
-
--- TAG-SIB20-STOP
--- ASN1STOP
-```
+### Other RRC Messagges
 
 ```
 -- ASN1START
