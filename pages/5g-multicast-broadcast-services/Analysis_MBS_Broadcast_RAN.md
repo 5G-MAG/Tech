@@ -6,6 +6,9 @@ has_children: false
 nav_order: 5
 ---
 
+{: .warning }
+This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
+
 # Analysis of RAN procedures
   1. Obtain MIB
   2. Obtain SIB1 (points to SIB20)
@@ -17,7 +20,8 @@ nav_order: 5
 
 ## Acquiring PLMN and RAN Information
 
-{: .note } This information is not required for prototype/demo purposes as this can be pre-configured by other means.
+{: .note }
+This information is not required for prototype/demo purposes as this can be pre-configured by other means.
 
 A UE can support MBS to deliver content from a single source entity to all users in a broadcast service area (MBS 
 broadcast communication), as defined in 3GPP TS 23.247. If the UE is pre-configured with information related to services using MBS, the UE can discover and receive data for 
