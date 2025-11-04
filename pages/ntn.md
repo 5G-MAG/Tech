@@ -40,7 +40,7 @@ Information can be found in the following resources:
 ### MBS Multicast over NTN
 
 * [**Analysis - MBS Multicast over NTN**](./NTN/Analysis_MBS_Multicast_over_NTN.html)
-* [**Analysis - Mobility for MBS Multicast over NTN**](./NTN/Analysis_Mobility_NTN_MBS_Multicast.html)
+* [**Analysis - Mobility for MBS Multicast over NTN**](./NTN/Analysis_Mobility_MBS_Multicast_over_NTN.html)
 
 ### MBS Broadcast over NTN
 
