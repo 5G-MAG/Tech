@@ -1,16 +1,15 @@
 ---
 layout: default
-title: MBS Multicast over NTN
+title: MBS Multicast NTN
 parent: Non-Terrestrial Networks
 nav_order: 1
 has_children: false
 ---
 
 {: .warning }
-This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members as part of **WI: Content Delivery over NTNs** and **WI: Multicast Broadcast Services**
-We welcome and encourage contributions from the broader community. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
+This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# Feasibility Analysis - MBS Delivery Mode 1 over NTN
+# Analysis - MBS Delivery Mode 1 (Multicast) over NTN
 
 ## Requirements and Overview for the delivery of multicast content with autonomous RAN switching between point-to-point and point-to-multipoint
 
