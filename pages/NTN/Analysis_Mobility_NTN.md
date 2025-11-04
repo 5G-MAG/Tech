@@ -2,7 +2,7 @@
 layout: default
 title: NTN - Mobility
 parent: Non-Terrestrial Networks
-nav_order: 2
+nav_order: 0
 has_children: false
 ---
 
