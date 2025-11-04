@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MBS Broadcast over NTN
+title: MBS Broadcast NTN
 parent: Non-Terrestrial Networks
 nav_order: 3
 has_children: false
