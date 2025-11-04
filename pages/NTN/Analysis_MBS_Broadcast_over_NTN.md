@@ -2,7 +2,7 @@
 layout: default
 title: MBS Broadcast over NTN
 parent: Non-Terrestrial Networks
-nav_order: 2
+nav_order: 4
 has_children: false
 ---
 
