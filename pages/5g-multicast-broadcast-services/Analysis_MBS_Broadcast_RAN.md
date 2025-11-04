@@ -7,7 +7,7 @@ has_children: false
 nav_order: 2
 ---
 
-# Summary of the RAN procedures
+# Analysis of RAN procedures
   1. Obtain MIB
   2. Obtain SIB1 (points to SIB20)
   3. SIB20 contains configuration of MCCH
