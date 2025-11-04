@@ -8,6 +8,8 @@ has_children: false
 
 # Analysis - MBS Delivery Mode 2 (Broadcast) over NTN
 
+{: .warning } This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
+
 Procedures for MBS Broadcast over NTN are those defined for MBS Broadcast in [Analysis MBS Broadcast - RAN Procedures](../5g-multicast-broadcast-services/Analysis_MBS_Broadcast_RAN.html)
 
 {: .note } In threory SIB19 is designed for mobility and cell reselection, therefore the delivery of SIB19 would not be required for MBS Broadcast.
