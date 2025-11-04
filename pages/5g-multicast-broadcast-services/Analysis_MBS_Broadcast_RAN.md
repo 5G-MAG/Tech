@@ -3,7 +3,7 @@ layout: default
 title: MBS Broadcast - RAN Procedures
 parent: 5G Multicast Broadcast Services
 has_children: false
-nav_order: 2
+nav_order: 5
 ---
 
 # Analysis of RAN procedures
