@@ -38,17 +38,23 @@ nav_order: 4
 
 Information can be found in the following resources:
 
-* [**Media distribution with 5G Multicast-Broadcast Services (MBS)**](./5g-multicast-broadcast-services/explainer_1.html)
+* [**Media distribution with 5G Multicast-Broadcast Services (MBS)**](https://hub.5g-mag.com/Tech/docs/Explainer_5G_Multicast_Broadcast_Services.pdf)
 
-### Technical analysis:
+## Technical analysis:
 
-* [MBS Service Layer Aspects](./5g-multicast-broadcast-services/mbs-service-layer.html)
+* [**MBS - Summary of Service Layer Aspects**](./5g-multicast-broadcast-services/mbs-service-layer.html)
 
-* [MBS Service and System Aspects](./5g-multicast-broadcast-services/mbs-service-system-aspects.html)
+* [**MBS - Summary of Service and System Aspects**](./5g-multicast-broadcast-services/mbs-service-system-aspects.html)
 
-* [MBS RAN Aspects](./5g-multicast-broadcast-services/ran-aspects.html)
+* [**MBS - Summary of RAN Aspects**](./5g-multicast-broadcast-services/ran-aspects.html)
 
-* [Aspects on Mobility for MBS Multicast Services](./5g-multicast-broadcast-services/Mobility_MBS_Multicast.html)
+### MBS Multicast
+
+* [**Analysis of Mobility for MBS Multicast Services**](./5g-multicast-broadcast-services/Mobility_MBS_Multicast.html)
+
+### MBS Broadcast
+
+* [**Analysis of RAN Procedures for MBS Broadcast**](./5g-multicast-broadcast-services/Analysis_MBS_Broadcast_RAN.html)
 
 ---
 
