@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MBS Multicast over NTN
+title: MBS Multicast NTN
 parent: Non-Terrestrial Networks
 nav_order: 1
 has_children: false
