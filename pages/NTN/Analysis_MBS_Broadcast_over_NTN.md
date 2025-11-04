@@ -6,7 +6,7 @@ nav_order: 2
 has_children: false
 ---
 
-# Analysis of MBS Broadcast over NTN
+# Analysis - MBS Delivery Mode 2 (Broadcast) over NTN
 
 Procedures for MBS Broadcast over NTN are those defined for MBS Broadcast in [Analysis MBS Broadcast - RAN Procedures](../5g-multicast-broadcast-services/Analysis_MBS_Broadcast_RAN.html)
 
