@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mobility MBS Multicast over NTN
+title: MBS Multicast NTN - Mobility
 parent: Non-Terrestrial Networks
 nav_order: 1
 has_children: false
@@ -8,7 +8,7 @@ has_children: false
 
 {: .warning } This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# Aspects on Mobility for MBS Multicast over NTN
+# Analysis - Mobility for MBS Multicast over NTN
 
 The scenarios under study are the following:
 * **Scenario 1**: Support of Lossless Handover for MBS Multicast Service for a group of users under the coverage of a satellite when mobility is triggered by the satellite moving.
