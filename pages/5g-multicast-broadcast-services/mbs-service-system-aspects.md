@@ -1,9 +1,9 @@
 ---
 layout: default
-title: MBS Service and System Aspects
+title: MBS - Service & System
 parent: 5G Multicast Broadcast Services
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 {: .warning }
