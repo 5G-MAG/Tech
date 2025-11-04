@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mobility Aspects NTN
+title: NTN - Mobility
 parent: Non-Terrestrial Networks
 nav_order: 2
 has_children: false
