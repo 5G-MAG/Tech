@@ -39,7 +39,6 @@ A user of a media application would like to obtain Connectivity Insights about t
 
 <figure>
   <img src="./Content_Production/images/figure_connectivityinsights.png" width="80%">
-  <figcaption>Example for mobile journalism and newsgathering</figcaption>
 </figure>
 
 ### Step 0: Pre-conditions
