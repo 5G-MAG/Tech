@@ -11,27 +11,20 @@ This documentation is currently **under development and subject to change**. It 
 
 # Network API Initiatives under analysis
 
-## 3GPP APIs for Quality of Service
+## CAMARA APIs for Communication Quality Management
 
-We collect here information about the following 3GPP APIs
+- CAMARA Repositories in GitHub: [Link](https://github.com/orgs/camaraproject/repositories?q=sort%3Aname-asc)
+- API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
+- Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
 
-### NEF
-- [Nnef_AFSessionWithQoS]()
-- [Nnef_ChargeableParty]()
-- [Nnef_BDTPNegotiation]()
+### [Quality On Demand APIs](./CAMARA_QualityonDemand.html)
+### [Application Profiles APIs](./CAMARA_ApplicationProfiles.html)
+### [Dedicated Networks APIs](./CAMARA_DedicatedNetworks.html)
+### [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html)
 
-### PCF
-- [Npcf_PolicyAuthorization]()
-- [Npcf_BDTPolicyControl]()
-
-## CAMARA APIs for Quality of Service
-
-### Relevant APIs
- - [Quality On Demand APIs](./CAMARA_QualityonDemand.html)
+TBC
  - [QoS Booking APIs](./CAMARA_QoSBooking.html)
- - [Dedicated Networks APIs](./CAMARA_DedicatedNetworks.html)
  - [Network Slice Booking APIs](./CAMARA_NetworkSliceBooking.html)
- - [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html)
 
 ### Relevant QoS Parameters
 
@@ -98,7 +91,15 @@ Name | Description
 **signalStrength** | rough indication of the end user device radio signal conditions
 **connectivityType** | the access technology connecting the user device to the operator network
 
-### Information
-- CAMARA Repositories in GitHub: [Link](https://github.com/orgs/camaraproject/repositories?q=sort%3Aname-asc)
-- API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
-- Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
+## 3GPP APIs for Quality of Service
+
+We collect here information about the following 3GPP APIs
+
+### NEF
+- [Nnef_AFSessionWithQoS]()
+- [Nnef_ChargeableParty]()
+- [Nnef_BDTPNegotiation]()
+
+### PCF
+- [Npcf_PolicyAuthorization]()
+- [Npcf_BDTPolicyControl]()
