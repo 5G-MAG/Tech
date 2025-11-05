@@ -48,7 +48,7 @@ A user of a media application would like to obtain Connectivity Insights about t
 ### Step 1b: Recurrent events/notifications on network quality
 * **POST /subscriptions**, passing the **applicationProfileId** obtained in step 0, the address/port of an application server, and a device object. Indicate expiration time and maximum number of events.
 
-## Assessment
+## 5G-MAG's Self-Assessment
 
 The APIs are likely to be invoked to obtain information either before or during operation about the ability of the network to meet the requirements. However:
 - The information received has no time validity. There is no guarantee that the network can meet the requirements at any other time with the sole use of this API.
