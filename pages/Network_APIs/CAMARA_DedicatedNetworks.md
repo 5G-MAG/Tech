@@ -14,18 +14,92 @@ This documentation is currently **under development and subject to change**. It 
 
 ## Description
 
-The Dedicated Network APIs are a set of APIs to provide functionalities for reserving network connectivity resources (e.g. throughput) potentially with an SLA and for time and location (service area) limits, discover supported and prepared network capabilities/resources (e.g. existing slices to connect to), manage device access, offering insights based on network profiles and resource states.
+The “Dedicated Networks” APIs provide functionalities for reserving network connectivity resources, selecting network capabilities, and controlling access for devices.
 
-* The **Dedicated Network API** is invoked for reservation and lifecycle management of network connectivity resources for dedicated use. A Dedicated Network is a logical resource and is used to embody the reservation of network connectivity resources in the physical network. Initiating a new reservation request using this API results in a new Dedicated Network resource being created. The Dedicated Network undergoes various lifecycle States including REQUESTED, RESERVED, ACTIVATED and TERMINATED. Reservation of resources occurs based on the selected **Network Profile**, **duration** when the reservation is needed (Service Time) and **geographical areas** where the service is needed (Service Area).
+## Relation of APIs
+### Dedicated Network - Network Profiles API
+  * **GET /profiles** - List of available network profiles. The response includes an `id`, alongside the `maxNumberOfDevices`, `aggregatedUlThroughput`, `aggregatedDlThroughput`, `qosProfiles`,...
+  * **GET /profiles/{profileId}** - Read a dedicated network profile
 
-* The **Dedicated Network Profiles API** is invoked for discovery of predefined set of network capabilities and performance characteristics. A Network Profile represents a predefined set of network capabilities and performance characteristics that can be applied when creating dedicated networks. Each profile represents a validated, supported configuration that has been pre-approved in the terms and conditions between the API Provider and API Consumer.
+### Dedicated Network - Networks API
+  * **GET /networks** - List of dedicated networks (the list can be empty)
+  * **POST /networks** with the request body including the chose Network Profile `profileId`, `serviceTime` start and end, `serviceArea` is used to request the creation of a dedicated network. The response includes an `id` and the `status`of the request. A `sink` for notifications can be optionally indicated.
+  * **GET /networks/{networkId}** - get the current information about a dedicated network
+  * **DELETE /networks/{networkId}** - delete a dedicated network
 
-* The **Dedicated Network Accesses API** is invoked to managing access to the Dedicated Network, i.e., controlling which devices may benefit from the reserved resources and capabilities. A Device Access represents the permission for a specific device to use a Dedicated Network's reserved connectivity resources. The usage of resources can be tailored to each device within the constraints of the applicable Network Profile.
+### Dedicated Network - Accesses API
+  * **GET /accesses** - List of existing device accesses to dedicated networks, optionally filtered for a given device and/or for a dedicated network (the list can be empty)
+  * **POST /accesses** with the request body including the `networkId` received after invoking the Dedicated Network API (`id`), a `device` object, `qosProfiles`, this request will crate a device access to a dedicated network with a fiven configutation. The response includes an `id`.
+  * **GET /accesses/{accessId}** - get a device access to the dedicated network and its configuration
+  * **DELETE /accesses/{accessId}** - delete a device access to the dedicated network
 
 Information: [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
-The API definitions can be obtained here: 
 
-## Dedicated Network API Usage
+The API definitions can be obtained here: [https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions](https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions)
+
+## Workflow: Media application requesting Dedicated Network
+
+A user of a media application would like to request a Dedicated Network, with a set of capabilities and connectivity performance targets. The resut is for a particular geographical location and at a particular time window. The following steps are executed:
+
+<figure>
+  <img src="./Content_Production/images/figure_dedicatednetworks.png" width="80%">
+</figure>
+
+### Step 0: Pre-conditions
+* qosProfiles have already been defined and made available by the network operator. This is related to the [**Quality on Demand API**](./CAMARA_QualityonDemand.html).
+* Network Profiles with the allowed number of devices which can be server concurrently together with the aggregated UL and DL thoughput have been defined and made available by the network operator
+
+### Step 1: Discover Network Profiles available
+* **GET /networks** to obtain a list of dedicated networks with the corresponding `id`.
+
+### Step 2: Create a Dedicated Network
+* **POST /networks** passing the Network Profile `profileId` from Step 1, `serviceTime` start and end and `serviceArea`.
+
+### Step 3: Attach a Device to a Dedicated Network
+* **POST /accesses** passing the Network Profile `networkId` from Step 2, a `device` object, and `qosProfile`.
+
+### Step 4: During operation, delete a device access and attach a new device to a dedicated network or the same device to a different dedicated network
+**DELETE /accesses/{accessId}** and **POST /accesses** should be used to detach or attach devices to a different dedicated network
+
+## 5G-MAG's Self-Assessment
+
+The Network Profiles and Dedicated Network APIs are likely to be invoked before the actual usage of the network to ensure that the requested capabilities are "reserved" for the specific area and time window.
+During the event devices will have access to the Dedicated Network and should be allocated or de-allocated depending on the actual requirements.
+
+Potential improvements:
+- the fact that qosProfiles and Network Profiles need to be in place beforehand may delay the usage of this API. It would be useful if such profiles could be created/requested by the user and accepted by the network operator.
+- a media production event may involve several devices that may need to request access to the Dedicated Network but not simultaneously. A distinction between the number of different devices able to be allocated to the Dedicated Network and the number of devices that can simultaneouly request the same performance may be worth considering.
+
+---
+
+## Dedicated Network - Network Profiles API Usage
+
+This API allows for discovering available network profiles, which are offered by the network provider to be used in conjunction of the Dedicated Network API. Network profiles describe the capabilities and performance targets of a dedicated network.
+
+With **GET /profiles** a list of available network profiles can be retrieved
+
+```
+[
+  {
+    "id": "string",
+    "maxNumberOfDevices": 0,
+    "aggregatedUlThroughput": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "aggregatedDlThroughput": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "qosProfiles": [
+      "QCI_1_voice"
+    ],
+    "defaultQosProfile": "QCI_1_voice"
+  }
+]
+```
+
+## Dedicated Network - Networks API Usage
 
 This API allows for requesting a Dedicated Network, which provides a set of capabilities and connectivity performance targets. The Dedicated Network may be requested for a particular geographical location and at a particular time window. Depending on the requested start time for the dedicated network, the network may first enter a reserved state.
 
@@ -36,11 +110,11 @@ With **POST /networks**, passing a **profileId**, **serviceTime**, **serviceArea
 {
   "profileId": "string",
   "serviceTime": {
-    "start": "2025-06-18T11:42:33.700Z",
-    "end": "2025-06-18T11:42:33.700Z"
+    "start": "2025-11-05T14:14:35.390Z",
+    "end": "2025-11-05T14:14:35.390Z"
   },
   "serviceArea": {},
-  "sink": "string",
+  "sink": "https://1IG+u7oa.fNS?9-`Zg`Fi*'k",
   "sinkCredential": {}
 }
 ```
@@ -48,121 +122,38 @@ With **POST /networks**, passing a **profileId**, **serviceTime**, **serviceArea
 Type of response: Information about the **status** of the request.
 
 ```
-[
-  {
-    "profileId": "string",
-    "serviceTime": {
-      "start": "2025-06-18T11:41:09.988Z",
-      "end": "2025-06-18T11:41:09.988Z"
-    },
-    "serviceArea": {},
-    "sink": "string",
-    "sinkCredential": {},
-    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-    "status": "REQUESTED"
-  }
-]
+{
+  "profileId": "string",
+  "serviceTime": {
+    "start": "2025-11-05T14:14:35.392Z",
+    "end": "2025-11-05T14:14:35.392Z"
+  },
+  "serviceArea": {},
+  "sink": "https://E@g-!#-fZu+}jH*Z~!HO1,!UmF'CA<19OpZ0Z))",
+  "sinkCredential": {},
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "status": "REQUESTED"
+}
 ```
 
-### Obtain a list of dedicated networks
-With **GET /networks**
+## Dedicated Network - Accesses API Usage
 
-```
-[
-  {
-    "profileId": "string",
-    "serviceTime": {
-      "start": "2025-06-18T11:47:40.371Z",
-      "end": "2025-06-18T11:47:40.371Z"
-    },
-    "serviceArea": {},
-    "sink": "string",
-    "sinkCredential": {},
-    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-    "status": "REQUESTED"
-  }
-]
-```
-
-### Obtain the current information about a dedicated network
-With **GET /networks/{networkId}**
-
-### Delete a dedicated network
-With **DELETE /networks/{networkId}**
-
-## Dedicated Network Profiles API Usage
-
-This API allows for discovering available network profiles, which are offered by the network provider to be used in conjunction of the Dedicated Network API. Network profiles describe the capabilities and performance targets of a dedicated network. A Network Profile represents a predefined set of network capabilities and performance characteristics that can be applied when creating a Network. It enables API Consumers to understand the capabilities they can expect when using the reserved network connectivity resources. A Network Profile is a validated, supported configuration that has been pre-approved between the API Provider and API Consumer.
-
-A Network Profile contains information about:
-- the maximum number of devices allowed,
-- the aggregated throughput to be provided,
-- a set of allowed QoS Profiles that devices can use when having access to the Dedicated Network.
-
-### Obtain list of available dedicated network profiles
-With **GET GET /profiles**
-
-```
-[
-  {
-    "id": "string",
-    "maxNumberOfDevices": 0,
-    "aggregatedUlThroughput": {
-      "value": 10,
-      "unit": "bps"
-    },
-    "aggregatedDlThroughput": {
-      "value": 10,
-      "unit": "bps"
-    },
-    "qosProfiles": [
-      "string"
-    ],
-    "defaultQosProfile": "string"
-  }
-]
-```
-
-### Obtain list of available dedicated network profiles
-With **GET GET /profiles**
-
-```
-[
-  {
-    "id": "string",
-    "maxNumberOfDevices": 0,
-    "aggregatedUlThroughput": {
-      "value": 10,
-      "unit": "bps"
-    },
-    "aggregatedDlThroughput": {
-      "value": 10,
-      "unit": "bps"
-    },
-    "qosProfiles": [
-      "string"
-    ],
-    "defaultQosProfile": "string"
-  }
-]
-```
-
-### Obtain a dedicated network profiles
-With **GET /profiles/{profileId}**
-
-## Dedicated Network Accesses API Usage
 This API allows for requesting network access for devices. A device is identified by the CAMARA device object, containing either an MSIDSN or a Network Access Identifier.
 A Device Access represents the permission for a specific device to use a Dedicated Network's reserved connectivity resources. Only devices for which a Device Access resource has been created can use the connectivity resources allocated for that network. The usage of resources can be tailored to each device within the constraints of the applicable Network Profile.
 
-### Create a device access to a dedicated network with given configuration
-With **POST /accesses**
+With **POST /accesses** a device access can be created
 
 ```
 {
-  "networkId": "string",
+  "networkId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
   "device": {
     "phoneNumber": "+123456789",
-    "networkAccessIdentifier": "123456789@domain.com"
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {
+      "publicAddress": "84.125.93.10",
+      "publicPort": 59765
+    },
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
   },
   "qosProfiles": [
     "string"
@@ -175,10 +166,15 @@ Type of response: An **id** for the requested device access.
 
 ```
 {
-  "networkId": "string",
+  "networkId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
   "device": {
     "phoneNumber": "+123456789",
-    "networkAccessIdentifier": "123456789@domain.com"
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {
+      "publicAddress": "84.125.93.10",
+      "publicPort": 59765
+    },
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
   },
   "qosProfiles": [
     "string"
@@ -188,28 +184,16 @@ Type of response: An **id** for the requested device access.
 }
 ```
 
-### Obtain a list of device accesses to dedicated networks
-With **GET /accesses**
+## Device object
+
+This is how a device is defined:
 
 ```
-[
-  {
-    "networkId": "string",
-    "device": {
-      "phoneNumber": "+123456789",
-      "networkAccessIdentifier": "123456789@domain.com"
+  "device": {
+    "phoneNumber": "123456789",
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {
+      "publicAddress": "84.125.93.10",
+      "publicPort": 59765
     },
-    "qosProfiles": [
-      "string"
-    ],
-    "defaultQosProfile": "string",
-    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
-  }
-]
 ```
-
-### Obtain a device access to the dedicated network
-With **GET /accesses/{accessId}**
-
-### Delete a device access to the dedicated network
-With **DELETE /accesses/{accessId}**
