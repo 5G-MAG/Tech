@@ -17,13 +17,13 @@ This documentation is currently **under development and subject to change**. It 
 Visibility into network quality, check if application’s network requirements can be met for a given user session. Based on the API’s response, informed decisions can be taken.
 
 ## Relation of APIs
-* **Connectivity Insights API**
+### Connectivity Insights API
   * **POST /check-network-quality** with the request body containing an `applicationProfileId`, `device`, `applicationServer (IP:port)` - Check the network quality. Response shows the network's current level of confidence (qualitative) that it can meet an application profile's quality thresholds (according to those defined in the `applicationProfileId`for a given end user device.
 
 {: .note }
 Requires `applicationProfileId` from a previous call to the [**Application Profiles API**](./CAMARA_ApplicationProfiles.html).
 
-* **Connectivity Insights Subscriptions API**
+### Connectivity Insights Subscriptions API
   * **POST /subscriptions** with the request body containing a `device`, `applicationServer (IP:port)`, `applicationProfileId` and an indication of expiration time and maximun number of events. Response contains a `subscriptionId`.
   * **GET /subscriptions** - Operation to list subscriptions authorized to be retrieved by the provided access token.
   * **GET /subscriptions/{subscriptionId}** - Retrieve a given subscription by ID.
@@ -33,9 +33,14 @@ Information: [https://github.com/camaraproject/ConnectivityInsights](https://git
 
 The API definitions can be obtained here: [https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions](https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions)
 
-## Workflow for a media application requesting Connectivity Insights
+## Workflow: Media application requesting Connectivity Insights
 
 A user of a media application would like to obtain Connectivity Insights about the ability of the network to meet the requirements. The following steps are executed:
+
+<figure>
+  <img src="./Content_Production/images/figure_connectivityinsights.png" width="80%">
+  <figcaption>Example for mobile journalism and newsgathering</figcaption>
+</figure>
 
 ### Step 0: Pre-conditions
 * Create an application profile using the **Application Profiles API** (with the relevant application requirements).
@@ -50,11 +55,11 @@ A user of a media application would like to obtain Connectivity Insights about t
 
 ## 5G-MAG's Self-Assessment
 
-The APIs are likely to be invoked to obtain information either before or during operation about the ability of the network to meet the requirements. However:
-- The information received has no time validity. There is no guarantee that the network can meet the requirements at any other time with the sole use of this API.
-- The information received is qualitative (e.g. `"targetMinDownstreamRate": "meets the application requirements"`). The application invoking this API is unable to understand which parameters to be fine-tuned to receive a successful response.
+The APIs are likely to be invoked to obtain information about the ability of the network to meet the requirements either before or during operation. However:
+- The information received is instantaneous. There is no guarantee that the network can meet the requirements at any other time.
+- The information received is qualitative (e.g. `"targetMinDownstreamRate": "meets the application requirements"`). An application would be unable to understand which parameters to be adapted in order to revert a situation in which requirements cannot be met.
 
-For this API to be useful:
+Potential improvements:
 - the ability to request guaranteed performance during actual operation time is a pre-condition as just receiving notifications in a qualitative manner may not bring enough information.
 - an indication of the actual performance parameters (quantitative) for those defined in the Application Profile may provide better insight for potential remedies.
 
