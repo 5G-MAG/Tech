@@ -3,7 +3,7 @@ layout: default
 title: Network API Analysis
 parent: Network APIs
 nav_order: 3
-has_children: false
+has_children: true
 ---
 
 {: .warning }
