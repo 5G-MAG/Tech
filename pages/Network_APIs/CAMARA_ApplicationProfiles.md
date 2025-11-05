@@ -27,18 +27,6 @@ This API enables defining, reading, and managing application requirements,includ
   * **GET /application-profiles/{applicationProfileId}** - Read an Application Profile
   * **DELETE /application-profiles/{applicationProfileId}** - Delete an application profile
 
-Information: [https://github.com/camaraproject/ApplicationProfiles/](https://github.com/camaraproject/ApplicationProfiles/)
-
-The API definitions can be obtained here: [https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions](https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions)
-
-## Workflow for a media application creating an Application Profile
-
-### Step 1: Creation of Application Profile
-* Create an application profile using the **Application Profiles API**.
-
-### Further steps
-* The Application Profile created can be used by other APIs.
-
 ### Parameters
 
 * Network Quality Thresholds
@@ -57,6 +45,18 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Appl
   * `targetMinGPUMemory`
   * `targetMinEphemeralStorage`
   * `targetMinPersistentStorage`
+
+Information: [https://github.com/camaraproject/ApplicationProfiles/](https://github.com/camaraproject/ApplicationProfiles/)
+
+The API definitions can be obtained here: [https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions](https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions)
+
+## Workflow for a media application creating an Application Profile
+
+### Step 1: Creation of Application Profile
+* Create an application profile using the **Application Profiles API**.
+
+### Further steps
+* The Application Profile created can be used by other APIs.
 
 ## 5G-MAG's Self-Assessment
 
