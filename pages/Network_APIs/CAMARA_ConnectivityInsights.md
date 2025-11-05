@@ -10,34 +10,58 @@ has_children: false
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# CAMARA: Connectivity Insights
+# CAMARA: Connectivity Insights API Family
 
 ## Description
 
-With CAMARA Connectivity Insights, application developers gain essential visibility into network quality. This enables them to make informed decisions that enhance the end-user experience for their applications.
+Visibility into network quality, check if application’s network requirements can be met for a given user session. Based on the API’s response, informed decisions can be taken.
 
-* The **Connectivity Insights API** allows an application developer to ask the network the likelihood that an application's networking requirements can be met for a given end user session. This information helps a developer ensure their end users are able to get the best experience while using the application over their current network. Depending on the answer the network gives, the developer may decide to request a network boost (via the CAMARA QoD API) , and/or apply specific changes on the application side e.g. adjusting the resolution of the video stream upwards or downwards.
+## Relation of APIs
+* **Connectivity Insights API**
+  * **POST /check-network-quality** with the request body containing an `applicationProfileId`, `device`, `applicationServer (IP:port)` - Check the network quality. Response shows the network's current level of confidence (qualitative) that it can meet an application profile's quality thresholds (according to those defined in the `applicationProfileId`for a given end user device.
 
-* The **Connectivity Insights Subscriptions API** allows creating and managing a subscription to receive periodic connectivity insights.
+{: .note }
+Requires `applicationProfileId` from a previous call to the [**Application Profiles API**](./CAMARA_ApplicationProfiles.html).
 
-* The **Application Profiles API** allows creating and managing a subscription to receive periodic connectivity insights.
+* **Connectivity Insights Subscriptions API**
+  * **POST /subscriptions** with the request body containing a `device`, `applicationServer (IP:port)`, `applicationProfileId` and an indication of expiration time and maximun number of events. Response contains a `subscriptionId`.
+  * **GET /subscriptions** - Operation to list subscriptions authorized to be retrieved by the provided access token.
+  * **GET /subscriptions/{subscriptionId}** - Retrieve a given subscription by ID.
+  * **DELETE /subscriptions/{subscriptionId}** - Delete a given subscription by ID
 
 Information: [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
 The API definitions can be obtained here: [https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions](https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions)
 
-## Overall usage
-The overall usage would follow this sequence:
+## Workflow for a media application requesting Connectivity Insights
 
-  1. Create an application profile using the Connectivity Insights **application-profiles** API
-  2. Request: **POST check-network-quality**, passing the **applicationProfileId** obtained in step 1, the address/port of an application server, and at least one device identifier.
-  3. Response: The network will indicate whether it can or cannot meet the application requirements.
-Optional: use the **connectivity-insights-subscriptions** API to receive notifications of network quality.
+A user of a media application would like to obtain Connectivity Insights about the ability of the network to meet the requirements. The following steps are executed:
+
+### Step 0: Pre-conditions
+* Create an application profile using the **Application Profiles API** (with the relevant application requirements).
+* Create a device object for the device which media flow is to be monitored.
+* Obtain IP address and port of the application server (Production Server).
+
+### Step 1a: One-shot information on network quality
+* **POST /check-network-quality**, passing the **applicationProfileId** obtained in step 0, the address/port of an application server, and a device object.
+
+### Step 1b: Recurrent events/notifications on network quality
+* **POST /subscriptions**, passing the **applicationProfileId** obtained in step 0, the address/port of an application server, and a device object. Indicate expiration time and maximum number of events.
+
+## Assessment
+
+The APIs are likely to be invoked to obtain information either before or during operation about the ability of the network to meet the requirements. However:
+- The information received has no time validity. There is no guarantee that the network can meet the requirements at any other time with the sole use of this API.
+- The information received is qualitative (e.g. `"targetMinDownstreamRate": "meets the application requirements"`). The application invoking this API is unable to understand which parameters to be fine-tuned to receive a successful response.
+
+For this API to be useful:
+- the ability to request guaranteed performance during actual operation time is a pre-condition as just receiving notifications in a qualitative manner may not bring enough information.
+- an indication of the actual performance parameters (quantitative) for those defined in the Application Profile may provide better insight for potential remedies.
+
+---
 
 ## Application Profiles API Usage
-
-### Create a profile which represent the network demands of an application
-With **POST /application-profiles**
+Check: [**Application Profiles API**](./CAMARA_ApplicationProfiles.html). The type of parameters that an `applicationProfile` defines includes:
 
 ```
 {
@@ -48,73 +72,63 @@ With **POST /application-profiles**
     },
     "targetMinDownstreamRate": {
       "value": 10,
-      "unit": "bps"
+      "unit": "Bps"
     },
     "targetMinUpstreamRate": {
       "value": 10,
-      "unit": "bps"
+      "unit": "Bps"
     },
-    "packetlossErrorRate": 3,
+    "packetLossErrorRate": 3,
     "jitter": {
       "value": 12,
       "unit": "Minutes"
+    }
+  },
+  "computeResources": {
+    "targetMinCPU": 0.5,
+    "targetMinMemory": {
+      "value": 10,
+      "unit": "Kb"
+    },
+    "gpuVendorType": "Nvidia",
+    "gpuModelName": "string",
+    "targetMinGPU": 1,
+    "targetMinGPUMemory": {
+      "value": 10,
+      "unit": "Kb"
+    },
+    "targetMinEphemeralStorage": {
+      "value": 10,
+      "unit": "Kb"
+    },
+    "targetMinPersistentStorage": {
+      "value": 10,
+      "unit": "Kb"
     }
   }
 }
 ```
 
-Type of response: An **applicationProfileId**
+## Device object
+
+This is how a device is defined:
 
 ```
-{
-  "applicationProfileId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "networkQualityThresholds": {
-    "packetDelayBudget": {
-      "value": 12,
-      "unit": "Minutes"
+  "device": {
+    "phoneNumber": "123456789",
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {
+      "publicAddress": "84.125.93.10",
+      "publicPort": 59765
     },
-    "targetMinDownstreamRate": {
-      "value": 10,
-      "unit": "bps"
-    },
-    "targetMinUpstreamRate": {
-      "value": 10,
-      "unit": "bps"
-    },
-    "packetlossErrorRate": 3,
-    "jitter": {
-      "value": 12,
-      "unit": "Minutes"
-    }
-  }
-}
 ```
-
-Parameters:
-  - "packet delay budget": the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
-  - "targetMinDownstreamRate": This is the target minimum downstream rate.
-  - "targetMinUpstreamRate": This is the target minimum upstream rate
-  - "packetlossErrorRate": The exponential power of the allowable error loss rate 10^(-N). For 5G network the 3GPP specification TS 23.203 defines the packet error loss rate QCI attribute.
-  - "jitter" requirement aims to limit the maximum variation in round-trip packet delay for the 99th percentile of traffic, following ITU Y.1540 standards. It considers only acknowledged packets in a session, which are packets that receive a confirmation of receipt from the recipient (e.g., using TCP).
-
-### Update the profile
-With **PATCH /application-profiles/{applicationProfileId}**
-
-### Obtain an existing application profile
-With **GET /application-profiles/{applicationProfileId}**
-
-### Delete an existing application profile
-With **DELETE /application-profiles/{applicationProfileId}**
-
 ## Connectivity Insights API Usage
 
 ### Obtain information about network quality
-With **POST /check-network-quality** and:
-
-  - An **ApplicationProfileId** and one or more device identifiers. Together these allow the network to calculate whether the thresholds defined in the application profile can be met for the particular connected device.
-  - Identifier for the device: At least one identifier for the device (user equipment) out of four options: IPv4 address, IPv6 address, Phone number, or Network Access Identifier assigned by the mobile network operator for the device.
-  - Identifier for the application server: IPv4 and/or IPv6 address of the application server (application backend)
-  - Notification URL and token: Developers may provide a callback URL on which notifications can be received from the service provider. This is an optional parameter.
+With **POST /check-network-quality** passing:
+  - the **ApplicationProfileId**,
+  - the device object
+  - identifier for the application server (IPv4 and/or IPv6 address and ports)
 
 ```
 {
@@ -260,12 +274,3 @@ Type of response: A **subcriptionId**
   "status": "ACTIVATION_REQUESTED"
 }
 ```
-
-### Obtain a list of event subscription details
-With **GET /subscriptions**
-
-### Obtain a subscription based on the provided ID
-With **GET /subscriptions/{subscriptionId}**
-
-### Delete a subscription based on the provided ID
-With **DELETE /subscriptions/{subscriptionId}**
