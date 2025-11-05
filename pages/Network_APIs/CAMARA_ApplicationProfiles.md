@@ -58,6 +58,14 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Appl
   * `targetMinEphemeralStorage`
   * `targetMinPersistentStorage`
 
+## 5G-MAG's Self-Assessment
+
+The APIs is likely to be invoked well before the actual use of the network with the required values of performance and compute resources.
+Once an `applicationProfileId` is obtained, it can be used by other APIs.
+
+Potential improvements:
+- the list of parameters and unit/accuracy should be checked for typical media applications.
+
 ---
 
 ## Application Profiles API Usage
