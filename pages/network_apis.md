@@ -24,13 +24,13 @@ nav_order: 6
 
 <img src="../assets/images/Banner_Documentation.png" width="60%" /> 
 
-##  Content Production and Contribution Scenarios
+## Network Capability Exposure for Content Production and Contribution Scenarios
 
 * Scenarios: [Network Capability Exposure and APIs for Content Production and Contribution](./Network_APIs/Content_Production/Production_Contribution_Scenarios.html).
 * Workflows: [Required interactions to exploit network capabilities](./Network_APIs/Content_Production/Production_Contribution_Workflows.html).
 * Requirements: [Network Capabilities (Network Services) for Content Production & Contribution](./Network_APIs/Content_Production/Production_Contribution_Requirements.html).
 
-## Live Media Streaming
+## Network Capability Exposure for Live Media Streaming
 
 * Scenarios: [Network Capability Exposure and APIs for Live Media Distribution](./Network_APIs/Live_Media_Distribution/Live_Media_Distribution_Scenarios.html).
 * Workflows: [Required interactions to exploit network capabilities](./Network_APIs/Live_Media_Distribution/Live_Media_Distribution_Workflows.html).
