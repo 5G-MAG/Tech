@@ -24,6 +24,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Qual
 
 ### QoS Provisioning API
   * **POST /qos-assignments** with the request body including a `device` object and `qosProfile`, this request will assign a QoS profile to a device. The response includes an `assignmentId`.
+    * Dependency: Requires `qosProfiles` which can be retrieved from a previous call to the [**QoS Profiles API**](./CAMARA_QoSProfiles.html).
   * **GET /qos-assignments/{assignmentId}** - Querying for details about the QoS profile assignment
   * **DELETE /qos-assignments/{assignmentId}** - Revokes the assignment of a QoS profile to a device performed by a previous assignment operation.
   * **POST /retrieve-qos-assignment** with the request body including the `device` object, this request will return information about the QoS profile assignment for the device with an `assignmentId`.
