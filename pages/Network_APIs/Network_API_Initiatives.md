@@ -13,94 +13,72 @@ This documentation is currently **under development and subject to change**. It 
 
 ## CAMARA APIs for Communication Quality Management
 
-### Quality On Demand APIs
-* Analysis of [**Quality On Demand**](./CAMARA_QualityonDemand.html) by 5G-MAG
-* Repository in CAMARA Project: [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
-
-### Application Profiles APIs 
+### Application Profiles API
 * Analysis of [**Application Profiles**](./CAMARA_ApplicationProfiles.html) by 5G-MAG
-* Repository in CAMARA Project: [https://github.com/camaraproject/ApplicationProfiles](https://github.com/camaraproject/ApplicationProfiles)
+* CAMARA Project: [https://camaraproject.org/application-profiles/](https://camaraproject.org/application-profiles/) and [https://github.com/camaraproject/ApplicationProfiles](https://github.com/camaraproject/ApplicationProfiles)
 
-### Dedicated Networks APIs 
-* Analysis of [**Dedicated Networks**](./CAMARA_DedicatedNetworks.html) by 5G-MAG
-* Repository in CAMARA Project: [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
-
-### Connectivity Insights APIs 
+### Connectivity Insights API
 * Analysis of [**Connectivity Insights**](./CAMARA_ConnectivityInsights.html) by 5G-MAG
-* Repository in CAMARA Project: [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
+* CAMARA Project: [https://camaraproject.org/connectivity-insights/](https://camaraproject.org/connectivity-insights/) and [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
-### Connectivity Insights APIs 
+### Connectivity Insights Subscriptions API
+* Analysis of [**Connectivity Insights Subscriptions**](./CAMARA_ConnectivityInsightsSubscriptions.html) by 5G-MAG
+* CAMARA Project: [https://camaraproject.org/connectivity-insights-subscriptions/](https://camaraproject.org/connectivity-insights-subscriptions/) and [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
+
+### Dedicated Networks API
+* Analysis of [**Dedicated Networks**](./CAMARA_DedicatedNetworks.html) by 5G-MAG
+* CAMARA Project: [https://camaraproject.org/dedicated-networks/](https://camaraproject.org/dedicated-networks/) and [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
+
+### Network Slice Booking API
 * Analysis of [**Network Slice Booking**](./CAMARA_NetworkSliceBooking.html) by 5G-MAG
-* Repository in CAMARA Project: [https://github.com/camaraproject/NetworkSliceBooking](https://github.com/camaraproject/NetworkSliceBooking)
+* CAMARA Project: [https://camaraproject.org/network-slice-booking/](https://camaraproject.org/network-slice-booking/) and [https://github.com/camaraproject/NetworkSliceBooking](https://github.com/camaraproject/NetworkSliceBooking)
 
-### Connectivity Insights APIs 
+### QoS Booking APIs 
 * Analysis of [**QoS Booking**](./CAMARA_QoSBooking.html) by 5G-MAG
-* Repository in CAMARA Project: [https://github.com/camaraproject/QoSBooking](https://github.com/camaraproject/QoSBooking)
+* CAMARA Project: [https://camaraproject.org/qos-booking/](https://camaraproject.org/qos-booking/) and [https://github.com/camaraproject/QoSBooking](https://github.com/camaraproject/QoSBooking)
 
-### Relevant QoS Parameters
+### QoS Booking and Assignment APIs 
+* Analysis of [**QoS Booking and Assignment**](./CAMARA_QoSBookingAssignment.html) by 5G-MAG
+* CAMARA Project: [https://camaraproject.org/qos-booking-and-assignment/](https://camaraproject.org/qos-booking-and-assignment/) and [https://github.com/camaraproject/QoSBooking](https://github.com/camaraproject/QoSBooking)
 
-#### Quality On Demand
+### QoS Profiles API
+* Analysis of [**QoS Profiles**](./CAMARA_QoSProfiles.html) by 5G-MAG
+* CAMARA Project: [https://camaraproject.org/qos-profiles/](https://camaraproject.org/qos-profiles/) and [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
-Name | Description  
--- | --
-**targetMinUpstreamRate** | This is the target minimum upload speed for the QoS profile. It represents the minimum rate that the network attempts to deliver. Please note that this is a target value—the network might not always be able to provide this rate under all conditions. It helps ensure that applications like video calls or live streaming perform consistently.
-**maxUpstreamRate** | The maximum best effort data
-**maxUpstreamBurstRate** |  When defined, this is the maximum upstream burst rate for the QoS profile, that will enable the network to burst data at a higher rate than the maxUpstreamRate for a period of time.
-**targetMinDownstreamRate** |  This is the target maximum upload speed for the QoS profile. It represents the maximum rate that the network attempts to deliver. Please note that this is a target value—the network might not always be able to provide this rate under all conditions. It helps ensure that applications like video calls or live streaming perform consistently.
-**maxDownstreamRate** | The maximum best effort rate
-**maxDownstreamBurstRate** | When defined, this is the maximum downstream burst rate for the QoS profile, that will enable the network to burst data at a higher rate than the maxDownstreamRate for a period of time. This can result in improved user experience when there is additional network capacity. For instance, when a user is streaming a video, the network can burst data at a higher rate to fill the buffer, and then return to the maxUpstreamRate once the buffer is full.
-**minDuration** | The shortest time period that this profile can be deployed.
-**maxDuration** | The maximum time period that this profile can be deployed. Overall session duration must not exceed this value. This includes the initial requested duration plus any extensions.
-**priority** | Priority levels allow efficient resource allocation and ensure optimal performance for various services in each technology, with the highest priority traffic receiving preferential treatment. The lower value the higher priority. Not all access networks use the same priority range, so this priority will be scaled to the access network's priority range.
-**packetDelayBudget** | The packet delay budget is the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. By limiting the delay, the network can provide an acceptable level of performance for various services, such as voice calls, video streaming, and data. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
-**jitter** | The jitter requirement aims to limit the maximum variation in round-trip packet delay for the 99th percentile of traffic, following ITU Y.1540 standards. It considers only acknowledged packets in a session, which are packets that receive a confirmation of receipt from the recipient (e.g., using TCP). This requirement helps maintain consistent latency, essential for real-time applications such as VoIP, video calls, and gaming.
-**packetErrorLossRate** | This field specifies the acceptable level of data loss during transmission. The value is an exponent of 10, so a value of 3 means that up to 10⁻³, or 0.1%, of the data packets may be lost. This setting is part of a broader system that categorizes different types of network traffic (like phone calls, video streams, or data transfers) to ensure they perform reliably on the network.
+### QoS Provisioning API
+* Analysis of [**QoS Provisioning**](./CAMARA_QoSProvisioning.html) by 5G-MAG
+* CAMARA Project: [https://camaraproject.org/qod-provisioning/](https://camaraproject.org/qod-provisioning/) and [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
-#### Quality On Demand - Experimental parameters - L4S
+### Quality On Demand API
+* Analysis of [**Quality On Demand**](./CAMARA_QualityonDemand.html) by 5G-MAG
+* CAMARA Project: [https://camaraproject.org/quality-on-demand/](https://camaraproject.org/quality-on-demand/) and [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
-**NOTE**: l4sQueueType is experimental and could change or be removed in a future release.
-Specifies the type of queue for L4S (Low Latency, Low Loss, Scalable Throughput) traffic management. L4S is an advanced queue management approach designed to provide ultra-low latency and high throughput for internet traffic, particularly beneficial for interactive applications such as gaming, video conferencing, and virtual reality. For more details, refer to the [L4S standard](https://datatracker.ietf.org/doc/rfc9330/)
-        
-**NOTE**: serviceClass is experimental and could change or be removed in a future release.
-The name of a Service Class, representing a QoS Profile designed to provide optimized behavior for a specific application type. While DSCP values are commonly associated with Service Classes, their use may vary across network segments and may not be applied throughout the entire end-to-end QoS session. This aligns with the serviceClass concept used in HomeDevicesQoQ for consistent terminology. Service classes define specific QoS behaviors that map to DSCP (Differentiated Services Code Point) values or Microsoft QoS traffic types. The supported mappings are:
-- 1. Values aligned with the [RFC4594](https://datatracker.ietf.org/doc/html/rfc4594) guidelines for differentiated traffic classes.
-- 2. Microsoft [QOS_TRAFFIC_TYPE](https://learn.microsoft.com/en-us/windows/win32/api/qos2/ne-qos2-qos_traffic_type) values for Windows developers.
+## Relevant QoS Parameters
 
-#### QoS Booking APIs
+### Application Profiles
+* `packetDelayBudget`- the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
+* `targetMinDownstreamRate` - the target minimum downstream rate.
+* `targetMinUpstreamRate` - the target minimum upstream rate
+* `packetLossErrorRate` - the exponential power of the allowable error loss rate 10^(-N). For 5G network the 3GPP specification TS 23.203 defines the packet error loss rate QCI attribute.
+* `jitter`  - this requirement aims to limit the maximum variation in round-trip packet delay for the 99th percentile of traffic, following ITU Y.1540 standards. It considers only acknowledged packets in a session, which are packets that receive a confirmation of receipt from the recipient (e.g., using TCP).
 
-Makes use of the QoS Profiles retrieved by the QoS Profiles API (part of Quality on Demand APIs).
+### QoS Profiles
+* `packetDelayBudget`- the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
+* `targetMinDownstreamRate` - the target minimum downstream rate.
+* `targetMinUpstreamRate` - the target minimum upstream rate
+* `packetLossErrorRate` - the exponential power of the allowable error loss rate 10^(-N). For 5G network the 3GPP specification TS 23.203 defines the packet error loss rate QCI attribute.
+* `jitter`  - this requirement aims to limit the maximum variation in round-trip packet delay for the 99th percentile of traffic, following ITU Y.1540 standards. It considers only acknowledged packets in a session, which are packets that receive a confirmation of receipt from the recipient (e.g., using TCP).
+* `minDuration`
+* `maxDuration`
+* `priority`
+* `l4sQueueType`
 
-#### Network Slice Booking
-
-Name | Description  
--- | --
-**MaxNumofTerminals** | 
-**DLThroughputPerTerminal** | 
-**ULThroughputPerTerminal** | 
-**DLLatency** | DLLatency is an attribute specifies the required DL packet transmission latency (millisecond) through the 5G network.
-**ULLatency** | ULLatency is an attribute specifies the required UL packet transmission latency (millisecond) through the 5G network.
-
-#### Dedicated Networks
-
-Name | Description  
--- | --
-**maxNumberOfDevices** | 
-**aggregatedUlThroughput** | 
-**aggregatedDlThroughput** | 
-**DLLatency** | DLLatency is an attribute specifies the required DL packet transmission latency (millisecond) through the 5G network.
-**ULLatency** | ULLatency is an attribute specifies the required UL packet transmission latency (millisecond) through the 5G network.
-
-#### Connectivity Insights
-
-Name | Description  
--- | --
-**packetDelayBudget** | the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
-**targetMinDownstreamRate** | This is the target minimum downstream rate.
-**targetMinUpstreamRate** | This is the target minimum upstream rate.
-**packetlossErrorRate** | The exponential power of the allowable error loss rate 10^(-N). For 5G network the 3GPP specification TS 23.203 defines the packet error loss rate QCI attribute.
-**jitter** | Aims to limit the maximum variation in round-trip packet delay for the 99th percentile of traffic, following ITU Y.1540 standards. It considers only acknowledged packets in a session, which are packets that receive a confirmation of receipt from the recipient (e.g., using TCP).
-**signalStrength** | rough indication of the end user device radio signal conditions
-**connectivityType** | the access technology connecting the user device to the operator network
+#### Network Slice QoS Profile
+* `maxNumOfDevices`- is the maximum number of devices that can be connected to the slice
+* `downStreamRatePerDevice` - is the maximum downstream rate allowed for each device connected to the slice. It indicates the individual device capability required for the slice.
+* `upStreamRatePerDevice` - is the maximum upstream rate allowed for each device connected to the slice. It indicates the individual device capability required for the slice.
+* `downStreamDelayBudget` - is the maximum allowable downlink packet transmission latency (millisecond). By limiting the delay, the network can provide an acceptable level of performance for various services, such as voice calls, video streaming, and data.
+* `upStreamDelayBudget`  - is the maximum allowable uplink packet transmission latency (millisecond). By limiting the delay, the network can provide an acceptable level of performance for various services, such as voice calls, video streaming, and data.
 
 ## 3GPP APIs for Quality of Service
 
