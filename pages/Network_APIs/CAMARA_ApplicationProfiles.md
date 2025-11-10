@@ -16,7 +16,9 @@ This documentation is currently **under development and subject to change**. It 
 
 The “Application Profiles” API enables developers to share essential information about their applications that is relevant for network and CAMARA APIs decision-making. Currently, it focuses on defining network quality thresholds and compute resource requirements needed by the application. This foundation will expand to include additional information based on requirements from other CAMARA APIs, making it a central point for capturing what the application needs are.
 
-Used in the of the [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html).
+Used in the context of:
+* [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html)
+* [Connectivity Insights Subscriptions APIs](./CAMARA_ConnectivityInsights.html)
 
 This API enables defining, reading, and managing application requirements,including:
 * Network quality thresholds (latency, jitter, loss, throughput)
