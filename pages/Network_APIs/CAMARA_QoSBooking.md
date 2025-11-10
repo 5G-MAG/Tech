@@ -14,12 +14,49 @@ This documentation is currently **under development and subject to change**. It 
 
 ## Description
 
-The QoS (Quality of Service) Booking API provides programmable interface for developers and other users (capabilities consumers) to request in advance certain network conditions to be provided by Telco networks, without the necessity to have an in-depth knowledge of the underlying network complexity (e.g. the 4G/5G system in case of a mobile network).
+The “QoS Booking” (Quality of Service Booking) API provides a programmable interface for developers and other users (capabilities consumers) to request in advance certain network conditions to be provided by Telco networks, without the necessity to have an in-depth knowledge of the underlying network complexity (e.g. the 4G/5G system in case of a mobile network).
 
-
-Information: [https://github.com/camaraproject/QoSBooking](https://github.com/camaraproject/QoSBooking)
+Information: [https://camaraproject.org/qos-booking/](https://camaraproject.org/qos-booking/) and [https://github.com/camaraproject/QoSBooking](https://github.com/camaraproject/QoSBooking)
 
 The API definitions can be obtained here: [https://github.com/camaraproject/QoSBooking/tree/main/code/API_definitions](https://github.com/camaraproject/QoSBooking/tree/main/code/API_definitions)
+
+## Relation of APIs
+### Dedicated Network - Network Profiles API
+  * **POST /device-qos-bookings** with a request body containing `qosProfile`, `applicationServer`, `applicationServerPorts`, `device` object, `devicePorts`, `startTime`, `duration`, `serviceArea`, it triggers a new booking to assign certain QoS Profile to certain devices. The response includes a `bookingId`.
+    * Dependency: Requires `qosProfile` which can be retrieved from a previous call to the [**QoS Profiles API**](./CAMARA_QoSProfiles.html).
+  * **GET /device-qos-bookings/{bookingId}** - Get QoS Booking information.
+  * **DELETE /device-qos-bookings/{bookingId}** - Deletes a QoS Booking.
+  * **POST /retrieve-device-qos-bookings** with a request body containing a `device` object, queries for QoS Booking resource information details for a device.
+
+---
+
+## Workflow: Media application requesting to assing a QoS Profile to a device
+
+A user of a media application would like to request the assignment of a QoS Profile to a device for a given period of time and service area. The following steps are executed:
+
+<figure>
+  <img src="./Content_Production/images/figure_dedicatednetworks.png" width="80%">
+</figure>
+
+### Step 0: Pre-conditions
+* qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
+
+### Step 1: Create a QoS Booking for a device
+* **POST /device-qos-bookings** passing the `qosProfile`, `applicationServer`, `applicationServerPorts`, `device` object, `devicePorts`, `startTime`, `duration`, `serviceArea`.
+
+### Step 2: Use the QoS Booking
+Use the QoS Booking for the device and the time window and service area. The device connected to the network at the time and service area will be able to benefit from the QoS Booking.
+
+## 5G-MAG's Self-Assessment
+
+The QoS Booking APIs can be invoked before the actual usage of the network starts to ensure that the requested capabilities are "reserved" for the specific area, time window and device.
+During the event a device will have access to the QoS Booking.
+
+Potential improvements:
+- It is unclear how to associate devices to make use of the resources. As it stands, the device is granted the booking as soon as connected to the network under the service area and for the specified duration.
+- It is unclear how to update the booking. In the event that a device would need to be exchanged, deleting and creating a new booking may lead to loosing the ability to reserve resources during operation.
+
+---
 
 ## QoS Booking API Usage
 
@@ -173,6 +210,3 @@ With **GET /device-qos-bookings/{bookingId}**
   }
 }
 ```
-
-### Delete the QoS booking
-With **DELETE /device-qos-bookings/{bookingId}**
