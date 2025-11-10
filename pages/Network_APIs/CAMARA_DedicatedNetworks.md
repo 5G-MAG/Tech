@@ -16,6 +16,10 @@ This documentation is currently **under development and subject to change**. It 
 
 The “Dedicated Networks” APIs provide functionalities for reserving network connectivity resources, selecting network capabilities, and controlling access for devices.
 
+Information: [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
+
+The API definitions can be obtained here: [https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions](https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions)
+
 ## Relation of APIs
 ### Dedicated Network - Network Profiles API
   * **GET /profiles** - List of available network profiles. The response includes an `id`, alongside the `maxNumberOfDevices`, `aggregatedUlThroughput`, `aggregatedDlThroughput`, `qosProfiles`,...
@@ -33,11 +37,9 @@ The “Dedicated Networks” APIs provide functionalities for reserving network 
   * **GET /accesses/{accessId}** - get a device access to the dedicated network and its configuration
   * **DELETE /accesses/{accessId}** - delete a device access to the dedicated network
 
-Information: [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
+---
 
-The API definitions can be obtained here: [https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions](https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions)
-
-## Workflow: Media application requesting Dedicated Network
+## Workflow: Media application requesting a Dedicated Network
 
 A user of a media application would like to request a Dedicated Network, with a set of capabilities and connectivity performance targets. The resut is for a particular geographical location and at a particular time window. The following steps are executed:
 
