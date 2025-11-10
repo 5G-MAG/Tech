@@ -24,7 +24,7 @@ The Quality-On-Demand (QoD) API provides a programmable interface for developers
   * **POST /sessions/{sessionId}/extend** - Extend the duration of an active session
   * **POST /retrieve-sessions** - Get QoS session information for a device
 
-### QoS Profiles
+### QoS Profiles API
   * **POST /retrieve-qos-profiles** with a request body including a `device` object, `name` of the profile and `status`, it is used to query QoS Profiles for a given device. The response contains information about the QoS Profiles
   * **GET /qos-profiles/{name}** - get QoS Profile for a given name
 
