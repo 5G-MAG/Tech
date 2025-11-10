@@ -24,13 +24,13 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Qual
 
 ### Quality on Demand API
   * **POST /sessions** with the request body including a `device` object, `applicationServer` IP, `applicationServerPorts`, `devicePorts`, `qosProfile` and `duration`, it is used to create a QoS session to manage latency/throughput priorities. The response includes information about the creation of the session, with a `sessionId`.
+    * Dependency: Requires `qosProfiles` which can be retrieved from a previous call to the [**QoS Profiles API**](./CAMARA_QoSProfiles.html).
   * **GET /sessions/{sessionId}** - Get QoS session information
   * **DELETE /sessions/{sessionId}** - Delete a QoS session
   * **POST /sessions/{sessionId}/extend** - Extend the duration of an active session
   * **POST /retrieve-sessions** - Get QoS session information for a device
 
 ---
-
 
 ## Workflow: Media application using the Quality on Demand API to create a QoS session
 
