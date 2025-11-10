@@ -14,24 +14,28 @@ This documentation is currently **under development and subject to change**. It 
 ## CAMARA APIs for Communication Quality Management
 
 ### Quality On Demand APIs
-* Analysis of [Quality On Demand APIs](./CAMARA_QualityonDemand.html) by 5G-MAG
+* Analysis of [**Quality On Demand**](./CAMARA_QualityonDemand.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
 ### Application Profiles APIs 
-* Analysis of [Application Profiles APIs](./CAMARA_ApplicationProfiles.html) by 5G-MAG
+* Analysis of [**Application Profiles**](./CAMARA_ApplicationProfiles.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/ApplicationProfiles](https://github.com/camaraproject/ApplicationProfiles)
 
 ### Dedicated Networks APIs 
-* Analysis of [Dedicated Networks APIs](./CAMARA_DedicatedNetworks.html) by 5G-MAG
+* Analysis of [**Dedicated Networks**](./CAMARA_DedicatedNetworks.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
 
 ### Connectivity Insights APIs 
-* Analysis of [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html) by 5G-MAG
+* Analysis of [**Connectivity Insights**](./CAMARA_ConnectivityInsights.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
-TBC
-### [QoS Booking APIs](./CAMARA_QoSBooking.html)
-### [Network Slice Booking APIs](./CAMARA_NetworkSliceBooking.html)
+### Connectivity Insights APIs 
+* Analysis of [**Network Slice Booking**](./CAMARA_NetworkSliceBooking.html) by 5G-MAG
+* Repository in CAMARA Project: [https://github.com/camaraproject/NetworkSliceBooking](https://github.com/camaraproject/NetworkSliceBooking)
+
+### Connectivity Insights APIs 
+* Analysis of [**QoS Booking**](./CAMARA_QoSBooking.html) by 5G-MAG
+* Repository in CAMARA Project: [https://github.com/camaraproject/QoSBooking](https://github.com/camaraproject/QoSBooking)
 
 ### Relevant QoS Parameters
 
