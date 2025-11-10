@@ -67,8 +67,8 @@ The Profiles and Networks APIs are to be invoked before the actual usage of the 
 During the event devices will have access to the Dedicated Network and should be allocated or de-allocated depending on the actual requirements.
 
 Potential improvements:
-- the fact that qosProfiles and Network Profiles need to be in place beforehand may delay the usage of this API. It would be useful if such profiles could be created/requested by the user and accepted by the network operator.
-- a media production event may involve several devices that may need to request access to the Dedicated Network but not simultaneously. A distinction between the number of different devices able to be allocated to the Dedicated Network and the number of devices that can simultaneouly request the same performance may be worth considering.
+- there is a dependency with qosProfiles and Network Profiles, which need to be present before being able to invoke Dedicated Networks. This is not an issue related to this API but worth considering as it would be useful if such profiles could be created/requested by the user and accepted by the network operator, rather than requiring another process.
+- a media production event may involve several devices eventually making use of a Dedicated Network, but not simultaneously. It should be clarified if the maximum number of devices means the devices concurrently using the resources allocated to the Dedicated Network or any device suitable to make use of the Dedicated Network. In practice, I may want to bring 10 devices suitable to access a Dedicated Network at some point but only have 2 of them making use of the Dedicated Network simultaneously.
 
 ---
 
