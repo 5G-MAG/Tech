@@ -14,9 +14,9 @@ This documentation is currently **under development and subject to change**. It 
 
 ## Description
 
-Visibility into network quality, check if application’s network requirements can be met for a given user session. Based on the API’s response, informed decisions can be taken.
+The “Connectivity Insights” API gives developers visibility into network quality, allowing them to check if their application’s network requirements can be met for a given user session. Based on the API’s response, developers can make informed decisions – like requesting a network boost through CAMARA Quality on Demand API or adjusting application settings (e.g., video resolution) to ensure the best possible user experience.
 
-Information: [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
+Information: [https://camaraproject.org/connectivity-insights/](https://camaraproject.org/connectivity-insights/) and [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
 The API definitions can be obtained here: [https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions](https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions)
 
