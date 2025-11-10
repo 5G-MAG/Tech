@@ -16,6 +16,11 @@ This documentation is currently **under development and subject to change**. It 
 
 The “Quality-of-Service (QoS) Profiles” API provides a set of predefined network performance characteristics, such as latency, throughput, and priority, identified by a unique name. These profiles allow application developers to specify the desired network behavior for their application’s data traffic, ensuring optimal performance. By selecting an appropriate QoS profile, developers can request stable latency (reduced jitter) or throughput for specific data flows between client devices and application servers when used by the Quality On Demand API.
 
+Used in the context of:
+* [Dedicated Networks API](./CAMARA_DedicatedNetworks.html)
+* [Quality on Demand API](./CAMARA_QualityonDemand.html)
+* [QoS Provisioning API](./CAMARA_QoSProvisioning.html)
+
 Information: [https://camaraproject.org/qos-profiles/](https://camaraproject.org/qos-profiles/) and [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
 The API definitions can be obtained here: [https://github.com/camaraproject/QualityOnDemand/tree/main/code/API_definitions](https://github.com/camaraproject/QualityOnDemand/tree/main/code/API_definitions)
