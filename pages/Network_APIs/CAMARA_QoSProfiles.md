@@ -49,7 +49,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Qual
 
 ## Workflow: Media application retreiving QoS profiles
 
-A user of a media application would like to retrieve QoS profiles available in the network. The following steps are executed:
+A user of a media application would like to retrieve QoS profiles available in the network. An example figure is shown using the QoS Profiles in the context of Quality on Demand. The following steps are executed:
 
 <figure>
   <img src="./Content_Production/images/figure_qualityondemand.png" width="80%">
