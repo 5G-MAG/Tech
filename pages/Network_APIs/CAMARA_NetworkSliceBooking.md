@@ -16,7 +16,7 @@ This documentation is currently **under development and subject to change**. It 
 
 The “Network Slice Booking” API provides developers with a programmable interface. Industry customers can reserve and manage network slice resources within designated areas and time periods, and offer network guarantee services to end users. Within this API, developers can customize service areas (e.g., circular or polygonal regions), time periods, set Quality of Service (QoS) parameters (e.g., throughput, latency, and terminal limits), apply for network slice resources from operators, and bind slice resources for end users at the same time to achieve network guarantee functions.
 
-Information: [https://github.com/camaraproject/NetworkSliceBooking](https://github.com/camaraproject/NetworkSliceBooking)
+Information: [https://camaraproject.org/network-slice-booking/](https://camaraproject.org/network-slice-booking/) and [https://github.com/camaraproject/NetworkSliceBooking](https://github.com/camaraproject/NetworkSliceBooking)
 
 The API definitions can be obtained here: [https://github.com/camaraproject/NetworkSliceBooking/blob/main/code/API_definitions](https://github.com/camaraproject/NetworkSliceBooking/blob/main/code/API_definitions)
 
