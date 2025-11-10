@@ -14,16 +14,21 @@ This documentation is currently **under development and subject to change**. It 
 
 ## Description
 
-The application profiles, used in contenxt of the [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html), allow developers to specify all relevant information about their application for both network and compute resource requirements, supporting CAMARA APIs and network decision making.
-The application profiles are used in context of the Connectivity Insights APIs
+The application profiles allow developers to specify all relevant information about their application for both network and compute resource requirements, supporting CAMARA APIs and network decision making.
+
+Used in the of the [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html).
 
 This API enables defining, reading, and managing application requirements,including:
 * Network quality thresholds (latency, jitter, loss, throughput)
 * Compute resource thresholds (CPU, GPU, memory, storage)
 
+Information: [https://github.com/camaraproject/ApplicationProfiles/](https://github.com/camaraproject/ApplicationProfiles/)
+
+The API definitions can be obtained here: [https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions](https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions)
+
 ## Relation of APIs
 ### Application Profiles API
-  * **POST /application-profiles** with the request body containing an user-defined network quality thresholds. Used to define network monitoring intents for optimal end user application experience. Response is an `applicationProfileId`.
+  * **POST /application-profiles** with the request body containing user-defined network quality thresholds. Used to define network monitoring intents for optimal end user application experience. Response is an `applicationProfileId`.
   * **PATCH /application-profiles/{applicationProfileId}** - Update the complete set of network quality thresholds for an application with the new set of thresholds to ensure good end user experience
   * **GET /application-profiles/{applicationProfileId}** - Read an Application Profile
   * **DELETE /application-profiles/{applicationProfileId}** - Delete an application profile
@@ -47,9 +52,7 @@ This API enables defining, reading, and managing application requirements,includ
   * `targetMinEphemeralStorage`
   * `targetMinPersistentStorage`
 
-Information: [https://github.com/camaraproject/ApplicationProfiles/](https://github.com/camaraproject/ApplicationProfiles/)
-
-The API definitions can be obtained here: [https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions](https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions)
+---
 
 ## Workflow for a media application creating an Application Profile
 
