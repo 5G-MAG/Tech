@@ -23,6 +23,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Dedi
 ## Relation of APIs
 ### Dedicated Network - Network Profiles API
   * **GET /profiles** - List of available network profiles. The response includes an `id`, alongside the `maxNumberOfDevices`, `aggregatedUlThroughput`, `aggregatedDlThroughput`, `qosProfiles`,...
+    * Dependency: Requires `qosProfiles` which can be retrieved from a previous call to the [**QoS Profiles API**](./CAMARA_QoSProfiles.html).
   * **GET /profiles/{profileId}** - Read a dedicated network profile
 
 ### Dedicated Network - Networks API
