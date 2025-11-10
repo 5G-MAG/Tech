@@ -18,10 +18,21 @@ This documentation is currently **under development and subject to change**. It 
 - API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
 - Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
 
-### [Quality On Demand APIs](./CAMARA_QualityonDemand.html)
-### [Application Profiles APIs](./CAMARA_ApplicationProfiles.html)
-### [Dedicated Networks APIs](./CAMARA_DedicatedNetworks.html)
-### [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html)
+### Quality On Demand APIs
+* Analysis of [Quality On Demand APIs](./CAMARA_QualityonDemand.html) by 5G-MAG
+* Repository in CAMARA Project: [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
+
+### Analysis of Application Profiles APIs 
+* Analysis of [Application Profiles APIs](./CAMARA_ApplicationProfiles.html) by 5G-MAG
+* Repository in CAMARA Project: [https://github.com/camaraproject/ApplicationProfiles](https://github.com/camaraproject/ApplicationProfiles)
+
+### Analysis of Dedicated Networks APIs 
+* Analysis of [Dedicated Networks APIs](./CAMARA_DedicatedNetworks.html) by 5G-MAG
+* Repository in CAMARA Project: [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
+
+### Analysis of Connectivity Insights APIs 
+* Analysis of [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html) by 5G-MAG
+* Repository in CAMARA Project: [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
 TBC
 ### [QoS Booking APIs](./CAMARA_QoSBooking.html)
