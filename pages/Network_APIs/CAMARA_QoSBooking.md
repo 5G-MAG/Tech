@@ -21,7 +21,7 @@ Information: [https://camaraproject.org/qos-booking/](https://camaraproject.org/
 The API definitions can be obtained here: [https://github.com/camaraproject/QoSBooking/tree/main/code/API_definitions](https://github.com/camaraproject/QoSBooking/tree/main/code/API_definitions)
 
 ## Relation of APIs
-### Dedicated Network - Network Profiles API
+### QoS Booking API
   * **POST /device-qos-bookings** with a request body containing `qosProfile`, `applicationServer`, `applicationServerPorts`, `device` object, `devicePorts`, `startTime`, `duration`, `serviceArea`, it triggers a new booking to assign certain QoS Profile to certain devices. The response includes a `bookingId`.
     * Dependency: Requires `qosProfile` which can be retrieved from a previous call to the [**QoS Profiles API**](./CAMARA_QoSProfiles.html).
   * **GET /device-qos-bookings/{bookingId}** - Get QoS Booking information.
