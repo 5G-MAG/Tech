@@ -14,7 +14,7 @@ This documentation is currently **under development and subject to change**. It 
 
 ## Description
 
-The application profiles allow developers to specify all relevant information about their application for both network and compute resource requirements, supporting CAMARA APIs and network decision making.
+The “Application Profiles” API enables developers to share essential information about their applications that is relevant for network and CAMARA APIs decision-making. Currently, it focuses on defining network quality thresholds and compute resource requirements needed by the application. This foundation will expand to include additional information based on requirements from other CAMARA APIs, making it a central point for capturing what the application needs are.
 
 Used in the of the [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html).
 
@@ -22,7 +22,7 @@ This API enables defining, reading, and managing application requirements,includ
 * Network quality thresholds (latency, jitter, loss, throughput)
 * Compute resource thresholds (CPU, GPU, memory, storage)
 
-Information: [https://github.com/camaraproject/ApplicationProfiles/](https://github.com/camaraproject/ApplicationProfiles/)
+Information: [https://camaraproject.org/application-profiles/](https://camaraproject.org/application-profiles/) and [https://github.com/camaraproject/ApplicationProfiles/](https://github.com/camaraproject/ApplicationProfiles/)
 
 The API definitions can be obtained here: [https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions](https://github.com/camaraproject/ApplicationProfiles/tree/main/code/API_definitions)
 
