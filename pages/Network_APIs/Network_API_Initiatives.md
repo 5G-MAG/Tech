@@ -13,11 +13,6 @@ This documentation is currently **under development and subject to change**. It 
 
 ## CAMARA APIs for Communication Quality Management
 
-### Information
-- CAMARA Repositories in GitHub: [Link](https://github.com/orgs/camaraproject/repositories?q=sort%3Aname-asc)
-- API Backlog: [Link](https://github.com/camaraproject/WorkingGroups/blob/main/APIBacklog/documentation/APIbacklog.md)
-- Proposed new APIs: [Link](https://github.com/camaraproject/WorkingGroups/pulls)
-
 ### Quality On Demand APIs
 * Analysis of [Quality On Demand APIs](./CAMARA_QualityonDemand.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
