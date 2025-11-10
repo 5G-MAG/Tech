@@ -58,6 +58,7 @@ A user of a media application would like to request the assignment of a QoS Prof
 </figure>
 
 ### Step 0: Pre-conditions
+* The API invoker needs to have signed up with the API provider.
 * qosProfiles have already been defined and made available by the network operator.
 * Names of such qosProfiles have been disclosed to the user so they can be used when invoking APIs.
 
