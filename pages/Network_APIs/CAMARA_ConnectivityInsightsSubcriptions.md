@@ -3,7 +3,7 @@ layout: default
 title: CAMARA Connectivity Insights Subscriptions
 parent: Network API Analysis
 grand_parent: Network APIs
-nav_order: 3
+nav_order: 2
 has_children: false
 ---
 
