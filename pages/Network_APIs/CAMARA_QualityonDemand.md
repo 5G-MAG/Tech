@@ -77,14 +77,11 @@ A user of a media application would like to request the assignment of a QoS Prof
 
 The QoS Profiles API would be used prior to the start of the event in order to understand the profiles and details of the profiles available in the network. However, it seems that the only way to obtain the list of parameters of a profile is by invoking the API with the QoS Profile `name`. There is a method lacking the query of profile names. There is also no method to define QoS Profiles, and this operation should be done beforehand.
 
-Before the event starts, device may be assigned to a given QoS Profile. This QoS Profile would be active for such device for the duration of the assignment or until it gets revoked. This would be useful for devices that require a static QoS Profile for the duration of the event. Impractical if the device would have to change as revoking the assignment may then result in not being available to assign a new device with a different QoS Profile (if there is contention with other users).
-
 A session may be created by establishing a level of QoS between the device and the application server for a given duration. It is assumed that the QoS Provisioning would result successful when invoked in the given location. However as a service area cannot be defined/requested, it is unclear whether this would be successful or not.
 
 Potential improvements:
 - A way to list profile names available in the network
 - A solution to the fact that QoS Profiles need to be established manually before being able to invoke them.
-- a media production event may involve several devices that may need to request access to the Dedicated Network but not simultaneously. A distinction between the number of different devices able to be allocated to the Dedicated Network and the number of devices that can simultaneouly request the same performance may be worth considering.
 - There is no information about the location or service area.
 - Understanding opportunities to book QoS sessions in terms of duration and location/area would be useful as the user may be able to move and find a better coverage spot rather than being denied the establishment of QoS at the time and location in which it is requested.
 
