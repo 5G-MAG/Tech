@@ -14,7 +14,7 @@ This documentation is currently **under development and subject to change**. It 
 
 ## Description
 
-This API allows the API consumer to book the availability of a session (also known as a "network slice"), specifying the service time, service area, and quality of service (QoS) profile. It checks whether the requested QoS profile can be guaranteed for the indicated time and area, and, if so, it reserves the network slice accordingly, and monitors that the slice delivers the QoS profile. The latter process is known as Service Level Agreement (SLA) monitoring.
+The “Network Slice Booking” API provides developers with a programmable interface. Industry customers can reserve and manage network slice resources within designated areas and time periods, and offer network guarantee services to end users. Within this API, developers can customize service areas (e.g., circular or polygonal regions), time periods, set Quality of Service (QoS) parameters (e.g., throughput, latency, and terminal limits), apply for network slice resources from operators, and bind slice resources for end users at the same time to achieve network guarantee functions.
 
 Information: [https://github.com/camaraproject/NetworkSliceBooking](https://github.com/camaraproject/NetworkSliceBooking)
 
