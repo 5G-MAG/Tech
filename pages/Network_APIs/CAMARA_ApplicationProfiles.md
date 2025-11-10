@@ -14,7 +14,8 @@ This documentation is currently **under development and subject to change**. It 
 
 ## Description
 
-Application profiles allow developers to specify all relevant information about their application for both network and compute resource requirements,supporting CAMARA APIs and network decision making.
+The application profiles, used in contenxt of the [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html), allow developers to specify all relevant information about their application for both network and compute resource requirements, supporting CAMARA APIs and network decision making.
+The application profiles are used in context of the Connectivity Insights APIs
 
 This API enables defining, reading, and managing application requirements,including:
 * Network quality thresholds (latency, jitter, loss, throughput)
