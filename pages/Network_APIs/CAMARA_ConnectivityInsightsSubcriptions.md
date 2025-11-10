@@ -24,6 +24,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Conn
 
 ### Connectivity Insights Subscriptions API
   * **POST /subscriptions** with the request body containing a `device`, `applicationServer (IP:port)`, `applicationProfileId` and an indication of expiration time and maximun number of events. Response contains a `subscriptionId`.
+    * Dependency: Requires `applicationProfileId` from a previous call to the [**Application Profiles API**](./CAMARA_ApplicationProfiles.html).
   * **GET /subscriptions** - Operation to list subscriptions authorized to be retrieved by the provided access token.
   * **GET /subscriptions/{subscriptionId}** - Retrieve a given subscription by ID.
   * **DELETE /subscriptions/{subscriptionId}** - Delete a given subscription by ID
@@ -41,7 +42,7 @@ A user of a media application would like to obtain Connectivity Insights events.
 * Create a device object for the device which media flow is to be monitored.
 * Obtain IP address and port of the application server (Ingest Server of Production).
 
-### Step 1: Recurrent events/notifications on network quality
+### Step 1: Subcribe to recurrent events/notifications on network quality
 * **POST /subscriptions**, passing the **applicationProfileId** obtained in step 0, the address/port of an application server, and a device object. Indicate expiration time and maximum number of events.
 
 ## 5G-MAG's Self-Assessment
