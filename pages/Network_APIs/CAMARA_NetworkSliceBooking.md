@@ -27,7 +27,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Netw
   * **GET /sessions/{sessionId}** - query session resource information details.
   * **DELETE /sessions/{sessionId}** - delete a Network Slice Booking session.
 
-#### Parameters describing a slide QoS Profile
+#### Parameters describing a Network Slice QoS Profile
 * `maxNumOfDevices`- is the maximum number of devices that can be connected to the slice
 * `downStreamRatePerDevice` - is the maximum downstream rate allowed for each device connected to the slice. It indicates the individual device capability required for the slice.
 * `upStreamRatePerDevice` - is the maximum upstream rate allowed for each device connected to the slice. It indicates the individual device capability required for the slice.
