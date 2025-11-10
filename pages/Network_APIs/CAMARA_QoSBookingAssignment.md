@@ -3,7 +3,7 @@ layout: default
 title: CAMARA QoS Booking and Assignment
 parent: Network API Analysis
 grand_parent: Network APIs
-nav_order: 4
+nav_order: 6
 has_children: false
 ---
 
