@@ -49,7 +49,7 @@ Information: [https://github.com/camaraproject/QualityOnDemand](https://github.c
 
 The API definitions can be obtained here: [https://github.com/camaraproject/QualityOnDemand/tree/main/code/API_definitions](https://github.com/camaraproject/QualityOnDemand/tree/main/code/API_definitions)
 
-## Workflow: Media application requesting Quality on Demand
+## Workflow: Media application using the Quality on Demand APIs (action towards establishing a QoS session)
 
 A user of a media application would like to request the assignment of a QoS Profile to a device and be able to establish a QoS session for the connection between such a device and an application server. The following steps are executed:
 
