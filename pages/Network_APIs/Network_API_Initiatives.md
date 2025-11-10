@@ -17,15 +17,15 @@ This documentation is currently **under development and subject to change**. It 
 * Analysis of [Quality On Demand APIs](./CAMARA_QualityonDemand.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
-### Analysis of Application Profiles APIs 
+### Application Profiles APIs 
 * Analysis of [Application Profiles APIs](./CAMARA_ApplicationProfiles.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/ApplicationProfiles](https://github.com/camaraproject/ApplicationProfiles)
 
-### Analysis of Dedicated Networks APIs 
+### Dedicated Networks APIs 
 * Analysis of [Dedicated Networks APIs](./CAMARA_DedicatedNetworks.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
 
-### Analysis of Connectivity Insights APIs 
+### Connectivity Insights APIs 
 * Analysis of [Connectivity Insights APIs](./CAMARA_ConnectivityInsights.html) by 5G-MAG
 * Repository in CAMARA Project: [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
 
