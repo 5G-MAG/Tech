@@ -40,9 +40,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/QoSB
 
 A user of a media application would like to request the assignment of a QoS Profile to a device for a given period of time and service area. The following steps are executed:
 
-<figure>
-  <img src="./Content_Production/images/figure_dedicatednetworks.png" width="80%">
-</figure>
+Figure TBD
 
 ### Step 0: Pre-conditions
 * qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
