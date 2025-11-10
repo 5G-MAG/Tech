@@ -20,6 +20,9 @@ Used in the context of:
 * [Dedicated Networks API](./CAMARA_DedicatedNetworks.html)
 * [Quality on Demand API](./CAMARA_QualityonDemand.html)
 * [QoS Provisioning API](./CAMARA_QoSProvisioning.html)
+* [QoS Booking API](./CAMARA_QoSBooking.html)
+* [QoS Booking and Assignment API](./CAMARA_QoSBookingAssignment.html)
+
 
 Information: [https://camaraproject.org/qos-profiles/](https://camaraproject.org/qos-profiles/) and [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
