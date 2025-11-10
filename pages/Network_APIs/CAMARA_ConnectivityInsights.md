@@ -44,7 +44,7 @@ A user of a media application would like to obtain Connectivity Insights about t
 ### Step 0: Pre-conditions
 * Create an application profile using the **Application Profiles API** (with the relevant application requirements).
 * Create a device object for the device which media flow is to be monitored.
-* Obtain IP address and port of the application server (Production Server).
+* Obtain IP address and port of the application server (Ingest Server of Production).
 
 ### Step 1a: One-shot information on network quality
 * **POST /check-network-quality**, passing the **applicationProfileId** obtained in step 0, the address/port of an application server, and a device object.
