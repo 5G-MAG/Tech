@@ -14,21 +14,19 @@ This documentation is currently **under development and subject to change**. It 
 
 ## Description
 
-The Quality-On-Demand (QoD) API provides a programmable interface for developers and other users (API consumers) to request stable latency or throughput managed by networks without the necessity to have an in-depth knowledge of the underlying network complexity (e.g. the 4G/5G system in case of a mobile network).
+The Quality-On-Demand (QoD) APIs provides a programmable interface for developers and other users (API consumers) to request stable latency or throughput managed by networks without the necessity to have an in-depth knowledge of the underlying network complexity (e.g. the 4G/5G system in case of a mobile network).
+
+Information: [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
+
+The API definitions can be obtained here: [https://github.com/camaraproject/QualityOnDemand/tree/main/code/API_definitions](https://github.com/camaraproject/QualityOnDemand/tree/main/code/API_definitions)
 
 ## Relation of APIs
-### Quality on Demand API
-  * **POST /sessions** with the request body including a `device` object, `applicationServer` IP, `applicationServerPorts`, `devicePorts`, `qosProfile` and `duration`, it is used to create QoS Session to manage latency/throughput priorities. The response incliudes information about the creation of the session, with a `sessionId`.
-  * **GET /sessions/{sessionId}** - Get QoS session information
-  * **DELETE /sessions/{sessionId}** - Delete a QoS session
-  * **POST /sessions/{sessionId}/extend** - Extend the duration of an active session
-  * **POST /retrieve-sessions** - Get QoS session information for a device
 
 ### QoS Profiles API
   * **POST /retrieve-qos-profiles** with a request body including a `device` object, `name` of the profile and `status`, it is used to query QoS Profiles for a given device. The response contains information about the QoS Profiles
   * **GET /qos-profiles/{name}** - get QoS Profile for a given name
 
-#### Parameters
+#### Parameters describing a QoS Profile
 * `packetDelayBudget`- the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
 * `targetMinDownstreamRate` - the target minimum downstream rate.
 * `targetMinUpstreamRate` - the target minimum upstream rate
@@ -38,20 +36,25 @@ The Quality-On-Demand (QoD) API provides a programmable interface for developers
 * `maxDuration`
 * `priority`
 * `l4sQueueType`
-  
+
+### Quality on Demand API
+  * **POST /sessions** with the request body including a `device` object, `applicationServer` IP, `applicationServerPorts`, `devicePorts`, `qosProfile` and `duration`, it is used to create a QoS session to manage latency/throughput priorities. The response includes information about the creation of the session, with a `sessionId`.
+  * **GET /sessions/{sessionId}** - Get QoS session information
+  * **DELETE /sessions/{sessionId}** - Delete a QoS session
+  * **POST /sessions/{sessionId}/extend** - Extend the duration of an active session
+  * **POST /retrieve-sessions** - Get QoS session information for a device
+
 ### QoS Provisioning API
   * **POST /qos-assignments** with the request body including a `device` object and `qosProfile`, this request will assign a QoS profile to a device. The response includes an `assignmentId`.
   * **GET /qos-assignments/{assignmentId}** - Querying for details about the QoS profile assignment
   * **DELETE /qos-assignments/{assignmentId}** - Revokes the assignment of a QoS profile to a device performed by a previous assignment operation.
   * **POST /retrieve-qos-assignment** with the request body including the `device` object, this request will return information about the QoS profile assignment for the device with an `assignmentId`.
 
-Information: [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
+---
 
-The API definitions can be obtained here: [https://github.com/camaraproject/QualityOnDemand/tree/main/code/API_definitions](https://github.com/camaraproject/QualityOnDemand/tree/main/code/API_definitions)
+## Workflow: Media application using the QoS Provisioning API to assign a QoS profile to a device
 
-## Workflow: Media application using the Quality on Demand APIs (action towards establishing a QoS session)
-
-A user of a media application would like to request the assignment of a QoS Profile to a device and be able to establish a QoS session for the connection between such a device and an application server. The following steps are executed:
+A user of a media application would like to request the assignment of a QoS Profile to a device. The following steps are executed:
 
 <figure>
   <img src="./Content_Production/images/figure_qualityondemand.png" width="80%">
@@ -65,13 +68,31 @@ A user of a media application would like to request the assignment of a QoS Prof
 ### Step 1: Check details of an existing QoS Profile (when not cached)
 * **GET /qos-profiles/{name}** to obtain the parameters of the QoS Profile
 
-### Step 2a: Attach a device to the QoS Profile
+### Step 2: Attach a device to the QoS Profile
 * **POST /qos-assignments** passing the `device` object and the name of the `qosProfile`
 * The received "assignmentId" could be used to query details or revoke the assignment
 * This QoS profile will be assigned to the device anytime it is connected to the network.
 
-### Step 2b: Establish a QoS session
+## Workflow: Media application using the Quality on Demand API to create a QoS session
+
+A user of a media application would like to request the creation of a QoS session for the connection between a device and an application server. The following steps are executed:
+
+<figure>
+  <img src="./Content_Production/images/figure_qualityondemand.png" width="80%">
+</figure>
+
+### Step 0: Pre-conditions
+* The API invoker needs to have signed up with the API provider.
+* qosProfiles have already been defined and made available by the network operator.
+* Names of such qosProfiles have been disclosed to the user so they can be used when invoking APIs.
+
+### Step 1: Check details of an existing QoS Profile (when not cached)
+* **GET /qos-profiles/{name}** to obtain the parameters of the QoS Profile
+
+### Step 2: Establish a QoS session
 * **POST /sessions** passing the `device` object, `applicationServer` IP, `applicationServerPorts`, `devicePorts`, `qosProfile` and `duration`.
+
+---
 
 ## 5G-MAG's Self-Assessment
 
