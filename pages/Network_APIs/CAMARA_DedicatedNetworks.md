@@ -63,7 +63,7 @@ A user of a media application would like to request a Dedicated Network, with a 
 
 ## 5G-MAG's Self-Assessment
 
-The Network Profiles and Dedicated Network APIs are likely to be invoked before the actual usage of the network to ensure that the requested capabilities are "reserved" for the specific area and time window.
+The Profiles and Networks APIs are to be invoked before the actual usage of the network to ensure that the requested capabilities are "reserved" for the specific area and time window.
 During the event devices will have access to the Dedicated Network and should be allocated or de-allocated depending on the actual requirements.
 
 Potential improvements:
