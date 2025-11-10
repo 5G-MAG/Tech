@@ -16,7 +16,7 @@ This documentation is currently **under development and subject to change**. It 
 
 The “Dedicated Networks” APIs provide functionalities for reserving network connectivity resources, selecting network capabilities, and controlling access for devices.
 
-Information: [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
+Information: [https://camaraproject.org/dedicated-networks/](https://camaraproject.org/dedicated-networks/) and [https://github.com/camaraproject/DedicatedNetworks](https://github.com/camaraproject/DedicatedNetworks)
 
 The API definitions can be obtained here: [https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions](https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions)
 
