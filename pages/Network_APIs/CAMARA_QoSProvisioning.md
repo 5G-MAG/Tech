@@ -33,7 +33,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Qual
 
 ## Workflow: Media application using the QoS Provisioning API to assign a QoS profile to a device
 
-A user of a media application would like to request the assignment of a QoS Profile to a device. The following steps are executed:
+A user of a media application would like to request the assignment of a QoS Profile to a device. An example figure is shown using the QoS Provisioning in the context of Quality on Demand. The following steps are executed:
 
 <figure>
   <img src="./Content_Production/images/figure_qualityondemand.png" width="80%">
