@@ -3,7 +3,7 @@ layout: default
 title: CAMARA Qos Profiles
 parent: Network API Analysis
 grand_parent: Network APIs
-nav_order: 0
+nav_order: 7
 has_children: false
 ---
 
