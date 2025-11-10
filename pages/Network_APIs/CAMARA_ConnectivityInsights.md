@@ -16,22 +16,20 @@ This documentation is currently **under development and subject to change**. It 
 
 Visibility into network quality, check if application’s network requirements can be met for a given user session. Based on the API’s response, informed decisions can be taken.
 
+Information: [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
+
+The API definitions can be obtained here: [https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions](https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions)
+
 ## Relation of APIs
 ### Connectivity Insights API
   * **POST /check-network-quality** with the request body containing an `applicationProfileId`, `device`, `applicationServer (IP:port)` - Check the network quality. Response shows the network's current level of confidence (qualitative) that it can meet an application profile's quality thresholds (according to those defined in the `applicationProfileId`for a given end user device.
-
-{: .note }
-Requires `applicationProfileId` from a previous call to the [**Application Profiles API**](./CAMARA_ApplicationProfiles.html).
+    * Dependency: Requires `applicationProfileId` from a previous call to the [**Application Profiles API**](./CAMARA_ApplicationProfiles.html).
 
 ### Connectivity Insights Subscriptions API
   * **POST /subscriptions** with the request body containing a `device`, `applicationServer (IP:port)`, `applicationProfileId` and an indication of expiration time and maximun number of events. Response contains a `subscriptionId`.
   * **GET /subscriptions** - Operation to list subscriptions authorized to be retrieved by the provided access token.
   * **GET /subscriptions/{subscriptionId}** - Retrieve a given subscription by ID.
   * **DELETE /subscriptions/{subscriptionId}** - Delete a given subscription by ID
-
-Information: [https://github.com/camaraproject/ConnectivityInsights](https://github.com/camaraproject/ConnectivityInsights)
-
-The API definitions can be obtained here: [https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions](https://github.com/camaraproject/ConnectivityInsights/tree/main/code/API_definitions)
 
 ## Workflow: Media application requesting Connectivity Insights
 
