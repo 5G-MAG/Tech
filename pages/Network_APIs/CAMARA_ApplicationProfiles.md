@@ -58,6 +58,12 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Appl
 
 ## Workflow for a media application creating an Application Profile
 
+A user of a media application would like to create and Application Profile with the network quality thresholds for the application. An example figure is shown using the Applicaiton Profile in the context of Connectivity Insights. The following steps are executed:
+
+<figure>
+  <img src="./Content_Production/images/figure_connectivityinsights.png" width="80%">
+</figure>
+
 ### Step 1: Creation of Application Profile
 * Create an application profile using the **Application Profiles API** with **POST /application-profiles** and with the request body containing user-defined network quality thresholds.
 
