@@ -28,7 +28,7 @@ The Quality-On-Demand (QoD) API provides a programmable interface for developers
   * **POST /retrieve-qos-profiles** with a request body including a `device` object, `name` of the profile and `status`, it is used to query QoS Profiles for a given device. The response contains information about the QoS Profiles
   * **GET /qos-profiles/{name}** - get QoS Profile for a given name
 
-### Parameters
+#### Parameters
 * `packetDelayBudget`- the maximum allowable one-way latency between the customer's device and the gateway from the operator's network to other networks. The end-to-end or round trip latency will be about two times this value plus the latency not controlled by the operator
 * `targetMinDownstreamRate` - the target minimum downstream rate.
 * `targetMinUpstreamRate` - the target minimum upstream rate
@@ -39,7 +39,7 @@ The Quality-On-Demand (QoD) API provides a programmable interface for developers
 * `priority`
 * `l4sQueueType`
   
-### QoS Provisioning
+### QoS Provisioning API
   * **POST /qos-assignments** with the request body including a `device` object and `qosProfile`, this request will assign a QoS profile to a device. The response includes an `assignmentId`.
   * **GET /qos-assignments/{assignmentId}** - Querying for details about the QoS profile assignment
   * **DELETE /qos-assignments/{assignmentId}** - Revokes the assignment of a QoS profile to a device performed by a previous assignment operation.
@@ -61,7 +61,7 @@ A user of a media application would like to request the assignment of a QoS Prof
 * qosProfiles have already been defined and made available by the network operator.
 * Names of such qosProfiles have been disclosed to the user so they can be used when invoking APIs.
 
-### Step 1: Check details of an existing QoS Profile
+### Step 1: Check details of an existing QoS Profile (when not cached)
 * **GET /qos-profiles/{name}** to obtain the parameters of the QoS Profile
 
 ### Step 2a: Attach a device to the QoS Profile
@@ -78,7 +78,7 @@ The QoS Profiles API would be used prior to the start of the event in order to u
 
 Before the event starts, device may be assigned to a given QoS Profile. This QoS Profile would be active for such device for the duration of the assignment or until it gets revoked. This would be useful for devices that require a static QoS Profile for the duration of the event. Impractical if the device would have to change as revoking the assignment may then result in not being available to assign a new device with a different QoS Profile (if there is contention with other users).
 
-A session may be created by establishing a guarantee of QoS between the device and the application server for a given duration. It is assumed that the QoS Provisioning would result successful when invoked in the given location. However as a service area cannot be defined/requested, it is unclear whether this would be successful or not.
+A session may be created by establishing a level of QoS between the device and the application server for a given duration. It is assumed that the QoS Provisioning would result successful when invoked in the given location. However as a service area cannot be defined/requested, it is unclear whether this would be successful or not.
 
 Potential improvements:
 - A way to list profile names available in the network
