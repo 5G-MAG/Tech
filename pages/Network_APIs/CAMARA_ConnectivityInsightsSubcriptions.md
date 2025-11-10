@@ -31,7 +31,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Conn
 
 ## Workflow: Media application subcribing to Connectivity Insights events
 
-A user of a media application would like to obtain Connectivity Insights events. The following steps are executed:
+A user of a media application would like to obtain Connectivity Insights events. An example figure is shown in the context of using Applicaiton Profiles and Connectivity Insights. The following steps are executed:
 
 <figure>
   <img src="./Content_Production/images/figure_connectivityinsights.png" width="80%">
