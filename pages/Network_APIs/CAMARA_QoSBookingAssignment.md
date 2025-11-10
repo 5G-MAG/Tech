@@ -22,16 +22,21 @@ Information: [https://camaraproject.org/qos-booking-and-assignment/](https://cam
 The API definitions can be obtained here: [https://github.com/camaraproject/QoSBooking/tree/main/code/API_definitions](https://github.com/camaraproject/QoSBooking/tree/main/code/API_definitions)
 
 ## Relation of APIs
-### Dedicated Network - Network Profiles API
-  * **POST /device-qos-bookings** with a request body containing `qosProfile`, `applicationServer`, `applicationServerPorts`, `device` object, `devicePorts`, `startTime`, `duration`, `serviceArea`, it triggers a new booking to assign certain QoS Profile to certain devices. The response includes a `bookingId`.
+### QoS Booking and Assignment - QoS Booking API
+  * **POST /qos-bookings** with a request body containing `numDevices`, `qosProfile`, `startTime`, `duration`, `serviceArea`, it triggers a new booking in advance and assign this reserved booking profile to one or more devices when the devices are ready. The response includes a `bookingId`.
     * Dependency: Requires `qosProfile` which can be retrieved from a previous call to the [**QoS Profiles API**](./CAMARA_QoSProfiles.html).
-  * **GET /device-qos-bookings/{bookingId}** - Get QoS Booking information.
-  * **DELETE /device-qos-bookings/{bookingId}** - Deletes a QoS Booking.
-  * **POST /retrieve-device-qos-bookings** with a request body containing a `device` object, queries for QoS Booking resource information details for a device.
+  * **GET /qos-bookings/{bookingId}** - gets booking information for the given bookingId
+  * **DELETE /qos-bookings/{bookingId}** - Cancel an existing booking and release resources related to that booking.
+
+### QoS Booking and Assignment - Device Assignment API
+  * **POST /qos-bookings/{bookingId}/devices/assign** with a request body containing `device` object, allows the end user to assign one or more devices to the existing QoS Booking.
+  * **GET /qos-bookings/{bookingId}/devices** - allows the end user to retrieve the list of devices assigned to the existing QoS Booking.
+  * **POST /qos-bookings/{bookingId}/devices/release** with a request body containing `device` object - Release one or more already assigned devices. This is a synchronous call.
+  * **POST /qos-bookings/retrieve** with a request body containing `device` object - Querying for QoS Booking resource information details for a device. Returns the QoS booking information for a given device. A device may have multiple bookings (for several times and locations), thus the response is an array
 
 ---
 
-## Workflow: Media application requesting to assing a QoS Profile to a device
+## Workflow: Media application requesting a QoS Booking and assinging to a device
 
 A user of a media application would like to request the assignment of a QoS Profile to a device for a given period of time and service area. The following steps are executed:
 
@@ -42,73 +47,49 @@ A user of a media application would like to request the assignment of a QoS Prof
 ### Step 0: Pre-conditions
 * qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
 
-### Step 1: Create a QoS Booking for a device
-* **POST /device-qos-bookings** passing the `qosProfile`, `applicationServer`, `applicationServerPorts`, `device` object, `devicePorts`, `startTime`, `duration`, `serviceArea`.
+### Step 1: Create a QoS Booking for a given number of devices
+* **POST /qos-bookings** passing the `numDevices`, `qosProfile`, `startTime`, `duration`, `serviceArea`.
 
-### Step 2: Use the QoS Booking
-Use the QoS Booking for the device and the time window and service area. The device connected to the network at the time and service area will be able to benefit from the QoS Booking.
+### Step 2: Assing the QoS Booking to a specific Device
+* **POST /qos-bookings/{bookingId}/devices/assign** passing the BookingId from the previous step and a `device` object to assign the QoS Booking to a specific device.
 
 ## 5G-MAG's Self-Assessment
 
-The QoS Booking APIs can be invoked before the actual usage of the network starts to ensure that the requested capabilities are "reserved" for the specific area, time window and device.
-During the event a device will have access to the QoS Booking.
+The QoS Booking can be invoked before the actual usage of the network starts to ensure that the requested capabilities are "reserved" for the specific area, time window and a given number of devices.
+Before or during the event a device will be assigned have access to the QoS booking.
 
 Potential improvements:
-- It is unclear how to associate devices to make use of the resources. As it stands, the device is granted the booking as soon as connected to the network under the service area and for the specified duration.
-- It is unclear how to update the booking. In the event that a device would need to be exchanged, deleting and creating a new booking may lead to loosing the ability to reserve resources during operation.
-
+- Unlike other similar APIs there is no information about the application server. It is unclear what would be the endpoint to which throughput, jitter, latency and other parameters would apply.
+- The procedure is very similar to Dedicated Networks. There seems to be redundancy with QoS Booking
+- The use of the same name "QoS Booking" is misleading with the other API called "QoS Booking"
 ---
 
-## QoS Booking API Usage
+## QoS Booking and Assignment API Usage
 
-### Request booking of QoS for a device
-With **POST /device-qos-bookings**, and device parameters
+### Request booking of QoS
+With **POST /qos-bookings**
 
 ```
 {
-  "device": {
-    "phoneNumber": "+123456789",
-    "networkAccessIdentifier": "123456789@domain.com",
-    "ipv4Address": {
-      "publicAddress": "203.0.113.0",
-      "publicPort": 59765
-    },
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  },
-  "qosProfile": "QCI_1_voice",
-  "applicationServer": {
-    "ipv4Address": "198.51.100.0/24",
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  },
-  "devicePorts": {
-    "ranges": [
-      {
-        "from": 5010,
-        "to": 5020
-      }
-    ],
-    "ports": [
-      5060,
-      5070
-    ]
-  },
-  "applicationServerPorts": {
-    "ranges": [
-      {
-        "from": 5010,
-        "to": 5020
-      }
-    ],
-    "ports": [
-      5060,
-      5070
-    ]
-  },
-  "sink": "https://endpoint.example.com/sink",
-  "sinkCredential": {},
-  "startTime": "2024-06-01T12:00:00Z",
+  "numDevices": 15,
+  "qosProfile": "QOS_MEDIA_BROADCAST",
+  "startTime": "2025-10-27T15:00:00.000Z",
   "duration": 3600,
-  "serviceArea": {}
+  "serviceArea": {
+    "areaType": "CIRCLE",
+    "center": {
+      "latitude": 37.735851,
+      "longitude": -127.10066
+    },
+    "radius": 100
+  },
+  "sink": "https://application-server.com/notifications",
+  "sinkCredential": {
+    "credentialType": "ACCESSTOKEN",
+    "accessToken": "<access_token>",
+    "accessTokenExpiresUtc": "2025-12-31T23:59:59Z",
+    "accessTokenType": "bearer"
+  }
 }
 ```
 
@@ -116,98 +97,53 @@ Type of response: A **bookingId**
 
 ```
 {
-  "device": {
-    "phoneNumber": "+123456789",
-    "networkAccessIdentifier": "123456789@domain.com",
-    "ipv4Address": {
-      "publicAddress": "203.0.113.0",
-      "publicPort": 59765
-    },
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  },
-  "qosProfile": "QCI_1_voice",
-  "applicationServer": {
-    "ipv4Address": "198.51.100.0/24",
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  },
-  "devicePorts": {
-    "ranges": [
-      {
-        "from": 5010,
-        "to": 5020
-      }
-    ],
-    "ports": [
-      5060,
-      5070
-    ]
-  },
-  "applicationServerPorts": {
-    "ranges": [
-      {
-        "from": 5010,
-        "to": 5020
-      }
-    ],
-    "ports": [
-      5060,
-      5070
-    ]
-  },
-  "sink": "https://endpoint.example.com/sink",
-  "sinkCredential": {},
-  "startTime": "2024-06-01T12:00:00Z",
+  "bookingId": "8e2f6f30-0a1c-4c6b-92e1-1bd05aef1c58",
+  "totalDevices": 15,
+  "remainingDevices": 15,
+  "qosProfile": "QOS_MEDIA_BROADCAST",
+  "startTime": "2025-10-27T15:00:00.000Z",
   "duration": 3600,
-  "serviceArea": {},
-  "bookingId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "startedAt": "2024-06-01T12:00:00Z",
-  "status": "REQUESTED",
-  "statusInfo": "DURATION_EXPIRED"
-}
-```
-
-### Obtains the existing QoS booking for a device
-With **POST /retrieve-device-qos-bookings**, and device parameters
-
-```
-{
-  "device": {
-    "phoneNumber": "+123456789",
-    "networkAccessIdentifier": "123456789@domain.com",
-    "ipv4Address": {
-      "publicAddress": "203.0.113.0",
-      "publicPort": 59765
-    },
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  }
-}
-```
-
-### Obtains the QoS booking information
-With **GET /device-qos-bookings/{bookingId}**
-
-```
-{
-  "bookingId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "duration": 3600,
-  "device": {
-    "ipv4Address": {
-      "publicAddress": "203.0.113.0",
-      "publicPort": 59765
-    }
-  },
-  "qosProfile": "QOS_L",
-  "sink": "https://application-server.com/notifications",
-  "startTime": "2024-06-01T12:00:00Z",
-  "startedAt": "2024-06-01T12:00:00Z",
-  "status": "AVAILABLE",
   "serviceArea": {
     "areaType": "CIRCLE",
     "center": {
-      "latitude": 50.735851,
-      "longitude": 7.10066
+      "latitude": 37.735851,
+      "longitude": -127.10066
     },
     "radius": 100
+  },
+  "status": "SUCCESSFUL",
+  "statusInfo": "BOOKING_ACCEPTED"
+}
+```
+
+### Assign a device
+With **POST /qos-bookings/{bookingId}/devices/assign**, and device parameters
+
+```
+{
+  "devices": [
+    {
+      "phoneNumber": "+14145550101"
+    },
+    {
+      "networkAccessIdentifier": "+123456789@domain.com"
+    },
+    {
+      "ipv4Address": {
+        "publicAddress": "203.0.113.0",
+        "publicPort": 59765
+      }
+    },
+    {
+      "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+    }
+  ],
+  "sink": "https://application-server.com/notifications",
+  "sinkCredential": {
+    "credentialType": "ACCESSTOKEN",
+    "accessToken": "<access_token>",
+    "accessTokenExpiresUtc": "2025-12-31T23:59:59Z",
+    "accessTokenType": "bearer"
   }
 }
 ```
