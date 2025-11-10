@@ -37,45 +37,11 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Qual
 * `priority`
 * `l4sQueueType`
 
-### Quality on Demand API
-  * **POST /sessions** with the request body including a `device` object, `applicationServer` IP, `applicationServerPorts`, `devicePorts`, `qosProfile` and `duration`, it is used to create a QoS session to manage latency/throughput priorities. The response includes information about the creation of the session, with a `sessionId`.
-  * **GET /sessions/{sessionId}** - Get QoS session information
-  * **DELETE /sessions/{sessionId}** - Delete a QoS session
-  * **POST /sessions/{sessionId}/extend** - Extend the duration of an active session
-  * **POST /retrieve-sessions** - Get QoS session information for a device
-
-### QoS Provisioning API
-  * **POST /qos-assignments** with the request body including a `device` object and `qosProfile`, this request will assign a QoS profile to a device. The response includes an `assignmentId`.
-  * **GET /qos-assignments/{assignmentId}** - Querying for details about the QoS profile assignment
-  * **DELETE /qos-assignments/{assignmentId}** - Revokes the assignment of a QoS profile to a device performed by a previous assignment operation.
-  * **POST /retrieve-qos-assignment** with the request body including the `device` object, this request will return information about the QoS profile assignment for the device with an `assignmentId`.
-
 ---
 
-## Workflow: Media application using the QoS Provisioning API to assign a QoS profile to a device
+## Workflow: Media application retreiving QoS profiles
 
-A user of a media application would like to request the assignment of a QoS Profile to a device. The following steps are executed:
-
-<figure>
-  <img src="./Content_Production/images/figure_qualityondemand.png" width="80%">
-</figure>
-
-### Step 0: Pre-conditions
-* The API invoker needs to have signed up with the API provider.
-* qosProfiles have already been defined and made available by the network operator.
-* Names of such qosProfiles have been disclosed to the user so they can be used when invoking APIs.
-
-### Step 1: Check details of an existing QoS Profile (when not cached)
-* **GET /qos-profiles/{name}** to obtain the parameters of the QoS Profile
-
-### Step 2: Attach a device to the QoS Profile
-* **POST /qos-assignments** passing the `device` object and the name of the `qosProfile`
-* The received "assignmentId" could be used to query details or revoke the assignment
-* This QoS profile will be assigned to the device anytime it is connected to the network.
-
-## Workflow: Media application using the Quality on Demand API to create a QoS session
-
-A user of a media application would like to request the creation of a QoS session for the connection between a device and an application server. The following steps are executed:
+A user of a media application would like to retrieve QoS profiles available in the network. The following steps are executed:
 
 <figure>
   <img src="./Content_Production/images/figure_qualityondemand.png" width="80%">
@@ -88,9 +54,6 @@ A user of a media application would like to request the creation of a QoS sessio
 
 ### Step 1: Check details of an existing QoS Profile (when not cached)
 * **GET /qos-profiles/{name}** to obtain the parameters of the QoS Profile
-
-### Step 2: Establish a QoS session
-* **POST /sessions** passing the `device` object, `applicationServer` IP, `applicationServerPorts`, `devicePorts`, `qosProfile` and `duration`.
 
 ---
 
@@ -98,151 +61,12 @@ A user of a media application would like to request the creation of a QoS sessio
 
 The QoS Profiles API would be used prior to the start of the event in order to understand the profiles and details of the profiles available in the network. However, it seems that the only way to obtain the list of parameters of a profile is by invoking the API with the QoS Profile `name`. There is a method lacking the query of profile names. There is also no method to define QoS Profiles, and this operation should be done beforehand.
 
-A session may be created by establishing a level of QoS between the device and the application server for a given duration. It is assumed that the QoS Provisioning would result successful when invoked in the given location. However as a service area cannot be defined/requested, it is unclear whether this would be successful or not.
-
 Potential improvements:
 - A way to list profile names available in the network
 - A solution to the fact that QoS Profiles need to be established manually before being able to invoke them.
-- There is no information about the location or service area.
-- Understanding opportunities to book QoS sessions in terms of duration and location/area would be useful as the user may be able to move and find a better coverage spot rather than being denied the establishment of QoS at the time and location in which it is requested.
+- There is no information about the location or service area where such profiles are available. It would be inpractical if QoS Profiles would only be retrievable once in the exact location and at a given time.
 
 ---
-
-## Quality-On-Demand (QoD) API Usage
-
-### Request the creation of a session
-With **POST /sessions**, to manage latency/throughput priorities.
-
-```
-{
-  "device": {
-    "phoneNumber": "+123456789",
-    "networkAccessIdentifier": "123456789@domain.com",
-    "ipv4Address": {
-      "publicAddress": "203.0.113.0",
-      "publicPort": 59765
-    },
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  },
-  "applicationServer": {
-    "ipv4Address": "198.51.100.0/24",
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  },
-  "devicePorts": {
-    "ranges": [
-      {
-        "from": 5010,
-        "to": 5020
-      }
-    ],
-    "ports": [
-      5060,
-      5070
-    ]
-  },
-  "applicationServerPorts": {
-    "ranges": [
-      {
-        "from": 5010,
-        "to": 5020
-      }
-    ],
-    "ports": [
-      5060,
-      5070
-    ]
-  },
-  "qosProfile": "voice",
-  "sink": "https://endpoint.example.com/sink",
-  "sinkCredential": {
-    "credentialType": "PLAIN"
-  },
-  "duration": 3600
-}
-```
-
-Type of response: Information about the **status** of the request.
-
-```
-{
-  "applicationServer": {
-    "ipv4Address": "198.51.100.0/24"
-  },
-  "qosProfile": "QOS_L",
-  "sink": "https://application-server.com/notifications",
-  "sessionId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "duration": 3600,
-  "qosStatus": "REQUESTED"
-}
-```
-
-### Request QoS session information for a device
-With **POST /retrieve-sessions** and device object
-
-```
-{
-  "device": {
-    "phoneNumber": "+123456789",
-    "networkAccessIdentifier": "123456789@domain.com",
-    "ipv4Address": {
-      "publicAddress": "203.0.113.0",
-      "publicPort": 59765
-    },
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  }
-}
-```
-
-Type of response including QoS sessions information
-```
-[
-  {
-    "applicationServer": {
-      "ipv4Address": "0.0.0.0/0"
-    },
-    "qosProfile": "QOS_L",
-    "sink": "https://application-server.com/notifications",
-    "sessionId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-    "duration": 3600,
-    "startedAt": "2024-06-01T12:00:00Z",
-    "expiresAt": "2024-06-01T13:00:00Z",
-    "qosStatus": "AVAILABLE"
-  }
-]
-```
-
-### Request duration extension of an active QoS session
-With **POST /sessions/{sessionId}/extend** and the requested additional duration
-
-```
-{
-  "requestedAdditionalDuration": 1800
-}
-```
-
-### Obtain QoS session information
-With **GET /sessions/{sessionId}**
-
-```
-{
-  "duration": 3600,
-  "device": {
-    "ipv4Address": {
-      "publicAddress": "203.0.113.0",
-      "publicPort": 59765
-    }
-  },
-  "applicationServer": {
-    "ipv4Address": "198.51.100.0/24"
-  },
-  "qosProfile": "QOS_L",
-  "sink": "https://application-server.com/notifications",
-  "sessionId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "startedAt": "2024-06-01T12:00:00Z",
-  "expiresAt": "2024-06-01T13:00:00Z",
-  "qosStatus": "AVAILABLE"
-}
-```
 
 ## Quality-of-Service (QoS) Profiles API Usage
 
@@ -319,46 +143,4 @@ Type of response: information about the QoS Profiles
     "serviceClass": "real_time_interactive"
   }
 ]
-```
-
-## Quality-on-Demand (QoD) Provisioning API Usage
-
-### Provisioning of QoS for a device
-
-### Obtaining the QoD provisioning for a device
-With **POST /retrieve-device-qos**, and device object.
-
-```
-{
-  "device": {
-    "phoneNumber": "+123456789",
-    "networkAccessIdentifier": "123456789@domain.com",
-    "ipv4Address": {
-      "publicAddress": "203.0.113.0",
-      "publicPort": 59765
-    },
-    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
-  }
-}
-```
-
-Type of response:
-
-```
-{
-  "device": {
-    "phoneNumber": "+123456789"
-  },
-  "qosProfile": "QOS_L",
-  "sink": "https://application-server.com/callback",
-  "sinkCredential": {
-    "credentialType": "ACCESSTOKEN",
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
-    "accessTokenExpiresUtc": "2024-12-01T12:00:00Z",
-    "accessTokenType": "bearer"
-  },
-  "provisioningId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "startedAt": "2024-05-12T17:32:01Z",
-  "status": "AVAILABLE"
-}
 ```
