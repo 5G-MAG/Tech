@@ -3,18 +3,19 @@ layout: default
 title: CAMARA QoS Booking
 parent: Network API Analysis
 grand_parent: Network APIs
-nav_order: 3
+nav_order: 4
 has_children: false
 ---
 
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# CAMARA: QoS Booking
+# CAMARA: QoS Booking API Family
 
 ## Description
 
-* The **QoS (Quality of Service) Booking API** provides programmable interface for developers and other users (capabilities consumers) to request in advance certain network conditions to be provided by Telco networks, without the necessity to have an in-depth knowledge of the underlying network complexity (e.g. the 4G/5G system in case of a mobile network).
+The QoS (Quality of Service) Booking API provides programmable interface for developers and other users (capabilities consumers) to request in advance certain network conditions to be provided by Telco networks, without the necessity to have an in-depth knowledge of the underlying network complexity (e.g. the 4G/5G system in case of a mobile network).
+
 
 Information: [https://github.com/camaraproject/QoSBooking](https://github.com/camaraproject/QoSBooking)
 
