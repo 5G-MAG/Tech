@@ -59,7 +59,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Appl
 ## Workflow for a media application creating an Application Profile
 
 ### Step 1: Creation of Application Profile
-* Create an application profile using the **Application Profiles API**.
+* Create an application profile using the **Application Profiles API** with **POST /application-profiles** and with the request body containing user-defined network quality thresholds.
 
 ### Further steps
 * The Application Profile created can be used by other APIs.
