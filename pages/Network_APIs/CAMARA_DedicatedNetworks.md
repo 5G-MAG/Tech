@@ -48,7 +48,7 @@ A user of a media application would like to request a Dedicated Network, with a 
 </figure>
 
 ### Step 0: Pre-conditions
-* qosProfiles have already been defined and made available by the network operator. This is related to the [**Quality on Demand API**](./CAMARA_QualityonDemand.html).
+* qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
 * Network Profiles with the allowed number of devices which can be server concurrently together with the aggregated UL and DL thoughput have been defined and made available by the network operator
 
 ### Step 1: Discover Network Profiles available
