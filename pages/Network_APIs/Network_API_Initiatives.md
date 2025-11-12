@@ -76,6 +76,9 @@ However, as indicated in the [Production and Contribution Scenarios](https://hub
 
 Identifying such as device by a telefone number may not be practical (or relevant) as the device is used exclusively for data.
 
+## Details on the Application Server
+A media application running in a device (as per the sense in the section above) may run different processes each one associated to a different Application Server IP:port address. For instance, an application for Mobile Journalism may be running uplink video towards an AS and receiving return video from a different IP:port. These two different media flows, though belonging to the same device, would require the allocation of different network resources and performance.
+
 ## Relevant QoS Parameters
 
 ### Application Profiles
