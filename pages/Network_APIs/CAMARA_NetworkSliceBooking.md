@@ -46,7 +46,7 @@ Figure TBD
 * In principle none. Only after invoking the API the API consumer will receive a response whether the network slice booking can be sucessfuly created.
 
 ### Step 1: Create a Network Slice Booking
-* **POST /qos-assignments** passing the `serviceTime`, `serviceArea` and `sliceQoSProfiles` parameters.
+* **POST /sessions** passing the `serviceTime`, `serviceArea` and `sliceQoSProfiles` parameters.
 
 ---
 
