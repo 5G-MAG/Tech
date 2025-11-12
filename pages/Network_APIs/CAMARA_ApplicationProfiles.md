@@ -75,8 +75,9 @@ A user of a media application would like to create and Application Profile with 
 The APIs is likely to be invoked well before the actual use of the network with the required values of performance and compute resources.
 Once an `applicationProfileId` is obtained, it can be used by other APIs.
 
-Potential improvements:
-- the list of parameters and unit/accuracy should be checked for typical media applications.
+Potential improvements and/or suggestions:
+- the list of parameters and unit/accuracy should be checked for typical media applications. The parameters are a subset of `qosProfile` with additional compute resources. Harmonize?
+- Packet delay budget defined between device and cloud server? UPF? When invoking Connectivity Insights with such profile and indicated device and AS, how would this relate?
 
 ---
 
