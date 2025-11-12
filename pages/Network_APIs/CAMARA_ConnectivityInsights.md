@@ -44,12 +44,12 @@ A user of a media application would like to obtain Connectivity Insights about t
 ## 5G-MAG's Self-Assessment
 
 The APIs are likely to be invoked to obtain information about the ability of the network to meet the requirements either before or during operation. However:
-- The information received is instantaneous. There is no guarantee that the network can meet the requirements at any other time. If triggered before the event, it is not very meaningful.
+- The information received is instantaneous. Network status in the future cannot be derived from the response. Information provides no reliability for the actual time in which network should be used.
 - The information received is qualitative (e.g. `"targetMinDownstreamRate": "meets the application requirements"`). An application would be unable to understand which parameters to be adapted in order to revert a situation in which requirements cannot be met.
 
 Potential improvements:
-- the ability to request guaranteed performance during actual operation time is a pre-condition as just receiving notifications in a qualitative manner may not bring enough information.
-- an indication of the actual performance parameters (quantitative) for those defined in the Application Profile may provide better insight for potential remedies.
+- If used to monitor resources for which QoS was requested (via a different API) harmonization of Application Profile and QoS Profile for consistency.
+- an indication of the actual performance parameters (quantitative) for those defined in the Application Profile may provide better insight for potential remedies. E.g. latency cannot be fullfilled, but please respond with the actual latency the link device-AS is experiencing.
 
 ---
 
