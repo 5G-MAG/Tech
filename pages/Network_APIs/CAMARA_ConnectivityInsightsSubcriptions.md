@@ -51,8 +51,8 @@ The APIs are likely to be invoked to obtain information about the ability of the
 - The information received is qualitative (e.g. `"targetMinDownstreamRate": "meets the application requirements"`). An application would be unable to understand which parameters to be adapted in order to revert a situation in which requirements cannot be met.
 
 Potential improvements:
-- the ability to request guaranteed performance during actual operation time is a pre-condition as just receiving notifications in a qualitative manner may not bring enough information.
-- an indication of the actual performance parameters (quantitative) for those defined in the Application Profile may provide better insight for potential remedies.
+- If used to monitor resources for which QoS was requested (via a different API) harmonization of Application Profile and QoS Profile for consistency.
+- an indication of the actual performance parameters (quantitative) for those defined in the Application Profile may provide better insight for potential remedies. E.g. latency cannot be fullfilled, but please respond with the actual latency the link device-AS is experiencing.
 
 ---
 
