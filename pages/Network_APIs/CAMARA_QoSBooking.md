@@ -50,6 +50,8 @@ Use the QoS Booking for the device and the time window and service area. The dev
 The QoS Booking APIs can be invoked before the actual usage of the network starts to ensure that the requested capabilities are "reserved" for the specific area, time window and device.
 During the event a device will have access to the QoS Booking.
 
+This API may be suitable for a setup where a single device requires access to network resources (e.g. MoJo). However this is impractical for a Media Production setup with multiple devices as not all of them may be running at the same time. Making different QoS bookings for each of them while not requiring access to network resources concurrently may result in inneficiencies.
+
 Potential improvements:
 - It is unclear how to associate devices to make use of the resources. As it stands, the device is granted the booking as soon as connected to the network under the service area and for the specified duration.
 - It is unclear how to update the booking. In the event that a device would need to be exchanged, deleting and creating a new booking may lead to loosing the ability to reserve resources during operation.
