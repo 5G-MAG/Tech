@@ -73,6 +73,7 @@ A user of a media application would like to create and Application Profile with 
 ## 5G-MAG's Self-Assessment
 
 The APIs is likely to be invoked well before the actual use of the network with the required values of performance and compute resources.
+It is the understanding that the Application Profile is a list of parameters to be monitored on the link indicated between device and AS once inoking other APIs passing the ApplicationProfile as body.
 Once an `applicationProfileId` is obtained, it can be used by other APIs.
 
 Potential improvements and/or suggestions:
