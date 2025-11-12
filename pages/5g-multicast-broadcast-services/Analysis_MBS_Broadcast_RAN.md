@@ -23,6 +23,8 @@ This documentation is currently **under development and subject to change**. If 
 {: .note }
 This information is not required for prototype/demo purposes as this can be pre-configured by other means.
 
+For information on the MBS Broadcast Pre-Configuration Management Object (MO) refer to **[3GPP TS 24.575](https://www.3gpp.org/dynareport/24575.htm)**.
+
 A UE can support MBS to deliver content from a single source entity to all users in a broadcast service area (MBS 
 broadcast communication), as defined in 3GPP TS 23.247. If the UE is pre-configured with information related to services using MBS, the UE can discover and receive data for 
 services by using the provisioned configuration. 
