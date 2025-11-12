@@ -53,7 +53,7 @@ A user of a media application would like to request a Dedicated Network, with a 
 * Network Profiles with the allowed number of devices which can be server concurrently together with the aggregated UL and DL thoughput have been defined and made available by the network operator
 
 ### Step 1: Discover Network Profiles available
-* **GET /networks** to obtain a list of dedicated networks with the corresponding `id`.
+* **GET /profiles** to obtain a list of dedicated network profiles with the corresponding `id`.
 
 ### Step 2: Create a Dedicated Network
 * **POST /networks** passing the Network Profile `profileId` from Step 1, `serviceTime` start and end and `serviceArea`.
@@ -68,10 +68,14 @@ A user of a media application would like to request a Dedicated Network, with a 
 
 The Profiles and Networks APIs are to be invoked before the actual usage of the network to ensure that the requested capabilities are "reserved" for the specific area and time window.
 During the event devices will have access to the Dedicated Network and should be allocated or de-allocated depending on the actual requirements.
+This API is certainly adequate for a simple use case of 1 device requesting connectivity (MoJo) or multiple devices taking part in a Media Production setup.
+
+What is the meaning of `maxNumberOfDevices`? An ideal situation would be to bring different devices to an event (including for backup) which are candidates to be assigned to a dedicated network. During operation only a maximum amount of devices can concurrently connect to the network and allocated resources accoding to the network profile.
+
+One of the most interesting features in this API is the ability to define and create the network profile and later on attach/detach a device. This adds flexibility and avoids loosing the dedicated resources when revoking a device.
 
 Potential improvements:
 - there is a dependency with qosProfiles and Network Profiles, which need to be present before being able to invoke Dedicated Networks. This is not an issue related to this API but worth considering as it would be useful if such profiles could be created/requested by the user and accepted by the network operator, rather than requiring another process.
-- a media production event may involve several devices eventually making use of a Dedicated Network, but not simultaneously. It should be clarified if the maximum number of devices means the devices concurrently using the resources allocated to the Dedicated Network or any device suitable to make use of the Dedicated Network. In practice, I may want to bring 10 devices suitable to access a Dedicated Network at some point but only have 2 of them making use of the Dedicated Network simultaneously.
 
 ---
 
