@@ -53,6 +53,29 @@ This documentation is currently **under development and subject to change**. It 
 * Analysis of [**Quality On Demand**](./CAMARA_QualityonDemand.html) by 5G-MAG
 * CAMARA Project: [https://camaraproject.org/quality-on-demand/](https://camaraproject.org/quality-on-demand/) and [https://github.com/camaraproject/QualityOnDemand](https://github.com/camaraproject/QualityOnDemand)
 
+## Details on the `device` object
+A device object in the sense of CAMARA APIs is defined as:
+
+```
+"device": {
+    "phoneNumber": "+123456789",
+    "networkAccessIdentifier": "123456789@domain.com",
+    "ipv4Address": {
+      "publicAddress": "203.0.113.0",
+      "publicPort": 59765
+    },
+    "ipv6Address": "2001:db8:85a3:8d3:1319:8a2e:370:7344"
+  },
+```
+
+However, as indicated in the [Production and Contribution Scenarios](https://hub.5g-mag.com/Tech/pages/Network_APIs/Content_Production/Production_Contribution_Scenarios.html#media-connectivity-flows-single-device-connectivity), a device in the context of a Mobile Journalism or Media Production scenario may be:
+
+* A single UE (e.g. a smartphone) equipped with a single SIM card (or eSIM) connected to the mobile network.
+* A single device (e.g. a smartphone) equipped with 2 UEs each with 1 SIM card (or eSIM) connected to a different carrier of the same mobile network or different mobile networks.
+* A device with multiple UEs (e.g. a cellular bonding backpack) equipment with multiple SIM cards each one connected to a different carrier of the same mobile network or connected to different mobile networks.
+
+Identifying such as device by a telefone number may not be practical (or relevant) as the device is used exclusively for data.
+
 ## Relevant QoS Parameters
 
 ### Application Profiles
