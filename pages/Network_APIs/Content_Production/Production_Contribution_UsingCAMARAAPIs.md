@@ -12,6 +12,9 @@ has_children: false
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
+1. TOC
+{:toc}
+
 # Using CAMARA APIs (and Network Services) for Content Production & Contribution
 
 This is a list of CAMARA APIs suitable to be used in the context of Connectivity Quality Management: [Network API Initiatives under analysis including CAMARA Project and 3GPP APIs](../Network_API_Initiatives.html).
