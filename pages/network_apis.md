@@ -26,9 +26,9 @@ nav_order: 6
 
 ## Network Capability Exposure for Content Production and Contribution Scenarios
 
-* [Scenarios and Use Cases](./Network_APIs/Content_Production/Production_Contribution_Scenarios.html).
-* [Workflows and Requirements to exploit network capabilities](./Network_APIs/Content_Production/Production_Contribution_Workflows.html).
-* [Using Network APIs](./Network_APIs/Content_Production/Production_Contribution_UsingNetworkAPIs.html).
+* [Scenarios and Use Cases](./Network_APIs/Content_Production/Production_Contribution_Scenarios.html). This is a selection of scenarios and use cases that may benefit from the use of network services (exposed via APIs).
+* [Workflows and Requirements to exploit network capabilities](./Network_APIs/Content_Production/Production_Contribution_Workflows.html). This describes generic workflows and interaction to explot network capabilities and provides insight into devices and requirements.
+* [Using CAMARA APIs](./Network_APIs/Content_Production/Production_Contribution_UsingNetworkAPIs.html). This contains several examples of instantiations of the workflows and scenarios above when using CAMARA APIs.
 
 ## Network Capability Exposure for Live Media Streaming
 
