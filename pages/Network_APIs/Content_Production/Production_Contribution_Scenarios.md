@@ -18,15 +18,13 @@ This documentation is currently **under development and subject to change**. It 
 
 Wireless connectivity plays a key role in content production and contribution scenarios such as production in studios, coverage of live in-venue (a football match) or on-the-move (the Tour-de-France) events, commentary stands (in a convention), newsgathering (breaking news in the street),...
 
-These different setups may have unique infrastructure and equipment needs, and the provision of connectivity with variyng QoS requirements.
+These different setups may have unique infrastructure and equipment needs, and may benefit from the provision of connectivity with variyng QoS requirements.
 
 The use of wireless connectivity may differ as a trade-off between quality (or importance) of the content and connection reliability.
 
-## A few key ideas, practical examples and trade-offs
-
 The choice to use wireless connectivity is not limited to specific scenarios or production levels. Instead, it is a strategic trade-off, balancing cost, tolerance for technical glitches, risk of failure, and the quality and importance of the content. Examples are given below.
 
-### Diversity in connectivity needs in the same deployment scenario
+## Diversity in connectivity needs in the same deployment scenario
 
 Media production scenarios often require a mix of connectivity solutions to meet a variety of needs. For example, during a football match, a production team uses high-quality cameras for the main broadcast, while a commentator stand might have additional wireless cameras for pre-game interviews. Wireless cameras are also deployed outside the stadium to capture interviews with the crowd at the entrance of the stadium.
 
@@ -37,7 +35,7 @@ Similarly, a major event like the coronation of King Charles III brought togethe
   <figcaption>Note: Figure generated with Google Gemini</figcaption>
 </figure>
 
-### Immediacy Over Quality
+## Immediacy Over Quality
 
 When a sudden street event unfolds, the only way to cover it is with smartphones on a best-effort connection. Getting any live footage is far more valuable than dismissing the connection due to its unreliability. 
 While the video might not be broadcast-quality, the immediate, raw footage from the scene is critical for covering the event as it happens.
@@ -47,7 +45,7 @@ While the video might not be broadcast-quality, the immediate, raw footage from 
   <figcaption>Note: Figure generated with Google Gemini</figcaption>
 </figure>
 
-### Agility over Cost
+## Agility over Cost
 
 For both sudden and partially-planned events, cellular bonding systems have emerged as cost-effective solutions to eliminate the need for e.g. dedicated satellite feeds, making live reporting from a wider range of locations economically viable. The equipment itself may be a major investment. The backpacks, modems, and SIM cards are not inexpensive and the news organization has to pay for a data plan for each SIM card and a service fee to the external company that provides the bonding infrastructure.
 
@@ -58,7 +56,7 @@ Cellular bonding is needed as a single best-effort public mobile network cannot 
   <figcaption>Note: Figure generated with Google Gemini</figcaption>
 </figure>
 
-### Dynamic Footage over Signal Stability
+## Dynamic Footage over Signal Stability
 
 High-mobility cameras introduce the unique challenge of seamlessly mixing their footage (generally highly engaging) into a high-quality production that includes wired cameras with reliable connections. This means the wireless setup needs to be as stable as possible, whereas the nature of its constant motion, changing environments, and potential signal obstructions makes that challenging with frequent signal fades or brief drops in connectivity.
 
