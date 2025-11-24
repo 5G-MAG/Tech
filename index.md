@@ -94,4 +94,4 @@ This is the entry point to **5G-MAG's Technical Resources**. It includes resourc
 [Download the slidedeck for an Overview about 5G-MAG](./docs/5G_MAG_Overview.pdf){: .btn .btn-blue }
 
 {: .note }
-Copyright: 5G Media Action Group (5G-MAG). Please refer to the [Getting-Started](https://github.com/5G-MAG/Getting-Started/tree/main/pages) repository to provide updates to this documentation.
+Please refer to the [Tech](https://github.com/5G-MAG/Tech/) repository to provide updates to this documentation.
