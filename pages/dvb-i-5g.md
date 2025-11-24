@@ -9,25 +9,18 @@ nav_order: 15
 
 # DVB-I Services over 5G Systems - Tech Resources
 
-* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/17)
-* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/dvb-i-5g.html)
-* **Reference Tools** available:
-   * [**Project: DVB-I Services over 5G Systems**](https://5g-mag.github.io/Getting-Started/pages/dvbi-over-5g/)
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/17){: .btn .btn-blue }
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/1_qs4KlIkofFm0pYm1C13ERD_i4pW8Zzl/preview"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_DVB_I_over_5G.pdf"></iframe>
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1_qs4KlIkofFm0pYm1C13ERD_i4pW8Zzl/preview){: .btn}
+[Download the slidedeck with more information](../docs/Tech_DVB_I_over_5G.pdf){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+## Information related to Standards
 
-This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/17) for details.
+[Standards](../../Standards/pages/dvb-i-5g.html){: .btn .btn-blue }
 
-### In relation to Standards
-* Joint Task Force between 5G-MAG and DVB on Implementation Guidelines for DVB-I Services over 5G
-* 3GPP and DVB Standardization tracker and relevant Work Items
+## Information related to Reference Tools Projects
 
-### In relation to Software
-* Basic implementation of DVB-I Service List including 5G Broadcast services
+[Project: DVB-I Services over 5G Systems](../../Getting-Started/pages/dvbi-over-5g/){: .btn .btn-blue }

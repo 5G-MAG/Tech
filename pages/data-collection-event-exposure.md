@@ -7,39 +7,30 @@ nav_order: 2
 
 <img src="../assets/images/Banner_UEDC.png" /> 
 
-# UE Data Collection, Reporting and Event Exposure - Tech Resources
+# UE Data Collection, Reporting & Event Exposure - Tech Resources
 
-* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/21)
-* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/data-collection-event-exposure.html)
-* **Reference Tools** available:
-   * [**Project: UE data collection, reporting and event exposure**](https://5g-mag.github.io/Getting-Started/pages/ue-data-collection-reporting-exposure/)
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/21){: .btn .btn-blue }
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/1MzYZjOXwmBMqcloxZd4u6k0OzJmrB-k1/preview"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_UE_Data_Collection.pdf"></iframe>
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1MzYZjOXwmBMqcloxZd4u6k0OzJmrB-k1/preview){: .btn}
+[Download the slidedeck with more information](../docs/Tech_UE_Data_Collection.pdf){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_Explainers.png" width="50%" /> 
+## Information related to Standards
 
-## UE Data Collection and Reporting framework for Event Exposure (3GPP Release 17)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1Hv81xdbBfw?si=ZVTh7SUiMSw04_rn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[Standards](../../Standards/pages/data-collection-event-exposure.html){: .btn .btn-blue }
 
-## Technical Papers
-[UE Data Collection, Reporting and Exposure](https://www.3gpp.org/newsletter-issue-05-oct-2022#flipbook-flip6/17/), by Richard Bradbury (BBC R&D)
+## Information related to Reference Tools Projects
+
+[Project: UE data collection, reporting and event exposure](../../Getting-Started/pages/ue-data-collection-reporting-exposure/){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+## Technical Documentation
 
-This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/21) for details.
+The following resources are available:
 
-### In relation to Standards
-* Documentation on UE Data Collection and Reporting framework for Event Exposure in 3GPP Release 17
-* 3GPP Standardization tracker and relevant Work Items
-* Support to standards with feedback from implementation
+### General information about UE Data Collection, Reporting and Event Exposure
 
-### In relation to Software
-* Implementation of reusable Rel-18 Data Collection Application Function for data reporting and event exposure
-* Cloud-based deployments and dockerization
+* [**UE Data Collection and Reporting framework for Event Exposure (3GPP Release 17)**](./videos.html#ue-data-collection-and-reporting-framework-for-event-exposure-3gpp-release-17)

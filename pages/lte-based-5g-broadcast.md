@@ -9,52 +9,39 @@ nav_order: 3
 
 # 5G Broadcast - Tech Resources
 
-* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/10)
-* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/lte-based-5g-broadcast.html)
-* **Reference Tools** available:
-    * [**Project: 5G Broadcast Hybrid Services**](https://5g-mag.github.io/Getting-Started/pages/lte-based-5g-broadcast/)
-    * [**Project: Emergency Alerts over 5G Broadcast**](https://5g-mag.github.io/Getting-Started/pages/emergency-alerts/)
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/10){: .btn .btn-blue }
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/1T13M-z04JbUdpbKnaYLu4TO8ibxIwlfC/preview"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_5G_Broadcast.pdf"></iframe>
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1T13M-z04JbUdpbKnaYLu4TO8ibxIwlfC/preview){: .btn}
+[Download the slidedeck with more information](../docs/Tech_5G_Broadcast.pdf){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_Explainers.png" width="50%" /> 
+## Information related to Standards
 
+[Standards](../../Standards/pages/lte-based-5g-broadcast.html){: .btn .btn-blue }
 
-## 5G Media Streaming over eMBMS (3GPP Release 17)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m6fU7F0DhS8?si=9levb2nUxu5HyfaZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Information related to Reference Tools Projects
 
-## [Spectrum for LTE-based 5G Terrestrial Broadcast](https://www.5g-mag.com/post/spectrum-for-lte-based-5g-terrestrial-broadcast)
+[Project: 5G Broadcast Hybrid Services](../../Getting-Started/pages/lte-based-5g-broadcast/){: .btn .btn-blue }
 
-## [LTE-based 5G Terrestrial Broadcast for TV and radio distribution](https://www.5g-mag.com/post/lte-based-5g-terrestrial-broadcast-for-tv-and-radio-distribution)
-
----
-
-<img src="../assets/images/Banner_TechAnalysis.png" width="50%" /> 
-
-##  Deployment Profiles
-- Documentation available [here](./deployment_profiles.html).
-
-## Operational Parameters in Use
-- Documentation available [here](./parameters_in_use.html).
+[Project: Emergency Alerts over 5G Broadcast](../../Getting-Started/pages/emergency-alerts/){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+## Technical Documentation
 
-This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/10) for details.
+The following resources are available:
 
-### In relation to Standards
-* Documentation on LTE-based 5G Broadcast for TV, Radio and Emergency Alerts
-* Updates and maintenance of ETSI TS 103 720 “5G Broadcast System for TV and Radio” specification
-* Study of hardware-friendly approaches to Time-Frequency Interleaving
-* 3GPP Standardization tracker and relevant Work Items
-* Support to standards with feedback from implementation
+### General information about 5G Broadcast
 
-### In relation to Software
-* Implementation of end-to-end 5G Broadcast delivery chain for SDR-based hardware and Android smartphones
-* Implementation of transmitter for emergency alerts based on Cell Broadcast alerts over 5G Broadcast
+* [**LTE-based 5G Terrestrial Broadcast for TV and radio distribution**](../docs/Explainer_LTEbased_5G_Terrestrial_Broadcast.pdf)
+* [**Spectrum for LTE-based 5G Terrestrial Broadcast**](../docs/Explainer_Spectrum_for_LTEbased_5G_Terrestrial_Broadcast.pdf)
+* [**5G Media Streaming over eMBMS (3GPP Release 17)**](./videos.html#5g-media-streaming-over-embms-3gpp-release-17)
+
+### Analysis of Time-Frequency Interleaving for 5G Broadcast
+* [**Time and Frequency Interleaving for broadcast services in 3GPP Systems**](../docs/Time_and_Frequency_Interleaving_for_broadcast_services_in_3GPP_Systems.pdf)
+
+###  Deployment Profiles and Operational Parameters
+* [**5G Broadcast Deployment Profiles**](./5gbroadcast/deployment_profiles.html).
+* [**5G Broadcast Operational Parameters in Use**](./5gbroadcast/parameters_in_use.html).

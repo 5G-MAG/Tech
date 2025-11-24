@@ -9,25 +9,18 @@ nav_order: 13
 
 # AI & ML in 5G Media Services - Tech Resources
 
-* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/16)
-* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/aiml.html)
-* **Reference Tools** available:
-   * [**Project: AI & ML Evaluation Framework**](https://5g-mag.github.io/Getting-Started/pages/ai-ml-evaluation-framework/)
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/16){: .btn .btn-blue }
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/11wkc2c83pMcLWkR0uPhC4immTkAx25ij/preview"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_AIML.pdf"></iframe>
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/11wkc2c83pMcLWkR0uPhC4immTkAx25ij/preview){: .btn}
+[Download the slidedeck with more information](../docs/Tech_AIML.pdf){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_WorkTracking.png" width="50%" /> 
+## Information related to Standards
 
-This is a summary of the work conducted by 5G-MAG members on this topic. Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/16) for details.
+[Standards](../../Standards/pages/aiml.html){: .btn .btn-blue }
 
-### In relation to Standards
-* 3GPP and MPEG Standardization tracker and relevant Work Items
+## Information related to Reference Tools Projects
 
-### Software
-* Implementation of evaluation framework with datasets, reference AI/ML models, evaluation scripts per scenario,
-* Dockerfiles used to create a container image, allowing users to instantiate the evaluation environment as a Docker container
+[Project: AI & ML Evaluation Framework](../../Getting-Started/pages/ai-ml-evaluation-framework/){: .btn .btn-blue }

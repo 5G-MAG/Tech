@@ -9,48 +9,33 @@ nav_order: 7
 
 # Non-Terrestrial Networks - Tech Resources
 
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/6){: .btn .btn-blue }
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/1hClk6BnjbUUqevQj2IU8j54U3Y1WUDKh/preview"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_NTN.pdf"></iframe>
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1hClk6BnjbUUqevQj2IU8j54U3Y1WUDKh/preview){: .btn}
-
----
-
-<img src="../assets/images/Banner_ExecutionPlan.png" width="60%" /> 
-
-* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/6)
+[Download the slidedeck with more information](../docs/Tech_NTN.pdf){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_Specifications.png" width="60%" /> 
+## Information related to Standards
 
-* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/ntn.html)
-
----
-
-<img src="../assets/images/Banner_Documentation.png" width="60%" /> 
-
-Information can be found in the following resources:
-
-## Technical analysis:
-
-* [**Analysis - Mobility for NTN**](./NTN/Analysis_Mobility_NTN.html)
-
-### MBS Multicast over NTN
-
-* [**Analysis - MBS Multicast over NTN**](./NTN/Analysis_MBS_Multicast_over_NTN.html)
-* [**Analysis - Mobility for MBS Multicast over NTN**](./NTN/Analysis_Mobility_MBS_Multicast_over_NTN.html)
-
-### MBS Broadcast over NTN
-
-* [**Analysis - MBS Broadcast over NTN**](./NTN/Analysis_MBS_Broadcast_over_NTN.html)
+[Standards](../../Standards/pages/ntn.html){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_TechVideos.png" width="60%" />
+## Technical Documentation
 
-### User Services for the 5G Multicast-Broadcast Service (3GPP Release 17)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/73KINNxl_FA?si=Jbj6BID6uaXxFGOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+The following resources are available:
 
----
+### Mobility aspects in relation to NTN
+
+* [**Analysis of Mobility aspects for NTN**](./NTN/Analysis_Mobility_NTN.html)
+
+### Deployment of MBS Multicast over NTN
+
+* [**Analysis of MBS Multicast over NTN**](./NTN/Analysis_MBS_Multicast_over_NTN.html)
+* [**Analysis of Mobility aspcects for MBS Multicast over NTN**](./NTN/Analysis_Mobility_MBS_Multicast_over_NTN.html)
+
+### Deployment of MBS Broadcast over NTN
+
+* [**Analysis of MBS Broadcast over NTN**](./NTN/Analysis_MBS_Broadcast_over_NTN.html)
