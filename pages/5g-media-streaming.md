@@ -9,100 +9,52 @@ nav_order: 1
 
 # 5G Media Streaming - Tech Resources
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/1OStDM1ihSkZZRL9HiC_5HkY97K1TLmXR/preview"></iframe>
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/1OStDM1ihSkZZRL9HiC_5HkY97K1TLmXR/preview){: .btn}
+<iframe width="60%" height="520" src="../docs/Tech_5G_Media_Streaming.pdf"></iframe>
 
----
-
-<img src="../assets/images/Banner_ExecutionPlan.png" width="60%" /> 
-
-* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/9)
+[Download the slidedeck with more information](../docs/Tech_5G_Media_Streaming.pdf){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_Specifications.png" width="60%" /> 
+## Information related to Standards
 
-* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/5g-media-streaming.html)
+[Standards](../../Standards/pages/5g-media-streaming.html){: .btn .btn-blue }
 
----
+## Information related to Reference Tools Projects
 
-<img src="../assets/images/Banner_ReferenceTools.png" width="60%" /> 
+[Project: 5G Media Streaming](../../Getting-Started/pages/5g-media-streaming/){: .btn .btn-blue }
 
-* [**Project: 5G Media Streaming**](https://5g-mag.github.io/Getting-Started/pages/5g-media-streaming/)
-* [**Project: 5G Core Service Consumers**](https://5g-mag.github.io/Getting-Started/pages/5g-core-service-consumers/)
-
----
-
-<img src="../assets/images/Banner_Documentation.png" width="60%" /> 
-
-Information can be found in the following resources:
-
-* [**Uplink media delivery in 5G - Architectures & Features**](https://hub.5g-mag.com/Tech/docs/5G-MAG%20Report%20-%20Uplink%20media%20delivery%20in%205G_%20Architectures%20%26%20Features.pdf)
+[Project: 5G Core Service Consumers](../../Getting-Started/pages/5g-core-service-consumers/){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_TechVideos.png" width="60%" /> 
+## Technical Documentation
 
-### Introduction to 5G Media Streaming (3GPP Release 16)
-By Thorsten Lohmar (Ericsson) and Frédéric Gabin (Dolby)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GTfHnrdi_-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+The following resources are available:
 
-### Dynamic Policies for 5G Media Streaming (3GPP Release 16)
-By Thorsten Lohmar (Ericsson) and Imed Bouazizi (Qualcomm)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cspJzBuBeU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### General information about 5G Media Streaming
 
-### 5G Media Streaming over eMBMS (3GPP Release 17)
-By Thomas Stockhammer (Qualcomm) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m6fU7F0DhS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+* [**Introduction to 5G Media Streaming (3GPP Release 16)**](./videos.html#introduction-to-5g-media-streaming-3gpp-release-16)
+* [**Dynamic Policies for 5G Media Streaming (3GPP Release 16)**](./videos.html#dynamic-policies-for-5g-media-streaming-3gpp-release-16)
+* [**5G Media Streaming over eMBMS (3GPP Release 17)**](./videos.html#5g-media-streaming-over-embms-3gpp-release-17)
+* [**Edge Media Processing in 5G Media Streaming (3GPP Release 17)**](./videos.html#edge-media-processing-in-5g-media-streaming-3gpp-release-17)
 
-### Edge Media Processing in 5G Media Streaming (3GPP Release 17)
-By Imed Bouazizi (Qualcomm), Richard Bradbury (BBC) and Iraj Sodagar (Tencent)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1MciLj5V5EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### 5G Media Streaming for Uplink Media Delivery
 
-### Advanced Media Delivery - An Introduction
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SS4OvkC9oK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+* [**Uplink media delivery in 5G - Architectures & Features**](../docs/Uplink_media_delivery_in_5G_Architectures_Features.pdf)
+* [**Uplink media delivery in 5G - Protocols & Encoding**](../docs/Uplink_media_delivery_in_5G_Protocols_Encoding.pdf)
 
-### Advanced Media Delivery - Remider on 5G Media Streaming
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_0ZyI1TZoMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### Advanced Media Delivery
 
-### Advanced Media Delivery - Common Client Metadata
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5CiUqlzxzKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - Multi-CDN Media Delivery
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SsCTCmRmprQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - Multi-Access Media Delivery
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tLdCTMvdCuo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - Distributing encrypted and high-value content
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/24v2XA6C0M0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - Improved QoS support for Media Streaming services
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby), Richard Bradbury (BBC) and Rufael Mekuria (Huawei)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YNhzTgpjkns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - Media Streaming aspects of Network Slicing
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_Y2S16ZMFMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - In-Session Unicast Repair for MBS/MBMS Obj. Distribution
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jadGLNqUT6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - Time Synchronization
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tksS78GA--Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Advanced Media Delivery - Initial overview on Release 20
-By Thomas Stockhammer (Qualcomm) with support from Jason Cloud (Dolby), Frédéric Gabin (Dolby) and Richard Bradbury (BBC)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fRTFS8-ql_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
----
+* [**An Introduction**](./videos.html#advanced-media-delivery---an-introduction)
+* [**Remider on 5G Media Streaming**](./videos.html#advanced-media-delivery---remider-on-5g-media-streaming)
+* [**Common Client Metadata**](./videos.html#advanced-media-delivery---common-client-metadata)
+* [**Multi-CDN Media Delivery**](./videos.html#advanced-media-delivery---multi-cdn-media-delivery)
+* [**Multi-Access Media Delivery**](./videos.html#advanced-media-delivery---multi-access-media-delivery)
+* [**Distributing encrypted and high-value content**](./videos.html#advanced-media-delivery---distributing-encrypted-and-high-value-content)
+* [**Improved QoS support for Media Streaming services**](./videos.html#advanced-media-delivery---improved-qos-support-for-media-streaming-services)
+* [**Media Streaming aspects of Network Slicing**](./videos.html#advanced-media-delivery---media-streaming-aspects-of-network-slicing)
+* [**In-Session Unicast Repair for MBS/MBMS Obj. Distribution**](./videos.html#advanced-media-delivery---in-session-unicast-repair-for-mbsmbms-obj-distribution)
+* [**Time Synchronization**](./videos.html#advanced-media-delivery---time-synchronization)
+* [**Initial overview on Release 20**](./videos.html#advanced-media-delivery---initial-overview-on-release-20)

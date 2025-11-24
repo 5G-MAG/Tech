@@ -9,30 +9,27 @@ nav_order: 9
 
 # Time Sensitive Communications - Tech Resources
 
-## Overview
-<iframe width="60%" height="520" src="https://drive.google.com/file/d/10-OMViIilP2PgzVyvQkqpeLITDurgAwL/preview"></iframe>
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/12){: .btn .btn-blue }
 
-[DOWNLOAD THE PRESENTATION](https://drive.google.com/file/d/10-OMViIilP2PgzVyvQkqpeLITDurgAwL/preview){: .btn}
+<iframe width="60%" height="520" src="../docs/Tech_TSC.pdf"></iframe>
 
----
-
-<img src="../assets/images/Banner_ExecutionPlan.png" width="60%" /> 
-
-* Check the [**Execution Plan**](https://github.com/orgs/5G-MAG/projects/44/views/12)
+[Download the slidedeck with more information](../docs/Tech_TSC.pdf){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_Specifications.png" width="60%" /> 
+## Information related to Standards
 
-* Information on relevant [**Standards**](https://5g-mag.github.io/Standards/pages/tsc.html)
+[Standards](../../Standards/pages/tsc.html){: .btn .btn-blue }
 
 ---
 
-<img src="../assets/images/Banner_Documentation.png" width="60%" /> 
+## Technical Documentation
 
-Information can be found in the following resources:
+The following resources are available:
 
-* [**Time synchronization services for media production over 5G networks**](https://hub.5g-mag.com/Tech/docs/Time_synchronization_services_for_media_production_over_5G_networks.pdf)
-* [**Time synchronization and media streams for content production using SMPTE ST 2110 standards**](https://hub.5g-mag.com/Tech/docs/Time_synchronization_and_media_streams_for_content_production_using_SMPTE_ST_2110_standards.pdf)
+### General information about Time Sensitive Communication
+
+* [**Time synchronization services for media production over 5G networks**](../docs/Time_synchronization_services_for_media_production_over_5G_networks.pdf)
+* [**Time synchronization and media streams for content production using SMPTE ST 2110 standards**](../docs/Time_synchronization_and_media_streams_for_content_production_using_SMPTE_ST_2110_standards.pdf)
 
 ---
