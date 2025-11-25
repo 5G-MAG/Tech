@@ -75,8 +75,8 @@ This is the entry point to **5G-MAG's Technical Resources**. It includes resourc
     <td markdown="span" align="center"><a href="./pages/multimedia-content-delivery/"><img width="90%" style="border:5px solid black;" src="./assets/images/Tech_Multimedia_delivery_protocols.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center">[Project Documentation](./pages/ai-ml-evaluation-framework/){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/16){: .btn .btn-blue } </td>
-    <td markdown="span" align="center">[Project Documentation](./pages/multimedia-content-delivery/){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/22){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Technical Resources](./pages/ai-ml-evaluation-framework/){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/16){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Technical Resources](./pages/multimedia-content-delivery/){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/22){: .btn .btn-blue } </td>
   </tr>
     <td><br></td>
   <tr>
@@ -84,8 +84,8 @@ This is the entry point to **5G-MAG's Technical Resources**. It includes resourc
     <td markdown="span" align="center"><a href="./pages/6g.html"><img width="90%" style="border:5px solid black;" src="./assets/images/Tech_6G.png"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center">[Project Documentation](./pages/dvb-i-5g.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/17){: .btn .btn-blue } </td>
-    <td markdown="span" align="center">[Project Documentation](./pages/6g.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/20){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Technical Resources](./pages/dvb-i-5g.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/17){: .btn .btn-blue } </td>
+    <td markdown="span" align="center">[Technical Resources](./pages/6g.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/20){: .btn .btn-blue } </td>
   </tr>
 </table>
 
