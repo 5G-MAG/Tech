@@ -2,7 +2,7 @@
 layout: default
 title: UE Data Collection
 has_children: true
-nav_order: 2
+nav_order: 4
 ---
 
 <img src="../assets/images/Banner_UEDC.png" /> 
