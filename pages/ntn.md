@@ -2,7 +2,7 @@
 layout: default
 title: Non-Terrestrial Networks
 has_children: true
-nav_order: 7
+nav_order: 9
 ---
 
 <img src="../assets/images/Banner_NTN.png" /> 
