@@ -2,7 +2,7 @@
 layout: default
 title: Non-Public Networks
 has_children: true
-nav_order: 8
+nav_order: 10
 ---
 
 <img src="../assets/images/Banner_NPN.png" /> 
