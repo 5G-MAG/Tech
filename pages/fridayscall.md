@@ -2,7 +2,7 @@
 layout: default
 title: Friday's Public Call
 has_children: false
-nav_order: 0
+nav_order: 2
 ---
 
 <img src="../assets/images/Banner_TechVideos.png" /> 
