@@ -2,7 +2,7 @@
 layout: default
 title: Volumetric Video with V3C
 has_children: true
-nav_order: 11
+nav_order: 13
 ---
 
 <img src="../assets/images/Banner_V3C.png" /> 
