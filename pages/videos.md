@@ -9,7 +9,7 @@ nav_order: 1
 
 # Tech Videos
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>
