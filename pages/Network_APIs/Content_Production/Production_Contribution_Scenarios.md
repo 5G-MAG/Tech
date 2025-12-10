@@ -15,7 +15,7 @@ This documentation is currently **under development and subject to change**. It 
 
 This section contains information on:
 * [**A genearal introduction about the context**](#introduction)
-* [**Reference Scenarios**](#reference-scenarios), including
+* [**Reference Scenarios**](#reference-scenarios), including:
   * [**Single-device Connectivity**](#single-device-connectivity-single-camera-live-video-production-mobile-journalism-mojo-newsgathering-uplink-video)
   * [**Multi-device Connectivity**](#multi-device-connectivity-outside-broadcast-small-scale-video-production-remote-production)
 
