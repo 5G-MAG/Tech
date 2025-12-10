@@ -11,9 +11,6 @@ has_children: true
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-1. TOC
-{:toc}
-
 # Scenarios and Use Cases: Content Production and Contribution over Mobile Networks
 
 Wireless connectivity plays a key role in content production and contribution scenarios such as production in studios, coverage of live in-venue (a football match) or on-the-move (the Tour-de-France) events, commentary stands (in a convention), newsgathering (breaking news in the street),...
