@@ -11,7 +11,7 @@ This documentation is currently **under development and subject to change**. It 
 
 # Network API Initiatives under analysis
 
-This analysis contains information on:
+This section contains information on:
 * [**CAMARA APIs for Communication Quality Management**](#camara-apis-for-communication-quality-management)
 * [**Details on the DEVICE object**](#details-on-the-device-object)
 * [**Details on the APPLICATION SERVER**](#details-on-the-application-server)
