@@ -28,9 +28,8 @@ Before invoking any API, it is assumed that:
 
 * The production crew has a set of credentials (SIM/eSIM) for the network device nodes will connect to.
 * By default, the network provides "best-effort" connectivity and devices can already exploit "best-effort" connectivity.
-* The production company has set up an agreement with a network operator for usage of certain **network capabilitues** made available via an API and has received authentication credentials from the newotk operator authorising their use (when available).
-* The production crew (on location or located in the production centre) has access to one or several **Network API Platforms**. These platforms are accessible through any device/connectivity (e.g. Internet-acccessible website portal, command line tools, dedicated application, etc.).
-  * Note: For Network API Platform access, the production crew has obtained key access tokens/keys/credentials/payment details in advance.
+* The production company has set up an agreement with a network operator for usage of certain **network capabilitues** made available via an API. The production crew has obtained key access tokens/keys/credentials/payment details in advance authorising their use (when available).
+* The production crew (on location or located in the production centre) has access to one or more **Network API Platforms**. These platforms are accessible by any device/connectivity (e.g. Internet-accessible website portal, command line tools, dedicated application, etc.).
 * API Consumers will be able to select from available profiles, service areas, and parameters offered by the API Provider.
 
 ## Single-device Connectivity (Single Camera Live Video Production, Mobile Journalism (MoJo), Newsgathering, Uplink Video)
@@ -49,7 +48,7 @@ Before invoking any API, it is assumed that:
     <td markdown="span" align="left"><b>Practical example<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">A typical setup can consist of a smartphone used to capture video which is then send to a server in the cloud for uplink streaming. The provider of such a service, or the user, would have configured the IP addresses, ports, and other parameters between the user application and the application server though such application-specific API. For a cellular backpack, a similar configuration should be followed.</td>
+    <td markdown="span" align="left">A typical setup can consist of a smartphone used to capture video which is then send to a server in the cloud for uplink streaming. The provider of such a service, or the user, would have configured the IP addresses, ports, and other parameters between the user application and the application server through such application-specific API. For a cellular backpack, a similar configuration should be followed.</td>
   </tr>
 </table>
 
