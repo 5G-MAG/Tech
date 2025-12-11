@@ -14,58 +14,18 @@ This documentation is currently **under development and subject to change**. It 
 
 # Workflows and Requirements for Content Production & Contribution
 
-The [Scenarios and Use Cases](../Production_Contribution_Scenarios.html) page identified two reference scenarios. The workflows in relation to the booking and usage of network capabilities are described here with a focus on quality of service (QoS).
+[Scenarios and Use Cases](../Production_Contribution_Scenarios.html) describe two reference scenarios. The workflows in relation to the booking and usage of network capabilities are described here with a focus on quality of service (QoS).
 
 ## Pre-conditions and commonalities
 
-Before using any of the APIs, there is typically an agreement established between API customer and API provider. This agreement typically contains information about the API usage conditions, roles and responsibilities, etc. There are different technical ways to establish such an agreement (e.g. personal interactions, or API transactions) and the establishment of the agreement is out of scope for API specification within this working group. See Dedicated Network’s High Level description (link) as example.
-
-The API may support different business and payment models, which are not in scope for the API definition. Before using any API, it is assumed that the payment models are clarified and agreed between the API customer and API provider. This agreement may also clarify, how payment is related to reservations, cancelation of reservations, connectivity usage, etc.   
-
-
-
-
-
-
-
-
-
-Before Dedicated Network APIs can be invoked, relevant agreements need to be in place between the API Consumer and the API Provider. Conceptually, the agreement contains all the different terms and conditions, which typically include price, service descriptions and conditions. It also includes obligations and restrictions possibly for both, the API Provider and the API Consumer, etc.
-
-An API Provider may provide a catalog where API Consumers can get an overview of the various options available. For example, there may be a catalog of available APIs, and a catalog of available parameter sets for each of the APIs.
-
-The API Provider may also offer a procedure for requesting additional customization, for example, additional Service Areas or Network Profiles. Such a procedure can leverage conventional methods such as emails or phone conversations.
-
-API Consumers selects from available Network Profiles and Service Areas offered by the API Provider which then become part of the agreed terms and conditions.
-
-This preparation phase is outside the scope of the Dedicated Network APIs.
-
-As result of the agreement on the terms and conditions, the following aspects are determined
-
-URLs and credentials for the API Consumer to use
-
-A set of capabilities and performance targets (Network Profiles) that an API Consumer is eligible to use
-
-A set of geographic areas (Service Areas) that an API Consumer is eligible to use
-
-The API Consumer is aware about the terms and conditions (incl price), when selecting different parameter or parameter combinations according to the conditions.
-
-Note that, at completion of the pre-requisites, no network connectivity resources are reserved, i.e., no Dedicated Network is created.
-
-
-
-
-
-
-
+Before invoking any API, it is assumed that:
 
 * The production crew has a set of credentials (SIM/eSIM) for the network device nodes will connect to.
-* By default, the network provides "best-effort" connectivity.
-* Production device nodes can already exploit "best-effort" connectivity.
-
+* By default, the network provides "best-effort" connectivity and devices can already exploit "best-effort" connectivity.
 * The production company has set up an agreement with a network operator for usage of certain **network capabilitues** (e.g. selected from an API catalogue) and has received authentication credentials from the newotk operator authorising their use (when available).
 * The production crew (on location or located in the production centre) has access to one or several **Network API Platforms**. These platforms are accessible through any device/connectivity (e.g. Internet-acccessible website portal, command line tools, dedicated application, etc.).
   * Note: For Network API Platform access, the production crew has obtained key access tokens/keys/credentials/payment details in advance.
+* API Consumers will be able to select from available profiles, service areas, and parameters offered by the API Provider.
 
 # Single Camera Live Video Production (Mobile journalism (MoJo) and newsgathering / Uplink video)
 
@@ -77,7 +37,16 @@ Note that, at completion of the pre-requisites, no network connectivity resource
 
 * Production device nodes are generally UEs which establish connectivity to servers in the Data Network. 
 * An **application-specific API** (e.g. from the media equipment provider) enables client/server communication to configure media-related parameters and procedures.
- 
+
+<table>
+  <tr>
+    <td markdown="span" align="center"><b>Example<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="center">Media production scenarios often require a mix of connectivity solutions to meet a variety of needs. For example, during a football match, a production team uses high-quality cameras for the main broadcast, while a commentator stand might have additional wireless cameras for pre-game interviews. Wireless cameras are also deployed outside the stadium to capture interviews with the crowd at the entrance of the stadium. Similarly, a major event like the coronation of King Charles III brought together numerous TV producers. They used a combination of dedicated, high-quality streams for the main ceremony and various other setups for newsgathering and interviews from journalists deployed around the site. This demonstrates how a single event can have multiple connectivity needs, from high-bandwidth main broadcasts to more flexible, on-the-go reporting. This is independent of the overall cost or budget of the whole event.</td>
+  </tr>
+</table>
+
 ### Phase B: Event planning and pre-booking
 
 <img src="./images/Workflow_Step_2.png" width="60%">
