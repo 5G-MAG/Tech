@@ -176,8 +176,6 @@ Through the Network API Platform:
   </tr>
 </table>
 
-Note: Network access IDs are not expected to change when a reconfiguration occurs.
-
 Note: the steps in phase C are repeated whenever a service is added and created from scratch.
  
 ## After the event
@@ -195,7 +193,7 @@ A series of actions can be expected "During the Event" as changes, reconfigurati
 
 ## Reconfiguration for a given device
 * The production crew through the Network API Platform should request a change of the current configuration assinged to a device
-* The production crew through the Network API Platform should request an update/modification of the originally booked resources (e.g. increase or decrease the thoughput associated to an existing profile). Same validation steps as from B.2 to B.5 will be conducted after requesting the change.
+* The production crew through the Network API Platform should request an update/modification of the originally booked resources (e.g. increase or decrease the thoughput associated to an existing profile). Same validation steps as from B.2 to B.5 will be conducted after requesting the change. Note that the network access IDs are not expected to change when a reconfiguration occurs.
 
 ## Back-up devices
 * The production crew through the Network API Platform should switch/update a device while being able to use the original booking of a different device.
