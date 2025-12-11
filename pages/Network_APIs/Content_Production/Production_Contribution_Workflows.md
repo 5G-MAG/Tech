@@ -16,7 +16,13 @@ This documentation is currently **under development and subject to change**. It 
 
 [Scenarios and Use Cases](../Production_Contribution_Scenarios.html) describe two reference scenarios. The workflows in relation to the booking and usage of network capabilities are described here with a focus on quality of service (QoS).
 
-## Pre-conditions and commonalities
+This section contains information on:
+* [**Pre-conditions and commnalities**](#introduction)
+* [**Workflow for Single-device Connectivity**](#single-device-connectivity-single-camera-live-video-production-mobile-journalism-mojo-newsgathering-uplink-video)
+* [**Workflow for Multi-device Connectivity**](#multi-device-connectivity-outside-broadcast-small-scale-video-production-remote-production)
+* [**Dynamic management of network capabilities during runtime**](#dynamic-management-of-network-capabilities-during-runtime)
+
+# Pre-conditions and commonalities
 
 Before invoking any API, it is assumed that:
 
@@ -27,7 +33,7 @@ Before invoking any API, it is assumed that:
   * Note: For Network API Platform access, the production crew has obtained key access tokens/keys/credentials/payment details in advance.
 * API Consumers will be able to select from available profiles, service areas, and parameters offered by the API Provider.
 
-# Single Camera Live Video Production (Mobile journalism (MoJo) and newsgathering / Uplink video)
+## Single-device Connectivity (Single Camera Live Video Production, Mobile Journalism (MoJo), Newsgathering, Uplink Video)
 
 ## Before the Event
 
@@ -40,10 +46,10 @@ Before invoking any API, it is assumed that:
 
 <table>
   <tr>
-    <td markdown="span" align="center"><b>Example<b/></td>
+    <td markdown="span" align="left"><b>Practical example<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center">Media production scenarios often require a mix of connectivity solutions to meet a variety of needs. For example, during a football match, a production team uses high-quality cameras for the main broadcast, while a commentator stand might have additional wireless cameras for pre-game interviews. Wireless cameras are also deployed outside the stadium to capture interviews with the crowd at the entrance of the stadium. Similarly, a major event like the coronation of King Charles III brought together numerous TV producers. They used a combination of dedicated, high-quality streams for the main ceremony and various other setups for newsgathering and interviews from journalists deployed around the site. This demonstrates how a single event can have multiple connectivity needs, from high-bandwidth main broadcasts to more flexible, on-the-go reporting. This is independent of the overall cost or budget of the whole event.</td>
+    <td markdown="span" align="left">A typical setup can consist of a smartphone used to capture video which is then send to a server in the cloud for uplink streaming. The provider of such a service, or the user, would have configured the IP addresses, ports, and other parameters between the user application and the application server though such application-specific API. For a cellular backpack, a similar configuration should be followed.</td>
   </tr>
 </table>
 
@@ -60,19 +66,33 @@ Through the Network API Platform:
 4. The production manager accepts the service booking offer (involving payment).
 5. The production manager receives **network access IDs** to be used by the production device UEs to access the network and the requested capabilities for the specified location and duration.
     * Each network access ID ultimately resolves to a Data Network Name (DNN) and optionally a network slice identifier (S-NSSAI).
- 
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Practical example<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">This should be seen as nothing very different to going to the portal of your network operator to e.g. add a bonus for more data, activate/deactivate roaming opetions, and other services within your existing contract. If the contract includes the ability to select extra connectivity services (e.g. Quality of Service) those should be selectable from such or a similar portal.</td>
+  </tr>
+</table>
+     
 ## During the event
 
 <img src="./images/Workflow_Step_3.png" width="60%">
 
-### Phase C: Usage of the network capabilities
+### Phase C: Configuration and Usage of the network capabilities
 1. The production crew arrives at the event and can start using the booked network services (See phase B).
-2. The production device makes use of the network capabilities according to the network access IDs reveived. The media related parameters can be adapted using an application-specific API, citing the network access IDs delivered in step B.5). For example, considering a camera for which  one video + one audio is pre-booked, the application-specific API is used to properly configure the bitrate of the audio and video output.
- 
-### Independent steps that can be triggered during the event
-* The production crew can use the Network API Platform to monitor that the flows are coming and are properly using the reserved resource.
-* The production crew receives notification through the Network API Platform indicating potential issues (throughput, delay, etc.).
- 
+2. The production device makes use of the network capabilities according to the network access IDs reveived. The media related parameters can be adapted using an application-specific API, citing the network access IDs delivered in step B.5).
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Practical example<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">In a typical scenario, the journalist arrives to the location where the uplink video contribution should start. The network desired network conditions can be checked and booked on the spot so the transmission can start with the desired QoS. If known in advanced, the booking may have been done before arriving to the event. If network conditions are guaranteed (i.e. the booked service is being used), the media flow can be optimized by passing the details to the media application. For instance, if the network is able to guarantee X Mbps, the user can configure an encoder so it stays within margins avoiding packet loss.</td>
+  </tr>
+</table>
+     
 ## After the event
 
 ### Phase D: Location teardown
@@ -80,7 +100,7 @@ Through the Network API Platform:
 
 ---
 
-# Multi-device connectivity (Outside Broadcast / Remote Production)
+## Multi-device connectivity (Outside Broadcast, Small-Scale Video Production, Remote Production)
 
 ## Before the Event
 
@@ -89,9 +109,18 @@ Through the Network API Platform:
 <img src="./images/Workflow_Step_1.png" width="60%">
 
 * Some production device nodes are UEs; others are connected to the Data Network:
-  * Example production device nodes connected to the RAN: wireless cameras, wireless camaera control units, wireless microphones, wireless talkback intercom, etc.
+  * Example production device nodes connected to the RAN: wireless cameras, wireless camera control units, wireless microphones, wireless talkback intercom, etc.
   * Example production device nodes connected to the Data Network: vision mixer, sound mixer, etc. 
 * An **application-specific API** (e.g. from the media equipment provider) enables communication between the production network orchestrator and the production device nodes to configure media-related parameters and procedures.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Practical example<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">A typical setup can consist of several cameras, intercom, video return, mixers,... all interconnected and/or providing content to e.g. a vision mixed in the cloud. Connectivity should be established for all the equipment, which configuration is done via the application-specific API.</td>
+  </tr>
+</table>
 
 ### Phase B: Event planning and pre-booking
 
@@ -110,34 +139,43 @@ Through the Network API Platform:
    The booking of resources is done based on:
       * Geographical area
       * Schedule (starting time and closing time, or duration, of the event)
+        
 3. The production manager receives a booking reference responding to the service request.
 4. The production manager accepts the service booking offer (involving payment/contract/SLA aspects).
 5. The production manager receives **network access IDs** to be used by the production device UEs to access the network and the requested capabilities for the specified location and duration.
     * Each network access ID ultimately resolves to a Data Network Name (DNN) and optionally a network slice identifier (S-NSSAI).
 
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Practical example<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">This should be seen as nothing very different to going to the portal of your network operator to e.g. add a bonus for more data, activate/deactivate roaming opetions, and other services within your existing contract. If the contract includes the ability to select extra connectivity services (e.g. Quality of Service) those should be selectable from such or a similar portal. For a planned event taking place at a known location and for a given duration, the booking of network resources can be done beforehand by indicating the requirements, number of devices, QoS requirements for each of the devices or a group of them,...</td>
+  </tr>
+</table>
+
 ## During the event
 
 <img src="./images/Workflow_Step_3.png" width="60%">
 
-### Phase C: Location setup and configuration
+### Phase C: Configuration and Usage of the network capabilities
 1. The production crew arrives in the venue, plugs the SIM cards and turn on the devices, connectivity is enabled based on the booked network services (See phase B).
 2. The production crew initiates the setup of the location production by interacting with the production network orchestrator.
 3. The production network orchestrator configures the production device nodes using an application-specific API, citing the network access IDs delivered in step B.5).
 
    * Example: QoD service: A camera for which  one video + one audio is pre-booked. The application-specific API is used to properly configure the bitrate of the audio and video output, and the provided IDs.
    * Example: Time Sync service: A camera for which access to global clock is requested. The application-specific API is used to properly configure the time parameters and the provided IDs.
- 
-### Independent steps that can be triggered during the event
-* The production crew can use the Network API Platform to monitor that the flows are coming and are properly using the reserved resource.
-* The production crew receives notification through the Network API Platform indicating potential issues (throughput, delay, etc.).
-* The production crew through the Network API Platform can request a change of the current configuration.
-* Same validation steps as from B.2 to B.5 will be conducted after requesting the change.
-* Changes can be, for example:
-  * Switch profile A from SIM card A to SIM card B.
-  * Increase or decrease the capacity of an existing profile.
-  * Remove or add a profile to a SIM card.
-  * Enable/Disable time service on a SIM card.
-  * etc.
+
+4. The production device makes use of the network capabilities according to the network access IDs reveived.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Practical example<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Once at the location, connectivity needs to be established among the devices. Once this is ready, the setup will have the ability to exploit the pre-booked network resources.</td>
+  </tr>
+</table>
 
 Note: Network access IDs are not expected to change when a reconfiguration occurs.
 
@@ -147,6 +185,94 @@ Note: the steps in phase C are repeated whenever a service is added and created 
 
 ### Phase D: Location teardown
 1. Through the Network API Platform, the production crew releases the booked resources when the event finishes.
+
+# Dynamic management of network capabilities during runtime
+
+A series of actions can be expected "During the Event" as changes, reconfiguration or additional requests may need to be processed.
+
+## Monitoring and notifications
+* The production crew should use the Network API Platform to monitor that the flows are coming and are properly using the reserved resources.
+* The production crew should receive notifications through the Network API Platform indicating potential issues (throughput, delay, etc.).
+
+## Reconfiguration for a given device
+* The production crew through the Network API Platform should request a change of the current configuration assinged to a device
+* The production crew through the Network API Platform should request an update/modification of the originally booked resources (e.g. increase or decrease the thoughput associated to an existing profile). Same validation steps as from B.2 to B.5 will be conducted after requesting the change.
+
+## Back-up devices
+* The production crew through the Network API Platform should switch/update a device while being able to use the original booking of a different device.
+
+## Dynamic prioritization of QoS for different media flows
+
+In a setup with multiple camras, the media producer would like to ensure that there is always a subset of those being prioritized with the highest QoS profile. While each individual camera should be entitled to exploit such high QoS profile (i.e. the original booking should take into account that X devices will be requesting QoS profile Y), not all of them will be using such profile concurrently. Therefore:
+* The production crew though the Network API Platform should dynamically attach/detach a device to a QoS profile.
+* The network operator should secure that a subset of devices can concurrently request a given QoS profile and that all other devices remain eligible to access such profile when it is no longer used.
+
+### Basic example: Definition of QoS Profiles
+
+A media production requires 4 devices (e.g. cameras, smartphones). The output video quality of the cameras can switch from being "On Air" (high quality video), "Preview" (lower quality video which can quickly scale up when needed to be "On Air"), "Standby" (a minimum quality video for monitoring a scene in a video gallery).
+
+Therefore, first step is to define such QoS profiles which cameras can use.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>QoS Profile name</b></td>
+    <td markdown="span" align="left"><b>Parameters</b></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoS_OnAir - QoS Profile for High Quality Video</td>
+    <td markdown="span" align="left">Uplink throughput = 10 Mbps</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoS_Preview - QoS Profile for Previw Quality Video</td>
+    <td markdown="span" align="left">Uplink throughput = 5 Mbps</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoS_Standby - QoS Profile for Standby</td>
+    <td markdown="span" align="left">Uplink throughput = 2 Mbps</td>
+  </tr>
+</table>
+
+### Basic example: Identification of elegible devices-profiles
+
+Among the 4 devices:
+* Only one device is expected to use the QoS_OnAir profile during runtime. The rest will be either in QoS_Preview or QoS_Standby. When the media producer decides to switch the On-Air camera, there are temporarily two devices assigned with a QoS_OnAir profile.
+* Only one device is expected to use the QoS_Preview profile during runtime. The QoS_Preview profile is used for devices, which are about to be switched to the OnAir profile. Typically, the camera operator gets notified with the Preview selection, that its camera is next to be on air.
+* Cameras, which are providing their video “just” to the production gallery, are assigned with QoS_Standby profile.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Device</b></td>
+    <td markdown="span" align="left"><b>Eligible QoS Profiles</b></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Device C1</td>
+    <td markdown="span" align="left">QoS_OnAir, QoS_Preview and QoS_Standby</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Device C2</td>
+    <td markdown="span" align="left">QoS_OnAir, QoS_Preview and QoS_Standby</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Device C3</td>
+    <td markdown="span" align="left">QoS_OnAir, QoS_Preview and QoS_Standby</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Device C4</td>
+    <td markdown="span" align="left">QoS_OnAir, QoS_Preview and QoS_Standby</td>
+  </tr>
+</table>
+
+Note that the intention of this pre-booking is to make sure that 4 devices can be attached to 3 different QoS profiles during runtime. However not all the devices and profiles are used concurrently.
+
+### Basic example: Assignment of QoS Profile during runtime
+
+With the assumptions above:
+* The production crew through the Network API Platform should request a change of the assinged device from one QoS profile to another.
+
+From the network resources point of view, there will be:
+* A maximum of 2 devices concurrently assigned a QoS_OnAir profile (20 Mbps) plus 2 other devices with the QoS_Standby profile (4 Mbps) - peak throughput is 24 Mbps.
+* Most of the time a maximum of 1 device will be assigned a QoS_OnAir profile (10 Mbps) plus 3 other devices with the QoS_Standby profile (6 Mbps) - peak thoughput is 16 Mbps.
+* Only when the camera is about to be assinged QoS_OnAir there will be a transition by the QoS_Preview profile - 1 QoS_OnAir (10 Mbps) + 1 QoS_Preview (5 Mbps) + 2 QoS_Standby (4 Mbps) - peak throughput is 19 Mbps.
 
 # Requirements
 
