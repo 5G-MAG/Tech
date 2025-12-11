@@ -9,8 +9,14 @@ nav_order: 1
 
 # Tech Videos
 
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
 1. TOC
 {:toc}
+</details>
 
 ## Workshop - October 2025 - 3GPP Release 19, ready for implementation
 
