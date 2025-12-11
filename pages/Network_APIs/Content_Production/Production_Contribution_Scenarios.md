@@ -14,7 +14,7 @@ This documentation is currently **under development and subject to change**. It 
 # Scenarios and Use Cases: Content Production and Contribution over Mobile Networks
 
 This section contains information on:
-* [**A genearal introduction about the context**](#introduction)
+* [**A general introduction about the context**](#introduction)
 * [**Reference Scenarios**](#reference-scenarios), including:
   * [**Single-device Connectivity**](#single-device-connectivity-single-camera-live-video-production-mobile-journalism-mojo-newsgathering-uplink-video)
   * [**Multi-device Connectivity**](#multi-device-connectivity-outside-broadcast-small-scale-video-production-remote-production)
