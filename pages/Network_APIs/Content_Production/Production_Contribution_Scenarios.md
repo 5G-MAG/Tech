@@ -128,6 +128,7 @@ Two options are considered when it comes to network deployment:
 - A public network to which devices are connected to. Devices are managed remotely and are contributing data to the production centre. In this case, a PNI-NPN may be used to guarantee QoS for the different flows carried across the mobile network.
 
 The following figure represents an scenario involving multiple devices.
+
 <img src="./images/figure_outdoorbroadcast.png" width="60%">
 
 ### Actors
