@@ -28,7 +28,7 @@ Before invoking any API, it is assumed that:
 
 * The production crew has a set of credentials (SIM/eSIM) for the network device nodes will connect to.
 * By default, the network provides "best-effort" connectivity and devices can already exploit "best-effort" connectivity.
-* The production company has set up an agreement with a network operator for usage of certain **network capabilitues** (e.g. selected from an API catalogue) and has received authentication credentials from the newotk operator authorising their use (when available).
+* The production company has set up an agreement with a network operator for usage of certain **network capabilitues** made available via an API and has received authentication credentials from the newotk operator authorising their use (when available).
 * The production crew (on location or located in the production centre) has access to one or several **Network API Platforms**. These platforms are accessible through any device/connectivity (e.g. Internet-acccessible website portal, command line tools, dedicated application, etc.).
   * Note: For Network API Platform access, the production crew has obtained key access tokens/keys/credentials/payment details in advance.
 * API Consumers will be able to select from available profiles, service areas, and parameters offered by the API Provider.
