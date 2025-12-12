@@ -324,6 +324,7 @@ Focus on the QoS for Intercom - a voice service offered by the network may not b
 # Considerations on Devices
 
 ## Identification of devices
+
 Requirement | API 
 -- | --
 Devices should be uniquely identifiable during operation |
@@ -331,11 +332,13 @@ Devices should be dynamically added or deleted during operation and attachable t
 Each device should only access the network capabilities which have been assigned during booking |
 
 ## Device on-boarding and API consumer on-boarding
+
 Requirement | API 
 -- | --
 TBD How to obtain credentials |
 
 ## Discovery of network capabilities
+
 Requirement | API 
 -- | --
 TBD How to discover network capabilities |
