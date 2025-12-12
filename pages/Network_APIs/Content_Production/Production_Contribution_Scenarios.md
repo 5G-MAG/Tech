@@ -91,9 +91,11 @@ A media producer (e.g. journalist in the field or at a venue) is interested in c
 Connectivity with certain quality is required on short notice for one single camera (i.e. uplink video & audio), intercom/remote audio (i.e. speech from the TV Studio), return video (i.e. video from the TV studio), control signals (i.e. tally light).
 
 The following figure represents an scenario where the device is a smartphone.
+
 <img src="./images/figure_newsgathering.png" width="60%">
 
 The following figure represents an scenario where the device is a backpack.
+
 <img src="./images/figure_cellularbonding.png" width="60%">
 
 ### Actors
