@@ -51,8 +51,3 @@ A third group of extensions enables the distribution of real-time immersive and 
 * Avatar (<em>**MPEG_node_avatar**</em>), to support the representation of 3D avatars.
 * Lighting (<em>**MPEG_light**</em>), to provide a realistic user experience including shadows and lighting.
 * Haptics (<em>**MPEG_haptic**</em>, <em>**MPEG_material_haptic**</em>), to support haptics based on the MPEG standard for Coded representation of Haptics by attaching haptic information to a node or to a mesh.
-
-
-# References:
-* IBC2023 TECH PAPERS: MPEG-I SCENE DESCRIPTION: A DYNAMIC SCENE DESCRIPTION FRAMEWORK FOR IMMERSIVE MEDIA ([link](https://www.ibc.org/download?ac=24724))
-* glTF 2.0 extension in MPEG and 3GPP ([link](https://www.khronos.org/assets/uploads/developers/presentations/glTF_2.0_Extensions_in_MPEG_and_3GPP_.pdf))
