@@ -12,14 +12,18 @@ has_children: false
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-1. TOC
-{:toc}
-
 # Using CAMARA APIs (and Network Services) for Content Production & Contribution
 
 This is a list of CAMARA APIs suitable to be used in the context of Connectivity Quality Management: [Network API Initiatives under analysis including CAMARA Project and 3GPP APIs](../Network_API_Initiatives.html).
 
-Their mapping to the context of Content Production & Contribution is below.
+Their mapping to the context of Content Production & Contribution is done below answering the following requirements:
+* [How to book QoS before being at or at the location?]()
+  * [How to book QoS once already at the location?]()
+  * [How to book QoS for a known device?]()
+  * [How to book QoS for unknown devices?]()
+* [How to use the network resources?]()
+* [How to exchange devices during runtime?]()
+* [How to obtain notifications about the ability of a network to support the requirements of an application?}
 
 ## How to book QoS before being at or at the location?
 
@@ -190,7 +194,7 @@ With the previous mechanisms there is no guarantee that new resources are availa
 {: .warning }
 The mechanisms which detach the booking of network resources from a particular device add flexibility.
 
-## How to obtain notifications about the abiliy of a network to support the requirements of an application?
+## How to obtain notifications about the ability of a network to support the requirements of an application?
 
 These are different alternatives, including reception of a one-shot notification (e.g. for checking whether the network is able to meet certain requirements at a given instant of time) and a subcription to receive notifications (more useful during runtime).
 
