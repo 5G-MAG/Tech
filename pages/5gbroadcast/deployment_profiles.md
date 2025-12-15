@@ -90,6 +90,3 @@ Devices shall support
 * PWS systems (according to clause 7.6) 
 
 In case Time-Frequency-Interleaving and co-existence of Legacy Broadcast and 5G Broadcast in UHF are introduced in Release 19, both functionalities shall be supported.
-
-12.7.2	Optimum Requirements
-This aspect is for further study.
