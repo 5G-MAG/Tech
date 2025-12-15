@@ -36,5 +36,6 @@ The following resources are available:
 * [**Overview on MPEG-I Scene Description**](./xr/mpeg-i-scene-description.htmld)
 * [**Teaser on 5G and XR (3GPP Release 16/17/18)**](./videos.html#teaser-on-5g-and-xr-3gpp-release-161718)
 
-## Related Technical Papers
+## Related Technical Papers and Documents
 * [MPEG-I Scene Description: A dynamic scene description framework for immersive media](https://www.ibc.org/download?ac=24724), by T. Stockhammer (Qualcomm), I. Bouazizi (Qualcomm), M.-L. Champel (Xiaomi), E. Potetsianakis (Nokia), E. Thomas (Xiaomi), L. Kondrad (Nokia), E. Alexiou (TNO), G. Martin-Cocher (InterDigital), G. Bhullar (InterDigital), Q. Avril (InterDigital), Q. Galvane (InterDigital), J. Regateiro (InterDigital), P. Hirtzlin (InterDigital)
+* glTF 2.0 extension in MPEG and 3GPP ([link](https://www.khronos.org/assets/uploads/developers/presentations/glTF_2.0_Extensions_in_MPEG_and_3GPP_.pdf))
