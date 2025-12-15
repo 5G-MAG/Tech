@@ -14,7 +14,7 @@ This documentation is currently **under development and subject to change**. It 
 
 # Workflows and Requirements for Content Production & Contribution
 
-[Scenarios and Use Cases](../Production_Contribution_Scenarios.html) describe two reference scenarios. The workflows in relation to the booking and usage of network capabilities are described here with a focus on quality of service (QoS).
+[**Scenarios and Use Cases**](../Production_Contribution_Scenarios.html) describe two reference scenarios. The workflows in relation to the booking and usage of network capabilities are described here with a focus on quality of service (QoS).
 
 This section contains information on:
 * [**Pre-conditions and commonalities**](#pre-conditions-and-commonalities)
