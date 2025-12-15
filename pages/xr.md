@@ -33,11 +33,9 @@ The following resources are available:
 
 ### General information about XR and MPEG-I Scene Description
 
-## Teaser on 5G and XR (3GPP Release 16/17/18)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q0eyTt3KAs4?si=eqrjPkhslTFoEt8X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+* [**Overview on MPEG-I Scene Description**](./xr/mpeg-i-scene-description.htmld)
+* [**Teaser on 5G and XR (3GPP Release 16/17/18)**](./videos.html#teaser-on-5g-and-xr-3gpp-release-161718)
 
-## glTF 2.0 Extensions in MPEG and 3GPP - Real time exchange for 3D Experiences
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U9VgiYORNrA?si=9Sc935pfpkMkJeJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## Technical Papers
+## Related Technical Papers and Documents
 * [MPEG-I Scene Description: A dynamic scene description framework for immersive media](https://www.ibc.org/download?ac=24724), by T. Stockhammer (Qualcomm), I. Bouazizi (Qualcomm), M.-L. Champel (Xiaomi), E. Potetsianakis (Nokia), E. Thomas (Xiaomi), L. Kondrad (Nokia), E. Alexiou (TNO), G. Martin-Cocher (InterDigital), G. Bhullar (InterDigital), Q. Avril (InterDigital), Q. Galvane (InterDigital), J. Regateiro (InterDigital), P. Hirtzlin (InterDigital)
+* glTF 2.0 extension in MPEG and 3GPP ([link](https://www.khronos.org/assets/uploads/developers/presentations/glTF_2.0_Extensions_in_MPEG_and_3GPP_.pdf))
