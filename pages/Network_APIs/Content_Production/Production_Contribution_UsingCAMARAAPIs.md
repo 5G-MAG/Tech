@@ -21,11 +21,11 @@ This is a list of CAMARA APIs suitable to be used in the context of Connectivity
 
 Their mapping to the context of Content Production & Contribution is below.
 
-## How to book QoS before being at the location?
+## How to book QoS before being at or at the location?
 
 First step is the ability to discover QoS profiles available at a given location and time. This step requires:
   * Mechanism to obtain available QoS profiles
-  * Indication of a service area and/or duration
+  * Indication of a service area and/or time/duration
 
 <table>
   <tr>
@@ -35,81 +35,135 @@ First step is the ability to discover QoS profiles available at a given location
     <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSProfiles.html">QoS Profiles API</a></b> the QoS profile parameters available in the network can be retrieved. No information about the service area is linked to such request.</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Networks - Network Profiles API</a></b> it is possible to obtain the list of available Network Profiles which can be used together with other Dedicated Networks APIs</td>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Networks - Network Profiles API</a></b> it is possible to obtain the list of available Network Profiles which link the QoS Profile with additional information on the aggregated UL/DL throughput for a maximum number of devices.</td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Identification of a service area and/or duration<b/></td>
+    <td markdown="span" align="left"><b>Identification of a service area and/or time/duration<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">In general the available profiles are listed for the network, not for a specific location or duration.</td>
+    <td markdown="span" align="left">In general the available profiles are listed for the network, not for a specific location or time/duration.</td>
   </tr>
 </table>
 
-With the information in the previous step, it should be possible to book QoS (to reserve network resources) for a given application or device for the intended service area and/or duration. This step requires:
-  * Mechanism to create a booking linking a profile to a service area and duration.
+With the information in the previous step, it should be possible to book QoS (to reserve network resources) for a given application or device for the intended service area and/or time/duration. This step requires:
+  * Mechanism to create a booking linking a profile to a service area and time/duration.
+  * The previous mechanism including information about the application server and/or device.
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Mechanism to create a booking linking a profile to a service area and duration<b/></td>
+    <td markdown="span" align="left"><b>Mechanism to create a booking linking a profile to a service area and time/duration<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Networks - Network Profiles API</a></b> it is possible to request the creation of a dedicated network linking a QoS profile with a service area and duration.</td>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Networks - Network Profiles API</a></b> it is possible to request the creation of a dedicated network linking a QoS profile with a service area and time/duration. Therefore, this would comprise the booking of resources for a specific QoS Profile, a maximum number of devices which can make use of it, the service area and the time/duration.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_NetworkSliceBooking.html">Network Slice Booking API</a></b> it is possible to request the creation of a session with the expected service time, service area, and QoS profile. The number of devices can be specified in the QoS profile.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile, application server details, device details, service area and time/duration.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBookingAssignment.html">QoS Booking & Assignment - QoS Booking API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile, number of devices, service area and time/duration.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile and the device. No information about the service area nor time/duration are provided.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile, application server details, device details, and time/duration. No information about the service area is provided.</td>
   </tr>
 </table>
 
-## How to book QoS once already at the location?
+### How to book QoS once already at the location?
 
-The interest here is in booking resources on the spot. However, in scenarios where there are different parties competing for resources, the chances of this option to work may be limited.
+All the mechanisms described above would allow the booking of QoS when already at the location. However, the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> and <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> are particularly targetted to this scenario given it is not possible to define the service area in which they are applicable beforehand.
 
-Booking resources in advance is possible by using other APIs, which will then allow to obtain QoS at a given location and time... More details in the next sub-section.
+### How to book QoS for a known device?
 
-### Creating a QoS session with "Quality on Demand"
-It is possible to create a QoS session by invoking the [**Quality on Demand API**](../CAMARA_QualityonDemand.html) passing a [**QoS Profile**](../CAMARA_QoSProfiles.html), details of the application server (e.g. the end-point of the uplink video contribution) and device, the service time.
-This is assumed to be invoked when already at the location.
+All the mechanisms described above would allow to exploit network resources for any device. However, the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b>, <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> and <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> would imply knowledge of the devices for which the booking is requested.
 
-### Provisioning QoS for a device
-It is possible to provision QoS for a device by invoking the [**QoS Provisioning API API**](../CAMARA_QoSProvisioning.html) passing a [**QoS Profile**](../CAMARA_QoSProfiles.html), and details of the device. This QoS profile will be assigned to the device anytime it is connected to the network.
+### How to book QoS for unknown devices?
 
-## How to book in advance network resources for a single device, in a given area and period of time?
+All the mechanisms described above would allow to exploit network resources for any device. However, if devices are not known yet at the time of booking, it is possible to use the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Networks - Network Profiles API</a></b>, <b><a href="../CAMARA_NetworkSliceBooking.html">Network Slice Booking API</a></b> and <b><a href="../CAMARA_QoSBookingAssignment.html">QoS Booking & Assignment - QoS Booking API</a></b> to request the booking of resources without committing to use a particular device.
 
-The interest here is in booking resources in advance for a single device, just to ensure certain QoS.
+## How to use the network resources?
 
-### Setting up a "Dedicated Network"
-This scenario can be covered by invoking the [**Dedicated Networks API**](../CAMARA_DedicatedNetworks.html). This involves retrieving available **Network Profiles** in the network with some additional information on the aggregated UL/DL throughput for a maximum number of devices (in this case it will be for a single one). The parameters the "dedicated network" support are indicated per [**QoS Profile**](../CAMARA_QoSProfiles.html).
-After this, a request can be created with such Network Profile, the service time start and end as well as the service area.
-Once this is established, a device can be attached to access such "dedicated network" when required within the service area and for the specificed duration.
+First step is to have booked the network resources either for any device, a given number of devices or a concrete device. This implies following one of the steps below:
+* Assingment and management of the booked network resources to a device
+* Direct usage of the network resources when a device just connects to the network
 
-### Booking QoS with "QoS Booking"
-It is possible to book QoS by invoking the [**QoS Booking API**](../CAMARA_QoSBooking.html) passing a [**QoS Profile**](../CAMARA_QoSProfiles.html), details of the application server (e.g. the end-point of the uplink video contribution) and device, the service time and service area.
-A device connecting to the network at the given time and within the service area will be able to expoit the QoS booking.
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Assingment of the booked network resources to a particular device<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBookingAssignment.html">QoS Booking and Assignment - Device Assignment API</a></b> it is possible to assign a device to an existing QoS booking.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Network - Accesses API</a></b> it is possible to assign a device to an existing network profile</td>
+  </tr>
+</table>
 
-### Booking a "Network Slice"
-It is possible to book a "network slice" by invoking the [**Network Slice Booking API**](../CAMARA_NetworkSliceBooking.html) with additional QoS parameters linked to the network slice.
-A device connecting to the network at the given time and within the service area will be able to expoit the "network slice" properties.
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Direct usage of the network resources when a device just connects to the network<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_NetworkSliceBooking.html">Network Slice Booking API</a></b> it is possible to use the network resources when a device connects to the network.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b> it is possible to use the network resources when a device connects to the network.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> it is possible to use the network resources when a device connects to the network.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> it is possible to use the network resources when a device connects to the network.</td>
+  </tr>
+</table>
 
-## How to book in advance network resource for a media production scenario involving multiple devices in a given area and period of time?
+## How to exchange devices during runtime?
 
-The interest here is in booking resources in advance for different devices to make use of them during an event. The ability to assign and release devices is crutial for enabling back-up devices and the use of stand-by and active devices, for a more efficient management of network resources.
+In the event that a device need to be exchanged or the booked resources should be assing to a different device, the following alternatives exist:
+* Creating a new booking for a new device before releasing the current device
+* Separation of the QoS booking w.r.t. to the device, enabling re-assignment of QoS booking.
 
-### Setting up a "Dedicated Network"
-This scenario can be covered by invoking the [**Dedicated Networks API**](../CAMARA_DedicatedNetworks.html). This involves retrieving available **Network Profiles** in the network with some additional information on the aggregated UL/DL throughput for a maximum number of devices (in this case it will be for a single one). The parameters the "dedicated network" support are indicated per [**QoS Profile**](../CAMARA_QoSProfiles.html).
-After this, a request can be created with such Network Profile, the service time start and end as well as the service area.
-Once this is established, a device can be attached to access such "dedicated network" when required within the service area and for the specificed duration.
-Several devices can be attached to the same profile. Or multiple profiles can be created with devices being assinged/revoked during runtime.
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Creating a new booking for a new device before releasing the current device<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b> a new booking for a specific device should be created.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> a new booking for a specific device should be created.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> a new booking for a specific device should be created.</td>
+  </tr>
+</table>
 
-This API is particularly interesting as the booking of resources will not be revoked when a device is exchanged or released.
+{: .warning }
+With the previous mechanisms there is no guarantee that new resources are available. Releasing the previous device will also imply no guarantee that those will remain available for a new booking.
 
-### Setting up a "QoS Booking and Assignment"
-This scenario can be covered by invoking the [**QoS Booking and Assignment API**](../CAMARA_QoSBookingAssignment.html). This involves indicating a number of devices that will be part of the QoS booking, the [**QoS Profile**](../CAMARA_QoSProfiles.html), start time, duration and service area.
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Separation of the QoS booking w.r.t. to the device, enabling re-assignment of QoS booking<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Network - Accesses API</a></b> it is possible to request the assignment or release of a device to an existing network profile</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_NetworkSliceBooking.html">Network Slice Booking API</a></b> it is possible to bring a new device which will exploit the booked network resources.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBookingAssignment.html">QoS Booking & Assignment - Device Assignment API</a></b> it is possible to request the assignment or release of devide to an existing QoS booking.</td>
+  </tr>
+</table>
 
-Once the booking is created, devices can be assinged and releases.
-
-This API is particularly interesting as the booking of resources will not be revoked when a device is exchanged or released.
-
-## How to obtain a notification about the abiliy of a network to support the requirements of my application?
+## How to obtain notifications about the abiliy of a network to support the requirements of an application?
 
 These are different alternatives, including reception of a one-shot notification (e.g. for checking whether the network is able to meet certain requirements at a given instant of time) and a subcription to receive notifications (more useful during runtime).
 
