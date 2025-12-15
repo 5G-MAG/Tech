@@ -19,7 +19,49 @@ This documentation is currently **under development and subject to change**. It 
 
 This is a list of CAMARA APIs suitable to be used in the context of Connectivity Quality Management: [Network API Initiatives under analysis including CAMARA Project and 3GPP APIs](../Network_API_Initiatives.html).
 
-## How to book QoS when already at the location?
+Their mapping to the context of Content Production & Contribution is below.
+
+## How to book QoS before being at the location?
+
+First step is the ability to discover QoS profiles available at a given location and time. This step requires:
+  * Mechanism to obtain available QoS profiles
+  * Indication of a service area and/or duration
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Mechanism to obtain available QoS profiles<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSProfiles.html">QoS Profiles API</a></b> the QoS profile parameters available in the network can be retrieved. No information about the service area is linked to such request.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Networks - Network Profiles API</a></b> it is possible to obtain the list of available Network Profiles which can be used together with other Dedicated Networks APIs</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Identification of a service area and/or duration<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">In general the available profiles are listed for the network, not for a specific location or duration.</td>
+  </tr>
+</table>
+
+With the information in the previous step, it should be possible to book QoS (to reserve network resources) for a given application or device for the intended service area and/or duration. This step requires:
+  * Mechanism to create a booking linking a profile to a service area and duration.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Mechanism to create a booking linking a profile to a service area and duration<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Networks - Network Profiles API</a></b> it is possible to request the creation of a dedicated network linking a QoS profile with a service area and duration.</td>
+  </tr>
+</table>
+
+## How to book QoS once already at the location?
+
 The interest here is in booking resources on the spot. However, in scenarios where there are different parties competing for resources, the chances of this option to work may be limited.
 
 Booking resources in advance is possible by using other APIs, which will then allow to obtain QoS at a given location and time... More details in the next sub-section.
