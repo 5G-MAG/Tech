@@ -39,18 +39,24 @@ First step is the ability to discover QoS profiles available at a given location
   </tr>
 </table>
 
+{: .warning }
+There are some limitations as the information on the name of the QoS profile need to be known beforehand. It is understood that the name of the profiles would be communicated by the network operator via the Network API Platform.
+
 <table>
   <tr>
     <td markdown="span" align="left"><b>Identification of a service area and/or time/duration<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">In general the available profiles are listed for the network, not for a specific location or time/duration.</td>
+    <td markdown="span" align="left">In general the available profiles are listed for the network, not for a specific location or time/duration. It is only when booking the resources for the specific area and duration when information about the success will be available.</td>
   </tr>
 </table>
 
+{: .warning }
+There are some limitations as the information on the availability of QoS is only available at booking time and not beforehand. The **Connectivity Insights APIs** are also not practical as they can only be invoked at the given location. Potential remedy: Create/Adapt an API so that information on the QoS profile availability for a given location can be retrieved.
+
 With the information in the previous step, it should be possible to book QoS (to reserve network resources) for a given application or device for the intended service area and/or time/duration. This step requires:
   * Mechanism to create a booking linking a profile to a service area and time/duration.
-  * The previous mechanism including information about the application server and/or device.
+  * The previous mechanism including already information about the application server and/or device.
 
 <table>
   <tr>
@@ -63,10 +69,19 @@ With the information in the previous step, it should be possible to book QoS (to
     <td markdown="span" align="left">By means of the <b><a href="../CAMARA_NetworkSliceBooking.html">Network Slice Booking API</a></b> it is possible to request the creation of a session with the expected service time, service area, and QoS profile. The number of devices can be specified in the QoS profile.</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile, application server details, device details, service area and time/duration.</td>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBookingAssignment.html">QoS Booking & Assignment - QoS Booking API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile, number of devices, service area and time/duration.</td>
+  </tr>
+</table>
+
+{: .warning }
+The **Quality on Demand API** lacks information about the service area. Potential remedy: add information about the service area.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>The previous mechanism including already information about the application server and/or device<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBookingAssignment.html">QoS Booking & Assignment - QoS Booking API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile, number of devices, service area and time/duration.</td>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile, application server details, device details, service area and time/duration.</td>
   </tr>
   <tr>
     <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> it is possible to request the creation of a QoS booking specifying the QoS profile and the device. No information about the service area nor time/duration are provided.</td>
@@ -76,9 +91,12 @@ With the information in the previous step, it should be possible to book QoS (to
   </tr>
 </table>
 
+{: .warning }
+There are some limitations as the information on the exact device and application server may not be known beforehand or may change in the course between making the booking and using the network resources. The mechanisms defined in **Dedicated Networks API** and **QoS Booking and Assignment** are more appropriate for this case. 
+
 ### How to book QoS once already at the location?
 
-All the mechanisms described above would allow the booking of QoS when already at the location. However, the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> and <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> are particularly targetted to this scenario given it is not possible to define the service area in which they are applicable beforehand.
+All the mechanisms described above would allow the booking of QoS when already at the location. However, the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> and <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> are particularly targetted to this scenario given it is not possible to define the service area in which they are applicable beforehand. If the booking is done at the location it is also assumed that the exact devices are known, therefore any of the mechanisms described above would be suitable.
 
 ### How to book QoS for a known device?
 
@@ -106,6 +124,9 @@ First step is to have booked the network resources either for any device, a give
   </tr>
 </table>
 
+{: .warning }
+The mechanisms which detach the booking of network resources from a particular device add flexibility.
+
 <table>
   <tr>
     <td markdown="span" align="left"><b>Direct usage of the network resources when a device just connects to the network<b/></td>
@@ -123,6 +144,9 @@ First step is to have booked the network resources either for any device, a give
     <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> it is possible to use the network resources when a device connects to the network.</td>
   </tr>
 </table>
+
+{: .warning }
+For some of these mechanisms it is unclear how the network capabilities would be exploited by a device. It may be impractical when a device need to be exchanged.
 
 ## How to exchange devices during runtime?
 
@@ -163,6 +187,9 @@ With the previous mechanisms there is no guarantee that new resources are availa
   </tr>
 </table>
 
+{: .warning }
+The mechanisms which detach the booking of network resources from a particular device add flexibility.
+
 ## How to obtain notifications about the abiliy of a network to support the requirements of an application?
 
 These are different alternatives, including reception of a one-shot notification (e.g. for checking whether the network is able to meet certain requirements at a given instant of time) and a subcription to receive notifications (more useful during runtime).
@@ -174,3 +201,6 @@ Following this step, the [**Connectivity Insights API**](../CAMARA_ConnectivityI
 ### Subscribing to regular notifications
 The pre-requisite is to create an Application Profile by invoking the [**Application Profiles API**]((../CAMARA_ApplicationProfiles.html)) with a series of user-defined network quality thresholds.
 Following this step, the [**Connectivity Insights Subscriptions API**](../CAMARA_ConnectivityInsightsSubscriptions.html) can be invoked to receive regular notifications (up to a defined limit) about the confidence of the network in meeting the network quality thresholds.
+
+{: .warning }
+A new application profile needs to be created where tracking notifications for the original QoS Profile which many other APIs use would be more coherent. In general, one would expect that notifications/logs can be requested for any API once the network resources are being used.
