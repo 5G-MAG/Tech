@@ -18,7 +18,10 @@ Khronos has adopted the MPEG-I Scene Description extensions as defined in [https
 
 ## Reference architecture:
 MPEG-I SD defined the following reference architecture.
-![image](./images/mpeg-i-sd-0.png)
+
+<figure>
+  <img src="./images/mpeg-i-sd-0.png" alt="" width="80%">
+</figure>
 
 * The Presentation Engine replaces a traditional 2D media player. It is responsible for multi-modal rendering of a scene composed of audiovisuals and haptics media. It also provides information about the viewer's and object pose to optimize delivery.
 * The Media Access Function (MAF) is responsible for the media access and processing functions. Media handling is delegated to the MAF by the Presentation Engine. The MAF constructs a suitable media pipeline to transform media from a delivery format into the formats used during rendering. the MAF uses MIME type and codec parameters to identify support for the media reconstruction and assemble the adequate media pipeline.
@@ -26,7 +29,10 @@ MPEG-I SD defined the following reference architecture.
 * The Buffers are fed by the processed media with a format defined through the scene description document in SO/IEC 23090-14
 
 ## Vendor extensions to Khronos glTF 2.0
-![image](./images/mpeg-i-sd-1.png)
+
+<figure>
+  <img src="./images/mpeg-i-sd-1.png" alt="" width="80%">
+</figure>
 
 A first set of extensions (green in the figure) enable the timed framework including:
 * [<em>**MPEG_media**</em>](https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Vendor/MPEG_media/README.md), which enables the referencing of external media streams that are delivered over protocols such as RTP/SRTP, MPEG-DASH, or others
