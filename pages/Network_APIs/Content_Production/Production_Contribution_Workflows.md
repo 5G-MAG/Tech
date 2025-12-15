@@ -23,7 +23,7 @@ This section contains information on:
 * [**Dynamic management of network capabilities during runtime**](#dynamic-management-of-network-capabilities-during-runtime)
 * [**Requirements**](#requirements)
 
-# Pre-conditions and commonalities
+## Pre-conditions and commonalities
 
 Before invoking any API, it is assumed that:
 
@@ -33,7 +33,19 @@ Before invoking any API, it is assumed that:
 * The production crew (on location or located in the production centre) has access to one or more **Network API Platforms**. These platforms are accessible by any device/connectivity (e.g. Internet-accessible website portal, command line tools, dedicated application, etc.).
 * API Consumers will be able to select from available profiles, service areas, and parameters offered by the API Provider.
 
-## Single-device Connectivity (Single Camera Live Video Production, Mobile Journalism (MoJo), Newsgathering, Uplink Video)
+## Collaboration scenarios for the provisioning of network capabilities
+
+### Collaboration scenario #1: Direct invoking Network APIs
+The **Network API Platform** of a Network Operator is accessed directly from **API Consumers**, either deployed with the Studio Production or the Location Production functions. The API consumer can be a Web Portal, e.g. offered by the CSP. Alternatively, the API consumers can be embedded production devices like a Vision Mixer or a production orchestration solution ([NMOS](https://specs.amwa.tv/nmos/branches/main/docs/Technical_Overview.html)  concept). The API consumer functions can be integrated in media servers, responsible for receiving the video stream from the application client.
+
+<img src="./images/figure_collaboration_1.png" width="60%">
+
+### Collaboration scenario #2: Invoking Network APIs via an Aggregator
+The **Network API Platform** of a Network Operator is accessed via an **Aggregator API Platform**. The Aggregator Platforms harmonize capabilities offered by different Network Providers and routes customer requests to them.
+
+<img src="./images/figure_collaboration_2.png" width="60%">
+
+# Single-device Connectivity (Single Camera Live Video Production, Mobile Journalism (MoJo), Newsgathering, Uplink Video)
 
 ## Before the Event
 
@@ -312,6 +324,7 @@ Focus on the QoS for Intercom - a voice service offered by the network may not b
 # Considerations on Devices
 
 ## Identification of devices
+
 Requirement | API 
 -- | --
 Devices should be uniquely identifiable during operation |
@@ -319,11 +332,13 @@ Devices should be dynamically added or deleted during operation and attachable t
 Each device should only access the network capabilities which have been assigned during booking |
 
 ## Device on-boarding and API consumer on-boarding
+
 Requirement | API 
 -- | --
 TBD How to obtain credentials |
 
 ## Discovery of network capabilities
+
 Requirement | API 
 -- | --
 TBD How to discover network capabilities |
