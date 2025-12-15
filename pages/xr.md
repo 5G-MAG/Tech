@@ -33,7 +33,7 @@ The following resources are available:
 
 ### General information about XR and MPEG-I Scene Description
 
-* [**Overview on MPEG-I Scene Description**](./xr/mpeg-i-scene-description.htmld)
+* [**Overview on MPEG-I Scene Description**](./xr/mpeg-i-scene-description.html)
 * [**Teaser on 5G and XR (3GPP Release 16/17/18)**](./videos.html#teaser-on-5g-and-xr-3gpp-release-161718)
 
 ## Related Technical Papers and Documents
