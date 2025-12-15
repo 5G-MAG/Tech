@@ -19,24 +19,11 @@ This documentation is currently **under development and subject to change**. It 
 
 The supported bandwidth for LTE-based 5G Broadcast in units of MHz are 6, 7 and 8.
 
-The supported spectrum is a subset of the operating band n108 (as defined in clause 8.X):
-
-Table 12.7.1-1 Subset of 5G terrestrial broadcast operating band n108 as minimum requirement.
-Operating band on which subset is based	Uplink (UL) operating band
-BS receive
-UE transmit	Downlink (DL) operating band
-BS transmit 
-UE receive	Duplex Mode
-	FUL_low   –  FUL_high
-FDL_low  –  FDL_high
-
-108
-N/A	606 MHz	–	698 MHz	SDO
-
+The supported spectrum is a subset of the operating band 108 (as defined in clause X of ETSI 103 720):
 
 ### Radio
 
-Implementation of radio aspects in devices shall follow clause 7.3 and support the following features:
+Implementation of radio aspects in devices shall follow clause 7.3 of ETSI 103 720 and support the following features:
 
 * MBMS-dedicated cells for 100% MBMS allocation
 * Subcarrier spacings: 1.25 kHz, 2.5 kHz and 15 kHz.
@@ -55,6 +42,7 @@ Devices’ interfaces shall support the following delivery methods (according to
 * MBMS Download Delivery Method
 
 Devices shall support the following protocols (according to 3GPP 26.346 18.0.0):
+
 * RTP (over transparent delivery method)
 * DASH
 * TSoverIP (over transparent delivery method)
@@ -81,7 +69,8 @@ Devices shall support the following codecs:
 
 ### Miscellaneous
 
-Devices shall support
+Devices shall support:
+
 * Free-to-air (FTA) mode
 * Receive-only-mode (ROM)
 * MFN support
