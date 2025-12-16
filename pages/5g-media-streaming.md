@@ -35,7 +35,7 @@ The following resources are available:
 
 ### General information about 5G Media Streaming
 
-* [**Overview on 5G Media Streaming**](./5g-media-streaming/overview_5gms.md)
+* [**Overview on 5G Media Streaming**](./5g-media-streaming/overview_5gms.html)
 
 #### VideoTech
 
@@ -51,7 +51,7 @@ The following resources are available:
 
 ### Advanced Media Delivery
 
-* [**Overview on Advanced Media Delivery**](./5g-media-streaming/overview_amd.md)
+* [**Overview on Advanced Media Delivery**](./5g-media-streaming/overview_amd.html)
 
 #### VideoTech
 
