@@ -33,4 +33,6 @@ The following resources are available:
 
 ### General information about UE Data Collection, Reporting and Event Exposure
 
+#### VideoTech
+
 * [**UE Data Collection and Reporting framework for Event Exposure (3GPP Release 17)**](./videos.html#ue-data-collection-and-reporting-framework-for-event-exposure-3gpp-release-17)
