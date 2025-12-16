@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Overview 5G Media Streaming
+title: 5G Media Streaming
 parent: 5G Media Streaming
 has_children: false
 nav_order: 0
@@ -8,7 +8,7 @@ nav_order: 0
 
 <img src="../../assets/images/Banner_5GMS.png" /> 
 
-# 5G Media Streaming Architecture - Overview
+# 5G Media Streaming - Overview
 
 ### Features: Content Hosting (TS 26.510)
 
