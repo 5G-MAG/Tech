@@ -38,6 +38,7 @@ The following resources are available:
 * [**Overview on 5G Media Streaming**](./5g-media-streaming/overview_5gms.md)
 
 #### VideoTech
+
 * [**Introduction to 5G Media Streaming (3GPP Release 16)**](./videos.html#introduction-to-5g-media-streaming-3gpp-release-16)
 * [**Dynamic Policies for 5G Media Streaming (3GPP Release 16)**](./videos.html#dynamic-policies-for-5g-media-streaming-3gpp-release-16)
 * [**5G Media Streaming over eMBMS (3GPP Release 17)**](./videos.html#5g-media-streaming-over-embms-3gpp-release-17)
@@ -53,6 +54,7 @@ The following resources are available:
 * [**Overview on Advanced Media Delivery**](./5g-media-streaming/overview_amd.md)
 
 #### VideoTech
+
 * [**An Introduction**](./videos.html#advanced-media-delivery---an-introduction)
 * [**Remider on 5G Media Streaming**](./videos.html#advanced-media-delivery---remider-on-5g-media-streaming)
 * [**Common Client Metadata**](./videos.html#advanced-media-delivery---common-client-metadata)
