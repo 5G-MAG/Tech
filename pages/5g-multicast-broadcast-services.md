@@ -35,6 +35,9 @@ The following resources are available:
 ### General information about 5G Multicast Broadcast Services
 
 * [**Media distribution with 5G Multicast-Broadcast Services (MBS)**](../docs/Explainer_5G_Multicast_Broadcast_Services.pdf)
+
+#### VideoTech
+
 * [**User Services for the 5G Multicast-Broadcast Service (3GPP Release 17)**](./videos.html#user-services-for-the-5g-multicast-broadcast-service-3gpp-release-17)
 
 ### Analysis of Time-Frequency Interleaving for 5G Multicast Broadcast Services
