@@ -47,6 +47,81 @@ The **Network API Platform** of a Network Operator is accessed via an **Aggregat
 
 # Single-device Connectivity (Single Camera Live Video Production, Mobile Journalism (MoJo), Newsgathering, Uplink Video)
 
+The basic requirements for this scenario are:
+
+* **Ability to DISCOVER network resources**, by indicating _service area_ and _duration_.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>DISCOVERY API<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Invoked with:</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Response:</td>
+  </tr>
+</table>
+
+* **Ability to RESERVE network resources**, by indicating _service area_ and _duration_.
+  * The location where the network resources are to be used is known. Either the production team is already at the location or heading towards it. A potential sub-case is the usage of network resources already at the location and for a given duration.
+  * An estimate of the duration of the usage of the network resources is known, and it may be extended while in usage.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>RESERVATION API<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Invoked with:</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Response:</td>
+  </tr>
+</table>
+
+* **Ability to ASSIGN the device for usage**, by linking a _reservation ID_ with a _device ID_.
+  * The device for which resources are reserved is known in advance. However better flexibility would be given if the resources are not linked to a specific device at reservation. The device finally using the network resources may change between the reservation of network resources and their actual usage. A change of the device while in operation may also be needed (e.g. for replacement by a back-up device).
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>ASSIGNMENT API<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Invoked with:</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Response:</td>
+  </tr>
+</table>
+
+* **Ability to activate/deactivate the USAGE of the network resources**, either automatically when the device is connected to the network or manually. Activating the usage of network resources just when the device obtains connectivity is not ideal. For instance, a device should use best-effort connectivity in the event of a problem (need to exchange a device) while a new device is assigned the network resources.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>USAGE API<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Invoked with:</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Response:</td>
+  </tr>
+</table>
+
+* **Ability to activate/deactivate NOTIFICATIONS on the usage of the network resources**.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>NOTIFICATIONS API<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Invoked with:</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Response:</td>
+  </tr>
+</table>
+
 ## Before the Event
 
 ### Phase A: Preparing devices, configuring application clients and servers, and configuring client/server flows
@@ -70,7 +145,7 @@ The **Network API Platform** of a Network Operator is accessed via an **Aggregat
 <img src="./images/Workflow_Step_2.png" width="60%">
 
 Through the Network API Platform:
-1. The production crew (already on location or while traveling to the event) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for). Example: QoD available, connectivity monitoring available.
+1. The production crew (already on location or while traveling to the event) can discover the capabilities the network can offer in a particular location and at a particular time. Example: QoD available, connectivity monitoring available.
 2. The production crew requests network services for the devices (identified by its SIM cards) in advance. The booking of resources is done based on:
   * Geographical area
   * Schedule (starting time and closing time, or duration, of the event)
