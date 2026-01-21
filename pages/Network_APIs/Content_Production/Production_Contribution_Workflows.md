@@ -53,16 +53,22 @@ The basic requirements for this scenario are:
   * A QoS template may be used to define the required QoS parameters between the application (device) and application server.
   * It should be able to indicate an aggregate of network resources corresponding to the number of devices with the same QoS requirements. For a single device, the aggregate would be just one device.
 
+<table>
   <tr>
     <td markdown="span" align="left"><b>DISCOVERY API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with: QoS template, location, time/duration, number of devices intended to use resources concurrently</td>
+    <td markdown="span" align="left">Invoked with: QoS template, location/area, time/duration, number of devices intended to use resources concurrently</td>
   </tr>
   <tr>
     <td markdown="span" align="left">Response: Ability or not to reserve such resources.</td>
   </tr>
 </table>
+
+Remarks on the **location**:
+* The user should be able to indicate the location where the network resources are to be used by means of coordinates for an area (array of points) or a single point.
+* It is unlikely that the user-defined area corresponds to the operator-defined area.
+* A more general API could be invoked with the user-defined area as input and a operator-defined area identifier as output.
 
 * **Ability to RESERVE network resources**, by indicating location and time/duration.
   * Network resources can be reserved for the intended location and time/duration.
@@ -149,10 +155,25 @@ The basic requirements for this scenario are:
 <img src="./images/Workflow_Step_2.png" width="60%">
 
 Through the Network API Platform:
+
 1. The production crew (already on location or while traveling to the event) can discover the capabilities the network can offer in a particular location and at a particular time. Example: QoD available, connectivity monitoring available.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke DISCOVERY API<b/></td>
+  </tr>
+</table>
+
 2. The production crew requests network services for the devices (identified by its SIM cards) in advance. The booking of resources is done based on:
   * Geographical area
   * Schedule (starting time and closing time, or duration, of the event)
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke RESERVATION API<b/></td>
+  </tr>
+</table>
+
 3. The production manager receives a booking reference responding to the service request.
 4. The production manager accepts the service booking offer (involving payment).
 5. The production manager receives **network access IDs** to be used by the production device UEs to access the network and the requested capabilities for the specified location and duration.
@@ -173,7 +194,20 @@ Through the Network API Platform:
 
 ### Phase C: Configuration and Usage of the network capabilities
 1. The production crew arrives at the event and can start using the booked network services (See phase B).
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke ASSIGNMENT API<b/></td>
+  </tr>
+</table>
+
 2. The production device makes use of the network capabilities according to the network access IDs reveived. The media related parameters can be adapted using an application-specific API, citing the network access IDs delivered in step B.5).
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke USAGE API<b/></td>
+  </tr>
+</table>
 
 <table>
   <tr>
@@ -188,6 +222,12 @@ Through the Network API Platform:
 
 ### Phase D: Location teardown
 1. Through the Network API Platform, the production crew releases the booked resources when the event finishes.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke RESERVATION API<b/></td>
+  </tr>
+</table>
 
 ---
 
@@ -220,6 +260,12 @@ Through the Network API Platform:
 Through the Network API Platform:
 1. The production crew (on location or from the production centre) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for). Example: QoD available, connectivity monitoring available, Timing as a service available, edge compute instantiation, etc.
 
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke DISCOVERY API<b/></td>
+  </tr>
+</table>
+
 2. The production crew requests network services for the devices (identified by its SIM cards) in advance. Possible services (network capabilities) are:
    1. *Quality-on-Demand*
       * One or several QoS profiles for each SIM card (QoS profiles are mapped to 5QIs) 
@@ -230,7 +276,13 @@ Through the Network API Platform:
    The booking of resources is done based on:
       * Geographical area
       * Schedule (starting time and closing time, or duration, of the event)
-        
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke RESERVATION API<b/></td>
+  </tr>
+</table>
+
 3. The production manager receives a booking reference responding to the service request.
 4. The production manager accepts the service booking offer (involving payment/contract/SLA aspects).
 5. The production manager receives **network access IDs** to be used by the production device UEs to access the network and the requested capabilities for the specified location and duration.
@@ -251,13 +303,26 @@ Through the Network API Platform:
 
 ### Phase C: Configuration and Usage of the network capabilities
 1. The production crew arrives in the venue, plugs the SIM cards and turn on the devices, connectivity is enabled based on the booked network services (See phase B).
-2. The production crew initiates the setup of the location production by interacting with the production network orchestrator.
-3. The production network orchestrator configures the production device nodes using an application-specific API, citing the network access IDs delivered in step B.5).
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke ASSIGNMENT API<b/></td>
+  </tr>
+</table>
+
+3. The production crew initiates the setup of the location production by interacting with the production network orchestrator.
+4. The production network orchestrator configures the production device nodes using an application-specific API, citing the network access IDs delivered in step B.5).
 
    * Example: QoD service: A camera for which  one video + one audio is pre-booked. The application-specific API is used to properly configure the bitrate of the audio and video output, and the provided IDs.
    * Example: Time Sync service: A camera for which access to global clock is requested. The application-specific API is used to properly configure the time parameters and the provided IDs.
 
-4. The production device makes use of the network capabilities according to the network access IDs reveived.
+5. The production device makes use of the network capabilities according to the network access IDs reveived.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke USAGE API<b/></td>
+  </tr>
+</table>
 
 <table>
   <tr>
@@ -283,17 +348,42 @@ A series of actions can be expected "During the Event" as changes, reconfigurati
 * The production crew should use the Network API Platform to monitor that the flows are coming and are properly using the reserved resources.
 * The production crew should receive notifications through the Network API Platform indicating potential issues (throughput, delay, etc.).
 
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke NOTIFICATION API<b/></td>
+  </tr>
+</table>
+
 ## Reconfiguration for a given device
 * The production crew through the Network API Platform should request a change of the current configuration assinged to a device
 * The production crew through the Network API Platform should request an update/modification of the originally booked resources (e.g. increase or decrease the thoughput associated to an existing profile). Same validation steps as from B.2 to B.5 will be conducted after requesting the change. Note that the network access IDs are not expected to change when a reconfiguration occurs.
 
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke RESERVATION API<b/></td>
+  </tr>
+</table>
+
 ## Back-up devices
 * The production crew through the Network API Platform should switch/update a device while being able to use the original booking of a different device.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke ASSIGNMENT API<b/></td>
+  </tr>
+</table>
 
 ## Dynamic prioritization of QoS for different media flows
 
 In a setup with multiple camras, the media producer would like to ensure that there is always a subset of those being prioritized with the highest QoS profile. While each individual camera should be entitled to exploit such high QoS profile (i.e. the original booking should take into account that X devices will be requesting QoS profile Y), not all of them will be using such profile concurrently. Therefore:
 * The production crew though the Network API Platform should dynamically attach/detach a device to a QoS profile.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Requirement to invoke ASSIGNMENT API<b/></td>
+  </tr>
+</table>
+
 * The network operator should secure that a subset of devices can concurrently request a given QoS profile and that all other devices remain eligible to access such profile when it is no longer used.
 
 ### Basic example: Definition of QoS Profiles
