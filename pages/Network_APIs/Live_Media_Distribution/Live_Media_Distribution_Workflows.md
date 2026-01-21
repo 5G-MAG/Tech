@@ -3,7 +3,7 @@ layout: default
 title: Workflow
 parent: Live Media Distribution
 grand_parent: Network APIs
-nav_order: 0
+nav_order: 2
 has_children: false
 ---
 
@@ -12,7 +12,7 @@ has_children: false
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# Workflows and Requirements for Live Media Production
+# Workflows and Requirements for Live Media Distribution
 
 [Scenarios and Use Cases](../Live_Media_Distribution_Scenarios.html) describe the reference scenario. The workflows in relation to the booking and usage of network capabilities are described here with a focus on quality of service (QoS).
 
