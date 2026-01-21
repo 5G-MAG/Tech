@@ -24,7 +24,9 @@ If poor performance is detected the content provider can often rule out the CDN 
 
 Although content providers can also record radio access network (RAN) performance indicators such as cell ID, signal strength and quality, they have no direct visibility of the underlying network. Any issues not attributable to the CDN or insufficient signal are effectively lumped into the ‘network’, which appears to them as ‘The Cloud’.
 
-**Figure goes here** Content providers can measure ‘end to end’ performance via the client app and the CDN endpoints. Network operators have greater visibility of their network but may see the entire distribution chain.
+**Figure goes here**
+
+Content providers can measure ‘end to end’ performance via the client app and the CDN endpoints. Network operators have greater visibility of their network but may see the entire distribution chain.
 
 Network operators, on the other hand, have far greater visibility of what is happening in their networks. Typically, however, for third party services where network operators don’t have access to the client app, they too typically lack visibility of the full distribution chain. In these cases, for example, interference to the uplink may prevent segment requests ‘reaching’ the network. Such events cannot be recorded by the network as an issue. From the operator’s perspective, the request simply does not exist, making it impossible to diagnose or attribute the underlying cause of any subsequent degraded experience.
 
