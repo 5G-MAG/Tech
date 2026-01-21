@@ -48,7 +48,7 @@ The **Network API Platform** of a Network Operator is accessed via an **Aggregat
 ## Consolidation of requirements on network interactions
 The basic requirements for this scenario are:
 
-* **Ability to DISCOVER network resources**, at a given location and time/duration.
+### **Ability to DISCOVER network resources**, at a given location and time/duration.
   * This step is required to obtain information about the ability or not to reserve (and use) network resources for the intended location and time/duration.
   * A QoS template may be used to define the required QoS parameters between the application (device) and application server.
   * It should be able to indicate an aggregate of network resources corresponding to the number of devices with the same QoS requirements. For a single device, the aggregate would be just one device.
@@ -70,7 +70,7 @@ Remarks on the **location**:
 * It is unlikely that the user-defined area corresponds to the operator-defined area.
 * A more general API could be invoked with the user-defined area as input and a operator-defined area identifier as output.
 
-* **Ability to RESERVE network resources**, by indicating location and time/duration.
+### **Ability to RESERVE network resources**, by indicating location and time/duration.
   * Network resources can be reserved for the intended location and time/duration.
   * A QoS template may be used to define the required QoS parameters between the application (device) and application server.
   * It should be able to reserve an aggregate of network resources corresponding to the number of devices with the same QoS requirements. For a single device, the aggregate would be just one device.
@@ -87,7 +87,7 @@ Remarks on the **location**:
   </tr>
 </table>
 
-* **Ability to ASSIGN the device to the reserved network resources**, by linking a _reservation ID_ with a _device ID_.
+### **Ability to ASSIGN the device to the reserved network resources**, by linking a _reservation ID_ with a _device ID_.
   * The devices for which resources are reserved are known in advance. However better flexibility would be given if the resources are not linked to a specific device at reservation. The device finally using the network resources may change between the reservation of network resources and their actual usage. A change of the device while in operation may also be needed (e.g. for replacement by a back-up device).
 
 <table>
@@ -102,7 +102,7 @@ Remarks on the **location**:
   </tr>
 </table>
 
-* **Ability to activate/deactivate the USAGE of the network resources**, either automatically when the device is connected to the network or manually. Activating the usage of network resources just when the device obtains connectivity is not ideal. For instance, a device should use best-effort connectivity in the event of a problem (need to exchange a device) while a new device is assigned the network resources.
+### **Ability to activate/deactivate the USAGE of the network resources**, either automatically when the device is connected to the network or manually. Activating the usage of network resources just when the device obtains connectivity is not ideal. For instance, a device should use best-effort connectivity in the event of a problem (need to exchange a device) while a new device is assigned the network resources.
 
 <table>
   <tr>
@@ -116,7 +116,7 @@ Remarks on the **location**:
   </tr>
 </table>
 
-* **Ability to activate/deactivate NOTIFICATIONS on the usage of the network resources**.
+### **Ability to activate/deactivate NOTIFICATIONS on the usage of the network resources**.
 
 <table>
   <tr>
