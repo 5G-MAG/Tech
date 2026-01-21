@@ -63,3 +63,11 @@ The fundamental trade-off in using wireless connectivity for media is that as a 
 Historically, media was uplinked using highly reliable satellite and RF technologies. Today, the widespread availability of public mobile networks or LEO satellite constellations triggered a shift toward more agile tools like smartphones, cellular bonding packs or wireless modems.
 The exposure of network capabilities to applications representes an opportunity to exploit advanced network features beyond best-effort connectivity. Examples of network capabilities maz include on-demand quality, user equipment (UE) management, precise time synchronization,... Accessing and utilizing the desired features can be intricate and inconsistent across different networks. Several initiatives are taking shape to explore the opportunities behind Network APIs (exposing network capabilities to API consumers), offering high-level abstractions of underlying network functionalities to simplify resource utilization for non-network experts.
 
+# What we are doing
+
+At 5G-MAG we’re investigating the possibility of using network APIs to meet certain requiremnts for Content Production and Contribution scenarios over mobile networks.
+
+Please go to the following sections:
+* [Reference Scenarios](./Production_Contribution_Scenarios.html)
+* [Workflows](./Production_Contribution_Workflows.html)
+* [Using Network APIs](./Production_Contribution_UsingCAMARAAPIs.html)
