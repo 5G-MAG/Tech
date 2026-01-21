@@ -45,52 +45,54 @@ The **Network API Platform** of a Network Operator is accessed via an **Aggregat
 
 <img src="./images/figure_collaboration_2.png" width="60%">
 
-# Single-device Connectivity (Single Camera Live Video Production, Mobile Journalism (MoJo), Newsgathering, Uplink Video)
-
+## Consolidation of requirements on network interactions
 The basic requirements for this scenario are:
 
-* **Ability to DISCOVER network resources**, by indicating _service area_ and _duration_.
+* **Ability to DISCOVER network resources**, at a given location and time/duration.
+  * This step is required to obtain information about the ability or not to reserve (and use) network resources for the intended location and time/duration.
+  * A QoS template may be used to define the required QoS parameters between the application (device) and application server.
+  * It should be able to indicate an aggregate of network resources corresponding to the number of devices with the same QoS requirements. For a single device, the aggregate would be just one device.
 
-<table>
   <tr>
     <td markdown="span" align="left"><b>DISCOVERY API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with:</td>
+    <td markdown="span" align="left">Invoked with: QoS template, location, time/duration, number of devices intended to use resources concurrently</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Response:</td>
+    <td markdown="span" align="left">Response: Ability or not to reserve such resources.</td>
   </tr>
 </table>
 
-* **Ability to RESERVE network resources**, by indicating _service area_ and _duration_.
-  * The location where the network resources are to be used is known. Either the production team is already at the location or heading towards it. A potential sub-case is the usage of network resources already at the location and for a given duration.
-  * An estimate of the duration of the usage of the network resources is known, and it may be extended while in usage.
+* **Ability to RESERVE network resources**, by indicating location and time/duration.
+  * Network resources can be reserved for the intended location and time/duration.
+  * A QoS template may be used to define the required QoS parameters between the application (device) and application server.
+  * It should be able to reserve an aggregate of network resources corresponding to the number of devices with the same QoS requirements. For a single device, the aggregate would be just one device.
 
 <table>
   <tr>
     <td markdown="span" align="left"><b>RESERVATION API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with:</td>
+    <td markdown="span" align="left">Invoked with: QoS template, location, time/duration, number of devices intended to use resources concurrently</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Response:</td>
+    <td markdown="span" align="left">Response: Effective reservation of resources for the specified location and duration. A range of reservation IDs corresponding to the number of devices which can concurrently use such resources.</td>
   </tr>
 </table>
 
-* **Ability to ASSIGN the device for usage**, by linking a _reservation ID_ with a _device ID_.
-  * The device for which resources are reserved is known in advance. However better flexibility would be given if the resources are not linked to a specific device at reservation. The device finally using the network resources may change between the reservation of network resources and their actual usage. A change of the device while in operation may also be needed (e.g. for replacement by a back-up device).
+* **Ability to ASSIGN the device to the reserved network resources**, by linking a _reservation ID_ with a _device ID_.
+  * The devices for which resources are reserved are known in advance. However better flexibility would be given if the resources are not linked to a specific device at reservation. The device finally using the network resources may change between the reservation of network resources and their actual usage. A change of the device while in operation may also be needed (e.g. for replacement by a back-up device).
 
 <table>
   <tr>
     <td markdown="span" align="left"><b>ASSIGNMENT API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with:</td>
+    <td markdown="span" align="left">Invoked with: reservation ID and device ID</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Response:</td>
+    <td markdown="span" align="left">Response: ACK and an assingment ID per device.</td>
   </tr>
 </table>
 
@@ -101,10 +103,10 @@ The basic requirements for this scenario are:
     <td markdown="span" align="left"><b>USAGE API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with:</td>
+    <td markdown="span" align="left">Invoked with: Assingment ID</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Response:</td>
+    <td markdown="span" align="left">Response: ACK the activation of the resources for the current assignment</td>
   </tr>
 </table>
 
@@ -115,12 +117,14 @@ The basic requirements for this scenario are:
     <td markdown="span" align="left"><b>NOTIFICATIONS API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with:</td>
+    <td markdown="span" align="left">Invoked with: Assignment ID, periodicity of notifications, sink for notifications</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Response:</td>
+    <td markdown="span" align="left">Response: ACK the activation of the notification</td>
   </tr>
 </table>
+
+# Single-device Connectivity (Single Camera Live Video Production, Mobile Journalism (MoJo), Newsgathering, Uplink Video)
 
 ## Before the Event
 
