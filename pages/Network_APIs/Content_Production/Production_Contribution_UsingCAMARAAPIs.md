@@ -16,20 +16,105 @@ This documentation is currently **under development and subject to change**. It 
 
 This is a list of CAMARA APIs suitable to be used in the context of Connectivity Quality Management: [**Network API Initiatives under analysis**](../Network_API_Initiatives.html).
 
-Their mapping to the context of Content Production & Contribution is done below answering the following requirements:
-* [**How to book QoS before being at or at the location?**](#how-to-book-qos-before-being-at-or-at-the-location)
-  * [**How to book QoS once already at the location?**](#how-to-book-qos-once-already-at-the-location)
-  * [**How to book QoS for a known device?**](#how-to-book-qos-for-a-known-device)
-  * [**How to book QoS for unknown devices?**](#how-to-book-qos-for-unknown-devices)
-* [**How to use the network resources?**](#how-to-use-the-network-resources)
-* [**How to exchange devices during runtime?**](#how-to-exchange-devices-during-runtime)
-* [**How to obtain notifications about the ability of a network to support the requirements of an application?**](#how-to-obtain-notifications-about-the-ability-of-a-network-to-support-the-requirements-of-an-application)
+Their mapping to the context of Content Production & Contribution is done below based on the different steps identified in [**Network API Initiatives under analysis**](../Production_Contribution_Workflows.html)
 
-## How to book QoS before being at or at the location?
+## Summary of available CAMARA APIs
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>API<b/></td>
+    <td markdown="span" align="left"><b>DISCOVERY<b/></td>
+    <td markdown="span" align="left"><b>RESERVATION<b/></td>
+    <td markdown="span" align="left"><b>ASSIGNMENT<b/></td>
+    <td markdown="span" align="left"><b>USAGE<b/></td>
+    <td markdown="span" align="left"><b>NOTIFICATIONS<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Application Profiles</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Defines an Application Profile to be used for notifications.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">ConnectivityInsights</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Checks network quality for an Aplication Profile and an already connected device.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">ConnectivityInsightsSubscriptions</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Regular notifications for an Aplication Profile and an already connected device.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">DedicatedNetworks</td>
+    <td markdown="span" align="left">Discovers available Network Profiles</td>
+    <td markdown="span" align="left">Creates a Dedicated Network matching Network Profile, time and area</td>
+    <td markdown="span" align="left">Assigns/releases devices to a Dedicated Network</td>
+    <td markdown="span" align="left">Automatic when Assingment</td>
+    <td markdown="span" align="left">N/A</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">NetworkSliceBooking</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Creates a Network Slice (session)S</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">NO</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoSBooking</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Creates a booking matching, QoS profile, time, area, device, application,...</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">N/A</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoSBookindAssignment</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Creates a booking matching, QoS profile, time, area,...</td>
+    <td markdown="span" align="left">Assigns/releases devices to a booking.</td>
+    <td markdown="span" align="left">Automatic when Assingment.</td>
+    <td markdown="span" align="left">NO</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoSProfiles</td>
+    <td markdown="span" align="left">Retrieves existing profiles parameters.</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoSProvisioning</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Assigns/releases devices to a booking.</td>
+    <td markdown="span" align="left">Automatic when Assingment.</td>
+    <td markdown="span" align="left">N/A</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QualityonDemand</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Creates a QoS session.O</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">NO</td>
+  </tr>        
+</table>
 
-First step is the ability to discover QoS profiles available at a given location and time. This step requires:
-  * Mechanism to obtain available QoS profiles
-  * Indication of a service area and/or time/duration
+## SERVICE AREA API
+
+TBD
+
+## DISCOVERY API
 
 <table>
   <tr>
@@ -58,7 +143,9 @@ There are some limitations as the information on the name of the QoS profile nee
 {: .warning }
 There are some limitations as the information on the availability of QoS is only available at booking time and not beforehand. The **Connectivity Insights APIs** are also not practical as they can only be invoked at the given location. Potential remedy: Create/Adapt an API so that information on the QoS profile availability for a given location can be retrieved.
 
-With the information in the previous step, it should be possible to book QoS (to reserve network resources) for a given application or device for the intended service area and/or time/duration. This step requires:
+## RESERVATION API
+
+It should be possible to book QoS (to reserve network resources) for a given application or device for the intended service area and/or time/duration. This step requires:
   * Mechanism to create a booking linking a profile to a service area and time/duration.
   * The previous mechanism including already information about the application server and/or device.
 
@@ -98,19 +185,13 @@ The **Quality on Demand API** lacks information about the service area. Potentia
 {: .warning }
 There are some limitations as the information on the exact device and application server may not be known beforehand or may change in the course between making the booking and using the network resources. The mechanisms defined in **Dedicated Networks API** and **QoS Booking and Assignment** are more appropriate for this case. 
 
-### How to book QoS once already at the location?
-
 All the mechanisms described above would allow the booking of QoS when already at the location. However, the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> and <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> are particularly targetted to this scenario given it is not possible to define the service area in which they are applicable beforehand. If the booking is done at the location it is also assumed that the exact devices are known, therefore any of the mechanisms described above would be suitable.
-
-### How to book QoS for a known device?
 
 All the mechanisms described above would allow to exploit network resources for any device. However, the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b>, <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> and <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> would imply knowledge of the devices for which the booking is requested.
 
-### How to book QoS for unknown devices?
-
 All the mechanisms described above would allow to exploit network resources for any device. However, if devices are not known yet at the time of booking, it is possible to use the <b><a href="../CAMARA_DedicatedNetworks.html">Dedicated Networks - Network Profiles API</a></b>, <b><a href="../CAMARA_NetworkSliceBooking.html">Network Slice Booking API</a></b> and <b><a href="../CAMARA_QoSBookingAssignment.html">QoS Booking & Assignment - QoS Booking API</a></b> to request the booking of resources without committing to use a particular device.
 
-## How to use the network resources?
+## ASSIGNMENT API
 
 First step is to have booked the network resources either for any device, a given number of devices or a concrete device. This implies following one of the steps below:
 * Assingment and management of the booked network resources to a device
@@ -130,29 +211,6 @@ First step is to have booked the network resources either for any device, a give
 
 {: .warning }
 The mechanisms which detach the booking of network resources from a particular device add flexibility.
-
-<table>
-  <tr>
-    <td markdown="span" align="left"><b>Direct usage of the network resources when a device just connects to the network<b/></td>
-  </tr>
-  <tr>
-    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_NetworkSliceBooking.html">Network Slice Booking API</a></b> it is possible to use the network resources when a device connects to the network.</td>
-  </tr>
-  <tr>
-    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b> it is possible to use the network resources when a device connects to the network.</td>
-  </tr>
-  <tr>
-    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> it is possible to use the network resources when a device connects to the network.</td>
-  </tr>
-  <tr>
-    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> it is possible to use the network resources when a device connects to the network.</td>
-  </tr>
-</table>
-
-{: .warning }
-For some of these mechanisms it is unclear how the network capabilities would be exploited by a device. It may be impractical when a device need to be exchanged.
-
-## How to exchange devices during runtime?
 
 In the event that a device need to be exchanged or the booked resources should be assing to a different device, the following alternatives exist:
 * Creating a new booking for a new device before releasing the current device
@@ -194,16 +252,37 @@ With the previous mechanisms there is no guarantee that new resources are availa
 {: .warning }
 The mechanisms which detach the booking of network resources from a particular device add flexibility.
 
-## How to obtain notifications about the ability of a network to support the requirements of an application?
+## USAGE API
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>Direct usage of the network resources when a device just connects to the network<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_NetworkSliceBooking.html">Network Slice Booking API</a></b> it is possible to use the network resources when a device connects to the network.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSBooking.html">QoS Booking API</a></b> it is possible to use the network resources when a device connects to the network.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QoSProvisioning.html">QoS Provisioning API</a></b> it is possible to use the network resources when a device connects to the network.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">By means of the <b><a href="../CAMARA_QualityonDemand.html">Quality on Demand API</a></b> it is possible to use the network resources when a device connects to the network.</td>
+  </tr>
+</table>
+
+{: .warning }
+For some of these mechanisms it is unclear how the network capabilities would be exploited by a device. It may be impractical when a device need to be exchanged.
+
+## NOTIFICATIONS API
 
 These are different alternatives, including reception of a one-shot notification (e.g. for checking whether the network is able to meet certain requirements at a given instant of time) and a subcription to receive notifications (more useful during runtime).
 
-### A one-shot notification
-The pre-requisite is to create an Application Profile by invoking the [**Application Profiles API**]((../CAMARA_ApplicationProfiles.html)) with a series of user-defined network quality thresholds.
+Once-shot notifications. The pre-requisite is to create an Application Profile by invoking the [**Application Profiles API**]((../CAMARA_ApplicationProfiles.html)) with a series of user-defined network quality thresholds.
 Following this step, the [**Connectivity Insights API**](../CAMARA_ConnectivityInsights.html) can be invoked which reply contains a message about the confidence of the network in meeting the network quality thresholds.
 
-### Subscribing to regular notifications
-The pre-requisite is to create an Application Profile by invoking the [**Application Profiles API**]((../CAMARA_ApplicationProfiles.html)) with a series of user-defined network quality thresholds.
+Regular notifications. The pre-requisite is to create an Application Profile by invoking the [**Application Profiles API**]((../CAMARA_ApplicationProfiles.html)) with a series of user-defined network quality thresholds.
 Following this step, the [**Connectivity Insights Subscriptions API**](../CAMARA_ConnectivityInsightsSubscriptions.html) can be invoked to receive regular notifications (up to a defined limit) about the confidence of the network in meeting the network quality thresholds.
 
 {: .warning }
