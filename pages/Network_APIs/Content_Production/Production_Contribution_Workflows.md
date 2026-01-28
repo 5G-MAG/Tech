@@ -46,7 +46,24 @@ The **Network API Platform** of a Network Operator is accessed via an **Aggregat
 ## Consolidation of requirements on network interactions
 The basic requirements for this scenario are:
 
-### **Ability to DISCOVER network resources**, at a given location and time/duration.
+### Precondition to specify SERVICE AREA, to identify a location.
+  * This step is required so the user is able to identify the service area in which network resources are available. The user should be able to indicate the location where the network resources are to be used by means of coordinates for an area (array of points) or a single point.
+  * It is unlikely that the user-defined area corresponds to the operator-defined area.
+  * A more general API could be invoked with the user-defined area as input and a operator-defined area identifier as output.
+
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>SERVICE AREA API<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">This API should be invoked by passing an arbitrarily large area defined by the user on the location where network resources are intended to be requested.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Response: An identifier of the area defined by the network operator which matches the area identified by the user. Alternatively, a list of areas which are within the original boundaries specified by the user. Alternatively, areas in the proximities of the original input.</td>
+  </tr>
+</table>
+
+### Ability to DISCOVER network resources, at a given location and time/duration.
   * This step is required to obtain information about the ability or not to reserve (and use) network resources for the intended location and time/duration.
   * A QoS template may be used to define the required QoS parameters between the application (device) and application server.
   * It should be able to indicate an aggregate of network resources corresponding to the number of devices with the same QoS requirements. For a single device, the aggregate would be just one device.
@@ -56,19 +73,14 @@ The basic requirements for this scenario are:
     <td markdown="span" align="left"><b>DISCOVERY API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with: QoS template, location/area, time/duration, number of devices intended to use resources concurrently</td>
+    <td markdown="span" align="left">This API should be invoked with the location/area, time/duration.</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Response: Ability or not to reserve such resources.</td>
+    <td markdown="span" align="left">Response: The available QoS profiles in the area which are able to be reserved for the specified duration. It may also indicate the ability or not to reserve such resources.</td>
   </tr>
 </table>
 
-Remarks on the **location**:
-* The user should be able to indicate the location where the network resources are to be used by means of coordinates for an area (array of points) or a single point.
-* It is unlikely that the user-defined area corresponds to the operator-defined area.
-* A more general API could be invoked with the user-defined area as input and a operator-defined area identifier as output.
-
-### **Ability to RESERVE network resources**, by indicating location and time/duration.
+### Ability to RESERVE network resources, by indicating location and time/duration.
   * Network resources can be reserved for the intended location and time/duration.
   * A QoS template may be used to define the required QoS parameters between the application (device) and application server.
   * It should be able to reserve an aggregate of network resources corresponding to the number of devices with the same QoS requirements. For a single device, the aggregate would be just one device.
@@ -78,14 +90,14 @@ Remarks on the **location**:
     <td markdown="span" align="left"><b>RESERVATION API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with: QoS template, location, time/duration, number of devices intended to use resources concurrently</td>
+    <td markdown="span" align="left">Invoked with: QoS profile, location, time/duration, number of devices intended to use resources concurrently.</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Response: Effective reservation of resources for the specified location and duration. A range of reservation IDs corresponding to the number of devices which can concurrently use such resources.</td>
+    <td markdown="span" align="left">Response: Confirmation of the reservation of resources for the specified location and duration. A range of reservation IDs corresponding to the number of devices which can concurrently use such resources.</td>
   </tr>
 </table>
 
-### **Ability to ASSIGN the device to the reserved network resources**, by linking a _reservation ID_ with a _device ID_.
+### Ability to ASSIGN the device to the reserved network resources, by linking a _reservation ID_ with a _device ID_.
   * The devices for which resources are reserved are known in advance. However better flexibility would be given if the resources are not linked to a specific device at reservation. The device finally using the network resources may change between the reservation of network resources and their actual usage. A change of the device while in operation may also be needed (e.g. for replacement by a back-up device).
 
 <table>
@@ -93,24 +105,24 @@ Remarks on the **location**:
     <td markdown="span" align="left"><b>ASSIGNMENT API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with: reservation ID and device ID</td>
+    <td markdown="span" align="left">Invoked with: Reservation ID and Device ID.</td>
   </tr>
   <tr>
     <td markdown="span" align="left">Response: ACK and an assingment ID per device.</td>
   </tr>
 </table>
 
-### **Ability to activate/deactivate the USAGE of the network resources**, either automatically when the device is connected to the network or manually. Activating the usage of network resources just when the device obtains connectivity is not ideal. For instance, a device should use best-effort connectivity in the event of a problem (need to exchange a device) while a new device is assigned the network resources.
+### Ability to activate/deactivate the USAGE of the network resources, either automatically when the device is connected to the network or manually. Activating the usage of network resources just when the device obtains connectivity is not ideal. For instance, a device should use best-effort connectivity in the event of a problem (need to exchange a device) while a new device is assigned the network resources.
 
 <table>
   <tr>
     <td markdown="span" align="left"><b>USAGE API<b/></td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Invoked with: Assingment ID</td>
+    <td markdown="span" align="left">Invoked with the Assignment ID.</td>
   </tr>
   <tr>
-    <td markdown="span" align="left">Response: ACK the activation of the resources for the current assignment</td>
+    <td markdown="span" align="left">Response: ACK the activation of the resources for the current assignment.</td>
   </tr>
 </table>
 
@@ -154,21 +166,19 @@ Remarks on the **location**:
 
 Through the Network API Platform:
 
-1. The production crew (already on location or while traveling to the event) can discover the capabilities the network can offer in a particular location and at a particular time. Example: QoD available, connectivity monitoring available.
+1. The production crew (already on location or while traveling to the event) can discover the capabilities/resources the network can offer in a particular location and time.
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke DISCOVERY API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>DISCOVERY API<b/>. See details above.</td>
   </tr>
 </table>
 
-2. The production crew requests network services for the devices (identified by its SIM cards) in advance. The booking of resources is done based on:
-  * Geographical area
-  * Schedule (starting time and closing time, or duration, of the event)
+2. The production crew requests network resources in advance for a given location and time.
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke RESERVATION API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>RESERVATION API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -191,11 +201,11 @@ Through the Network API Platform:
 <img src="./images/Workflow_Step_3.png" width="60%">
 
 ### Phase C: Configuration and Usage of the network capabilities
-1. The production crew arrives at the event and can start using the booked network services (See phase B).
+1. The production crew arrives at the event and can start using the booked network resources (See phase B). The network resources are assigned to devices.
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke ASSIGNMENT API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>ASSIGNMENT API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -203,7 +213,7 @@ Through the Network API Platform:
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke USAGE API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>USAGE API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -223,7 +233,7 @@ Through the Network API Platform:
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke RESERVATION API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>RESERVATION API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -256,11 +266,11 @@ Through the Network API Platform:
 <img src="./images/Workflow_Step_2.png" width="60%">
 
 Through the Network API Platform:
-1. The production crew (on location or from the production centre) can discover the capabilities the network can offer in a particular location and at a particular time (for which the production company is eligible for). Example: QoD available, connectivity monitoring available, Timing as a service available, edge compute instantiation, etc.
+1. The production crew (on location or from the production centre) can discover the capabilities the network can offer in a particular location and at a particular time.
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke DISCOVERY API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>DISCOVERY API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -277,7 +287,7 @@ Through the Network API Platform:
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke RESERVATION API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>RESERVATION API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -304,7 +314,7 @@ Through the Network API Platform:
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke ASSIGNMENT API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>ASSIGNMENT API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -318,7 +328,15 @@ Through the Network API Platform:
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke USAGE API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>USAGE API<b/>. See details above.</td>
+  </tr>
+</table>
+
+6. In addition, it is possible to subscribe to receive notifications while network resources are in use.
+
+<table>
+  <tr>
+    <td markdown="span" align="left">Requirement to invoke <b>NOTIFICATIONS API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -348,7 +366,7 @@ A series of actions can be expected "During the Event" as changes, reconfigurati
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke NOTIFICATION API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>NOTIFICATIONS API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -358,7 +376,7 @@ A series of actions can be expected "During the Event" as changes, reconfigurati
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke RESERVATION API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>RESERVATION API<b/>. See details above.</td>
   </tr>
 </table>
 
@@ -367,7 +385,7 @@ A series of actions can be expected "During the Event" as changes, reconfigurati
 
 <table>
   <tr>
-    <td markdown="span" align="left"><b>Requirement to invoke ASSIGNMENT API<b/></td>
+    <td markdown="span" align="left">Requirement to invoke <b>ASSIGNMENT API<b/>. See details above.</td>
   </tr>
 </table>
 
