@@ -18,6 +18,98 @@ This is a list of CAMARA APIs suitable to be used in the context of Connectivity
 
 Their mapping to the context of Content Production & Contribution is done below based on the different steps identified in [**Network API Initiatives under analysis**](../Production_Contribution_Workflows.html)
 
+## Summary of available CAMARA APIs
+<table>
+  <tr>
+    <td markdown="span" align="left"><b>API<b/></td>
+    <td markdown="span" align="left"><b>DISCOVERY<b/></td>
+    <td markdown="span" align="left"><b>RESERVATION<b/></td>
+    <td markdown="span" align="left"><b>ASSIGNMENT<b/></td>
+    <td markdown="span" align="left"><b>USAGE<b/></td>
+    <td markdown="span" align="left"><b>NOTIFICATIONS<b/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">Application Profiles</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Defines an Application Profile to be used for notifications.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">ConnectivityInsights</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Checks network quality for an Aplication Profile and an already connected device.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">ConnectivityInsightsSubscriptions</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Regular notifications for an Aplication Profile and an already connected device.</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">DedicatedNetworks</td>
+    <td markdown="span" align="left">Discovers available Network Profiles</td>
+    <td markdown="span" align="left">Creates a Dedicated Network matching Network Profile, time and area</td>
+    <td markdown="span" align="left">Assigns/releases devices to a Dedicated Network</td>
+    <td markdown="span" align="left">Automatic when Assingment</td>
+    <td markdown="span" align="left">N/A</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">NetworkSliceBooking</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Creates a Network Slice (session)S</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">NO</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoSBooking</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Creates a booking matching, QoS profile, time, area, device, application,...</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">N/A</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoSBookindAssignment</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Creates a booking matching, QoS profile, time, area,...</td>
+    <td markdown="span" align="left">Assigns/releases devices to a booking.</td>
+    <td markdown="span" align="left">Automatic when Assingment.</td>
+    <td markdown="span" align="left">NO</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoSProfiles</td>
+    <td markdown="span" align="left">Retrieves existing profiles parameters.</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QoSProvisioning</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Assigns/releases devices to a booking.</td>
+    <td markdown="span" align="left">Automatic when Assingment.</td>
+    <td markdown="span" align="left">N/A</td>
+  </tr>
+  <tr>
+    <td markdown="span" align="left">QualityonDemand</td>
+    <td markdown="span" align="left">N/A</td>
+    <td markdown="span" align="left">Creates a QoS session.O</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">Automatic for the device invoking the creation.</td>
+    <td markdown="span" align="left">NO</td>
+  </tr>        
+</table>
+
 ## SERVICE AREA API
 
 TBD
