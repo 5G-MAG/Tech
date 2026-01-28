@@ -112,7 +112,8 @@ The basic requirements for this scenario are:
   </tr>
 </table>
 
-### Ability to activate/deactivate the USAGE of the network resources, either automatically when the device is connected to the network or manually. Activating the usage of network resources just when the device obtains connectivity is not ideal. For instance, a device should use best-effort connectivity in the event of a problem (need to exchange a device) while a new device is assigned the network resources.
+### Ability to activate/deactivate the USAGE of the network resources, either automatically when the device is connected to the network or manually.
+  * Activating the usage of network resources just when the device obtains connectivity is not ideal. For instance, a device should use best-effort connectivity in the event of a problem (need to exchange a device) while a new device is assigned the network resources.
 
 <table>
   <tr>
