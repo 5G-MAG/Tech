@@ -25,8 +25,6 @@ This section contains information on:
 
 ## Pre-conditions and commonalities
 
-Before invoking any API, it is assumed that:
-
 * The production crew has a set of credentials (SIM/eSIM) for the network device nodes will connect to.
 * By default, the network provides "best-effort" connectivity and devices can already exploit "best-effort" connectivity.
 * The production company has set up an agreement with a network operator for usage of certain **network capabilitues** made available via an API. The production crew has obtained key access tokens/keys/credentials/payment details in advance authorising their use (when available).
