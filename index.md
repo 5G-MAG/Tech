@@ -7,13 +7,72 @@ has_children: false
 
 <img src="./assets/images/Banner_Tech.png" > 
 
-This is the entry point to **5G-MAG's Technical Resources**. It includes resources related to specification analysis and implementation, explainers and reports, videos,...
+This is the entry point to **5G-MAG's Technical Documentation**. It includes resources related to specification analysis and implementation, explainers and reports, videos,...
 
-[Overview about 5G-MAG](#overview-about-5g-mag){: .btn .btn-blue }
+[Download an overview about 5G-MAG](./docs/5G_MAG_Overview.pdf){: .btn .btn-blue }
 
 ---
 
-# Our Tech Resources
+# What is 5G-MAG currently working on?
+
+<table>
+  <tr>
+    <td markdown="span" align="center" width="33%"><a href="./pages/streaming.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_Streaming.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./pages/5gbroadcast.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_5GBroadcast.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./pages/multicastbroadcast.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_Multicast.png" width="95%"><a/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="center" width="33%">[Streaming, Media Delivery and Data Analytics](./pages/streaming.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[5G Broadcast for TV, Radio and Emergency Alerts](./pages/5gbroadcast.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/10){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Multicast and Broadcast Services in 5G Networks](./pages/multicastbroadcast.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/11){: .btn .btn-blue }</td>
+  </tr>
+    <td><br></td><td><br></td><td><br></td>
+  <tr>
+    <td markdown="span" align="center" width="33%"><a href="./pages/xr.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_XR.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./pages/volumetric.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_Volumetric.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./pages/npn.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_NPN.png" width="95%"><a/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="center" width="33%">[XR: 3D Scenes and Avatar Communications](./pages/xr.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/12){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Volumetric Video and Beyond 2D Video Experiences](./pages/volumetric.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/13){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Non-Public Networks for Content Production](./pages/npn.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/14){: .btn .btn-blue }</td>
+  </tr>
+    <td><br></td><td><br></td><td><br></td>
+  <tr>
+    <td markdown="span" align="center" width="33%"><a href="./pages/api.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_API.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./pages/ntn.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_NTN.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./pages/6g.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_6G.png" width="95%"><a/></td>
+  </tr>
+  <tr>
+    <td markdown="span" align="center" width="33%">[Network Capability Exposure through Network APIs](./pages/api.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/15){: .btn .btn-blue }</td>
+    <td markdown="span" align="center">[Non-Terrestrial Network for Content Delivery](./pages/ntn.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/16){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Getting ready towards 6G Media](./pages/6g.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/17){: .btn .btn-blue }</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <table>
   <tr>
@@ -88,12 +147,6 @@ This is the entry point to **5G-MAG's Technical Resources**. It includes resourc
     <td markdown="span" align="center">[Technical Resources](./pages/6g.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/20){: .btn .btn-blue } </td>
   </tr>
 </table>
-
-# Overview about 5G-MAG
-
-<iframe width="60%" height="520" src="./docs/5G_MAG_Overview.pdf"></iframe>
-
-[Download the slidedeck for an Overview about 5G-MAG](./docs/5G_MAG_Overview.pdf){: .btn .btn-blue }
 
 {: .note }
 Please refer to the [Tech](https://github.com/5G-MAG/Tech/) repository to provide updates to this documentation.
