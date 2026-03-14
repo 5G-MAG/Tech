@@ -1,8 +1,9 @@
 ---
 layout: default
+parent: VideoTech
 title: Friday's Public Call
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 
 <img src="../assets/images/Banner_TechVideos.png" /> 
