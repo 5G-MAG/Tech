@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VideoTech
+title: Video Library
 has_children: true
 nav_order: 1
 ---
