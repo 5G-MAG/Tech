@@ -3,6 +3,7 @@ layout: default
 title: Multimedia Delivery Protocols
 has_children: true
 nav_order: 16
+nav_exclude: true
 ---
 
 <img src="../assets/images/Banner_MD.png" /> 
