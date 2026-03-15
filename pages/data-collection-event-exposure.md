@@ -1,9 +1,9 @@
 ---
 layout: default
 title: UE Data Collection
-parent: Streaming, Media Delivery & Data Collection
 has_children: true
 nav_order: 4
+nav_exclude: true
 ---
 
 <img src="../assets/images/Banner_UEDC.png" /> 
