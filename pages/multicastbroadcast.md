@@ -1,14 +1,13 @@
 ---
 layout: default
-title: 5G Multicast Broadcast Services
+title: Multicast Broadcast in 5G Networks
 has_children: true
 nav_order: 6
 ---
 
-<img src="../assets/images/Banner_5MBS.png" /> 
+<img src="../assets/images/Banner_MulticastBroadcast.png" /> 
 
-# 5G Multicast Broadcast Services - Tech Resources
-
+# Multicast and Broadcast Services in 5G Networks - Technical Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }
 
