@@ -2,7 +2,7 @@
 layout: default
 title: XR - 3D Scenes and Avatar
 has_children: true
-nav_order: 12
+nav_order: 5
 ---
 
 <img src="../assets/images/Banner_XR.png" /> 
