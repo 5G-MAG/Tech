@@ -2,7 +2,7 @@
 layout: default
 title: Volumetric Video
 has_children: true
-nav_order: 13
+nav_order: 6
 ---
 
 <img src="../assets/images/Banner_Volumetric.png" /> 
