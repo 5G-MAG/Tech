@@ -4,6 +4,7 @@ title: Beyond 2D Video
 parent: Volumetric Video
 has_children: true
 nav_order: 14
+nav_exclude: true
 ---
 
 <img src="../assets/images/Banner_B2D.png" /> 
