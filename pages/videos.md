@@ -7,7 +7,7 @@ nav_order: 1
 
 <img src="../assets/images/Banner_TechVideos.png" /> 
 
-# Tech Videos
+# Video Library
 
 <details markdown="block">
   <summary>
