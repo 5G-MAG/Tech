@@ -3,6 +3,7 @@ layout: default
 title: AI & ML in 5G Media 
 has_children: true
 nav_order: 15
+nav_exclude: true
 ---
 
 <img src="../assets/images/Banner_AIML.png" /> 
