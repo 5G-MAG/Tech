@@ -5,9 +5,9 @@ has_children: true
 nav_order: 3
 ---
 
-<img src="../assets/images/Banner_5GMS.png" /> 
+<img src="../assets/images/Banner_Streaming.png" /> 
 
-# 5G Media Streaming - Tech Resources
+# Streaming, Media Delivery & Data Collection - Technical Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }
 
