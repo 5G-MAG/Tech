@@ -23,7 +23,7 @@ This is the entry point to **5G-MAG's Technical Documentation**. It includes res
   <tr>
     <td markdown="span" align="center" width="33%"><a href="./pages/streaming.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_Streaming.png" width="95%"><a/></td>
     <td markdown="span" align="center" width="33%"><a href="./pages/5gbroadcast.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_5GBroadcast.png" width="95%"><a/></td>
-    <td markdown="span" align="center" width="33%"><a href="./pages/multicastbroadcast.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_Multicast.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./pages/multicastbroadcast.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_MulticastBroadcast.png" width="95%"><a/></td>
   </tr>
   <tr>
     <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/streaming.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }</td>
@@ -43,7 +43,7 @@ This is the entry point to **5G-MAG's Technical Documentation**. It includes res
   </tr>
     <td><br></td><td><br></td><td><br></td>
   <tr>
-    <td markdown="span" align="center" width="33%"><a href="./pages/network_apis.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_API.png" width="95%"><a/></td>
+    <td markdown="span" align="center" width="33%"><a href="./pages/network_apis.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_NetworkAPIs.png" width="95%"><a/></td>
     <td markdown="span" align="center" width="33%"><a href="./pages/ntn.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_NTN.png" width="95%"><a/></td>
     <td markdown="span" align="center" width="33%"><a href="./pages/6g.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_6G.png" width="95%"><a/></td>
   </tr>
