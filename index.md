@@ -7,6 +7,10 @@ has_children: false
 
 <img src="./assets/images/Banner_Tech.png" > 
 
+[Go to Reference Tools](https://developer.5g-mag.com){: .btn .btn-blue } [Go to Standards](https://standards.5g-mag.com){: .btn .btn-blue } [Video Library](./pages/videos.html){: .btn .btn-video }
+
+<img src="./assets/images/5GMAG.png">
+
 This is the entry point to **5G-MAG's Technical Documentation**. It includes resources related to specification analysis and implementation, explainers and reports, videos,...
 
 [Download an overview about 5G-MAG](./docs/5G_MAG_Overview.pdf){: .btn .btn-blue }
