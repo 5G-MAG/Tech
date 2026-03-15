@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Volumetric Video with V3C
+title: Volumetric Video
 has_children: true
 nav_order: 13
 ---
