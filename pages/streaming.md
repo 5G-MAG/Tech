@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5G Media Streaming
+title: Streaming, Media Delivery & Data Collection
 has_children: true
 nav_order: 3
 ---
