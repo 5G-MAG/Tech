@@ -1,13 +1,13 @@
 ---
 layout: default
-title: XR with MPEG-I SD
+title: XR: 3D Scenes and Avatar
 has_children: true
 nav_order: 12
 ---
 
 <img src="../assets/images/Banner_XR.png" /> 
 
-# XR Media with MPEG-I Scene Description - Tech Resources
+# XR: 3D Scenes and Avatar Communications - Technical Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/13){: .btn .btn-blue }
 
