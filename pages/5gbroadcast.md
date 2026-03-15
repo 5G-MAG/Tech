@@ -5,9 +5,9 @@ has_children: true
 nav_order: 5
 ---
 
-<img src="../assets/images/Banner_5GBC.png" /> 
+<img src="../assets/images/Banner_5GBroadcast.png" /> 
 
-# 5G Broadcast - Tech Resources
+# 5G Broadcast: TV, Radio and Emergency Alerts - Technical Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/10){: .btn .btn-blue }
 
