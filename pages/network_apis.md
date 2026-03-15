@@ -5,7 +5,7 @@ has_children: true
 nav_order: 8
 ---
 
-<img src="../assets/images/Banner_API.png" /> 
+<img src="../assets/images/Banner_NetworkAPIs.png" /> 
 
 # Network Capability Exposure through APIs - Tech Resources
 
