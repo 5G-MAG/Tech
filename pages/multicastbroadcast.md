@@ -2,7 +2,7 @@
 layout: default
 title: Multicast Broadcast in 5G Networks
 has_children: true
-nav_order: 6
+nav_order: 4
 ---
 
 <img src="../assets/images/Banner_MulticastBroadcast.png" /> 
