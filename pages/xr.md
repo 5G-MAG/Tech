@@ -1,6 +1,6 @@
 ---
 layout: default
-title: XR: 3D Scenes and Avatar
+title: XR - 3D Scenes and Avatar
 has_children: true
 nav_order: 12
 ---
