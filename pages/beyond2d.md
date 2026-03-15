@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Beyond 2D Video
+parent: Volumetric Video
 has_children: true
 nav_order: 14
 ---
