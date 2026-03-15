@@ -3,6 +3,7 @@ layout: default
 title: Time Sensitive Communication
 has_children: true
 nav_order: 11
+nav_exclude: true
 ---
 
 <img src="../assets/images/Banner_TSC.png" /> 
