@@ -5,7 +5,7 @@ has_children: true
 nav_order: 13
 ---
 
-<img src="../assets/images/Banner_V3C.png" /> 
+<img src="../assets/images/Banner_Volumetric.png" /> 
 
 # Volumetric Video Experiences with MPEG V3C - Tech Resources
 
