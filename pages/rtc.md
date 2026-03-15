@@ -3,6 +3,7 @@ layout: default
 title: Real-Time Media Communication (RTC)
 has_children: true
 nav_order: 7
+nav_exclude: true
 ---
 
 <img src="../assets/images/Banner_RTC.png" /> 
