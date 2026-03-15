@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Streaming, Media Delivery & Data Collection
+title: Streaming & Media Delivery
 has_children: true
 nav_order: 2
 ---
