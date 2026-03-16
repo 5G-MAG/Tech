@@ -6,7 +6,7 @@ nav_order: 1
 has_children: true
 ---
 
-<img src="../../assets/images/Banner_5GBC.png" /> 
+<img src="../../assets/images/Banner_5GBroadcast.png" /> 
 
-# 5G Broadcast - Deployment profiles
+# 5G Broadcast - Operational Parameters
 
