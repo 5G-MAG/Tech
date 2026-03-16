@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Multicast Broadcast in 5G
+title: Multicast & Broadcast in 5G
 has_children: true
 nav_order: 4
 ---
