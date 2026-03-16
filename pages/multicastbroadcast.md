@@ -9,21 +9,21 @@ nav_order: 4
 
 # Multicast and Broadcast Services in 5G Networks - Technical Documentation
 
-[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/8){: .btn .btn-blue }
 
-<iframe width="60%" height="520" src="../docs/Tech_5G_Multicast_Broadcast.pdf"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_MulticastBroadcast.pdf"></iframe>
 
-[Download the slidedeck with more information](../docs/Tech_5G_Multicast_Broadcast.pdf){: .btn .btn-blue }
+[Download the Slidedeck](../docs/Tech_MulticastBroadcast.pdf){: .btn .btn-blue }
 
 ---
 
 ## Information related to Standards
 
-[Standards](../../Standards/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue }
+[Standards: 5G Multicast Broadcast Services](../../Standards/pages/5g-multicast-broadcast-services.html){: .btn .btn-blue }
 
-## Information related to Reference Tools Projects
+[Standards: 5G Core Service Consumers](../../Standards/pages/5g-core-service-consumers.html){: .btn .btn-blue }
 
-[Project: 5G Multicast Broadcast Services](../../Getting-Started/pages/5g-multicast-broadcast-services/){: .btn .btn-blue }
+[Standards: Multimedia Delivery Protocols](../../Standards/pages/multimedia-content-delivery.html){: .btn .btn-blue }
 
 ---
 
