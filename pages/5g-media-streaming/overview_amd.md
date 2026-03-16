@@ -1,12 +1,15 @@
 ---
 layout: default
 title: Advanced Media Delivery
-parent: 5G Media Streaming
+parent: Streaming & Media Delivery
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
-<img src="../../assets/images/Banner_5GMS.png" /> 
+<img src="../../assets/images/Banner_Streaming.png" /> 
+
+{: .warning }
+This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
 # Advanced Media Delivery - Overview
 
