@@ -6,7 +6,7 @@ has_children: false
 nav_order: 2
 ---
 
-<img src="../../../assets/images/Banner_MulticastBroadcast.png" /> 
+<img src="../../assets/images/Banner_MulticastBroadcast.png" /> 
 
 {: .warning }
 This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
