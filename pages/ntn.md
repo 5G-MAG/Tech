@@ -7,7 +7,7 @@ nav_order: 9
 
 <img src="../assets/images/Banner_NTN.png" /> 
 
-# Non-Terrestrial Networks - Tech Documentation
+# Non-Terrestrial Networks - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/13){: .btn .btn-blue }
 
