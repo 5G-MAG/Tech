@@ -7,7 +7,7 @@ nav_order: 7
 
 <img src="../assets/images/Banner_NPN.png" /> 
 
-# Non-Public Networks for Content Production - Tech Documentation
+# Non-Public Networks for Content Production - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/11){: .btn .btn-blue }
 
