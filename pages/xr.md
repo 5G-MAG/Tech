@@ -7,7 +7,7 @@ nav_order: 5
 
 <img src="../assets/images/Banner_XR.png" /> 
 
-# XR: 3D Scenes and Avatar Communications - Technical Documentation
+# XR: 3D Scenes and Avatar Communications - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }
 
