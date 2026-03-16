@@ -7,7 +7,7 @@ nav_order: 4
 
 <img src="../assets/images/Banner_MulticastBroadcast.png" /> 
 
-# Multicast and Broadcast Services in 5G Networks - Technical Documentation
+# Multicast and Broadcast Services in 5G Networks - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/8){: .btn .btn-blue }
 
