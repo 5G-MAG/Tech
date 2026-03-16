@@ -1,14 +1,17 @@
 ---
 layout: default
-title: Explainer
-parent: 5G Multicast Broadcast Services
+title: MBS Overview
+parent: Multicast & Broadcast in 5G
 has_children: false
 nav_order: 0
 ---
 
-<img src="../../assets/images/Banner_5MBS.png" /> 
+<img src="../../assets/images/Banner_MulticastBroadcast.png" /> 
 
-# Explainer: Media distribution with 5G Multicast-Broadcast Services (MBS)
+{: .warning }
+This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
+
+# Media distribution with 5G Multicast-Broadcast Services (MBS) - Overview
 [**Download a PDF version**](../docs/Explainer_5G_Multicast_Broadcast_Services.pdf){: .btn .btn-blue }
 
 3GPP Release 17 brings Multicast–Broadcast Services (MBS) to the 5G System, based on 5G Core and New Radio. MBS allows the network to select the most suitable among point-to-multipoint (PTM) or point-to-point (PTP) delivery based on requirements set by either service providers or network operators and/or taking into account concurrent user demand.
