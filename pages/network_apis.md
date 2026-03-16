@@ -7,13 +7,13 @@ nav_order: 8
 
 <img src="../assets/images/Banner_NetworkAPIs.png" /> 
 
-# Network Capability Exposure through APIs - Tech Resources
+# Network Capability Exposure through APIs - Tech Documentation
 
-[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/8){: .btn .btn-blue }
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/12){: .btn .btn-blue }
 
-<iframe width="60%" height="520" src="../docs/Tech_Network_APIs.pdf"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_NetworkAPIs.pdf"></iframe>
 
-[Download the slidedeck with more information](../docs/Tech_Network_APIs.pdf){: .btn .btn-blue }
+[Download the Slidedeck](../docs/Tech_NetworkAPIs.pdf){: .btn .btn-blue }
 
 ---
 
