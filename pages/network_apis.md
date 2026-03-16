@@ -7,7 +7,7 @@ nav_order: 8
 
 <img src="../assets/images/Banner_NetworkAPIs.png" /> 
 
-# Network Capability Exposure through APIs - Tech Documentation
+# Network Capability Exposure through APIs - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/12){: .btn .btn-blue }
 
