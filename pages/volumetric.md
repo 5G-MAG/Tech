@@ -7,7 +7,7 @@ nav_order: 6
 
 <img src="../assets/images/Banner_Volumetric.png" /> 
 
-# Volumetric & Beyond 2D Video Experiences - Tech Documentation
+# Volumetric & Beyond 2D Video Experiences - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/10){: .btn .btn-blue }
 
