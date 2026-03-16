@@ -7,25 +7,27 @@ nav_order: 2
 
 <img src="../assets/images/Banner_Streaming.png" /> 
 
-# Streaming, Media Delivery & Data Collection - Technical Documentation
+# Streaming, Media Delivery & Data Collection - Tech Documentation
 
-[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/6){: .btn .btn-blue }
 
-<iframe width="60%" height="520" src="../docs/Tech_5G_Media_Streaming.pdf"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_Streaming.pdf"></iframe>
 
-[Download the slidedeck with more information](../docs/Tech_5G_Media_Streaming.pdf){: .btn .btn-blue }
+[Download the Slidedeck](../docs/Tech_Streaming.pdf){: .btn .btn-blue }
 
 ---
 
 ## Information related to Standards
 
-[Standards](../../Standards/pages/5g-media-streaming.html){: .btn .btn-blue }
+[Standards: 5G Media Streaming](../../Standards/pages/5g-media-streaming.html){: .btn .btn-blue }
 
-## Information related to Reference Tools Projects
+[Standards: 5G Core Service Consumers](../../Standards/pages/5g-core-service-consumers.html){: .btn .btn-blue }
 
-[Project: 5G Media Streaming](../../Getting-Started/pages/5g-media-streaming/){: .btn .btn-blue }
+[Standards: UE Data Collection, Reporting and Event Exposure](../../Standards/pages/data-collection-event-exposure.html){: .btn .btn-blue }
 
-[Project: 5G Core Service Consumers](../../Getting-Started/pages/5g-core-service-consumers/){: .btn .btn-blue }
+[Standards: DVB-I Services over 5G Systems](../../Standards/pages/dvb-i-5g.html){: .btn .btn-blue }
+
+[Standards: Real-Time Media Communication](../../Standards/pages/rtc.html){: .btn .btn-blue }
 
 ---
 
