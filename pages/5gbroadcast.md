@@ -7,7 +7,7 @@ nav_order: 3
 
 <img src="../assets/images/Banner_5GBroadcast.png" /> 
 
-# 5G Broadcast: TV, Radio and Emergency Alerts - Tech Documentation
+# 5G Broadcast: TV, Radio and Emergency Alerts - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }
 
