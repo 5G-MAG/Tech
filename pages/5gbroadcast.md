@@ -7,25 +7,24 @@ nav_order: 3
 
 <img src="../assets/images/Banner_5GBroadcast.png" /> 
 
-# 5G Broadcast: TV, Radio and Emergency Alerts - Technical Documentation
+# 5G Broadcast: TV, Radio and Emergency Alerts - Tech Documentation
 
-[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/10){: .btn .btn-blue }
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }
 
-<iframe width="60%" height="520" src="../docs/Tech_5G_Broadcast.pdf"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_5GBroadcast.pdf"></iframe>
 
-[Download the slidedeck with more information](../docs/Tech_5G_Broadcast.pdf){: .btn .btn-blue }
+[Download the Slidedeck](../docs/Tech_5GBroadcast.pdf){: .btn .btn-blue }
 
 ---
 
 ## Information related to Standards
 
-[Standards](../../Standards/pages/lte-based-5g-broadcast.html){: .btn .btn-blue }
+[Standards: LTE-based 5G Broadcast](../../Standards/pages/lte-based-5g-broadcast.html){: .btn .btn-blue }
 
-## Information related to Reference Tools Projects
+[Standards: Multimedia Delivery Protocols](../../Standards/pages/multimedia-content-delivery.html){: .btn .btn-blue }
 
-[Project: 5G Broadcast Hybrid Services](../../Getting-Started/pages/lte-based-5g-broadcast/){: .btn .btn-blue }
+[Standards: DVB-I Services over 5G Systems](../../Standards/pages/dvb-i-5g.html){: .btn .btn-blue }
 
-[Project: Emergency Alerts over 5G Broadcast](../../Getting-Started/pages/emergency-alerts/){: .btn .btn-blue }
 
 ---
 
