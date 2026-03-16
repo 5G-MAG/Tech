@@ -9,21 +9,17 @@ nav_order: 5
 
 # XR: 3D Scenes and Avatar Communications - Technical Documentation
 
-[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/13){: .btn .btn-blue }
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }
 
-<iframe width="60%" height="520" src="../docs/Tech_XR_Media_MPEG_I_SD.pdf"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_XR.pdf"></iframe>
 
-[Download the slidedeck with more information](../docs/Tech_XR_Media_MPEG_I_SD.pdf){: .btn .btn-blue }
+[Download the Slidedeck](../docs/Tech_XR.pdf){: .btn .btn-blue }
 
 ---
 
 ## Information related to Standards
 
-[Standards](../../Standards/pages/xr.html){: .btn .btn-blue }
-
-## Information related to Reference Tools Projects
-
-[Project: XR Media with MPEG-I Scene Description](../../Getting-Started/pages/xr-media-integration-in-5g/){: .btn .btn-blue }
+[Standards: XR Media with MPEG-I Scene Description](../../Standards/pages/xr.html){: .btn .btn-blue }
 
 ---
 
