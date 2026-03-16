@@ -1,12 +1,15 @@
 ---
 layout: default
 title: MPEG-I Scene Description
-parent: XR with MPEG-I SD
+parent: XR - 3D Scenes and Avatar
 has_children: false
 nav_order: 0
 ---
 
 <img src="../../assets/images/Banner_XR.png" /> 
+
+{: .warning }
+This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
 # Overview - MPEG-I Scene Description and glTF 2.0 Extensions
 MPEG-I Scene Description (MPEG-I SD) is a standard developed by MPEG for immersive media.
