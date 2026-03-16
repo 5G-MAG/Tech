@@ -26,9 +26,9 @@ This is the entry point to **5G-MAG's Technical Documentation**. It includes res
     <td markdown="span" align="center" width="33%"><a href="./pages/multicastbroadcast.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_MulticastBroadcast.png" width="95%"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/streaming.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/5gbroadcast.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/10){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/multicastbroadcast.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/11){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/streaming.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/6){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/5gbroadcast.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/multicastbroadcast.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/8){: .btn .btn-blue }</td>
   </tr>
     <td><br></td><td><br></td><td><br></td>
   <tr>
@@ -37,9 +37,9 @@ This is the entry point to **5G-MAG's Technical Documentation**. It includes res
     <td markdown="span" align="center" width="33%"><a href="./pages/npn.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_NPN.png" width="95%"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/xr.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/12){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/volumetric.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/13){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/npn.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/14){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/xr.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/9){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/volumetric.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/10){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/npn.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/11){: .btn .btn-blue }</td>
   </tr>
     <td><br></td><td><br></td><td><br></td>
   <tr>
@@ -48,9 +48,9 @@ This is the entry point to **5G-MAG's Technical Documentation**. It includes res
     <td markdown="span" align="center" width="33%"><a href="./pages/6g.html"><img style="border:5px solid black;" src="./assets/images/Category_Tech_6G.png" width="95%"><a/></td>
   </tr>
   <tr>
-    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/network_apis.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/15){: .btn .btn-blue }</td>
-    <td markdown="span" align="center">[Technical Documentation](./pages/ntn.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/16){: .btn .btn-blue }</td>
-    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/6g.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/17){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/network_apis.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/12){: .btn .btn-blue }</td>
+    <td markdown="span" align="center">[Technical Documentation](./pages/ntn.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/13){: .btn .btn-blue }</td>
+    <td markdown="span" align="center" width="33%">[Technical Documentation](./pages/6g.html){: .btn .btn-blue } [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/15){: .btn .btn-blue }</td>
   </tr>
 </table>
 
