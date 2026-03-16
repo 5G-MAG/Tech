@@ -7,7 +7,7 @@ nav_order: 2
 
 <img src="../assets/images/Banner_Streaming.png" /> 
 
-# Streaming, Media Delivery & Data Collection - Tech Documentation
+# Streaming, Media Delivery & Data Collection - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/6){: .btn .btn-blue }
 
