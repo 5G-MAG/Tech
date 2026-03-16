@@ -1,17 +1,17 @@
 ---
 layout: default
 title: 5GMS Overview
-parent: 5G Media Streaming
+parent: Streaming & Media Delivery
 has_children: false
 nav_order: 0
 ---
 
-<img src="../../assets/images/Banner_5GMS.png" /> 
+<img src="../../assets/images/Banner_Streaming.png" /> 
 
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# 5G Media Streaming - An overview
+# 5G Media Streaming - Overview
 
 In the context of 3GPP standards, 5G Media Streaming (5GMS) is defined as a framework designed to enable high-quality, efficient delivery of media. The architecture supports services from mobile network operators and third parties including both Downlink (5GMSd) and Uplink (5GMSu) Media Streaming. The 5GMS architecture is functionally divided into independent components enabling deployments with various degrees of integration between 5G MNOs and Content Providers.
 
