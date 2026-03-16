@@ -7,23 +7,21 @@ nav_order: 6
 
 <img src="../assets/images/Banner_Volumetric.png" /> 
 
-# Volumetric Video Experiences with MPEG V3C - Tech Resources
+# Volumetric & Beyond 2D Video Experiences - Tech Documentation
 
-[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/18){: .btn .btn-blue }
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/10){: .btn .btn-blue }
 
-<iframe width="60%" height="520" src="../docs/Tech_V3C.pdf"></iframe>
+<iframe width="60%" height="520" src="../docs/Tech_Volumetric.pdf"></iframe>
 
-[Download the slidedeck with more information](../docs/Tech_V3C.pdf){: .btn .btn-blue }
+[Download the Slidedeck](../docs/Tech_Volumetric.pdf){: .btn .btn-blue }
 
 ---
 
 ## Information related to Standards
 
-[Standards](../../Standards/pages/volumetric-video.html){: .btn .btn-blue }
+[Standards: Volumetric Video Experiences with MPEG V3C](../../Standards/pages/volumetric-video.html){: .btn .btn-blue }
 
-## Information related to Reference Tools Projects
-
-[Project: V3C Immersive Platform](../../Getting-Started/pages/v3c-immersive-platform/){: .btn .btn-blue }
+[Standards: Beyond 2D Video Experiences](../../Standards/pages/beyond2d.html){: .btn .btn-blue }
 
 ---
 
