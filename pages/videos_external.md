@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: VideoTech
+parent: Video Library
 title: External Videos
 has_children: false
 nav_order: 1
@@ -8,7 +8,7 @@ nav_order: 1
 
 <img src="../assets/images/Banner_TechVideos.png" /> 
 
-# Tech Videos (External)
+# External Videos
 
 ## eXtended Reality and MPEG-I Scene Description
 

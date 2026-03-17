@@ -6,10 +6,12 @@ nav_order: 3
 has_children: false
 ---
 
-# Analysis - MBS Delivery Mode 2 (Broadcast) over NTN
+<img src="../../assets/images/Banner_NTN.png" /> 
 
 {: .warning }
 This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
+
+# Analysis - MBS Delivery Mode 2 (Broadcast) over NTN
 
 Procedures for MBS Broadcast over NTN are those defined for MBS Broadcast in [Analysis MBS Broadcast - RAN Procedures](../5g-multicast-broadcast-services/Analysis_MBS_Broadcast_RAN.html)
 

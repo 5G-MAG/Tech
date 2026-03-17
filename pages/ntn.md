@@ -7,13 +7,13 @@ nav_order: 9
 
 <img src="../assets/images/Banner_NTN.png" /> 
 
-# Non-Terrestrial Networks - Tech Resources
+# Non-Terrestrial Networks - Documentation
 
-[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/6){: .btn .btn-blue }
+[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/13){: .btn .btn-blue }
 
 <iframe width="60%" height="520" src="../docs/Tech_NTN.pdf"></iframe>
 
-[Download the slidedeck with more information](../docs/Tech_NTN.pdf){: .btn .btn-blue }
+[Download the Slidedeck](../docs/Tech_NTN.pdf){: .btn .btn-blue }
 
 ---
 

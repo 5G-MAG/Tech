@@ -2,24 +2,27 @@
 layout: default
 title: Non-Public Networks
 has_children: true
-nav_order: 10
+nav_order: 7
 ---
 
 <img src="../assets/images/Banner_NPN.png" /> 
 
-# Non-Public Networks - Tech Resources
+# Non-Public Networks for Content Production - Documentation
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/11){: .btn .btn-blue }
 
 <iframe width="60%" height="520" src="../docs/Tech_NPN.pdf"></iframe>
 
-[Download the slidedeck with more information](../docs/Tech_NPN.pdf){: .btn .btn-blue }
+[Download the Slidedeck](../docs/Tech_NPN.pdf){: .btn .btn-blue }
 
 ---
 
 ## Information related to Standards
 
-[Standards](../../Standards/pages/npn.html){: .btn .btn-blue }
+[Standards: Non-Public Networks](../../Standards/pages/npn.html){: .btn .btn-blue }
+
+[Standards: Time Sensitive Communications](../../Standards/pages/tsc.html){: .btn .btn-blue }
+
 
 ---
 

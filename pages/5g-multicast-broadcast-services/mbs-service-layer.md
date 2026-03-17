@@ -1,10 +1,12 @@
 ---
 layout: default
 title: MBS - Service Layer
-parent: 5G Multicast Broadcast Services
+parent: Multicast & Broadcast in 5G
 has_children: false
 nav_order: 1
 ---
+
+<img src="../../assets/images/Banner_MulticastBroadcast.png" /> 
 
 {: .warning }
 This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
@@ -15,7 +17,7 @@ This documentation is currently **under development and subject to change**. If 
 Void
 
 ## MBS User Services (TS 26.502)
-The primary goal of the MBS User Services architecture specified in TS 26.502 is to provide a higher-level abstraction on top of MBS Services that is more useful to a Content Service Provider, referred to in TS 26.502 as an **MBS Application Provider**. This entity plays the role of the AF/AS in the lower-level MBS Services architecture defined in TS 23.247 and described in section 4 below.
+The primary goal of the MBS User Services architecture specified in TS 26.502 is to provide a higher-level abstraction on top of MBS Services that is more useful to a Content Service Provider, referred to in TS 26.502 as an **MBS Application Provider**. This entity plays the role of the AF/AS in the lower-level MBS Services architecture defined in TS 23.247 and described below.
 
 The MBS User Services abstraction comprises three principal data entities:
 * The **MBS User Service** includes basic top-level metadata about itself, such as a type (broadcast or multicast) name, description and main service language.
@@ -25,7 +27,7 @@ The overall system architecture for MBS User Services (green) and MBS Services (
 
 <figure>
     <img src="https://github.com/user-attachments/assets/ed9b5a84-107e-4d9d-bb24-880ccd3d1e38" alt="Alt text" />
-    <figcaption>System architecture for MBS Services (purple) and MBS User Services (green) in reference point notation, based on TS 23.247</figcaption>
+    <figcaption><em>System architecture for MBS Services (purple) and MBS User Services (green) in reference point notation, based on TS 23.247</em></figcaption>
 </figure>
 
 {: .note }

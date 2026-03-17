@@ -1,15 +1,18 @@
 ---
 layout: default
 title: MBS Broadcast - RAN Procedures
-parent: 5G Multicast Broadcast Services
+parent: Multicast & Broadcast in 5G
 has_children: false
 nav_order: 5
 ---
 
+<img src="../../assets/images/Banner_MulticastBroadcast.png" /> 
+
 {: .warning }
 This documentation is currently **under development and subject to change**. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
-# Analysis of RAN procedures
+# Analysis of RAN procedures for MBS Broadcast
+  0. Acquiring PLMN and RAN Information
   1. Obtain MIB
   2. Obtain SIB1 (points to SIB20)
   3. SIB20 contains configuration of MCCH
@@ -20,15 +23,13 @@ This documentation is currently **under development and subject to change**. If 
 
 ## Acquiring PLMN and RAN Information
 
-{: .note }
-This information is not required for prototype/demo purposes as this can be pre-configured by other means.
-
 For information on the MBS Broadcast Pre-Configuration Management Object (MO) refer to **[3GPP TS 24.575](https://www.3gpp.org/dynareport/24575.htm)**.
 
 A UE can support MBS to deliver content from a single source entity to all users in a broadcast service area (MBS 
 broadcast communication), as defined in 3GPP TS 23.247. If the UE is pre-configured with information related to services using MBS, the UE can discover and receive data for 
 services by using the provisioned configuration. 
-The UE may support pre-configuration of information for services using MBS including:
+The UE may support pre-configuration of information for services using MBS, which contains a list of PLMNs.
+for each PLMN, the following information is included:
 * PLMN ID of the PLMN for which the configuration applies;
 * RAN information based on NR-ARFCN on which the broadcast communication service is available;
 * list of TMGI, on which the broadcast communication service is available, each associated with user service 
@@ -39,8 +40,6 @@ the associated USD information (see 3GPP TS 26.517) for the MBS user service ann
 ## Obtention of MIB/SIB signaling
 
 For definitions refer to **[3GPP TS 38.331](https://www.3gpp.org/DynaReport/38331.htm) Clause 6.2.2**
-
-{: .note } In threory SIB19 is designed for mobility and cell reselection, therefore not needed for MBS Broadcast.
 
 ### SIB 20 - Acquisition MCCH/MTCH
 
