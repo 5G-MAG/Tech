@@ -23,6 +23,10 @@ Information: [https://camaraproject.org/dedicated-networks/](https://camaraproje
 The API definitions can be obtained here: [https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions](https://github.com/camaraproject/DedicatedNetworks/tree/main/code/API_definitions)
 
 ## Relation of APIs
+### Dedicated Network - Network Service Areas API
+  * **POST /retrieve-service-areas** - Retrieve dedicated network service areas, filtered by additional search criteria. The response includes an `id` with the supported network profiles and QoS profiles
+  * **GET /areas/{areaId}** - Read a dedicated network service area
+
 ### Dedicated Network - Network Profiles API
   * **GET /profiles** - List of available network profiles. The response includes an `id`, alongside the `maxNumberOfDevices`, `aggregatedUlThroughput`, `aggregatedDlThroughput`, `qosProfiles`,...
     * Dependency: Requires `qosProfiles` which can be retrieved from a previous call to the [**QoS Profiles API**](./CAMARA_QoSProfiles.html).
@@ -36,7 +40,7 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Dedi
 
 ### Dedicated Network - Accesses API
   * **GET /accesses** - List of existing device accesses to dedicated networks, optionally filtered for a given device and/or for a dedicated network (the list can be empty)
-  * **POST /accesses** with the request body including the `networkId` received after invoking the Dedicated Network API (`id`), a `device` object, `qosProfiles`, this request will crate a device access to a dedicated network with a fiven configutation. The response includes an `id`.
+  * **POST /accesses** with the request body including the `networkId` received after invoking the Dedicated Network API (`id`), a `device` object, `qosProfiles`, this request will crate a device access to a dedicated network with a given configutation. The response includes an `id`.
   * **GET /accesses/{accessId}** - get a device access to the dedicated network and its configuration
   * **DELETE /accesses/{accessId}** - delete a device access to the dedicated network
 
@@ -52,7 +56,7 @@ A user of a media application would like to request a Dedicated Network, with a 
 
 ### Step 0: Pre-conditions
 * qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
-* Network Profiles with the allowed number of devices which can be server concurrently together with the aggregated UL and DL thoughput have been defined and made available by the network operator
+* Network Profiles with the allowed number of devices which can be server concurrently together with the aggregated UL and DL throughput have been defined and made available by the network operator
 
 ### Step 1: Discover Network Profiles available
 * **GET /profiles** to obtain a list of dedicated network profiles with the corresponding `id`.
@@ -74,12 +78,51 @@ This API is certainly adequate for a simple use case of 1 device requesting conn
 
 What is the meaning of `maxNumberOfDevices`? An ideal situation would be to bring different devices to an event (including for backup) which are candidates to be assigned to a dedicated network. During operation only a maximum amount of devices can concurrently connect to the network and allocated resources accoding to the network profile.
 
-One of the most interesting features in this API is the ability to define and create the network profile and later on attach/detach a device. This adds flexibility and avoids loosing the dedicated resources when revoking a device.
+One of the most interesting features in this API is the ability to define and create the network profile and later on attach/detach a device. This adds flexibility and avoids losing the dedicated resources when revoking a device.
 
 Potential improvements:
 - there is a dependency with qosProfiles and Network Profiles, which need to be present before being able to invoke Dedicated Networks. This is not an issue related to this API but worth considering as it would be useful if such profiles could be created/requested by the user and accepted by the network operator, rather than requiring another process.
 
 ---
+
+## Dedicated Network - Network Service Areas API Usage
+
+This API allows for discovering available network service areas, which are the geographical areas offered by the network provider where consitent coverage according to indicated network profile(s) and QoS profiles is provided, and which is to be used in conjunction with the Dedicated Network API.
+
+With **POST /retrieve-service-areas** a list of dedicated network service areas can be retrieved, filtered by additional search criteria
+
+```
+{
+  "atLocation": {
+    "latitude": 50.735851,
+    "longitude": 7.10066
+  },
+  "overlappingArea": {},
+  "coveringArea": {},
+  "byName": "string",
+  "byNetworkProfileId": "string",
+  "byQosProfileName": "QCI_1_voice"
+}
+```
+
+Type of response: The list of areas:
+
+```
+[
+  {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": "string",
+    "description": "string",
+    "area": {},
+    "networkProfiles": [
+      "string"
+    ],
+    "qosProfiles": [
+      "QCI_1_voice"
+    ]
+  }
+]
+```
 
 ## Dedicated Network - Network Profiles API Usage
 
