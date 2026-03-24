@@ -49,8 +49,8 @@ def update_file(path, num):
         file_text = f.read()
 
     # The STRICT Markers
-    start_m = ""
-    end_m = ""
+    start_m = "<!-- KANBAN_START -->"
+    end_m = "<!-- KANBAN_END -->"
 
     if start_m not in file_text:
         print(f"❌ ERROR: Markers missing in {path}. Please add them manually.")
