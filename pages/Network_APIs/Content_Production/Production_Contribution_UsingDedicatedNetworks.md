@@ -231,13 +231,10 @@ When reaching the duration the Dedicated Network may be teared down. A greceful 
 
 # 5G-MAG's Self-Assessment
 
-The Profiles and Networks APIs are to be invoked before the actual usage of the network to ensure that the requested capabilities are "reserved" for the specific area and time window.
-During the event devices will have access to the Dedicated Network and should be allocated or de-allocated depending on the actual requirements.
-This API is certainly adequate for a simple use case of 1 device requesting connectivity (MoJo) or multiple devices taking part in a Media Production setup.
-
-What is the meaning of `maxNumberOfDevices`? An ideal situation would be to bring different devices to an event (including for backup) which are candidates to be assigned to a dedicated network. During operation only a maximum amount of devices can concurrently connect to the network and allocated resources accoding to the network profile.
-
-One of the most interesting features in this API is the ability to define and create the network profile and later on attach/detach a device. This adds flexibility and avoids losing the dedicated resources when revoking a device.
+* The Profiles and Networks APIs are to be invoked before the actual usage of the network to ensure that the requested capabilities are "reserved" for the specific area and time window.
+* During the event devices will have access to the Dedicated Network and should be allocated or de-allocated depending on the actual requirements.
+* This API is certainly adequate for a simple use case of 1 device requesting connectivity (MoJo) or multiple devices taking part in a Media Production setup.
+* One of the most interesting features in this API is the ability to define and create the network profile and later on attach/detach a device. This adds flexibility and avoids losing the dedicated resources when revoking a device.
 
 Potential improvements:
-- there is a dependency with qosProfiles and Network Profiles, which need to be present before being able to invoke Dedicated Networks. This is not an issue related to this API but worth considering as it would be useful if such profiles could be created/requested by the user and accepted by the network operator, rather than requiring another process.
+- Possibility to extend/update the Dedicated Network (e.g. extending duration).
