@@ -1,4 +1,4 @@
-<img width="1064" height="81" alt="image" src="https://github.com/user-attachments/assets/97c9afaf-9748-4f4f-90f2-6addd5bd9140" />---
+---
 layout: default
 title: Dedicated Networks
 parent: Network APIs
