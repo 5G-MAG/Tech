@@ -9,7 +9,15 @@ nav_order: 3
 
 # 5G Broadcast: TV, Radio and Emergency Alerts - Documentation
 
-[Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }
+## Introduction
+
+<iframe width="60%" height="520" src="../docs/Tech_5GBroadcast.pdf"></iframe>
+
+[Download the Slidedeck](../docs/Tech_5GBroadcast.pdf){: .btn .btn-blue }
+
+## Execution Plan
+
+[Go to the Execution Plan Kanban Board](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }
 
 <!-- KANBAN_START -->
 
@@ -59,10 +67,6 @@ nav_order: 3
 </div>
 
 <!-- KANBAN_END -->
-
-<iframe width="60%" height="520" src="../docs/Tech_5GBroadcast.pdf"></iframe>
-
-[Download the Slidedeck](../docs/Tech_5GBroadcast.pdf){: .btn .btn-blue }
 
 ---
 
