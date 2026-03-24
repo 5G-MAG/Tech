@@ -111,13 +111,17 @@ With **POST /sessions** passing the `device` object, `applicationServer` IP, `ap
 A series of operations to delete the QoS session or extending its duration are available:
 
 **GET /sessions/{sessionId}** - Get QoS session information
+
 **DELETE /sessions/{sessionId}** - Delete a QoS session
+
 **POST /sessions/{sessionId}/extend** - Extend the duration of an active session
+
 **POST /retrieve-sessions** - Get QoS session information for a device
 
 ## Step 3: Dismantling
 
 When reaching the duration the QoS session may be teared down. A greceful way of tearing down will delete the QoS session by `id`.
+
 **DELETE /sessions/{sessionId}** deletes a QoS session
 
 ---
