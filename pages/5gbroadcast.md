@@ -11,6 +11,9 @@ nav_order: 3
 
 [Execution Plan](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }
 
+<!-- KANBAN_START -->
+<!-- KANBAN_END -->
+
 <iframe width="60%" height="520" src="../docs/Tech_5GBroadcast.pdf"></iframe>
 
 [Download the Slidedeck](../docs/Tech_5GBroadcast.pdf){: .btn .btn-blue }
