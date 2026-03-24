@@ -66,7 +66,6 @@ def generate_markdown(data, target_label):
             board[status].append(card)
 
     output = f"\n\n<div id='kanban-display' style='font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif;'>\n"
-    output += f"## Live Development Status\n"
     output += f"<p style='font-size: 12px; color: #586069; margin-bottom: 20px;'>Last Sync: {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC</p>\n"
     
     for p in phases:
