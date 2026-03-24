@@ -160,7 +160,7 @@ A series of operations to assign new devices and de-assign existing ones can be 
 
 **DELETE /accesses/{accessId}** to delete a device access to the dedicated network.
 
-## Step 3: Distmantling
+## Step 3: Dismantling
 
 When reaching the duration the Dedicated Network may be teared down. A greceful way of tearing down will delete device accesses and dedicated networks by `id`.
 **DELETE /accesses/{accessId}** deletes a device access to the dedicated network
