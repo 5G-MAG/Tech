@@ -34,37 +34,6 @@ The API definitions can be obtained here: [https://github.com/camaraproject/Qual
 
 ---
 
-## Workflow: Media application using the Quality on Demand API to create a QoS session
-
-A user of a media application would like to request the creation of a QoS session for the connection between a device and an application server. The following steps are executed:
-
-<figure>
-  <img src="./Content_Production/images/figure_qualityondemand.png" width="80%">
-</figure>
-
-### Step 0: Pre-conditions
-* The API invoker needs to have signed up with the API provider.
-* qosProfiles have already been defined and made available by the network operator.
-* Names of such qosProfiles have been disclosed to the user so they can be used when invoking APIs.
-
-### Step 1: Check details of an existing QoS Profile (when not cached)
-* **GET /qos-profiles/{name}** to obtain the parameters of the QoS Profile
-
-### Step 2: Establish a QoS session
-* **POST /sessions** passing the `device` object, `applicationServer` IP, `applicationServerPorts`, `devicePorts`, `qosProfile` and `duration`.
-
----
-
-## 5G-MAG's Self-Assessment
-
-A session may be created by establishing a level of QoS between the device and the application server for a given duration. It is assumed that the QoS Provisioning would result successful when invoked in the given location. However as a service area cannot be defined/requested, it is unclear whether this would be successful or not.
-
-Potential improvements:
-- There is no information about the location or service area.
-- Understanding opportunities to book QoS sessions in terms of duration and location/area would be useful as the user may be able to move and find a better coverage spot rather than being denied the establishment of QoS at the time and location in which it is requested.
-
----
-
 ## Quality-On-Demand (QoD) API Usage
 
 ### Request the creation of a session
