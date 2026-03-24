@@ -7,7 +7,7 @@ ORG = "5G-MAG"
 
 # 2. Add all 10 project IDs and their corresponding file paths here
 PROJECT_MAP = {
-    44: "pages/5g-broadcast.md", 
+    44: "pages/5gbroadcast.md", 
     # Example: 45: "docs/another-page.md",
 }
 
