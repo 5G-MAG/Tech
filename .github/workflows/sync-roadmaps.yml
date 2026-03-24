@@ -1,27 +1,28 @@
 name: Sync Project Boards
 on:
   schedule:
-    - cron: '0 * * * *'
-  workflow_dispatch:
+    - cron: '0 * * * *' # Every hour
+  workflow_dispatch:   # Allows manual run via "Actions" tab
+
 jobs:
-  sync:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-      - name: Run
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run sync
         env:
           PROJECT_ACCESS_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
-        run: |
-          pip install requests
-          python sync_projects.py
-      - name: Save Changes
+        run: python sync_projects.py
+      - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add docs/*.md
-          git commit -m "Update roadmaps" || exit 0
+          git commit -m "Update live roadmap data" || exit 0
           git push
