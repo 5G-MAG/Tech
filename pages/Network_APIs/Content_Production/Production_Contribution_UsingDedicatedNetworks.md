@@ -35,6 +35,7 @@ The following steps are executed:
 </figure>
 
 ## Step 0: Pre-conditions
+
 * The API invoker needs to have signed up with the API provider.
 * qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
 * Network Profiles with the allowed number of devices which can be served concurrently together with the aggregated UL and DL throughput have been defined and made available by the network operator.
@@ -43,7 +44,8 @@ The following steps are executed:
 ## Step 1: Before using the network
 
 ### 1.1a. Discovery of available and eligible Network Profiles:
-Usage of **GET /profiles** to obtain a list of dedicated network profiles with the corresponding **"id": "string"**.
+
+**GET /profiles** to obtain a list of dedicated network profiles with the corresponding **"id": "string"**.
 
 ```
 [
@@ -66,7 +68,7 @@ Usage of **GET /profiles** to obtain a list of dedicated network profiles with t
 ]
 ```
 
-Details of the already arranged QoS Profile can be retrieve with **GET /qos-profiles/{name}**, using the [QoS Profiles API](../CAMARA_QoSProfiles.html).
+**GET /qos-profiles/{name}**, using the [QoS Profiles API](../CAMARA_QoSProfiles.html), to obtain details of the already arranged QoS Profile.
 
 An example of the QoS Profile, including status:
 
@@ -125,6 +127,7 @@ An example of the QoS Profile, including status:
 ```
 
 ### 1.1b. Discovery of available and eligible Network Service Areas:
+
 The ASP should create and object with the desired location by means of one of the following parameters:
 
 ```
@@ -141,7 +144,7 @@ The ASP should create and object with the desired location by means of one of th
 }
 ```
 
-This object is passed as a body for **POST /retrieve-service-areas**.
+**POST /retrieve-service-areas** passing this object as body.
 
 This operation should return an **"id": "string"**, in this form:
 
@@ -163,7 +166,8 @@ This operation should return an **"id": "string"**, in this form:
 ```
 
 ### 1.2: Request for Dedicated Network reservation
-Usage of  **POST /networks** passing a `profileId`, `serviceTime`, `serviceAreaId`, among others, in the following form:
+
+**POST /networks** passing a `profileId`, `serviceTime`, `serviceAreaId`, among others, in the following form:
 
 ```
 {
@@ -226,7 +230,9 @@ A series of operations to assign new devices and de-assign existing ones can be 
 ## Step 3: Dismantling
 
 When reaching the duration the Dedicated Network may be teared down. A greceful way of tearing down will delete device accesses and dedicated networks by `id`.
+
 **DELETE /accesses/{accessId}** deletes a device access to the dedicated network
+
 **DELETE /networks/{networkId}** deletes a dedicated network
 
 # 5G-MAG's Self-Assessment
