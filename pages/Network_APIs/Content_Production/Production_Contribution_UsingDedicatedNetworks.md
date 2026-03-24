@@ -102,6 +102,7 @@ This operation should return an **"id": "string"**, in this form:
 ### 1.2: Request for Dedicated Network reservation
 Usage of  **POST /networks** passing a `profileId`, `serviceTime`, `serviceAreaId`, among others, in the following form:
 
+```
 {
   "profileId": "string",
   "serviceTime": {
@@ -112,6 +113,7 @@ Usage of  **POST /networks** passing a `profileId`, `serviceTime`, `serviceAreaI
   "sink": "https://1IG+u7oa.fNS?9-`Zg`Fi*'k",
   "sinkCredential": {}
 }
+```
 
 The response should contain a **"status": "REQUESTED"**.
 
