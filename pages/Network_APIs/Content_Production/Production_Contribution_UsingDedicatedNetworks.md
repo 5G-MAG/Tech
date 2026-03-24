@@ -16,9 +16,11 @@ This documentation is currently **under development and subject to change**. It 
 
 Find more information about [**Dedicated Networks API**](../CAMARA_DedicatedNetworks.html).
 
-A user of a media application would like to request a Dedicated Network, with a set of capabilities and connectivity performance targets. The resut is for a particular geographical location and at a particular time window. The following steps are executed:
+A user of a media application would like to request a Dedicated Network, with a set of capabilities and connectivity performance targets. The resut is for a particular geographical location and at a particular time window.
 
 # Workflow and Architecture
+
+This is a high-level figure with the entities involing APIs and the devices involved:
 
 <figure>
   <img src="./images/figure_dedicatednetworks.png" width="80%">
@@ -26,11 +28,14 @@ A user of a media application would like to request a Dedicated Network, with a 
 
 ## General Workflow
 
+The following steps are executed:
+
 <figure>
   <img src="./images/DedicatedNetworks_WF1.png" width="80%">
 </figure>
 
 ## Step 0: Pre-conditions
+* The API invoker needs to have signed up with the API provider.
 * qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
 * Network Profiles with the allowed number of devices which can be served concurrently together with the aggregated UL and DL throughput have been defined and made available by the network operator.
 * Dedicated Network Service Areas are created by the operator and made available.
