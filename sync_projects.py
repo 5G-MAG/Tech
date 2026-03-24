@@ -3,7 +3,13 @@ from datetime import datetime
 
 TOKEN = os.getenv('PROJECT_ACCESS_TOKEN')
 ORG = "5G-MAG"
-PROJECT_MAP = {44: "pages/5gbroadcast.md"}
+
+# Add all your pages here. 
+# Format: {"id": ProjectID, "path": "FileLocation", "label": "GitHubLabel"}
+CONFIG = [
+    {"id": 44, "path": "pages/5gbroadcast.md", "label": "Topic: 5G Broadcast"},
+    # You can add the other 8 pages below following the same pattern
+]
 
 def fetch_data(num):
     url = 'https://api.github.com/graphql'
@@ -13,7 +19,13 @@ def fetch_data(num):
         projectV2(number: $num) {
           items(first: 100) {
             nodes {
-              content { ... on Issue { title, url } }
+              content { 
+                ... on Issue { 
+                  title 
+                  url 
+                  labels(first: 10) { nodes { name } }
+                } 
+              }
               fieldValueByName(name: "Status") { ... on ProjectV2ItemFieldSingleSelectValue { name } }
             }
           }
@@ -23,20 +35,23 @@ def fetch_data(num):
     resp = requests.post(url, json={'query': query, 'variables': {"org": ORG, "num": num}}, headers=headers)
     return resp.json()
 
-def generate_markdown(data):
+def generate_markdown(data, target_label):
     nodes = data.get('data', {}).get('organization', {}).get('projectV2', {}).get('items', {}).get('nodes', [])
-    
-    # Updated phase order: Candidate first, Not Pursued last
     phases = ["Candidate", "Under Study", "Work in Progress", "Completed", "Not pursued"]
     board = {p: [] for p in phases}
     
     for n in nodes:
         content = n.get('content')
         if not content: continue
+        
+        # Filter by the specific label for THIS page
+        issue_labels = [l['name'] for l in content.get('labels', {}).get('nodes', [])]
+        if target_label not in issue_labels:
+            continue
+
         status = (n.get('fieldValueByName') or {}).get('name', "Candidate")
         
         if status in board:
-            # Style adjustment: 'Not pursued' items get a lighter, strike-through look
             is_ignored = status == "Not pursued"
             bg_color = "#f6f8fa" if is_ignored else "#ffffff"
             text_decor = "line-through" if is_ignored else "none"
@@ -62,9 +77,15 @@ def generate_markdown(data):
     output += "\n</div>\n\n"
     return output
 
-def update_file(path, num):
-    if not os.path.exists(path): return
-    
+def update_file(page_config):
+    path = page_config["path"]
+    num = page_config["id"]
+    label = page_config["label"]
+
+    if not os.path.exists(path): 
+        print(f"⚠️ File not found: {path}")
+        return
+        
     with open(path, 'r', encoding='utf-8') as f:
         file_text = f.read()
 
@@ -76,7 +97,7 @@ def update_file(path, num):
         return
 
     data = fetch_data(num)
-    new_board_content = generate_markdown(data)
+    new_board_content = generate_markdown(data, label)
     
     pattern = rf"{start_m}.*?{end_m}"
     replacement = f"{start_m}{new_board_content}{end_m}"
@@ -84,8 +105,8 @@ def update_file(path, num):
 
     with open(path, 'w', encoding='utf-8') as f:
         f.write(updated_text)
-    print(f"✅ Full board sync successful for {path}")
+    print(f"✅ Sync complete for {path} using label: {label}")
 
 if __name__ == "__main__":
-    for num, path in PROJECT_MAP.items():
-        update_file(path, num)
+    for page in CONFIG:
+        update_file(page)
