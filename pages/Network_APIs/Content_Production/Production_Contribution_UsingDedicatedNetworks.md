@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dedicated Networks
-parent: Network APIs
+parent: Using CAMARA APIs
 grand_parent: Content Production & Contribution
 nav_order: 0
 has_children: false
