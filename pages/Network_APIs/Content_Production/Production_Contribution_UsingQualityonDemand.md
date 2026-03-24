@@ -14,7 +14,7 @@ This documentation is currently **under development and subject to change**. It 
 
 # Using CAMARA APIs: Quality on Demand for Content Production & Contribution
 
-Find more information about [**QoD API**](../CAMARA_QualityonDemand.html).
+Find more information about [**Quality on Demand API**](../CAMARA_QualityonDemand.html).
 
 A user of a media application would like to request the creation of a QoS session for the connection between a device and an application server.
 
@@ -40,7 +40,7 @@ The following steps are executed:
 * Names of such qosProfiles have been disclosed to the user so they can be used when invoking APIs.
 
 ## Step 1: Before using the network
-Details of the already arranged QoS Profile can be retrieve with **GET /qos-profiles/{name}**.
+Details of the already arranged QoS Profile can be retrieve with **GET /qos-profiles/{name}**, using the [QoS Profiles API](../CAMARA_QoSProfiles.html).
 
 An example of the QoS Profile, including status:
 
