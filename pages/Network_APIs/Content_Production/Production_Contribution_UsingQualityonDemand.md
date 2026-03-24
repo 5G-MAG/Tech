@@ -3,7 +3,7 @@ layout: default
 title: Quality on Demand
 parent: Using CAMARA APIs
 grand_parent: Content Production & Contribution
-nav_order: 0
+nav_order: 1
 has_children: false
 ---
 
@@ -123,8 +123,11 @@ When reaching the duration the QoS session may be teared down. A greceful way of
 ---
 
 ## 5G-MAG's Self-Assessment
-
-A session may be created by establishing a level of QoS between the device and the application server for a given duration. It is assumed that the QoS Provisioning would result successful when invoked in the given location. However as a service area cannot be defined/requested, it is unclear whether this would be successful or not.
+* A session may be created by establishing a level of QoS between the device and the application server for a given duration.
+* It is assumed that the QoD API is invoked with the complete knowledge of device, application server, and at the given location.
+* No information is given to the user on the availability of resources in an area.
+* It is not possible to ensure availability of the QoS session before invoking at the location. A service area cannot be defined/requested, it is unclear whether this would be successful or not.
+* On device failure, the QoS session needs to be deleted with no guarantee that a new one can be created.
 
 Potential improvements:
 - There is no information about the location or service area.
