@@ -66,6 +66,64 @@ Usage of **GET /profiles** to obtain a list of dedicated network profiles with t
 ]
 ```
 
+Details of the already arranged QoS Profile can be retrieve with **GET /qos-profiles/{name}**, using the [QoS Profiles API](../CAMARA_QoSProfiles.html).
+
+An example of the QoS Profile, including status:
+
+```
+[
+  {
+    "name": "voice",
+    "description": "QoS profile for video streaming",
+    "status": "ACTIVE",
+    "targetMinUpstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "maxUpstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "maxUpstreamBurstRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "targetMinDownstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "maxDownstreamRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "maxDownstreamBurstRate": {
+      "value": 10,
+      "unit": "bps"
+    },
+    "minDuration": {
+      "value": 12,
+      "unit": "Days"
+    },
+    "maxDuration": {
+      "value": 12,
+      "unit": "Days"
+    },
+    "priority": 20,
+    "packetDelayBudget": {
+      "value": 12,
+      "unit": "Days"
+    },
+    "jitter": {
+      "value": 12,
+      "unit": "Days"
+    },
+    "packetErrorLossRate": 3,
+    "l4sQueueType": "non-l4s-queue",
+    "serviceClass": "real_time_interactive"
+  }
+]
+```
+
 ### 1.1b. Discovery of available and eligible Network Service Areas:
 The ASP should create and object with the desired location by means of one of the following parameters:
 
