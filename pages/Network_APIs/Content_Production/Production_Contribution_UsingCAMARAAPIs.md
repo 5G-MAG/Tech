@@ -4,7 +4,7 @@ title: Using CAMARA APIs
 parent: Content Production & Contribution
 grand_parent: Network APIs
 nav_order: 2
-has_children: false
+has_children: true
 ---
 
 <img src="../../../assets/images/Banner_NetworkAPIs.png" /> 
