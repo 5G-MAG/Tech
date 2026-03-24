@@ -34,7 +34,7 @@ def run():
         nodes = data.get('data', {}).get('organization', {}).get('projectV2', {}).get('items', {}).get('nodes', [])
         
         # Group by Status
-        cols = ["💡 Pitch", "📅 To Do", "🏗️ In Progress", "👀 In Review", "✅ Done"]
+        cols = ["💡 Candidate", "📅 Under Study", "🏗️ Work In Progress", "✅ Done", "👀 Not pursued"]
         board = {c: [] for c in cols}
         for n in nodes:
             content = n.get('content')
