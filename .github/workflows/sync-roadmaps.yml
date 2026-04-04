@@ -8,21 +8,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # CRITICAL: Use your PAT here so the push triggers the next workflow
+          token: ${{ secrets.PROJECT_ACCESS_TOKEN }}
+          
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+          
       - name: Install dependencies
         run: pip install requests
+        
       - name: Run sync
         env:
           PROJECT_ACCESS_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
         run: python sync_projects.py
-      - name: Commit changes
+        
+      - name: Commit and Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add pages/*.md
-          git commit -m "Update live roadmap data" || exit 0
-          git push
+          # Only commit and push if files actually changed
+          if ! git diff --cached --quiet; then
+            git commit -m "Update live roadmap data"
+            git push
+          else
+            echo "No changes detected in pages/*.md"
+          fi
