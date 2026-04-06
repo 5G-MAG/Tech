@@ -5,8 +5,10 @@ on:
   workflow_dispatch: 
 
 jobs:
-  update-kanban:
+  update-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,9 +26,8 @@ jobs:
           import os, json, requests
           from datetime import datetime
 
-          # 1. Configuration: Map your internal key to the View ID
-          # All these belong to Organization Project 44
-          views = {
+          # 1. Configuration: Mapping keys to View IDs for Project 44
+          project_map = {
               "streaming": 6,
               "5gbroadcast": 7,
               "mbs": 8,
@@ -38,32 +39,27 @@ jobs:
               "6g": 15
           }
 
-          def fetch_view_items(view_id):
-              # This is where your GraphQL logic goes to fetch from Project 44, View {view_id}
-              # For now, returning a placeholder structure
-              return [
-                  {"title": "Sample Issue", "url": "https://github.com/...", "status": "Work in Progress"},
-                  {"title": "Finished Task", "url": "https://github.com/...", "status": "Completed"}
-              ]
+          def fetch_github_kanban(view_id):
+              # Note: You will need your existing GraphQL logic here 
+              # to fetch Title, URL, and Status from Project 44 / View {view_id}
+              return [] # Should return list of {"title": "...", "url": "...", "status": "..."}
 
-          output = {
-              "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
-              "projects": {}
-          }
+          data_output = {}
+          for key, v_id in project_map.items():
+              print(f"Syncing {key}...")
+              data_output[key] = fetch_github_kanban(v_id)
 
-          for key, v_id in views.items():
-              print(f"Fetching View {v_id} for {key}...")
-              output["projects"][key] = fetch_view_items(v_id)
-
+          # 2. Create _data folder and save
           if not os.path.exists('_data'): os.makedirs('_data')
-          with open('_data/kanban.json', 'w') as f:
-              json.dump(output, f, indent=2)
+          timestamp = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
+          with open('_data/roadmaps.json', 'w') as f:
+              json.dump({"last_updated": timestamp, "projects": data_output}, f, indent=2)
           EOF
 
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/kanban.json
-          git commit -m "Update Kanban data for all projects" || exit 0
+          git add _data/roadmaps.json
+          git commit -m "Update Kanban data" || exit 0
           git push
