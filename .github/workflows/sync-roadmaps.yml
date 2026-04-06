@@ -1,5 +1,4 @@
 name: Sync Project Boards
-
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -24,7 +23,6 @@ jobs:
 
       - name: Fetch Kanban Data
         env:
-          # Using your Organization Secret here
           PROJECT_ACCESS_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
           python - <<EOF
@@ -32,98 +30,67 @@ jobs:
           from datetime import datetime
 
           token = os.environ.get("PROJECT_ACCESS_TOKEN")
-          if not token:
-              print("!!! ERROR: SYNC_TOKEN is empty. Check Org Secret permissions. !!!")
-              exit(1)
-          
           headers = {"Authorization": f"Bearer {token}"}
           
-          project_map = {
-              "streaming": 6, "5gbroadcast": 7, "mbs": 8, "xr": 9,
-              "volumetric": 10, "npn": 11, "net_apis": 12, "ntn": 13, "6g": 15
-          }
-
-          def fetch_github_kanban(view_id):
-              # GraphQL query targeting Project 44 in the 5G-MAG Org
-              query = """
-              query {
-                organization(login: "5G-MAG") {
-                  projectV2(number: 44) {
-                    view(number: %d) {
-                      items(first: 100) {
-                        nodes {
-                          content {
-                            ... on Issue { title url }
-                            ... on PullRequest { title url }
-                          }
-                          fieldValues(first: 20) {
-                            nodes {
-                              ... on ProjectV2ItemFieldSingleSelectValue {
-                                name
-                                field { ... on ProjectV2FieldCommon { name } }
-                              }
-                            }
-                          }
+          # This query gets all items in Project 44 and their field values (Status, etc.)
+          query = """
+          query {
+            organization(login: "5G-MAG") {
+              projectV2(number: 44) {
+                items(first: 100) {
+                  nodes {
+                    content {
+                      ... on Issue { title url }
+                      ... on PullRequest { title url }
+                    }
+                    fieldValues(first: 20) {
+                      nodes {
+                        ... on ProjectV2ItemFieldSingleSelectValue {
+                          name
+                          field { ... on ProjectV2FieldCommon { name } }
                         }
                       }
                     }
                   }
                 }
               }
-              """ % view_id
+            }
+          }
+          """
 
-              try:
-                  response = requests.post("https://api.github.com/graphql", 
-                                         json={"query": query}, 
-                                         headers=headers)
-                  response.raise_for_status()
-                  data = response.json()
-                  
-                  if "errors" in data:
-                      print(f"GitHub API Error for View {view_id}: {data['errors'][0]['message']}")
-                      return []
-
-                  # Navigate deep into the project structure
-                  items = data.get('data', {}).get('organization', {}).get('projectV2', {}).get('view', {}).get('items', {}).get('nodes', [])
-                  
-                  results = []
-                  for node in items:
-                      content = node.get('content')
-                      if not content: continue
-                      
-                      # Extract the Single Select 'Status' field
-                      status = "No Status"
-                      fields = node.get('fieldValues', {}).get('nodes', [])
-                      for f in fields:
-                          if f.get('field', {}).get('name') == 'Status':
-                              status = f.get('name')
-                      
-                      results.append({
-                          "title": content.get('title'),
-                          "url": content.get('url'),
-                          "status": status
-                      })
-                  return results
-              except Exception as e:
-                  print(f"Request failed for View {view_id}: {e}")
-                  return []
-
-          data_output = {}
-          for key, v_id in project_map.items():
-              print(f"Syncing {key} (View {v_id})...")
-              items = fetch_github_kanban(v_id)
-              print(f"  Found {len(items)} items")
-              data_output[key] = items
-
-          # Ensure the _data directory exists
-          if not os.path.exists('_data'):
-              os.makedirs('_data')
+          try:
+              response = requests.post("https://api.github.com/graphql", json={"query": query}, headers=headers)
+              response.raise_for_status()
+              data = response.json()
               
-          with open('_data/roadmaps.json', 'w') as f:
-              json.dump({
-                  "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
-                  "projects": data_output
-              }, f, indent=2)
+              nodes = data['data']['organization']['projectV2']['items']['nodes']
+              all_items = []
+              
+              for node in nodes:
+                  content = node.get('content')
+                  if not content: continue
+                  
+                  status = "No Status"
+                  fields = node.get('fieldValues', {}).get('nodes', [])
+                  for f in fields:
+                      if f.get('field', {}).get('name') == 'Status':
+                          status = f.get('name')
+                  
+                  all_items.append({
+                      "title": content.get('title'),
+                      "url": content.get('url'),
+                      "status": status
+                  })
+
+              if not os.path.exists('_data'): os.makedirs('_data')
+              with open('_data/roadmaps.json', 'w') as f:
+                  json.dump({
+                      "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+                      "all_items": all_items
+                  }, f, indent=2)
+          except Exception as e:
+              print(f"Error: {e}")
+              exit(1)
           EOF
 
       - name: Commit and Push
@@ -131,9 +98,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/roadmaps.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update roadmaps.json from Org Project 44"
-            git push
-          else
-            echo "No changes to data."
-          fi
+          git commit -m "Update roadmaps data" || exit 0
+          git push
