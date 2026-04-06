@@ -2,41 +2,68 @@ name: Sync Project Boards
 on:
   schedule:
     - cron: '0 0 * * *'
-  workflow_dispatch:   # Allows manual run via "Actions" tab
+  workflow_dispatch: 
 
 jobs:
-  build:
+  update-kanban:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          # Using SYNC_TOKEN here ensures the push triggers your Jekyll/Pages build
-          token: ${{ secrets.SYNC_TOKEN }}
-          
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-          
-      - name: Install dependencies
-        run: pip install requests
-        
-      - name: Run sync
+
+      - name: Fetch Kanban Data
         env:
-          # Updated to use your confirmed secret name
           PROJECT_ACCESS_TOKEN: ${{ secrets.SYNC_TOKEN }}
-        run: python sync_projects.py
-        
-      - name: Commit and Push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add pages/*.md
-          # Only commit and push if files actually changed to avoid empty commit errors
-          if ! git diff --cached --quiet; then
-            git commit -m "Update live roadmap data"
-            git push
-          else
-            echo "No changes detected in pages/*.md"
-          fi
+          python - <<EOF
+          import os, json, requests
+          from datetime import datetime
+
+          # 1. Configuration: Map your internal key to the View ID
+          # All these belong to Organization Project 44
+          views = {
+              "streaming": 6,
+              "5gbroadcast": 7,
+              "mbs": 8,
+              "xr": 9,
+              "volumetric": 10,
+              "npn": 11,
+              "net_apis": 12,
+              "ntn": 13,
+              "6g": 15
+          }
+
+          def fetch_view_items(view_id):
+              # This is where your GraphQL logic goes to fetch from Project 44, View {view_id}
+              # For now, returning a placeholder structure
+              return [
+                  {"title": "Sample Issue", "url": "https://github.com/...", "status": "Work in Progress"},
+                  {"title": "Finished Task", "url": "https://github.com/...", "status": "Completed"}
+              ]
+
+          output = {
+              "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+              "projects": {}
+          }
+
+          for key, v_id in views.items():
+              print(f"Fetching View {v_id} for {key}...")
+              output["projects"][key] = fetch_view_items(v_id)
+
+          if not os.path.exists('_data'): os.makedirs('_data')
+          with open('_data/kanban.json', 'w') as f:
+              json.dump(output, f, indent=2)
+          EOF
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/kanban.json
+          git commit -m "Update Kanban data for all projects" || exit 0
+          git push
