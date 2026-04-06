@@ -32,7 +32,6 @@ jobs:
           token = os.environ.get("PROJECT_ACCESS_TOKEN")
           headers = {"Authorization": f"Bearer {token}"}
           
-          # This query gets all items in Project 44 and their field values (Status, etc.)
           query = """
           query {
             organization(login: "5G-MAG") {
@@ -40,8 +39,16 @@ jobs:
                 items(first: 100) {
                   nodes {
                     content {
-                      ... on Issue { title url }
-                      ... on PullRequest { title url }
+                      ... on Issue { 
+                        title 
+                        url 
+                        labels(first: 10) { nodes { name } }
+                      }
+                      ... on PullRequest { 
+                        title 
+                        url 
+                        labels(first: 10) { nodes { name } }
+                      }
                     }
                     fieldValues(first: 20) {
                       nodes {
@@ -63,6 +70,10 @@ jobs:
               response.raise_for_status()
               data = response.json()
               
+              if "errors" in data:
+                  print(f"API Error: {data['errors']}")
+                  exit(1)
+
               nodes = data['data']['organization']['projectV2']['items']['nodes']
               all_items = []
               
@@ -70,16 +81,22 @@ jobs:
                   content = node.get('content')
                   if not content: continue
                   
+                  # Get Status from Project Field
                   status = "No Status"
                   fields = node.get('fieldValues', {}).get('nodes', [])
                   for f in fields:
                       if f.get('field', {}).get('name') == 'Status':
                           status = f.get('name')
                   
+                  # Get Labels from Issue/PR
+                  label_nodes = content.get('labels', {}).get('nodes', [])
+                  labels = [l['name'] for l in label_nodes]
+                  
                   all_items.append({
                       "title": content.get('title'),
                       "url": content.get('url'),
-                      "status": status
+                      "status": status,
+                      "labels": labels
                   })
 
               if not os.path.exists('_data'): os.makedirs('_data')
@@ -88,6 +105,7 @@ jobs:
                       "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
                       "all_items": all_items
                   }, f, indent=2)
+              print("Successfully updated _data/roadmaps.json")
           except Exception as e:
               print(f"Error: {e}")
               exit(1)
@@ -98,5 +116,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/roadmaps.json
-          git commit -m "Update roadmaps data" || exit 0
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Update roadmaps data with labels"
+            git push
+          else
+            echo "No changes to data."
+          fi
