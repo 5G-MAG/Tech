@@ -11,8 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # CRITICAL: Use your PAT here so the push triggers the next workflow
-          token: ${{ secrets.PROJECT_ACCESS_TOKEN }}
+          # Using SYNC_TOKEN here ensures the push triggers your Jekyll/Pages build
+          token: ${{ secrets.SYNC_TOKEN }}
           
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -24,7 +24,8 @@ jobs:
         
       - name: Run sync
         env:
-          PROJECT_ACCESS_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
+          # Updated to use your confirmed secret name
+          PROJECT_ACCESS_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: python sync_projects.py
         
       - name: Commit and Push changes
@@ -32,7 +33,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add pages/*.md
-          # Only commit and push if files actually changed
+          # Only commit and push if files actually changed to avoid empty commit errors
           if ! git diff --cached --quiet; then
             git commit -m "Update live roadmap data"
             git push
