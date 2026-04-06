@@ -1,28 +1,4 @@
-name: Sync Project Boards
-on:
-  schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch: 
-
-jobs:
-  update-data:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      # --- THIS IS THE MISSING PIECE ---
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Fetch and Create JSON
+- name: Fetch and Create JSON
         env:
           PROJECT_ACCESS_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
@@ -30,23 +6,77 @@ jobs:
           import os, json, requests
           from datetime import datetime
 
-          # 1. Configuration: Mapping keys to View IDs for Project 44
+          token = os.environ.get("PROJECT_ACCESS_TOKEN")
+          headers = {"Authorization": f"Bearer {token}"}
+
           project_map = {
               "streaming": 6, "5gbroadcast": 7, "mbs": 8, "xr": 9,
               "volumetric": 10, "npn": 11, "net_apis": 12, "ntn": 13, "6g": 15
           }
 
           def fetch_github_kanban(view_id):
-              # You must replace this with your actual GraphQL or REST query logic
-              # using requests.post or requests.get
-              print(f"Fetching View {view_id}...")
-              return [] # Return list of {"title": "...", "url": "...", "status": "..."}
+              query = """
+              query($org: String!, $number: Int!) {
+                organization(login: $org) {
+                  projectV2(number: $number) {
+                    view(number: %d) {
+                      items(first: 100) {
+                        nodes {
+                          content {
+                            ... on Issue { title url }
+                            ... on PullRequest { title url }
+                          }
+                          fieldValues(first: 10) {
+                            nodes {
+                              ... on ProjectV2ItemFieldSingleSelectValue {
+                                name
+                                field { ... on ProjectV2FieldCommon { name } }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              """ % view_id
+
+              variables = {"org": "5G-MAG", "number": 44}
+              response = requests.post("https://api.github.com/graphql", 
+                                     json={"query": query, "variables": variables}, 
+                                     headers=headers)
+              
+              if response.status_code != 200:
+                  print(f"Error: {response.status_code}")
+                  return []
+
+              data = response.json()
+              nodes = data['data']['organization']['projectV2']['view']['items']['nodes']
+              
+              results = []
+              for node in nodes:
+                  content = node.get('content', {})
+                  fields = node.get('fieldValues', {}).get('nodes', [])
+                  
+                  # Find the Status field
+                  status = "Unknown"
+                  for f in fields:
+                      if f.get('field', {}).get('name') == 'Status':
+                          status = f.get('name')
+                  
+                  results.append({
+                      "title": content.get('title'),
+                      "url": content.get('url'),
+                      "status": status
+                  })
+              return results
 
           data_output = {}
           for key, v_id in project_map.items():
+              print(f"Fetching data for {key} (View {v_id})...")
               data_output[key] = fetch_github_kanban(v_id)
 
-          # 2. Ensure _data folder exists and save
           if not os.path.exists('_data'): os.makedirs('_data')
           with open('_data/roadmaps.json', 'w') as f:
               json.dump({
@@ -54,11 +84,3 @@ jobs:
                   "projects": data_output
               }, f, indent=2)
           EOF
-
-      - name: Commit and Push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/roadmaps.json
-          git commit -m "Update roadmaps data" || exit 0
-          git push
