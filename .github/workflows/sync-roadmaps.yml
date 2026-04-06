@@ -18,7 +18,11 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Fetch Kanban Data
+      # --- THIS IS THE MISSING PIECE ---
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch and Create JSON
         env:
           PROJECT_ACCESS_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
@@ -33,20 +37,22 @@ jobs:
           }
 
           def fetch_github_kanban(view_id):
-              # --- INSERT YOUR EXISTING GRAPHQL FETCH LOGIC HERE ---
-              # It must return a list of dicts: [{"title": "...", "url": "...", "status": "..."}]
-              return [] 
+              # You must replace this with your actual GraphQL or REST query logic
+              # using requests.post or requests.get
+              print(f"Fetching View {view_id}...")
+              return [] # Return list of {"title": "...", "url": "...", "status": "..."}
 
           data_output = {}
           for key, v_id in project_map.items():
-              print(f"Syncing {key}...")
               data_output[key] = fetch_github_kanban(v_id)
 
-          # 2. Create _data folder and save
+          # 2. Ensure _data folder exists and save
           if not os.path.exists('_data'): os.makedirs('_data')
-          timestamp = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
           with open('_data/roadmaps.json', 'w') as f:
-              json.dump({"last_updated": timestamp, "projects": data_output}, f, indent=2)
+              json.dump({
+                  "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+                  "projects": data_output
+              }, f, indent=2)
           EOF
 
       - name: Commit and Push
@@ -54,5 +60,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/roadmaps.json
-          git commit -m "Update Kanban data" || exit 0
+          git commit -m "Update roadmaps data" || exit 0
           git push
