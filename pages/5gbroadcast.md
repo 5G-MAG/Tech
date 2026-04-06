@@ -24,21 +24,26 @@ nav_order: 3
 <div id='kanban-display' style='font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;'>
 <p style='font-size: 12px; color: #586069; margin-bottom: 20px;'>Last Sync: {{ site.data.roadmaps.last_updated }}</p>
 
+{% assign target_label = "Topic: 5G Broadcast" %}
+
 <h3 style='border-bottom: 1px solid #eaecef; padding-bottom: 8px; margin-top: 30px; color: #24292e;'>Work in Progress</h3>
-    {% for item in project_data %}{% if item.status == "Work in Progress" %}
-    <div style="margin-bottom: 12px; padding: 15px; border: 1px solid #d1d5da; border-radius: 8px; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <a href="{{ item.url }}" style="text-decoration: none; color: #0366d6; font-size: 15px; font-weight: 600; display: block;">{{ item.title }}</a>
-    </div>
-    {% endif %}{% endfor %}
+    {% for item in site.data.roadmaps.all_items %}
+      {% if item.status == "Work in Progress" and item.labels contains target_label %}
+        <div style="margin-bottom: 12px; padding: 15px; border: 1px solid #d1d5da; border-radius: 8px; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <a href="{{ item.url }}" style="text-decoration: none; color: #0366d6; font-size: 15px; font-weight: 600; display: block;">{{ item.title }}</a>
+        </div>
+      {% endif %}
+    {% endfor %}
 
 <h3 style='border-bottom: 1px solid #eaecef; padding-bottom: 8px; margin-top: 30px; color: #24292e;'>Completed</h3>
-    {% for item in project_data %}{% if item.status == "Completed" %}
-    <div style="margin-bottom: 12px; padding: 15px; border: 1px solid #d1d5da; border-radius: 8px; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <a href="{{ item.url }}" style="text-decoration: none; color: #0366d6; font-size: 15px; font-weight: 600; display: block;">{{ item.title }}</a>
-    </div>
-    {% endif %}{% endfor %}
+    {% for item in site.data.roadmaps.all_items %}
+      {% if item.status == "Completed" and item.labels contains target_label %}
+        <div style="margin-bottom: 12px; padding: 15px; border: 1px solid #d1d5da; border-radius: 8px; background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <a href="{{ item.url }}" style="text-decoration: none; color: #0366d6; font-size: 15px; font-weight: 600; display: block;">{{ item.title }}</a>
+        </div>
+      {% endif %}
+    {% endfor %}
 </div>
-
 ---
 
 ## Information related to Standards
