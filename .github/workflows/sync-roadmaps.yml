@@ -1,42 +1,165 @@
 name: Sync Project Boards
+
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:   # Allows manual run via "Actions" tab
+    - cron: '0 0 * * *' # Runs every night at midnight
+  workflow_dispatch:   # Allows manual trigger from the Actions tab
 
 jobs:
-  build:
+  update-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          # Using SYNC_TOKEN here ensures the push triggers your Jekyll/Pages build
-          token: ${{ secrets.SYNC_TOKEN }}
-          
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-          
+
       - name: Install dependencies
         run: pip install requests
-        
-      - name: Run sync
+
+      - name: Fetch Kanban Data
         env:
-          # Updated to use your confirmed secret name
+          # This must match the name of your Secret in GitHub Settings
           PROJECT_ACCESS_TOKEN: ${{ secrets.SYNC_TOKEN }}
-        run: python sync_projects.py
-        
-      - name: Commit and Push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add pages/*.md
-          # Only commit and push if files actually changed to avoid empty commit errors
+          python - <<EOF
+          import os
+          import json
+          import requests
+          from datetime import datetime
+
+          # 1. Configuration
+          token = os.environ.get("PROJECT_ACCESS_TOKEN")
+          headers = {"Authorization": f"Bearer {token}"}
+          org_name = "5G-MAG"
+          project_number = 44
+
+          # Mapping of your page keys to the specific View IDs in Project 44
+          project_map = {
+              "streaming": 6,
+              "5gbroadcast": 7,
+              "mbs": 8,
+              "xr": 9,
+              "volumetric": 10,
+              "npn": 11,
+              "net_apis": 12,
+              "ntn": 13,
+              "6g": 15
+          }
+
+          def fetch_github_kanban(view_id):
+              # GraphQL query to get items from a specific view
+              query = """
+              query($org: String!, $number: Int!) {
+                organization(login: $org) {
+                  projectV2(number: $number) {
+                    view(number: %d) {
+                      items(first: 100) {
+                        nodes {
+                          content {
+                            ... on Issue { title url }
+                            ... on PullRequest { title url }
+                          }
+                          fieldValues(first: 20) {
+                            nodes {
+                              ... on ProjectV2ItemFieldSingleSelectValue {
+                                name
+                                field { ... on ProjectV2FieldCommon { name } }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              """ % view_id
+
+              variables = {"org": org_name, "number": project_number}
+              
+              try:
+                  response = requests.post(
+                      "https://api.github.com/graphql", 
+                      json={"query": query, "variables": variables}, 
+                      headers=headers
+                  )
+                  response.raise_for_status()
+                  data = response.json()
+                  
+                  # Navigate the JSON response
+                  project_data = data.get('data', {}).get('organization', {}).get('projectV2', {})
+                  if not project_data:
+                      print(f"No project data found for View {view_id}")
+                      return []
+                      
+                  view_data = project_data.get('view', {})
+                  if not view_data:
+                      print(f"View {view_id} not found")
+                      return []
+
+                  nodes = view_data.get('items', {}).get('nodes', [])
+                  
+                  results = []
+                  for node in nodes:
+                      content = node.get('content', {})
+                      if not content: continue
+                      
+                      fields = node.get('fieldValues', {}).get('nodes', [])
+                      
+                      # Find the value of the field named 'Status'
+                      status = "No Status"
+                      for f in fields:
+                          if f.get('field', {}).get('name') == 'Status':
+                              status = f.get('name')
+                      
+                      results.append({
+                          "title": content.get('title'),
+                          "url": content.get('url'),
+                          "status": status
+                      })
+                  return results
+
+              except Exception as e:
+                  print(f"Error fetching view {view_id}: {e}")
+                  return []
+
+          # 2. Execute fetch for all mapped projects
+          data_output = {}
+          for key, v_id in project_map.items():
+              print(f"Fetching {key} (View {v_id})...")
+              data_output[key] = fetch_github_kanban(v_id)
+
+          # 3. Save to _data folder
+          if not os.path.exists('_data'):
+              os.makedirs('_data')
+              
+          timestamp = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
+          final_json = {
+              "last_updated": timestamp,
+              "projects": data_output
+          }
+
+          with open('_data/roadmaps.json', 'w') as f:
+              json.dump(final_json, f, indent=2)
+              
+          print(f"Successfully updated _data/roadmaps.json at {timestamp}")
+          EOF
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/roadmaps.json
+          # Commit only if the file changed
           if ! git diff --cached --quiet; then
-            git commit -m "Update live roadmap data"
+            git commit -m "Update live roadmap data in _data/roadmaps.json"
             git push
           else
-            echo "No changes detected in pages/*.md"
+            echo "No data changes detected."
           fi
