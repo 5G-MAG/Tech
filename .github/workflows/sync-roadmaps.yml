@@ -28,21 +28,14 @@ jobs:
 
           # 1. Configuration: Mapping keys to View IDs for Project 44
           project_map = {
-              "streaming": 6,
-              "5gbroadcast": 7,
-              "mbs": 8,
-              "xr": 9,
-              "volumetric": 10,
-              "npn": 11,
-              "net_apis": 12,
-              "ntn": 13,
-              "6g": 15
+              "streaming": 6, "5gbroadcast": 7, "mbs": 8, "xr": 9,
+              "volumetric": 10, "npn": 11, "net_apis": 12, "ntn": 13, "6g": 15
           }
 
           def fetch_github_kanban(view_id):
-              # Note: You will need your existing GraphQL logic here 
-              # to fetch Title, URL, and Status from Project 44 / View {view_id}
-              return [] # Should return list of {"title": "...", "url": "...", "status": "..."}
+              # --- INSERT YOUR EXISTING GRAPHQL FETCH LOGIC HERE ---
+              # It must return a list of dicts: [{"title": "...", "url": "...", "status": "..."}]
+              return [] 
 
           data_output = {}
           for key, v_id in project_map.items():
