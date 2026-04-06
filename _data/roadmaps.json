@@ -1,14 +1,291 @@
 {
-  "last_updated": "2026-04-06 15:42 UTC",
-  "projects": {
-    "streaming": [],
-    "5gbroadcast": [],
-    "mbs": [],
-    "xr": [],
-    "volumetric": [],
-    "npn": [],
-    "net_apis": [],
-    "ntn": [],
-    "6g": []
-  }
+  "last_updated": "2026-04-06 15:50 UTC",
+  "all_items": [
+    {
+      "title": "Technical Report on MBS: Service and System Aspects",
+      "url": "https://github.com/5G-MAG/Tech/issues/65",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on MBS: Service Layer Aspects",
+      "url": "https://github.com/5G-MAG/Tech/issues/64",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on MBS: RAN Aspects",
+      "url": "https://github.com/5G-MAG/Tech/issues/66",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on MBS: Mobility for MBS Multicast Services",
+      "url": "https://github.com/5G-MAG/Tech/issues/67",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on MBS: RAN procedures for MBS Broadcast",
+      "url": "https://github.com/5G-MAG/Tech/issues/68",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on MBS: RAN procedures for MBS Multicast Inactive",
+      "url": "https://github.com/5G-MAG/Tech/issues/69",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on MBS Delivery Mode 1 (Multicast) over NTN",
+      "url": "https://github.com/5G-MAG/Tech/issues/71",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: NTN",
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on Mobility for MBS Multicast over NTN",
+      "url": "https://github.com/5G-MAG/Tech/issues/72",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: NTN",
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on MBS Delivery Mode 2 (Broadcast) over NTN",
+      "url": "https://github.com/5G-MAG/Tech/issues/73",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: NTN",
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "5G Broadcast Deployment Profiles",
+      "url": "https://github.com/5G-MAG/Tech/issues/61",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: 5G Broadcast"
+      ]
+    },
+    {
+      "title": "5G Broadcast Operational Parameters in Use",
+      "url": "https://github.com/5G-MAG/Tech/issues/62",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: 5G Broadcast"
+      ]
+    },
+    {
+      "title": "Publication of ETSI TS 103 720 v1.3.1",
+      "url": "https://github.com/5G-MAG/Tech/issues/75",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: 5G Broadcast"
+      ]
+    },
+    {
+      "title": "Explainer on LTE-based 5G Terrestrial Broadcast for TV and radio distribution",
+      "url": "https://github.com/5G-MAG/Tech/issues/58",
+      "status": "Completed",
+      "labels": [
+        "Topic: 5G Broadcast"
+      ]
+    },
+    {
+      "title": "Explainer on Spectrum for LTE-based 5G Terrestrial Broadcast",
+      "url": "https://github.com/5G-MAG/Tech/issues/59",
+      "status": "Completed",
+      "labels": [
+        "Topic: 5G Broadcast"
+      ]
+    },
+    {
+      "title": "Technical Report on Time and Frequency Interleaving for broadcast services in 3GPP Systems",
+      "url": "https://github.com/5G-MAG/Tech/issues/60",
+      "status": "Completed",
+      "labels": [
+        "Topic: Multicast Broadcast",
+        "Topic: 5G Broadcast"
+      ]
+    },
+    {
+      "title": "Publication of ETSI TS 103 720 v1.2.1",
+      "url": "https://github.com/5G-MAG/Tech/issues/74",
+      "status": "Completed",
+      "labels": [
+        "Topic: 5G Broadcast"
+      ]
+    },
+    {
+      "title": "Explainer on Media distribution with 5G Multicast-Broadcast Services (MBS)",
+      "url": "https://github.com/5G-MAG/Tech/issues/63",
+      "status": "Completed",
+      "labels": [
+        "Topic: Multicast Broadcast"
+      ]
+    },
+    {
+      "title": "Gathering requirements towards FS_AMD",
+      "url": "https://github.com/5G-MAG/Tech/issues/23",
+      "status": "Completed",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Report on Uplink Media Delivery",
+      "url": "https://github.com/5G-MAG/Tech/issues/24",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Implemention of Reference Tools (Rel-17)",
+      "url": "https://github.com/5G-MAG/Tech/issues/21",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Documentation page on 5GMS specification references",
+      "url": "https://github.com/5G-MAG/Tech/issues/18",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Generation of Docker instances for 5GMS collaboration scenarios",
+      "url": "https://github.com/5G-MAG/Tech/issues/20",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Testing of 5G Media Streaming Reference Tools in Testbeds",
+      "url": "https://github.com/5G-MAG/Tech/issues/17",
+      "status": "Under Study",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Documentation on 5GMS collaboration scenarios",
+      "url": "https://github.com/5G-MAG/Tech/issues/19",
+      "status": "Under Study",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Implementation of Reference Tools (Rel-18)",
+      "url": "https://github.com/5G-MAG/Tech/issues/22",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Provide feedback to 3GPP",
+      "url": "https://github.com/5G-MAG/Tech/issues/26",
+      "status": "Work in Progress",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "Integration of 5GMS clients with commercial OTT app",
+      "url": "https://github.com/5G-MAG/Tech/issues/25",
+      "status": "Candidates",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "3GPP TSG RAN Workshop on Release -18",
+      "url": "https://github.com/5G-MAG/Tech/issues/52",
+      "status": "Completed",
+      "labels": [
+        "Topic: 3GPP Workshops"
+      ]
+    },
+    {
+      "title": "Documentation on Standards related to Advanced Media Delivery",
+      "url": "https://github.com/5G-MAG/Tech/issues/36",
+      "status": "Under Study",
+      "labels": [
+        "Topic: Streaming & Media Delivery"
+      ]
+    },
+    {
+      "title": "3GPP TSG SA Workshop on Release 18",
+      "url": "https://github.com/5G-MAG/Tech/issues/53",
+      "status": "Completed",
+      "labels": [
+        "Topic: 3GPP Workshops"
+      ]
+    },
+    {
+      "title": "3GPP TSG RAN Workshop on Release 19",
+      "url": "https://github.com/5G-MAG/Tech/issues/54",
+      "status": "Completed",
+      "labels": [
+        "Topic: 3GPP Workshops"
+      ]
+    },
+    {
+      "title": "3GPP TSG SA Workshop on Release 19",
+      "url": "https://github.com/5G-MAG/Tech/issues/55",
+      "status": "Completed",
+      "labels": [
+        "Topic: 3GPP Workshops"
+      ]
+    },
+    {
+      "title": "3GPP TSG SA WG1 Workshop on IMT-2030",
+      "url": "https://github.com/5G-MAG/Tech/issues/56",
+      "status": "Completed",
+      "labels": [
+        "Topic: 6G Media",
+        "Topic: 3GPP Workshops"
+      ]
+    },
+    {
+      "title": "3GPP TSG Workshop on 6G",
+      "url": "https://github.com/5G-MAG/Tech/issues/57",
+      "status": "Completed",
+      "labels": [
+        "Topic: 6G Media",
+        "Topic: 3GPP Workshops"
+      ]
+    },
+    {
+      "title": "Technical Report on Mobility for NTN",
+      "url": "https://github.com/5G-MAG/Tech/issues/70",
+      "status": "Candidates",
+      "labels": [
+        "Topic: NTN"
+      ]
+    }
+  ]
 }
