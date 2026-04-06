@@ -19,8 +19,6 @@ nav_order: 3
 
 [Go to the Execution Plan Kanban Board](https://github.com/orgs/5G-MAG/projects/44/views/7){: .btn .btn-blue }
 
-{% assign project_data = site.data.roadmaps.projects["5gbroadcast"] %}
-
 <div id='kanban-display' style='font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;'>
 <p style='font-size: 12px; color: #586069; margin-bottom: 20px;'>Last Sync: {{ site.data.roadmaps.last_updated }}</p>
 
@@ -44,6 +42,7 @@ nav_order: 3
       {% endif %}
     {% endfor %}
 </div>
+
 ---
 
 ## Information related to Standards
