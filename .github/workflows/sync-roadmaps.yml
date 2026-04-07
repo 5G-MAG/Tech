@@ -1,8 +1,9 @@
 name: Sync Project Boards
+
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch: 
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch:   # Allows manual triggering
 
 jobs:
   update-data:
@@ -12,6 +13,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          # Using PAT here ensures the push can trigger other workflows
+          token: ${{ secrets.SYNC_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -112,6 +116,7 @@ jobs:
           EOF
 
       - name: Commit and Push
+        id: push_data
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -119,6 +124,21 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Update roadmaps data with labels"
             git push
+            echo "updated=true" >> $GITHUB_OUTPUT
           else
             echo "No changes to data."
+            echo "updated=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Trigger Deployment
+        # Only trigger if the data actually changed
+        if: steps.push_data.outputs.updated == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.SYNC_TOKEN }}
+          script: |
+            github.rest.repos.create_dispatch_event({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              event_type: 'rebuild_site'
+            })
