@@ -137,7 +137,7 @@ jobs:
         with:
           github-token: ${{ secrets.SYNC_TOKEN }}
           script: |
-            github.rest.repos.create_dispatch_event({
+            github.rest.repos.createDispatchEvent({
               owner: context.repo.owner,
               repo: context.repo.repo,
               event_type: 'rebuild_site'
