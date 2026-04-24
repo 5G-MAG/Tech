@@ -10,91 +10,101 @@ has_children: false
 <img src="../../../assets/images/Banner_NetworkAPIs.png" /> 
 
 <style>
+  /* Base Variables (Default: Dark Mode) */
+  :root {
+    --proc-bg: transparent;
+    --proc-text: #e6edf3;
+    --proc-text-muted: #8b949e;
+    --proc-text-red: #ff7b72;
+    --proc-badge-csp: #30363d;
+    --proc-header-text: #ffffff;
+  }
+
+  /* Adaptive Light Mode Override */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --proc-text: #1a1a1a;
+      --proc-text-muted: #57606a;
+      --proc-text-red: #cf222e;
+      --proc-badge-csp: #24292f;
+    }
+  }
+
+  /* Specific just-the-docs theme toggle support */
+  [data-theme='light'] .process-container {
+      --proc-text: #1a1a1a;
+      --proc-text-muted: #57606a;
+      --proc-text-red: #cf222e;
+      --proc-badge-csp: #24292f;
+  }
+
   .process-container {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: transparent;
+    background-color: var(--proc-bg);
     padding: 10px 0;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 20px 0;
+    color: var(--proc-text);
   }
 
   .phase-bar {
     display: flex;
     align-items: center;
-    padding: 10px 18px;
+    padding: 10px 20px;
     border-radius: 50px;
     font-weight: 700;
     margin-bottom: 18px;
     margin-top: 30px;
-    color: #ffffff !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: var(--proc-header-text) !important;
   }
 
   .phase-num {
     background: #ffffff !important;
     border-radius: 50%;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 12px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 900;
   }
 
   .row-item {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 15px;
     margin-left: 15px;
     margin-bottom: 16px;
   }
 
-  .badge-stack {
+  .actor-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 45px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #1a1a1a !important;
+    width: 55px;
+    flex-shrink: 0;
   }
 
   .p-badge {
-    padding: 2px 10px;
+    padding: 2px 0;
     border-radius: 20px;
     font-size: 11px;
     font-weight: 800;
     color: #ffffff !important;
     text-align: center;
-    width: 100%;
+    width: 55px;
+    display: block;
+    align-self: flex-start;
   }
 
   .p-asp { background-color: #00a3cc !important; }
-  .p-csp { background-color: #314b6d !important; }
+  .p-csp { background-color: var(--proc-badge-csp) !important; }
 
-  /* Visible text for white background */
-  .p-text-black { 
-    color: #000000 !important; 
-    font-size: 15px; 
-    line-height: 1.5;
-    font-weight: 450;
-  }
-
-  .p-text-gray { 
-    color: #707070 !important; 
-    font-size: 15px; 
-    line-height: 1.5;
-  }
-
-  .p-text-red { 
-    color: #e60000 !important; 
-    font-size: 15px; 
-    line-height: 1.5; 
-    font-weight: 500; 
-  }
-  
+  .p-text { color: var(--proc-text) !important; font-size: 15px; line-height: 1.4; }
+  .p-text-gray { color: var(--proc-text-muted) !important; font-size: 15px; line-height: 1.4; }
+  .p-text-red { color: var(--proc-text-red) !important; font-size: 15px; line-height: 1.4; font-weight: 600; }
   .p-text-red u { text-underline-offset: 3px; }
 </style>
 
@@ -121,29 +131,31 @@ The following steps are executed:
 
 <div class="process-container">
 
-  <div class="phase-bar" style="background-color: #7c52e4;">
-    <div class="phase-num" style="color: #7c52e4;">0</div> Pre-conditions
+  <div class="phase-bar" style="background-color: #8957e5;">
+    <div class="phase-num" style="color: #8957e5;">0</div> Pre-conditions
   </div>
   
   <div class="row-item">
-    <div class="badge-stack">
-      <span class="p-badge p-asp">ASP</span>
-      <div style="margin: 2px 0;">+</div>
-      <span class="p-badge p-csp">CSP</span>
-    </div>
-    <div class="p-text-black">
-      On-boarding of the ASP<br>
-      - &nbsp;Sign up and access credentials<br>
-      - &nbsp;Selection / Request for Network Profiles and Network Service Areas
-    </div>
-  </div>
-
-  <div class="phase-bar" style="background-color: #f38d3c;">
-    <div class="phase-num" style="color: #f38d3c;">1</div> Before using the network
+    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
+    <div class="p-text">Description for Phase 0</div>
   </div>
 
   <div class="row-item">
-    <span class="p-badge p-asp">ASP</span>
+    <div class="actor-col"><span class="p-badge p-csp">CSP</span></div>
+    <div class="p-text">Description for Phase 0</div>
+  </div>
+
+  <div class="row-item">
+    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
+    <div class="p-text">Description for Phase 0</div>
+  </div>
+
+  <div class="phase-bar" style="background-color: #f0883e;">
+    <div class="phase-num" style="color: #f0883e;">1</div> Before using the network
+  </div>
+
+  <div class="row-item">
+    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
     <div class="p-text-gray">
       1.0a. Discovery of available and eligible Network Profiles (optional)<br>
       1.0b. Discovery of available and eligible Network Service Areas (optional)
@@ -151,53 +163,51 @@ The following steps are executed:
   </div>
 
   <div class="row-item">
-    <span class="p-badge p-asp">ASP</span>
+    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
     <div class="p-text-red">1.1. <u>Request</u> of <u>Reservation</u> for Dedicated Network</div>
   </div>
 
   <div class="row-item">
-    <span class="p-badge p-csp">CSP</span>
-    <div class="p-text-black">1.2. Assessment of Dedicated Network reservation and change of status</div>
+    <div class="actor-col"><span class="p-badge p-csp">CSP</span></div>
+    <div class="p-text">Step 1.2 description</div>
   </div>
 
   <div class="row-item">
-    <span class="p-badge p-asp">ASP</span>
+    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
     <div class="p-text-red">1.3. <u>Request</u> of Device <u>Access</u> for Dedicated Network</div>
   </div>
 
-  <div class="phase-bar" style="background-color: #74b85c;">
-    <div class="phase-num" style="color: #74b85c;">2</div> During operation
+  <div class="phase-bar" style="background-color: #3fb950;">
+    <div class="phase-num" style="color: #3fb950;">2</div> During operation
   </div>
 
   <div class="row-item">
-    <span class="p-badge p-csp">CSP</span>
-    <div class="p-text-black">2.1. Dedicated Network is activated</div>
+    <div class="actor-col"><span class="p-badge p-csp">CSP</span></div>
+    <div class="p-text">Step 2.1 description</div>
   </div>
 
   <div class="row-item">
-    <span class="p-badge p-asp">ASP</span>
-    <div class="p-text-black">2.2. Device establishes connection</div>
+    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
+    <div class="p-text">Step 2.2 description</div>
   </div>
 
   <div class="row-item">
-    <span class="p-badge p-asp">ASP</span>
+    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
     <div class="p-text-red">2.3. Usage of API capabilities</div>
   </div>
 
-  <div class="phase-bar" style="background-color: #cc0000;">
-    <div class="phase-num" style="color: #cc0000;">3</div> Dismantling
+  <div class="phase-bar" style="background-color: #f85149;">
+    <div class="phase-num" style="color: #f85149;">3</div> Dismantling
   </div>
 
   <div class="row-item">
-    <div class="badge-stack">
-      <span class="p-badge p-asp">ASP</span>
-      <div style="margin: 2px 0;">+</div>
-      <span class="p-badge p-csp">CSP</span>
-    </div>
-    <div class="p-text-black">
-      <span class="p-text-red">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</span><br>
-      3.1b. Or the CSP simply tears the Dedicated Network down
-    </div>
+    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
+    <div class="p-text-red">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</div>
+  </div>
+
+  <div class="row-item">
+    <div class="actor-col"><span class="p-badge p-csp">CSP</span></div>
+    <div class="p-text">Step 3.1b description</div>
   </div>
 
 </div>
