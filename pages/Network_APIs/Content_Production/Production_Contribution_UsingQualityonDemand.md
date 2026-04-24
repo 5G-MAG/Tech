@@ -10,15 +10,23 @@ has_children: false
 <img src="../../../assets/images/Banner_NetworkAPIs.png" /> 
 
 <style>
+  :root {
+    /* Define colors that work well on white */
+    --process-text-main: #24292f;   /* Dark charcoal for main text */
+    --process-text-muted: #57606a;  /* Gray for descriptions */
+    --process-highlight: #cf222e;   /* Stronger red for highlights */
+    --badge-csp-bg: #21262d;        /* Darker badge for CSP */
+  }
+
   .process-wrapper {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: transparent; /* Changed to transparent */
-    padding: 24px;
-    border-radius: 12px;
-    color: #fff;
+    background-color: transparent;
+    padding: 10px 0;
     max-width: 100%;
     margin: 20px 0;
+    color: var(--process-text-main);
   }
+
   .step-header {
     display: flex;
     align-items: center;
@@ -27,10 +35,12 @@ has_children: false
     font-weight: 600;
     margin-bottom: 16px;
     margin-top: 24px;
-    color: white !important;
+    color: #ffffff !important; /* Forces white text inside the dark colored bars */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds depth on white backgrounds */
   }
+
   .step-num {
-    background: #fff;
+    background: #ffffff;
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -41,25 +51,41 @@ has_children: false
     font-size: 0.85rem;
     font-weight: bold;
   }
+
   .process-row {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-bottom: 12px;
   }
+
   .badge {
     padding: 2px 8px;
     border-radius: 6px;
     font-size: 11px;
     font-weight: 800;
-    min-width: 40px;
+    min-width: 42px;
     text-align: center;
+    color: #ffffff !important;
   }
-  .badge-asp { background-color: #17a2b8; color: white; }
-  .badge-csp { background-color: #384d62; color: white; }
-  .text-gray { color: #8b949e; font-size: 14px; line-height: 1.6; }
-  .text-highlight { color: #ff6b6b; font-size: 14px; line-height: 1.6; font-weight: 500; }
+
+  .badge-asp { background-color: #0885a3; } /* Slightly darkened for better white-bg contrast */
+  .badge-csp { background-color: var(--badge-csp-bg); }
+
+  .text-description { 
+    color: var(--process-text-muted); 
+    font-size: 14px; 
+    line-height: 1.6; 
+  }
+
+  .text-highlight { 
+    color: var(--process-highlight); 
+    font-size: 14px; 
+    line-height: 1.6; 
+    font-weight: 600; 
+  }
+  
   .text-highlight ins { text-decoration: underline; text-underline-offset: 3px; }
 </style>
 
@@ -86,19 +112,19 @@ The following steps are executed:
 
 <div class="process-wrapper">
 
-  <div class="step-header" style="background-color: #8957e5;">
-    <div class="step-num" style="color: #8957e5;">0</div> Pre-conditions
+  <div class="step-header" style="background-color: #6e3cc7;">
+    <div class="step-num" style="color: #6e3cc7;">0</div> Pre-conditions
   </div>
   <div class="process-row"><span class="badge badge-asp">ASP</span></div>
   <div class="process-row"><span class="badge badge-csp">CSP</span></div>
   <div class="process-row"><span class="badge badge-asp">ASP</span></div>
 
-  <div class="step-header" style="background-color: #f0883e;">
-    <div class="step-num" style="color: #f0883e;">1</div> Before using the network
+  <div class="step-header" style="background-color: #d46b1d;">
+    <div class="step-num" style="color: #d46b1d;">1</div> Before using the network
   </div>
   <div class="process-row">
     <span class="badge badge-asp">ASP</span>
-    <div class="text-gray">
+    <div class="text-description">
       1.0a. Discovery of available and eligible Network Profiles (optional)<br>
       1.0b. Discovery of available and eligible Network Service Areas (optional)
     </div>
@@ -113,8 +139,8 @@ The following steps are executed:
     <div class="text-highlight">1.3. <ins>Request</ins> of Device <ins>Access</ins> for Dedicated Network</div>
   </div>
 
-  <div class="step-header" style="background-color: #3fb950;">
-    <div class="step-num" style="color: #3fb950;">2</div> During operation
+  <div class="step-header" style="background-color: #2da44e;">
+    <div class="step-num" style="color: #2da44e;">2</div> During operation
   </div>
   <div class="process-row"><span class="badge badge-csp">CSP</span></div>
   <div class="process-row"><span class="badge badge-asp">ASP</span></div>
@@ -123,8 +149,8 @@ The following steps are executed:
     <div class="text-highlight">2.3. Usage of API capabilities</div>
   </div>
 
-  <div class="step-header" style="background-color: #f85149;">
-    <div class="step-num" style="color: #f85149;">3</div> Dismantling
+  <div class="step-header" style="background-color: #cf222e;">
+    <div class="step-num" style="color: #cf222e;">3</div> Dismantling
   </div>
   <div class="process-row">
     <span class="badge badge-asp">ASP</span>
