@@ -12,7 +12,7 @@ has_children: false
 <style>
   .process-wrapper {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #000000;
+    background-color: transparent; /* Changed to transparent */
     padding: 24px;
     border-radius: 12px;
     color: #fff;
