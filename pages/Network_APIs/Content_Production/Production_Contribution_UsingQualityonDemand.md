@@ -13,8 +13,8 @@ has_children: false
   /* Color Variables - Default: Light Mode */
   :root {
     --p-text-main: #1a1a1a;
-    --p-text-muted: #57606a;
-    --p-text-alert: #cf222e;
+    --p-text-muted: #707070; /* Gray for optional steps */
+    --p-text-alert: #cf222e; /* Red for key requests */
     --p-badge-csp: #24292f;
   }
 
@@ -28,7 +28,7 @@ has_children: false
     }
   }
 
-  /* Theme-toggle support for just-the-docs */
+  /* Theme-toggle support for just-the-docs theme */
   [data-theme='dark'] .proc-wrapper {
     --p-text-main: #e6edf3;
     --p-text-muted: #8b949e;
@@ -43,17 +43,19 @@ has_children: false
     line-height: 1.5;
   }
 
+  /* Phase Header Bars */
   .p-header {
     display: flex;
     align-items: center;
     padding: 10px 18px;
     border-radius: 50px;
     font-weight: 700;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     margin-top: 30px;
     color: #ffffff !important;
   }
 
+  /* Phase Number Circle */
   .p-circle {
     background: #ffffff !important;
     border-radius: 50%;
@@ -67,22 +69,25 @@ has_children: false
     font-weight: 900;
   }
 
+  /* Standard Entry Row */
   .p-entry {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start; /* Keeps actor at the top of the text block */
     gap: 15px;
     margin-left: 15px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
+  /* Actor Column (consistent width) */
   .p-actors {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 55px;
+    width: 55px; /* Ensures text descriptions always align */
     flex-shrink: 0;
   }
 
+  /* Badge Pills */
   .p-pill {
     padding: 2px 0;
     border-radius: 20px;
@@ -94,9 +99,11 @@ has_children: false
     display: block;
   }
 
+  /* Actor Colors */
   .p-pill-asp { background-color: #00a3cc !important; }
   .p-pill-csp { background-color: var(--p-badge-csp) !important; }
   
+  /* Collaborative Plus Sign (Step 0 only) */
   .p-plus-sign {
     font-weight: bold;
     font-size: 14px;
@@ -104,9 +111,10 @@ has_children: false
     color: var(--p-text-main) !important;
   }
 
-  .p-content { color: var(--p-text-main) !important; font-size: 15px; }
-  .p-content-m { color: var(--p-text-muted) !important; font-size: 15px; }
-  .p-content-a { color: var(--p-text-alert) !important; font-size: 15px; font-weight: 500; }
+  /* Text Semantic Colors */
+  .p-content { color: var(--p-text-main) !important; font-size: 15px; padding-top: 2px;}
+  .p-content-m { color: var(--p-text-muted) !important; font-size: 15px; padding-top: 2px;}
+  .p-content-a { color: var(--p-text-alert) !important; font-size: 15px; font-weight: 500; padding-top: 2px;}
   .p-content-a u { text-underline-offset: 3px; font-weight: 600; }
 </style>
 
@@ -156,10 +164,12 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-m">
-      1.0a. Discovery of available and eligible Network Profiles (optional)<br>
-      1.0b. Discovery of available and eligible Network Service Areas (optional)
-    </div>
+    <div class="p-content-m">1.0a. Discovery of available and eligible Network Profiles (optional)</div>
+  </div>
+
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-m">1.0b. Discovery of available and eligible Network Service Areas (optional)</div>
   </div>
 
   <div class="p-entry">
@@ -201,14 +211,13 @@ The following steps are executed:
   </div>
 
   <div class="p-entry">
-    <div class="p-actors">
-      <span class="p-pill p-pill-asp">ASP</span>
-      <div style="height: 4px;"></div> <span class="p-pill p-pill-csp">CSP</span>
-    </div>
-    <div class="p-content">
-      <span class="p-content-a">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</span><br>
-      3.1b. Or the CSP simply tears the Dedicated Network down
-    </div>
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-a">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</div>
+  </div>
+
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
+    <div class="p-content">3.1b. Or the CSP simply tears the Dedicated Network down</div>
   </div>
 
 </div>
