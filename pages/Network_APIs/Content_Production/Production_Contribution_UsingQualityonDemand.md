@@ -10,55 +10,51 @@ has_children: false
 <img src="../../../assets/images/Banner_NetworkAPIs.png" /> 
 
 <style>
-  /* Base Variables (Default: Dark Mode) */
+  /* Color Variables - Default: Light Mode */
   :root {
-    --proc-bg: transparent;
-    --proc-text: #e6edf3;
-    --proc-text-muted: #8b949e;
-    --proc-text-red: #ff7b72;
-    --proc-badge-csp: #30363d;
-    --proc-header-text: #ffffff;
+    --p-text-main: #1a1a1a;
+    --p-text-muted: #57606a;
+    --p-text-alert: #cf222e;
+    --p-badge-csp: #24292f;
   }
 
-  /* Adaptive Light Mode Override */
-  @media (prefers-color-scheme: light) {
+  /* Automatic Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
     :root {
-      --proc-text: #1a1a1a;
-      --proc-text-muted: #57606a;
-      --proc-text-red: #cf222e;
-      --proc-badge-csp: #24292f;
+      --p-text-main: #e6edf3;
+      --p-text-muted: #8b949e;
+      --p-text-alert: #ff7b72;
+      --p-badge-csp: #30363d;
     }
   }
 
-  /* Specific just-the-docs theme toggle support */
-  [data-theme='light'] .process-container {
-      --proc-text: #1a1a1a;
-      --proc-text-muted: #57606a;
-      --proc-text-red: #cf222e;
-      --proc-badge-csp: #24292f;
+  /* Theme-toggle support for just-the-docs */
+  [data-theme='dark'] .proc-wrapper {
+    --p-text-main: #e6edf3;
+    --p-text-muted: #8b949e;
+    --p-text-alert: #ff7b72;
+    --p-badge-csp: #30363d;
   }
 
-  .process-container {
+  .proc-wrapper {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--proc-bg);
-    padding: 10px 0;
-    max-width: 100%;
+    max-width: 1000px;
     margin: 20px 0;
-    color: var(--proc-text);
+    line-height: 1.5;
   }
 
-  .phase-bar {
+  .p-header {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 18px;
     border-radius: 50px;
     font-weight: 700;
     margin-bottom: 18px;
     margin-top: 30px;
-    color: var(--proc-header-text) !important;
+    color: #ffffff !important;
   }
 
-  .phase-num {
+  .p-circle {
     background: #ffffff !important;
     border-radius: 50%;
     width: 24px;
@@ -71,7 +67,7 @@ has_children: false
     font-weight: 900;
   }
 
-  .row-item {
+  .p-entry {
     display: flex;
     align-items: flex-start;
     gap: 15px;
@@ -79,7 +75,7 @@ has_children: false
     margin-bottom: 16px;
   }
 
-  .actor-col {
+  .p-actors {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,25 +83,31 @@ has_children: false
     flex-shrink: 0;
   }
 
-  .p-badge {
+  .p-pill {
     padding: 2px 0;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
     color: #ffffff !important;
     text-align: center;
     width: 55px;
     display: block;
-    align-self: flex-start;
   }
 
-  .p-asp { background-color: #00a3cc !important; }
-  .p-csp { background-color: var(--proc-badge-csp) !important; }
+  .p-pill-asp { background-color: #00a3cc !important; }
+  .p-pill-csp { background-color: var(--p-badge-csp) !important; }
+  
+  .p-plus-sign {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 1px 0;
+    color: var(--p-text-main) !important;
+  }
 
-  .p-text { color: var(--proc-text) !important; font-size: 15px; line-height: 1.4; }
-  .p-text-gray { color: var(--proc-text-muted) !important; font-size: 15px; line-height: 1.4; }
-  .p-text-red { color: var(--proc-text-red) !important; font-size: 15px; line-height: 1.4; font-weight: 600; }
-  .p-text-red u { text-underline-offset: 3px; }
+  .p-content { color: var(--p-text-main) !important; font-size: 15px; }
+  .p-content-m { color: var(--p-text-muted) !important; font-size: 15px; }
+  .p-content-a { color: var(--p-text-alert) !important; font-size: 15px; font-weight: 500; }
+  .p-content-a u { text-underline-offset: 3px; font-weight: 600; }
 </style>
 
 {: .warning }
@@ -129,85 +131,84 @@ This is a high-level figure with the entities involing APIs and the devices invo
 
 The following steps are executed:
 
-<div class="process-container">
+<div class="proc-wrapper">
 
-  <div class="phase-bar" style="background-color: #8957e5;">
-    <div class="phase-num" style="color: #8957e5;">0</div> Pre-conditions
+  <div class="p-header" style="background-color: #7c52e4;">
+    <div class="p-circle" style="color: #7c52e4;">0</div> Pre-conditions
   </div>
   
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
-    <div class="p-text">Description for Phase 0</div>
+  <div class="p-entry">
+    <div class="p-actors">
+      <span class="p-pill p-pill-asp">ASP</span>
+      <div class="p-plus-sign">+</div>
+      <span class="p-pill p-pill-csp">CSP</span>
+    </div>
+    <div class="p-content">
+      On-boarding of the ASP and Negotiation<br>
+      - &nbsp;Sign up and access credentials<br>
+      - &nbsp;Selection / Request for Network Profiles and Network Service Areas
+    </div>
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-csp">CSP</span></div>
-    <div class="p-text">Description for Phase 0</div>
+  <div class="p-header" style="background-color: #f38d3c;">
+    <div class="p-circle" style="color: #f38d3c;">1</div> Before using the network
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
-    <div class="p-text">Description for Phase 0</div>
-  </div>
-
-  <div class="phase-bar" style="background-color: #f0883e;">
-    <div class="phase-num" style="color: #f0883e;">1</div> Before using the network
-  </div>
-
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
-    <div class="p-text-gray">
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-m">
       1.0a. Discovery of available and eligible Network Profiles (optional)<br>
       1.0b. Discovery of available and eligible Network Service Areas (optional)
     </div>
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
-    <div class="p-text-red">1.1. <u>Request</u> of <u>Reservation</u> for Dedicated Network</div>
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-a">1.1. <u>Request</u> of <u>Reservation</u> for Dedicated Network</div>
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-csp">CSP</span></div>
-    <div class="p-text">Step 1.2 description</div>
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
+    <div class="p-content">1.2. Assessment of Dedicated Network reservation and change of status</div>
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
-    <div class="p-text-red">1.3. <u>Request</u> of Device <u>Access</u> for Dedicated Network</div>
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-a">1.3. <u>Request</u> of Device <u>Access</u> for Dedicated Network</div>
   </div>
 
-  <div class="phase-bar" style="background-color: #3fb950;">
-    <div class="phase-num" style="color: #3fb950;">2</div> During operation
+  <div class="p-header" style="background-color: #74b85c;">
+    <div class="p-circle" style="color: #74b85c;">2</div> During operation
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-csp">CSP</span></div>
-    <div class="p-text">Step 2.1 description</div>
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
+    <div class="p-content">2.1. Dedicated Network is activated</div>
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
-    <div class="p-text">Step 2.2 description</div>
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content">2.2. Device establishes connection</div>
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
-    <div class="p-text-red">2.3. Usage of API capabilities</div>
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-a">2.3. Usage of API capabilities</div>
   </div>
 
-  <div class="phase-bar" style="background-color: #f85149;">
-    <div class="phase-num" style="color: #f85149;">3</div> Dismantling
+  <div class="p-header" style="background-color: #cc0000;">
+    <div class="p-circle" style="color: #cc0000;">3</div> Dismantling
   </div>
 
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-asp">ASP</span></div>
-    <div class="p-text-red">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</div>
-  </div>
-
-  <div class="row-item">
-    <div class="actor-col"><span class="p-badge p-csp">CSP</span></div>
-    <div class="p-text">Step 3.1b description</div>
+  <div class="p-entry">
+    <div class="p-actors">
+      <span class="p-pill p-pill-asp">ASP</span>
+      <div style="height: 4px;"></div> <span class="p-pill p-pill-csp">CSP</span>
+    </div>
+    <div class="p-content">
+      <span class="p-content-a">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</span><br>
+      3.1b. Or the CSP simply tears the Dedicated Network down
+    </div>
   </div>
 
 </div>
