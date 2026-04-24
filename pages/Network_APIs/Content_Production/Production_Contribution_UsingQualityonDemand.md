@@ -10,28 +10,27 @@ has_children: false
 <img src="../../../assets/images/Banner_NetworkAPIs.png" /> 
 
 <style>
-  .process-wrapper {
+  .process-container {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: transparent;
     padding: 10px 0;
-    max-width: 100%;
+    max-width: 1000px;
     margin: 20px 0;
   }
 
-  .step-header {
+  .phase-bar {
     display: flex;
     align-items: center;
-    padding: 12px 20px;
+    padding: 10px 18px;
     border-radius: 50px;
     font-weight: 700;
-    margin-bottom: 16px;
-    margin-top: 28px;
-    /* This ensures header text is always white against the colored bar */
-    color: #ffffff !important; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    margin-bottom: 18px;
+    margin-top: 30px;
+    color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-  .step-num {
+  .phase-num {
     background: #ffffff !important;
     border-radius: 50%;
     width: 26px;
@@ -44,50 +43,59 @@ has_children: false
     font-weight: 900;
   }
 
-  .process-row {
+  .row-item {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    margin-left: 20px;
-    margin-bottom: 14px;
+    gap: 12px;
+    margin-left: 15px;
+    margin-bottom: 16px;
   }
 
-  .badge {
-    padding: 3px 10px;
-    border-radius: 6px;
+  .badge-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a1a1a !important;
+  }
+
+  .p-badge {
+    padding: 2px 10px;
+    border-radius: 20px;
     font-size: 11px;
     font-weight: 800;
-    min-width: 45px;
-    text-align: center;
     color: #ffffff !important;
-    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
   }
 
-  /* Specific Badge Colors */
-  .badge-asp { background-color: #007a94 !important; }
-  .badge-csp { background-color: #24292f !important; }
+  .p-asp { background-color: #00a3cc !important; }
+  .p-csp { background-color: #314b6d !important; }
 
-  /* Main Text - Forced to Black for visibility */
-  .text-description { 
-    color: #1a1a1a !important; 
-    font-size: 14px; 
-    line-height: 1.6;
+  /* Visible text for white background */
+  .p-text-black { 
+    color: #000000 !important; 
+    font-size: 15px; 
+    line-height: 1.5;
     font-weight: 450;
   }
 
-  /* Highlight Text - Forced to Deep Red */
-  .text-highlight { 
-    color: #b91c1c !important; 
-    font-size: 14px; 
-    line-height: 1.6; 
-    font-weight: 700; 
+  .p-text-gray { 
+    color: #707070 !important; 
+    font-size: 15px; 
+    line-height: 1.5;
+  }
+
+  .p-text-red { 
+    color: #e60000 !important; 
+    font-size: 15px; 
+    line-height: 1.5; 
+    font-weight: 500; 
   }
   
-  .text-highlight ins { 
-    text-decoration: underline; 
-    text-underline-offset: 3px; 
-    font-weight: 800;
-  }
+  .p-text-red u { text-underline-offset: 3px; }
 </style>
 
 {: .warning }
@@ -111,53 +119,86 @@ This is a high-level figure with the entities involing APIs and the devices invo
 
 The following steps are executed:
 
-<div class="process-wrapper">
+<div class="process-container">
 
-  <div class="step-header" style="background-color: #6e3cc7;">
-    <div class="step-num" style="color: #6e3cc7;">0</div> Pre-conditions
+  <div class="phase-bar" style="background-color: #7c52e4;">
+    <div class="phase-num" style="color: #7c52e4;">0</div> Pre-conditions
   </div>
-  <div class="process-row"><span class="badge badge-asp">ASP</span></div>
-  <div class="process-row"><span class="badge badge-csp">CSP</span></div>
-  <div class="process-row"><span class="badge badge-asp">ASP</span></div>
+  
+  <div class="row-item">
+    <div class="badge-stack">
+      <span class="p-badge p-asp">ASP</span>
+      <div style="margin: 2px 0;">+</div>
+      <span class="p-badge p-csp">CSP</span>
+    </div>
+    <div class="p-text-black">
+      On-boarding of the ASP<br>
+      - &nbsp;Sign up and access credentials<br>
+      - &nbsp;Selection / Request for Network Profiles and Network Service Areas
+    </div>
+  </div>
 
-  <div class="step-header" style="background-color: #d46b1d;">
-    <div class="step-num" style="color: #d46b1d;">1</div> Before using the network
+  <div class="phase-bar" style="background-color: #f38d3c;">
+    <div class="phase-num" style="color: #f38d3c;">1</div> Before using the network
   </div>
-  <div class="process-row">
-    <span class="badge badge-asp">ASP</span>
-    <div class="text-description">
+
+  <div class="row-item">
+    <span class="p-badge p-asp">ASP</span>
+    <div class="p-text-gray">
       1.0a. Discovery of available and eligible Network Profiles (optional)<br>
       1.0b. Discovery of available and eligible Network Service Areas (optional)
     </div>
   </div>
-  <div class="process-row">
-    <span class="badge badge-asp">ASP</span>
-    <div class="text-highlight">1.1. <ins>Request</ins> of <ins>Reservation</ins> for Dedicated Network</div>
-  </div>
-  <div class="process-row"><span class="badge badge-csp">CSP</span></div>
-  <div class="process-row">
-    <span class="badge badge-asp">ASP</span>
-    <div class="text-highlight">1.3. <ins>Request</ins> of Device <ins>Access</ins> for Dedicated Network</div>
+
+  <div class="row-item">
+    <span class="p-badge p-asp">ASP</span>
+    <div class="p-text-red">1.1. <u>Request</u> of <u>Reservation</u> for Dedicated Network</div>
   </div>
 
-  <div class="step-header" style="background-color: #2da44e;">
-    <div class="step-num" style="color: #2da44e;">2</div> During operation
-  </div>
-  <div class="process-row"><span class="badge badge-csp">CSP</span></div>
-  <div class="process-row"><span class="badge badge-asp">ASP</span></div>
-  <div class="process-row">
-    <span class="badge badge-asp">ASP</span>
-    <div class="text-highlight">2.3. Usage of API capabilities</div>
+  <div class="row-item">
+    <span class="p-badge p-csp">CSP</span>
+    <div class="p-text-black">1.2. Assessment of Dedicated Network reservation and change of status</div>
   </div>
 
-  <div class="step-header" style="background-color: #cf222e;">
-    <div class="step-num" style="color: #cf222e;">3</div> Dismantling
+  <div class="row-item">
+    <span class="p-badge p-asp">ASP</span>
+    <div class="p-text-red">1.3. <u>Request</u> of Device <u>Access</u> for Dedicated Network</div>
   </div>
-  <div class="process-row">
-    <span class="badge badge-asp">ASP</span>
-    <div class="text-highlight">3.1a. <ins>Deletion</ins> of Device Access and Dedicated Network</div>
+
+  <div class="phase-bar" style="background-color: #74b85c;">
+    <div class="phase-num" style="color: #74b85c;">2</div> During operation
   </div>
-  <div class="process-row"><span class="badge badge-csp">CSP</span></div>
+
+  <div class="row-item">
+    <span class="p-badge p-csp">CSP</span>
+    <div class="p-text-black">2.1. Dedicated Network is activated</div>
+  </div>
+
+  <div class="row-item">
+    <span class="p-badge p-asp">ASP</span>
+    <div class="p-text-black">2.2. Device establishes connection</div>
+  </div>
+
+  <div class="row-item">
+    <span class="p-badge p-asp">ASP</span>
+    <div class="p-text-red">2.3. Usage of API capabilities</div>
+  </div>
+
+  <div class="phase-bar" style="background-color: #cc0000;">
+    <div class="phase-num" style="color: #cc0000;">3</div> Dismantling
+  </div>
+
+  <div class="row-item">
+    <div class="badge-stack">
+      <span class="p-badge p-asp">ASP</span>
+      <div style="margin: 2px 0;">+</div>
+      <span class="p-badge p-csp">CSP</span>
+    </div>
+    <div class="p-text-black">
+      <span class="p-text-red">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</span><br>
+      3.1b. Or the CSP simply tears the Dedicated Network down
+    </div>
+  </div>
 
 </div>
 
