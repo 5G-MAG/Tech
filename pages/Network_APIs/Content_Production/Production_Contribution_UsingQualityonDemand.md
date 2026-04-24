@@ -12,7 +12,7 @@ has_children: false
 <style>
   .process-wrapper {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #0d1117; /* Matches GitHub dark mode */
+    background-color: #000000;
     padding: 24px;
     border-radius: 12px;
     color: #fff;
