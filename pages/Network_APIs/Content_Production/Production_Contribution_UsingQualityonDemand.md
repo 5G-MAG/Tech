@@ -154,7 +154,7 @@ The following steps are executed:
     <div class="p-content">
       On-boarding of the ASP and Negotiation<br>
       - &nbsp;Sign up and access credentials<br>
-      - &nbsp;Selection / Request for Network Profiles and Network Service Areas
+      - &nbsp;Selection / Request for QoS Profiles
     </div>
   </div>
 
@@ -164,27 +164,7 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-m">1.0a. Discovery of available and eligible Network Profiles (optional)</div>
-  </div>
-
-  <div class="p-entry">
-    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-m">1.0b. Discovery of available and eligible Network Service Areas (optional)</div>
-  </div>
-
-  <div class="p-entry">
-    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">1.1. <u>Request</u> of <u>Reservation</u> for Dedicated Network</div>
-  </div>
-
-  <div class="p-entry">
-    <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
-    <div class="p-content">1.2. Assessment of Dedicated Network reservation and change of status</div>
-  </div>
-
-  <div class="p-entry">
-    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">1.3. <u>Request</u> of Device <u>Access</u> for Dedicated Network</div>
+    <div class="p-content-m">1.0a. Discovery of available and eligible QoS Profiles (optional)</div>
   </div>
 
   <div class="p-header" style="background-color: #74b85c;">
@@ -192,8 +172,8 @@ The following steps are executed:
   </div>
 
   <div class="p-entry">
-    <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
-    <div class="p-content">2.1. Dedicated Network is activated</div>
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-a">2.1. <u>Request</u> of <u>Creation</u> of QoS Session</div>
   </div>
 
   <div class="p-entry">
@@ -212,12 +192,12 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</div>
+    <div class="p-content-a">3.1a. <u>Deletion</u> of QoS Session</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
-    <div class="p-content">3.1b. Or the CSP simply tears the Dedicated Network down</div>
+    <div class="p-content">3.1b. Or the CSP simply tears the QoS session down</div>
   </div>
 
 </div>
