@@ -10,83 +10,84 @@ has_children: false
 <img src="../../../assets/images/Banner_NetworkAPIs.png" /> 
 
 <style>
-  :root {
-    /* Define colors that work well on white */
-    --process-text-main: #24292f;   /* Dark charcoal for main text */
-    --process-text-muted: #57606a;  /* Gray for descriptions */
-    --process-highlight: #cf222e;   /* Stronger red for highlights */
-    --badge-csp-bg: #21262d;        /* Darker badge for CSP */
-  }
-
   .process-wrapper {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: transparent;
     padding: 10px 0;
     max-width: 100%;
     margin: 20px 0;
-    color: var(--process-text-main);
   }
 
   .step-header {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 16px;
-    margin-top: 24px;
-    color: #ffffff !important; /* Forces white text inside the dark colored bars */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds depth on white backgrounds */
+    margin-top: 28px;
+    /* This ensures header text is always white against the colored bar */
+    color: #ffffff !important; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   }
 
   .step-num {
-    background: #ffffff;
+    background: #ffffff !important;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 12px;
-    font-size: 0.85rem;
-    font-weight: bold;
+    font-size: 0.9rem;
+    font-weight: 900;
   }
 
   .process-row {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    margin-left: 15px;
-    margin-bottom: 12px;
+    gap: 15px;
+    margin-left: 20px;
+    margin-bottom: 14px;
   }
 
   .badge {
-    padding: 2px 8px;
+    padding: 3px 10px;
     border-radius: 6px;
     font-size: 11px;
     font-weight: 800;
-    min-width: 42px;
+    min-width: 45px;
     text-align: center;
     color: #ffffff !important;
+    text-transform: uppercase;
   }
 
-  .badge-asp { background-color: #0885a3; } /* Slightly darkened for better white-bg contrast */
-  .badge-csp { background-color: var(--badge-csp-bg); }
+  /* Specific Badge Colors */
+  .badge-asp { background-color: #007a94 !important; }
+  .badge-csp { background-color: #24292f !important; }
 
+  /* Main Text - Forced to Black for visibility */
   .text-description { 
-    color: var(--process-text-muted); 
+    color: #1a1a1a !important; 
     font-size: 14px; 
-    line-height: 1.6; 
+    line-height: 1.6;
+    font-weight: 450;
   }
 
+  /* Highlight Text - Forced to Deep Red */
   .text-highlight { 
-    color: var(--process-highlight); 
+    color: #b91c1c !important; 
     font-size: 14px; 
     line-height: 1.6; 
-    font-weight: 600; 
+    font-weight: 700; 
   }
   
-  .text-highlight ins { text-decoration: underline; text-underline-offset: 3px; }
+  .text-highlight ins { 
+    text-decoration: underline; 
+    text-underline-offset: 3px; 
+    font-weight: 800;
+  }
 </style>
 
 {: .warning }
