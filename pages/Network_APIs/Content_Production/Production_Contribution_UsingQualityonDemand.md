@@ -9,6 +9,60 @@ has_children: false
 
 <img src="../../../assets/images/Banner_NetworkAPIs.png" /> 
 
+<style>
+  .process-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0d1117; /* Matches GitHub dark mode */
+    padding: 24px;
+    border-radius: 12px;
+    color: #fff;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  .step-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    color: white !important;
+  }
+  .step-num {
+    background: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  .process-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+  }
+  .badge {
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    min-width: 40px;
+    text-align: center;
+  }
+  .badge-asp { background-color: #17a2b8; color: white; }
+  .badge-csp { background-color: #384d62; color: white; }
+  .text-gray { color: #8b949e; font-size: 14px; line-height: 1.6; }
+  .text-highlight { color: #ff6b6b; font-size: 14px; line-height: 1.6; font-weight: 500; }
+  .text-highlight ins { text-decoration: underline; text-underline-offset: 3px; }
+</style>
+
 {: .warning }
 This documentation is currently **under development and subject to change**. It reflects outcomes elaborated by 5G-MAG members. If you are interested in becoming a member of the 5G-MAG and actively participating in shaping this work, please contact the [Project Office](https://www.5g-mag.com/contact)
 
@@ -30,9 +84,55 @@ This is a high-level figure with the entities involing APIs and the devices invo
 
 The following steps are executed:
 
-<figure>
-  <img src="./images/QualityonDemand_WF1.png" width="80%">
-</figure>
+<div class="process-wrapper">
+
+  <div class="step-header" style="background-color: #8957e5;">
+    <div class="step-num" style="color: #8957e5;">0</div> Pre-conditions
+  </div>
+  <div class="process-row"><span class="badge badge-asp">ASP</span></div>
+  <div class="process-row"><span class="badge badge-csp">CSP</span></div>
+  <div class="process-row"><span class="badge badge-asp">ASP</span></div>
+
+  <div class="step-header" style="background-color: #f0883e;">
+    <div class="step-num" style="color: #f0883e;">1</div> Before using the network
+  </div>
+  <div class="process-row">
+    <span class="badge badge-asp">ASP</span>
+    <div class="text-gray">
+      1.0a. Discovery of available and eligible Network Profiles (optional)<br>
+      1.0b. Discovery of available and eligible Network Service Areas (optional)
+    </div>
+  </div>
+  <div class="process-row">
+    <span class="badge badge-asp">ASP</span>
+    <div class="text-highlight">1.1. <ins>Request</ins> of <ins>Reservation</ins> for Dedicated Network</div>
+  </div>
+  <div class="process-row"><span class="badge badge-csp">CSP</span></div>
+  <div class="process-row">
+    <span class="badge badge-asp">ASP</span>
+    <div class="text-highlight">1.3. <ins>Request</ins> of Device <ins>Access</ins> for Dedicated Network</div>
+  </div>
+
+  <div class="step-header" style="background-color: #3fb950;">
+    <div class="step-num" style="color: #3fb950;">2</div> During operation
+  </div>
+  <div class="process-row"><span class="badge badge-csp">CSP</span></div>
+  <div class="process-row"><span class="badge badge-asp">ASP</span></div>
+  <div class="process-row">
+    <span class="badge badge-asp">ASP</span>
+    <div class="text-highlight">2.3. Usage of API capabilities</div>
+  </div>
+
+  <div class="step-header" style="background-color: #f85149;">
+    <div class="step-num" style="color: #f85149;">3</div> Dismantling
+  </div>
+  <div class="process-row">
+    <span class="badge badge-asp">ASP</span>
+    <div class="text-highlight">3.1a. <ins>Deletion</ins> of Device Access and Dedicated Network</div>
+  </div>
+  <div class="process-row"><span class="badge badge-csp">CSP</span></div>
+
+</div>
 
 ## Step 0: Pre-conditions
 * The API invoker needs to have signed up with the API provider.
