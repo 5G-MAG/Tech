@@ -13,7 +13,11 @@ has_children: false
 
 This is the entry point to **5G-MAG's Technical Documentation**. It includes resources related to specification analysis and implementation, explainers and reports, videos,...
 
-[Download an overview about 5G-MAG](./docs/5G_MAG_Overview.pdf){: .btn .btn-blue }
+{: .note }
+> ### 📊 Overview
+> Get the full 5G-MAG slide deck for an in-depth look.
+>
+> [Download Slide Deck (PDF)](./docs/5G_MAG_Overview.pdf){: .btn .btn-blue .btn-large .btn-arrow}
 
 ---
 
