@@ -64,7 +64,7 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">2.1. <u>Request</u> of <u>Creation</u> of QoS Session</div>
+    <div class="p-content-a">2.1. <u>Request</u> Creation of QoS Session</div>
   </div>
 
   <div class="p-entry">
