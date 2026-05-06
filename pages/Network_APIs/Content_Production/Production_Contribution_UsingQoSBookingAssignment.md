@@ -55,7 +55,7 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-m">1.0a. Discovery of available and eligible QoS Profiles (optional)</div>
+    <div class="p-content-m">1.0. Discovery of available and eligible QoS Profiles (optional)</div>
   </div>
 
   <div class="p-entry">
@@ -63,18 +63,33 @@ The following steps are executed:
     <div class="p-content-a">1.1. <u>Request</u> of <u>Creation</u> of QoS Booking</div>
   </div>
 
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
+    <div class="p-content">1.2. Assessment of QoS Booking reservation and change of status</div>
+  </div>
+
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-a">1.3. <u>Request</u> of Device <u>Assignment</u> for the QoS Booking</div>
+  </div>
+
   <div class="p-header" style="background-color: #74b85c;">
     <div class="p-circle" style="color: #74b85c;">2</div> During operation
   </div>
 
   <div class="p-entry">
-    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content">2.1. Device establishes connection and uses the QoS Booking</div>
+    <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
+    <div class="p-content">2.1. QoS Booking is activated</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">2.2. Usage of API capabilities</div>
+    <div class="p-content">2.2. Device establishes connection</div>
+  </div>
+
+  <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-a">2.3. Usage of API capabilities</div>
   </div>
 
   <div class="p-header" style="background-color: #cc0000;">
@@ -83,12 +98,12 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">3.1a. <u>Deletion</u> of QoS Booking</div>
+    <div class="p-content-a">3.1a. <u>Release</u> of Device Assignment and <u>Deletion</u> of QoS Booking</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
-    <div class="p-content">3.1b. Or the CSP simply tears the QoS Booking down</div>
+    <div class="p-content">3.1b. Or the CSP simply tears the Dedicated Network down</div>
   </div>
 
 </div>
