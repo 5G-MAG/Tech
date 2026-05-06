@@ -101,13 +101,13 @@ The following steps are executed:
 ## Step 1: Before using the network
 Details of the already arranged QoS Profile can be retrieve with **GET /qos-profiles/{name}**, using the [QoS Profiles API](../CAMARA_QoSProfiles.html).
 
-## Step 2: During operation
-
-### 2.1 Requests creation of QoS Booking
+### 1.1 Requests creation of QoS Booking
 
 With **POST /device-qos-bookings** passing the `qosProfile`, `applicationServer`, `applicationServerPorts`, `device` object, `devicePorts`, `startTime`, `duration`, `serviceArea`.
 
-### 2.2 Device establishes connection
+## Step 2: During operation
+
+### 2.1 Device establishes connection
 
 ### 2.3 Usage of API capabilities
 
