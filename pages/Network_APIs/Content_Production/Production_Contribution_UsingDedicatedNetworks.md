@@ -65,17 +65,17 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">1.1. <u>Request</u> of <u>Reservation</u> for Dedicated Network</div>
+    <div class="p-content-a">1.1. <u>Request</u> Reservation of Dedicated Network</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
-    <div class="p-content">1.2. Assessment of Dedicated Network reservation and change of status</div>
+    <div class="p-content">1.2. Assessment of Dedicated Network reservation request and change of status</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">1.3. <u>Request</u> of Device <u>Access</u> for Dedicated Network</div>
+    <div class="p-content-a">1.3. <u>Request</u> Device Access for the Dedicated Network</div>
   </div>
 
   <div class="p-header" style="background-color: #74b85c;">
@@ -84,17 +84,17 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
-    <div class="p-content">2.1. Dedicated Network is activated</div>
+    <div class="p-content">2.1. Dedicated Network is active and available</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content">2.2. Device establishes connection</div>
+    <div class="p-content">2.2. Device establishes connection and makes use of the Dedicated Network</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">2.3. Usage of API capabilities</div>
+    <div class="p-content-a">2.3. Usage of various API capabilities</div>
   </div>
 
   <div class="p-header" style="background-color: #cc0000;">
@@ -103,7 +103,7 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">3.1a. <u>Deletion</u> of Device Access and Dedicated Network</div>
+    <div class="p-content-a">3.1a. <u>Deletion</u> of Device Access and <u>Deletion</u> of Dedicated Network</div>
   </div>
 
   <div class="p-entry">
