@@ -18,11 +18,11 @@ Find more information about [**Dedicated Networks API**](../CAMARA_DedicatedNetw
 
 # Purpose
 
-A user of a media application would like to request a Dedicated Network, with a set of capabilities and connectivity performance targets. The resut is for a particular geographical location and at a particular time window.
+A user of a media application would like to request from the mobile network a set of capabilities and connectivity performance targets for a particular geographical location and time window.
 
 # Workflow and Architecture
 
-This is a high-level figure with the entities involing APIs and the devices involved:
+The entities, devices and interaction within the scope of this API are illustrated in the high-level figure below. 
 
 <figure>
   <img src="./images/figure_dedicatednetworks.png" width="80%">
@@ -30,7 +30,7 @@ This is a high-level figure with the entities involing APIs and the devices invo
 
 ## General Workflow
 
-The following steps are executed:
+The lifecycle of a Dedicated Network, from the preconditions that must be met before a request can be made, all the way through to establishing the Dedicated Network itself, its use, and then the dismantling of the service is shown below:
 
 <div class="proc-wrapper">
 
@@ -122,10 +122,10 @@ The following steps are executed:
 
 ## Step 0: Pre-conditions
 
-* The API invoker needs to have signed up with the API provider.
+* The user (API invoker) must have registered (signed up) with the API provider.
 * qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
-* Network Profiles with the allowed number of devices which can be served concurrently together with the aggregated UL and DL throughput have been defined and made available by the network operator.
-* Dedicated Network Service Areas are created by the operator and made available.
+* Dedicated Network Service Areas are created by the operator and made available. Each area is association with one or more Network Profiles.
+* Network Profiles set out the maximum number of devices that can be concurrently served within the area, as well as the aggregate UL and DL throughput that the network operator can offer.
 
 ## Step 1: Before using the network
 
