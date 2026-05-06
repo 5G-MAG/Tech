@@ -16,6 +16,8 @@ This documentation is currently **under development and subject to change**. It 
 
 Find more information about [**Dedicated Networks API**](../CAMARA_QoSProfiles.html).
 
+# Purpose
+
 QoS Profiles are created according to the requirements per application or use case.
 
 # Workflow and Architecture
