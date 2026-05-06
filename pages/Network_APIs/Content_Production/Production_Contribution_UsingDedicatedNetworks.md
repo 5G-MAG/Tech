@@ -83,18 +83,23 @@ The following steps are executed:
   </div>
 
   <div class="p-entry">
+    <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
+    <div class="p-content-a">2.1. <u>Request</u> Device Access for the Dedicated Network</div>
+  </div>
+
+  <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-csp">CSP</span></div>
-    <div class="p-content">2.1. Dedicated Network is active and available</div>
+    <div class="p-content">2.2. Dedicated Network is active and available</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content">2.2. Device establishes connection and makes use of the Dedicated Network</div>
+    <div class="p-content">2.3. Device establishes connection and makes use of the Dedicated Network</div>
   </div>
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">2.3. Usage of various API capabilities</div>
+    <div class="p-content-a">2.4. Usage of various API capabilities</div>
   </div>
 
   <div class="p-header" style="background-color: #cc0000;">
