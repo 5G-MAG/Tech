@@ -16,6 +16,8 @@ This documentation is currently **under development and subject to change**. It 
 
 Find more information about [**Quality on Demand API**](../CAMARA_QualityonDemand.html).
 
+# Purpose
+
 A user of a media application would like to request the creation of a QoS session for the connection between a device and an application server.
 
 # Workflow and Architecture
