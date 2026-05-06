@@ -16,6 +16,8 @@ This documentation is currently **under development and subject to change**. It 
 
 Find more information about [**Dedicated Networks API**](../CAMARA_DedicatedNetworks.html).
 
+# Purpose
+
 A user of a media application would like to request a Dedicated Network, with a set of capabilities and connectivity performance targets. The resut is for a particular geographical location and at a particular time window.
 
 # Workflow and Architecture
