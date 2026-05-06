@@ -16,7 +16,7 @@ This documentation is currently **under development and subject to change**. It 
 
 Find more information about [**QoS Booking API**](../CAMARA_QoSBooking.html).
 
-A user of a media application would like to request the assignment of a QoS Profile to a device for a given period of time and service area. The following steps are executed:
+A user of a media application would like to request the assignment of a QoS Profile to a device for a given period of time and service area.
 
 # Workflow and Architecture
 
