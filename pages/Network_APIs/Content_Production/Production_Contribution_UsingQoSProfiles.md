@@ -3,7 +3,7 @@ layout: default
 title: QoS Profiles
 parent: Using CAMARA APIs
 grand_parent: Content Production & Contribution
-nav_order: 0
+nav_order: 3
 has_children: false
 ---
 
