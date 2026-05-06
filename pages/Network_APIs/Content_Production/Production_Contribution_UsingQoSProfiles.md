@@ -3,7 +3,7 @@ layout: default
 title: QoS Profiles
 parent: Using CAMARA APIs
 grand_parent: Content Production & Contribution
-nav_order: 0
+nav_order: 3
 has_children: false
 ---
 
@@ -15,6 +15,8 @@ This documentation is currently **under development and subject to change**. It 
 # Using CAMARA APIs: QoS Profiles for Content Production & Contribution
 
 Find more information about [**Dedicated Networks API**](../CAMARA_QoSProfiles.html).
+
+# Purpose
 
 QoS Profiles are created according to the requirements per application or use case.
 

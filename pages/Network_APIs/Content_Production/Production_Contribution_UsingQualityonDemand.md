@@ -3,7 +3,7 @@ layout: default
 title: Quality on Demand
 parent: Using CAMARA APIs
 grand_parent: Content Production & Contribution
-nav_order: 1
+nav_order: 4
 has_children: false
 ---
 
@@ -15,6 +15,8 @@ This documentation is currently **under development and subject to change**. It 
 # Using CAMARA APIs: Quality on Demand for Content Production & Contribution
 
 Find more information about [**Quality on Demand API**](../CAMARA_QualityonDemand.html).
+
+# Purpose
 
 A user of a media application would like to request the creation of a QoS session for the connection between a device and an application server.
 
@@ -64,7 +66,7 @@ The following steps are executed:
 
   <div class="p-entry">
     <div class="p-actors"><span class="p-pill p-pill-asp">ASP</span></div>
-    <div class="p-content-a">2.1. <u>Request</u> of <u>Creation</u> of QoS Session</div>
+    <div class="p-content-a">2.1. <u>Request</u> Creation of QoS Session</div>
   </div>
 
   <div class="p-entry">

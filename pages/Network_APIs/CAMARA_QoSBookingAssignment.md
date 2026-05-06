@@ -38,34 +38,6 @@ The API definitions can be obtained here: [https://github.com/camaraproject/QoSB
 
 ---
 
-## Workflow: Media application requesting a QoS Booking and assinging to a device
-
-A user of a media application would like to request the assignment of a QoS Profile to a device for a given period of time and service area. The following steps are executed:
-
-Figure TBD
-
-### Step 0: Pre-conditions
-* qosProfiles have already been defined and made available by the network operator. This is related to the [**QoS Profiles API**](./CAMARA_QosProfiles.html).
-
-### Step 1: Create a QoS Booking for a given number of devices
-* **POST /qos-bookings** passing the `numDevices`, `qosProfile`, `startTime`, `duration`, `serviceArea`.
-
-### Step 2: Assing the QoS Booking to a specific Device
-* **POST /qos-bookings/{bookingId}/devices/assign** passing the BookingId from the previous step and a `device` object to assign the QoS Booking to a specific device.
-
-## 5G-MAG's Self-Assessment
-
-The QoS Booking can be invoked before the actual usage of the network starts to ensure that the requested capabilities are "reserved" for the specific area, time window and a given number of devices.
-Before or during the event a device will be assigned have access to the QoS booking.
-
-When is the assingment of devices done? For this API to be useful, assingment/release of devices should be done during real-time operation.
-
-Potential improvements:
-- Unlike other similar APIs there is no information about the application server. It is unclear what would be the endpoint to which throughput, jitter, latency and other parameters would apply.
-- The procedure is very similar to Dedicated Networks. There seems to be redundancy with QoS Booking
-- The use of the same name "QoS Booking" is misleading with the other API called "QoS Booking"
----
-
 ## QoS Booking and Assignment API Usage
 
 ### Request booking of QoS
